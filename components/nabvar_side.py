@@ -1,34 +1,35 @@
 from reactpy import component, html
+from reactpy_router import link
 
 
 @component
 def navbar():
-    return(
-       html.div({"id": "wrapper"},
+    return (
+        html.div({"id": "wrapper"},
                  # sidebar
                  html.ul({
                      "class": "navbar-nav bg-gradient-primary sidebar sidebar-dark accordion",
                      "id": "accordionSidebar"
                  },
                      # Sidebar - Brand
-                    html.a({
-                         "class": "sidebar-brand d-flex align-items-center justify-content-center",
-                         "href": "index.html"
+            html.a({
+                "class": "sidebar-brand d-flex align-items-center justify-content-center",
+                "href": "index.html"
+            },
+                     html.div({
+                         "class": "sidebar-brand-icon rotate-n-15"
                      },
-                         html.div({
-                             "class": "sidebar-brand-icon rotate-n-15"
-                         },
-                             html.i({
-                                 "class": "fas fa-laugh-wink"
-                             })
-                        ),
-                         html.div({
-                             "class": "sidebar-brand-text mx-3"
-                         },
-                             "ADMINISTRADOR",
-                             html.sup()
-                        )
-                    ),
+                html.i({
+                    "class": "fas fa-laugh-wink"
+                })
+            ),
+                     html.div({
+                         "class": "sidebar-brand-text mx-3"
+                     },
+                "ADMINISTRADOR",
+                html.sup()
+            )
+                 ),
 
                      # Divider
                      html.hr({
@@ -63,42 +64,40 @@ def navbar():
                  ),
 
                      # Nav Item - Pages Collapse Menu (TIER1)
-                    html.li({"class":"nav-item"},
-                        html.a({"class":"nav-link collapsed", 
-                                "href":"#",
-                                "data-toggle": "collapse",
-                                "data-target": "#collapseTwo",
-                                "aria-expanded": "true",
-                                "aria-controls": "collapseTwo"
+            html.li({"class": "nav-item"},
+                    html.a({"class": "nav-link collapsed",
+                            "href": "#",
+                            "data-toggle": "collapse",
+                            "data-target": "#collapseTwo",
+                            "aria-expanded": "true",
+                            "aria-controls": "collapseTwo"
                             },
-                            html.i({"class":"fas fa-fw fa-cog"}),
-                            "TIER1"
-                        ),
-                        html.div({"class": "collapse",
-                             "id": "collapseTwo",
-                             "aria-labelledby": "headingTwo",
-                             "data-parent": "#accordionSidebar"},
-                            html.div({"class":"bg-white py-2 collapse-inner rounded"},
-                               html.h6({
-                                     "class": "collapse-header"
-                                    },
-                                     "Custom Components:"
-                                ),
-                                html.a({
-                                     "class": "collapse-item",
-                                     "href": "buttons.html"
-                                    },
-                                    "Compra"
-                                ),
-                                html.a({
-                                     "class": "collapse-item",
-                                     "href": "cards.html"
-                                    },
-                                    "Pedidos"
-                                )
-                            )
-                        )
-                    ),
+                           html.i({"class": "fas fa-fw fa-cog"}),
+                           "TIER1"
+                           ),
+                    html.div({"class": "collapse",
+                              "id": "collapseTwo",
+                              "aria-labelledby": "headingTwo",
+                              "data-parent": "#accordionSidebar"},
+                             html.div({"class": "bg-white py-2 collapse-inner rounded"},
+                                      html.h6({
+                                          "class": "collapse-header"
+                                      },
+                                 "Custom Components:"
+                             ),
+                        link("Compra", to="/shopping", **{
+                            "class": "collapse-item",
+                            "href": "buttons.html"
+                        }),
+                        html.a({
+                            "class": "collapse-item",
+                            "href": "cards.html"
+                        },
+                                 "Pedidos"
+                             )
+                    )
+            )
+                 ),
 
                      # Nav Item - Pages Collapse Menu (TIER2)
                      html.li({
