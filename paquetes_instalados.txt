@@ -1,0 +1,3 @@
+reactpy[fastapi]
+uvicorn[standard]
+reactpy_router
