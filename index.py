@@ -12,7 +12,7 @@ def App():
         route("/login", login_page.login_user()),
         route("/shopping", shopping.shopping())
     )
-
+# Ernesto Rama
 
 app = FastAPI()
 
