@@ -1,8 +1,5 @@
 # Nombres de entornos virtuales
-<<<<<<< HEAD
-frontend-tier-env
-=======
 frontend-tier-env/
 venv/
 __pycache__/
->>>>>>> main
+S
