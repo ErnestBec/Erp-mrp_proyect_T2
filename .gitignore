@@ -1,4 +1,4 @@
 # Nombres de entornos virtuales
 frontend-tier-env
 venv
-_pycache_
+__pycache__
