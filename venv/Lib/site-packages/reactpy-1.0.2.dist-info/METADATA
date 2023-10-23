@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: reactpy
+Version: 1.0.2
+Summary: Reactive user interfaces with pure Python
+Project-URL: Source, https://github.com/reactive-python/reactpy
+Project-URL: Documentation, https://github.com/reactive-python/reactpy#readme
+Project-URL: Issues, https://github.com/reactive-python/reactpy/discussions
+Author-email: Ryan Morshead <ryan.morshead@gmail.com>
+License-Expression: MIT
+Keywords: component,javascript,react,reactpy
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.9
+Requires-Dist: anyio>=3
+Requires-Dist: asgiref>=3
+Requires-Dist: colorlog>=6
+Requires-Dist: fastjsonschema>=2.14.5
+Requires-Dist: jsonpatch>=1.32
+Requires-Dist: lxml>=4
+Requires-Dist: mypy-extensions>=0.4.3
+Requires-Dist: requests>=2
+Requires-Dist: typing-extensions>=3.10
+Provides-Extra: all
+Requires-Dist: reactpy[fastapi,flask,sanic,starlette,testing,tornado]; extra == 'all'
+Provides-Extra: fastapi
+Requires-Dist: fastapi>=0.63.0; extra == 'fastapi'
+Requires-Dist: uvicorn[standard]>=0.19.0; extra == 'fastapi'
+Provides-Extra: flask
+Requires-Dist: flask; extra == 'flask'
+Requires-Dist: flask-cors; extra == 'flask'
+Requires-Dist: flask-sock; extra == 'flask'
+Requires-Dist: markupsafe<2.1,>=1.1.1; extra == 'flask'
+Provides-Extra: sanic
+Requires-Dist: sanic-cors; extra == 'sanic'
+Requires-Dist: sanic>=21; extra == 'sanic'
+Requires-Dist: uvicorn[standard]>=0.19.0; extra == 'sanic'
+Provides-Extra: starlette
+Requires-Dist: starlette>=0.13.6; extra == 'starlette'
+Requires-Dist: uvicorn[standard]>=0.19.0; extra == 'starlette'
+Provides-Extra: testing
+Requires-Dist: playwright; extra == 'testing'
+Provides-Extra: tornado
+Requires-Dist: tornado; extra == 'tornado'
+Description-Content-Type: text/markdown
+
+# <img src="https://raw.githubusercontent.com/reactive-python/reactpy/main/branding/svg/reactpy-logo-square.svg" align="left" height="45"/> ReactPy
+
+<p>
+    <a href="https://github.com/reactive-python/reactpy/actions">
+        <img src="https://github.com/reactive-python/reactpy/workflows/test/badge.svg?event=push">
+    </a>
+    <a href="https://pypi.org/project/reactpy/">
+        <img src="https://img.shields.io/pypi/v/reactpy.svg?label=PyPI">
+    </a>
+    <a href="https://github.com/reactive-python/reactpy/blob/main/LICENSE">
+        <img src="https://img.shields.io/badge/License-MIT-purple.svg">
+    </a>
+    <a href="https://reactpy.dev/">
+        <img src="https://img.shields.io/website?down_message=offline&label=Docs&logo=read-the-docs&logoColor=white&up_message=online&url=https%3A%2F%2Freactpy.dev%2Fdocs%2Findex.html">
+    </a>
+    <a href="https://discord.gg/uNb5P4hA9X">
+        <img src="https://img.shields.io/discord/1111078259854168116?label=Discord&logo=discord">
+    </a>
+</p>
+
+---
+
+[ReactPy](https://reactpy.dev/) is a library for building user interfaces in Python without Javascript. ReactPy interfaces are made from components that look and behave similar to those found in [ReactJS](https://reactjs.org/). Designed with simplicity in mind, ReactPy can be used by those without web development experience while also being powerful enough to grow with your ambitions.
