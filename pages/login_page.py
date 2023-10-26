@@ -45,7 +45,7 @@ def login_user():
     ),
 
     return (
-        html.div({"class": "bg-gradient-primary"},
+        html.div({"class": "bg-gradient-primary", "style": {"height": "100vh"}},
                  bootstrap_css,
                  style_css,
                  fontawesome,
@@ -104,8 +104,8 @@ def login_user():
                                                                                              {"class": "small", "href": "#"}, "Forgot Password?")
                                                                                 ),
                                                                            html.div({"class": "text-center"},
-                                                                                    html.a(
-                                                                                        {"class": "small", "href": "#"}, "Create an Account!")
+                                                                                    link("Create an Account!", to="/register",
+                                                                                         **{"class": "small", "href": "#"})
                                                                                     )
                                                                        )
                                                               )

@@ -57,7 +57,7 @@ def tablas():
             },
             "id":"page-top"
         },
-            html.div(nabvar_side.navbar()),
+            nabvar_side.navbar(),
             html.div({"style":{
                 "width":"100%"
             }, "id":"content-wrapper", "class" :"d-flex flex-column"},
