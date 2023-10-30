@@ -1,11 +1,27 @@
 from reactpy import component, html
 from components import nabvar_side, footer, navbar_user
 from reactpy_router import link
+import pyodbc
 
-
-
-
-
+SERVER = 't2sqlsv.database.windows.net'
+DATABASE = 't2sql'
+USERNAME = 'tier2'
+PASSWORD = 'mdr-xd100'
+connectionString = f'DRIVER={{ODBC Driver 18 for SQL Server}};SERVER={SERVER};DATABASE={DATABASE};UID={USERNAME};PWD={PASSWORD}'
+cnxn = pyodbc.connect(connectionString)
+cursor = cnxn.cursor()
+cursor.execute("CREATE TABLE t2sql.dbo.TIPOS_ALMACEN (ID_TIPO numeric(2,0),NOMBRE_TIPO varchar(25))")
+cursor.execute("INSERT INTO t2sql.dbo.TIPOS_ALMACEN (ID_TIPO,NOMBRE_TIPO) VALUES(1,'PROD TERM')")
+cursor.execute("INSERT INTO t2sql.dbo.TIPOS_ALMACEN (ID_TIPO,NOMBRE_TIPO) VALUES(2,'MP')")
+cursor = cnxn.cursor()
+cursor.execute("COMMIT")
+cursor.execute("SELECT * FROM t2sql.dbo.TIPOS_ALMACEN")
+result =""
+row = cursor.fetchone() 
+while row:
+    print (row)
+    result += str(row);
+    row = cursor.fetchone()
 @component
 def error():
     bootstrap_css = html.link({
