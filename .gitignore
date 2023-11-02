@@ -1,3 +1,9 @@
 # Nombres de entornos virtuales
-frontend-tier-env
-__pychache__
+frontend-tier-envvenv/
+__pycache__/
+*.log
+*.pot
+*.pyc
+env
+.env
+.pytest_cache
