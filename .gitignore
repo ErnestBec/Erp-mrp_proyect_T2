@@ -1,6 +1,7 @@
 # Nombres de entornos virtuales
 frontend-tier-env
 venv
+# Carpetas de cache y vacias 
 __pycache__
 *.log
 *.pot
