@@ -2,4 +2,9 @@
 frontend-tier-env/
 venv/
 __pycache__/
-
+*.log
+*.pot
+*.pyc
+env
+.env
+.pytest_cache
