@@ -1,7 +1,7 @@
 # Nombres de entornos virtuales
-frontend-tier-env/
-venv/
-__pycache__/
+frontend-tier-env
+venv
+__pycache__
 *.log
 *.pot
 *.pyc
