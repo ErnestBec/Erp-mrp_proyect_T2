@@ -4,6 +4,7 @@ from reactpy_router import link
 
 @component
 def card_grpahic_round():
+
     return (
         html.div({"class": "col-xl-4 col-lg-5"},
                  html.div({"class": "card shadow mb-4"},
@@ -20,7 +21,7 @@ def card_grpahic_round():
                                                      html.div(
                                                          {"class": "dropdown-header"}, "Dropdown Header:"),
                                                      link(
-                                                         "Ation", to="/", **{"class": "dropdown-item"}),
+                                                         "Ation", to="/", **{"class": "dropdown-item "}),
                                                      link(
                                                          "Another action", to="/", **{"class": "dropdown-item"}),
                                                      html.div(

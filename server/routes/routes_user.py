@@ -21,7 +21,6 @@ def create_user(user: User):
     new_user["password"] = sha256_crypt.encrypt(new_user["password"])
     id = db_name.Users.insert_one(new_user).inserted_id
     user = db_name.Users.find_one({"_id": id})
-
     return userEntity(user)
 
 
