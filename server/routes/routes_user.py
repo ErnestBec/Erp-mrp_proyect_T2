@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
 from utils.db import db_name
-from schemas.schema_user import usersEntity
+from schemas.schema_user import usersEntity, userEntityUpdate
 from models.user_model import User, updateUser, loginUser
 
 
@@ -9,7 +9,7 @@ from middlewares.validate_user_middleware import user_validate_middleware, user_
 from middlewares.userExist_middleware import account_exist, user_exist
 from middlewares.auth_middleware import Portador, protectedAcountAdmin
 # Controllers
-from controllers.user_controller import create_user, get_user, update_user, delete_user, login
+from controllers.user_controller import create_user, get_user, update_user, delete_user, login, get_user_session
 user = APIRouter()
 
 # {
@@ -26,8 +26,15 @@ def login_user(user: loginUser):
 
 
 @user.get("/user_session")
-def get_user_session(user: loginUser = Depends(Portador())):
-    return user
+def get_user_session_route(user: loginUser = Depends(Portador())):
+    return get_user_session(user)
+
+
+@user.put("/user/{id}", dependencies=[Depends(user_exist), Depends(user_update_validator)])
+def update_find__user(id: str, user: updateUser, userSession=Depends(Portador())):
+    return update_user(id, dict(user), userSession)
+
+# Routes for Administrators
 
 
 @user.get("/users", dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
@@ -43,11 +50,6 @@ def create_user_route(user: User):
 @user.get("/users/{id}", dependencies=[Depends(user_exist), Depends(Portador()), Depends(protectedAcountAdmin)])
 def find_user(id: str):
     return get_user(id)
-
-
-@user.put("/user/{id}", dependencies=[Depends(user_exist), Depends(user_update_validator), Depends(Portador()), Depends(protectedAcountAdmin)])
-def update_find__user(id: str, user: updateUser):
-    return update_user(id, user)
 
 
 @user.delete("/user/{id}", dependencies=[Depends(user_exist), Depends(Portador())])

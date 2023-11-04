@@ -1,8 +1,8 @@
 from utils.db import db_name
-from fastapi import Response, HTTPException
+from fastapi import HTTPException
 from fastapi.responses import JSONResponse
 from passlib.hash import sha256_crypt
-from schemas.schema_user import userEntity
+from schemas.schema_user import userEntity, userEntityUpdate
 from bson import ObjectId
 from starlette.status import HTTP_204_NO_CONTENT, HTTP_201_CREATED
 from middlewares.auth_middleware import write_token
@@ -21,10 +21,18 @@ def get_user(id):
     return JSONResponse(content={"user": userEntity(user), "status": "Success!"}, status_code=201)
 
 
-def update_user(id, user):
-    db_name.Users.find_one_and_update(
-        {"_id": ObjectId(id)}, {"$set": dict(user)})
-    return JSONResponse(content={"status": "Update Successfull"}, status_code=204)
+def update_user(id, user, userSession):
+    print(user["email"])
+    print(userSession["email"])
+
+    update = db_name.Users.find_one_and_update(
+        {"$and": [{"_id": ObjectId(id)}, {"email": userSession["email"]}]}, {"$set": dict(user)})
+    print(update)
+    if update == None:
+        raise HTTPException(
+            status_code=400, detail="You can only edit your account!")
+    else:
+        return JSONResponse(content={"status": "Update Successfull", "user": user}, status_code=201)
 
 
 def delete_user(id, user):
@@ -49,3 +57,9 @@ def login(user):
     # Generate token
     token = write_token(user)
     return JSONResponse(content={"token": token, "status": "Succes Session!"}, status_code=201)
+
+
+def get_user_session(user):
+    user_session = db_name.Users.find_one(
+        {"$and": [{"email": user["email"]}, {"status": "activate"}]})
+    return JSONResponse(content={"user session": userEntityUpdate(user_session), "status": "Succes!"}, status_code=201)

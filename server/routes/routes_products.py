@@ -1,38 +1,41 @@
-
+# libreries
 from fastapi import APIRouter, Depends
 from utils.db import db_name
 from schemas.schema_prducts import productsEntity
 from models.prodcuts_model import Prducto, updatePrducto
-
-
 # Middlewares
-from middlewares.validate_product_middleware import product_update_validator,product_validate_middleware
+from middlewares.validate_product_middleware import product_update_validator, product_validate_middleware
 from middlewares.productExist_middleware import product_exist
+from middlewares.auth_middleware import protectedAcountAdmin, Portador
 # Controllers
 from controllers.product_controller import create_prduct, get_prduct, update_product, delete_product
 product = APIRouter()
 
+# Endppoints User Clients
 
-@product.get("/product")
+
+@product.get("/product", dependencies=[Depends(Portador())])
 def find_all_user():
     return productsEntity(db_name.Products.find())
 
 
-@product.post("/product", dependencies=[Depends(product_validate_middleware)])
-def create_product_route(producto: Prducto):
-    return create_prduct(product)
-
-
-@product.get("/products/{id}", dependencies=[Depends(product_exist)])
+@product.get("/products/{id}", dependencies=[Depends(product_exist), Depends(Portador())])
 def find_product(id: str):
     return get_prduct(id)
 
+# Endppoints User Admin
 
-@product.put("/products/{id}", dependencies=[Depends(product_exist), Depends(product_update_validator)])
+
+@product.post("/product", dependencies=[Depends(product_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
+def create_product_route(producto: Prducto):
+    return create_prduct(producto)
+
+
+@product.put("/products/{id}", dependencies=[Depends(product_exist), Depends(product_update_validator), Depends(Portador()), Depends(protectedAcountAdmin())])
 def update_find__product(id: str, product: updatePrducto):
     return update_product(id, product)
 
 
-@product.delete("/products/{id}", dependencies=[Depends(product_exist)])
+@product.delete("/products/{id}", dependencies=[Depends(product_exist), Depends(Portador()), Depends(protectedAcountAdmin())])
 def delete_find_product(id: str):
     return delete_product(id)

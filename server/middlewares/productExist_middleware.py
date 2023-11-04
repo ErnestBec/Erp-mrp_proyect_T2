@@ -15,10 +15,10 @@ def product_exist(request: Request):
     id = request.path_params.get("id")
     if not is_valid_object_id(id):
         raise HTTPException(
-            status_code=400, detail="The user doest not exist!")
+            status_code=400, detail="The product doest not exist!")
     user = db_name.Products.find_one({"_id": ObjectId(id)})
     if not user:
         raise HTTPException(
-            status_code=404, detail="The user doest not exist!")
+            status_code=404, detail="The product doest not exist!")
 
     return request
