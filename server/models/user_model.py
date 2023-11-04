@@ -17,4 +17,8 @@ class updateUser(BaseModel):
     name: Optional[str]
     email: Optional[str]
     phone: Optional[int]
-    role: Optional[str]
+
+
+class loginUser(BaseModel):
+    email: str
+    password: str
