@@ -3,7 +3,11 @@ def userEntity(item) -> dict:
         "id": str(item["_id"]),
         "name": item["name"],
         "emal": item["email"],
+        "user": item["user"],
         "password": item["password"],
+        "phone": item["phone"],
+        "role": item["role"],
+        "status": item["status"]
     }
 
 

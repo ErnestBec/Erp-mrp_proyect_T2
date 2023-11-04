@@ -1,11 +1,15 @@
-from fastapi import APIRouter, Response
-from utils.db import db_name
-from schemas.schema_user import userEntity, usersEntity
-from models.user_model import User
-from passlib.hash import sha256_crypt
-from bson import ObjectId
-from starlette.status import HTTP_204_NO_CONTENT
 
+from fastapi import APIRouter, Depends
+from utils.db import db_name
+from schemas.schema_user import usersEntity
+from models.user_model import User, updateUser
+
+
+# Middlewares
+from middlewares.validate_user_middleware import user_validate_middleware, user_update_validator
+from middlewares.userExist_middleware import account_exist, user_exist
+# Controllers
+from controllers.user_controller import create_user, get_user, update_user, delete_user
 user = APIRouter()
 
 
@@ -14,30 +18,21 @@ def find_all_user():
     return usersEntity(db_name.Users.find())
 
 
-@user.post("/user")
-def create_user(user: User):
-    new_user = dict(user)
-    # del new_user["_id"]
-    new_user["password"] = sha256_crypt.encrypt(new_user["password"])
-    id = db_name.Users.insert_one(new_user).inserted_id
-    user = db_name.Users.find_one({"_id": id})
-    return userEntity(user)
+@user.post("/user", dependencies=[Depends(account_exist), Depends(user_validate_middleware)])
+def create_user_route(user: User):
+    return create_user(user)
 
 
-@user.get("/users/{id}")
+@user.get("/users/{id}", dependencies=[Depends(user_exist)])
 def find_user(id: str):
-    return userEntity(db_name.Users.find_one({"_id": ObjectId(id)}))
+    return get_user(id)
 
 
-@user.put("/users/{id}")
-def update_user(id: str, user: User):
-    db_name.Users.find_one_and_update(
-        {"_id": ObjectId(id)}, {"$set": dict(user)})
-    return userEntity(db_name.Users.find_one({"_id": ObjectId(id)}))
+@user.put("/users/{id}", dependencies=[Depends(user_exist), Depends(user_update_validator)])
+def update_find__user(id: str, user: updateUser):
+    return update_user(id, user)
 
 
-@user.delete("/users/{id}")
-def delete_user(id: str):
-    userEntity(db_name.Users.find_one_and_delete(
-        {"_id": ObjectId(id)}))
-    return Response(status_code=HTTP_204_NO_CONTENT)
+@user.delete("/users/{id}", dependencies=[Depends(user_exist)])
+def delete_find_user(id: str):
+    return delete_user(id)
