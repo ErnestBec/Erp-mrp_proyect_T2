@@ -1,7 +1,7 @@
 def raw_materials(data):
     return {
         "_id": str(data["_id"]),
-        "raw_material": data["raw_material"],
+        "tipo": data["tipo"],
         "quantity": data["quantity"],
         "min_stock": data["min_stock"],
         "max_stock": data["max_stock"]

@@ -7,6 +7,7 @@ from models.requests_client_model import RequestsClient
 from models.user_model import userSession
 # Middlewares
 from middlewares.auth_middleware import Portador, protectedAcountAdmin
+from middlewares.request_client_middleware import exist_request_client
 # Controllers
 from controllers.requests_client_controller import new_request, get_request_month
 # routing requests
@@ -22,7 +23,7 @@ def new_request_route(request: RequestsClient):
 # Routes for Client
 
 
-@requests_client.post("/client/request", tags=["Client"], dependencies=[Depends(Portador())])
+@requests_client.post("/client/request", tags=["Client"], dependencies=[Depends(Portador()), Depends(exist_request_client)])
 def new_request_route(request: RequestsClient):
     return new_request(request)
 

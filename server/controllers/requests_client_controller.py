@@ -1,5 +1,6 @@
 from utils.db import db_name
 from fastapi.responses import JSONResponse
+from fastapi import Request, HTTPException
 import calendar
 from datetime import datetime
 # Schemas
@@ -11,6 +12,11 @@ from middlewares.productExist_middleware import product_ref
 
 def new_request(request):
     data_request = dict(request)
+    new_request = db_name.Request_Client.find_one(
+        {"num_ref_solicitud": data_request["num_ref_solicitud"]})
+    if new_request != None:
+        raise HTTPException(
+            detail=f"Ya existe una solicitud con referencia: {data_request['num_ref_solicitud']}, no puede modificar la solicitud!", status_code=400)
     date_request = datetime.now()
     data_request["client"] = user_email(data_request["client"])
     data_request["products"] = product_ref(data_request["products"])
