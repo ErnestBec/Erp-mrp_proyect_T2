@@ -8,7 +8,7 @@ from models.user_model import userSession
 # Middlewares
 from middlewares.auth_middleware import Portador, protectedAcountAdmin
 # Controllers
-from controllers.requests_client_controller import new_request
+from controllers.requests_client_controller import new_request, get_request_month
 # routing requests
 requests_client = APIRouter()
 
@@ -26,37 +26,25 @@ def new_request_route(request: RequestsClient):
 def new_request_route(request: RequestsClient):
     return new_request(request)
 
+# Routes generales
 
-@requests_client.get("client/requests", tags=["Client"])
+
+@requests_client.get("/requests", tags=["Client-Admin"], dependencies=[Depends(Portador())])
 def get_all_request_route():
-    return
+    return requestsClientEntity(db_name.Request_Client.find())
 
 
-@requests_client.get("/client/request/{status}", tags=["Client"])
-def get_request_status_route():
-    return
+@requests_client.get("/request/status/{status}", tags=["Client-Admin"], dependencies=[Depends(Portador())])
+def get_request_status_route(status: str):
+    return requestsClientEntity(db_name.Request_Client.find({"status": status}))
 
 
-@requests_client.get("/client/request/{date}", tags=["Client"])
-def get_request_date_route():
-    return
+@requests_client.get("/request/date/{month}", tags=["Client-Admin"], description="The month must be written in English and the first letter in capital letters", dependencies=[Depends(Portador())])
+def get_request_date_route(month: str):
+    return get_request_month(month)
 
 
 # Routes for Admin
-@requests_client.get("/admin/requests", tags=["Admin"])
-def get_all_request_route():
-    return
-
-
-@requests_client.get("/admin/request/{status}", tags=["Admin"])
-def get_request_status_route():
-    return
-
-
-@requests_client.get("/admin/request/{date}", tags=["Admin"])
-def get_request_date_route():
-    return
-
 
 @requests_client.put("/admin/request/{id}", tags=["Admin"])
 def update_status_request_route():

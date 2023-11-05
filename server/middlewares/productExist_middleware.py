@@ -27,9 +27,11 @@ def product_exist(request: Request):
 def product_ref(ref: list):
     products = []
     for ref_product in ref:
-        product = db_name.Products.find_one({"num_pieza": ref_product})
+        product = db_name.Products.find_one(
+            {"num_pieza": ref_product["product"]})
         product.pop("_id")
         product.pop("min_stock")
         product.pop("max_stock")
-        products.append(product)
+        products.append(
+            {ref_product["product"]: product, "quantyti": ref_product["quantity"]})
     return products

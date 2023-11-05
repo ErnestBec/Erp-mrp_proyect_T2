@@ -1,5 +1,7 @@
 from typing import Optional
 from pydantic import BaseModel
+
+
 class Prducto(BaseModel):
     _id: Optional[str]
     name: str
@@ -7,8 +9,10 @@ class Prducto(BaseModel):
     min_stock: int
     max_stock: int
     precio_uni: int
-    num_pieza: int
+    num_pieza: str
+    category: str
     cantidad: int
+
 
 class updatePrducto(BaseModel):
     _id: Optional[str]
@@ -17,6 +21,6 @@ class updatePrducto(BaseModel):
     min_stock: Optional[int]
     max_stock: Optional[int]
     precio_uni: Optional[int]
-    num_pieza: Optional[int]
+    num_pieza: Optional[str]
+    category: Optional[str]
     cantidad: Optional[int]
-    

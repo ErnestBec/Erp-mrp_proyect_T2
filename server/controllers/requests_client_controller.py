@@ -1,6 +1,6 @@
 from utils.db import db_name
 from fastapi.responses import JSONResponse
-from bson import ObjectId
+import calendar
 from datetime import datetime
 # Schemas
 from schemas.schema_client_request import requestClientEntity, requestsClientEntity, requestClientEntityInser
@@ -22,3 +22,18 @@ def new_request(request):
     id = db_name.Request_Client.insert_one(data_request).inserted_id
     request_inserted = db_name.Request_Client.find_one({"_id": id})
     return JSONResponse(content={"request": requestClientEntity(request_inserted), "status": "Success!"}, status_code=201)
+
+
+def get_request_month(month):
+
+    data = db_name.Request_Client.find()
+    list_request = []
+    for request in list(data):
+        dia, mes, año = map(int, request["date_req"].split("-"))
+        nombre_mes = calendar.month_name[mes]
+        if month == nombre_mes:
+            list_request.append(request)
+
+    return JSONResponse(content={"requests": requestsClientEntity(list_request), "status": "Succes!"}, status_code=201)
+
+# def verified_almacen():

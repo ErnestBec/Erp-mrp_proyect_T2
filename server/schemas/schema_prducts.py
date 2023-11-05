@@ -7,6 +7,7 @@ def productEntity(item) -> dict:
         "max_stock": item["max_stock"],
         "precio_uni": item["precio_uni"],
         "num_pieza": item["num_pieza"],
+        "category": item["category"],
         "cantidad": item["cantidad"]
     }
 
