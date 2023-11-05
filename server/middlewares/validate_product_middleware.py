@@ -41,11 +41,13 @@ async def product_update_validator(request: Request):
         errors.append("The descripcion cannot be empty")
     if not product["min_stock"]:
         errors.append("The min_stock cannot be empty")
-    elif product["min_stock"] >= 10:
+    elif product["min_stock"] <= 10:
         errors.append("Te min_stock cannot be 10")
     if not product["max_stock"]:
         errors.append("The max_stock cannot be empty")
-    elif product["max_stock"] <= 100 & product["max_stock"] > 10:
+    elif product["max_stock"] >= 100:
+        errors.append("Te max_stock the must be between 100 and 10")
+    elif product["max_stock"] < 10:
         errors.append("Te max_stock the must be between 100 and 10")
     if not product["precio_uni"]:
         errors.append("The precio_uni cannot be empty")
@@ -53,8 +55,6 @@ async def product_update_validator(request: Request):
         errors.append("Te precio_uni cannto be 0")
     if not product["num_pieza"]:
         errors.append("The num_pieza cannot be empty")
-    elif product["num_pieza"] < 0:
-        errors.append("Te num_pieza cannto be 0")
     if not product["cantidad"]:
         errors.append("The cantidad cannot be empty")
     elif product["cantidad"] < 0:
