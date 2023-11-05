@@ -24,6 +24,10 @@ def new_request(request):
     return JSONResponse(content={"request": requestClientEntity(request_inserted), "status": "Success!"}, status_code=201)
 
 
+def verified_almacen():
+    return
+
+
 def get_request_month(month):
 
     data = db_name.Request_Client.find()
@@ -35,5 +39,3 @@ def get_request_month(month):
             list_request.append(request)
 
     return JSONResponse(content={"requests": requestsClientEntity(list_request), "status": "Succes!"}, status_code=201)
-
-# def verified_almacen():

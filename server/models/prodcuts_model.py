@@ -10,6 +10,7 @@ class Prducto(BaseModel):
     max_stock: int
     precio_uni: int
     num_pieza: str
+    mp: list
     category: str
     cantidad: int
 
@@ -22,5 +23,6 @@ class updatePrducto(BaseModel):
     max_stock: Optional[int]
     precio_uni: Optional[int]
     num_pieza: Optional[str]
+    mp: Optional[list]
     category: Optional[str]
     cantidad: Optional[int]
