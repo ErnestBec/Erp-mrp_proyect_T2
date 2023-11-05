@@ -1,10 +1,12 @@
+# Libreries
 from fastapi import FastAPI
-# import uvicorn
 from fastapi import HTTPException
-from routes.routes_user import user
 from utils.appError_utils import http_error_handler, server_error_handler
 from dotenv import load_dotenv
+# Routes
+from routes.routes_user import user
 from routes.routes_products import product
+from routes.routes_client_request import requests_client
 
 
 app = FastAPI()
@@ -18,6 +20,7 @@ load_dotenv()
 # Routes
 app.include_router(user)
 app.include_router(product)
+app.include_router(requests_client)
 
 # if __name__ == "__main__":
 #     uvicorn.run(app, host="127.0.0.1", port=8001)

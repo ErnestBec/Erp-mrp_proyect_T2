@@ -20,38 +20,38 @@ user = APIRouter()
 # Token
 
 
-@user.post("/login")
+@user.post("/login", tags=["Login"])
 def login_user(user: loginUser):
     return login(dict(user))
 
 
-@user.get("/user_session")
+@user.get("/user_session", tags=["Client"])
 def get_user_session_route(user: loginUser = Depends(Portador())):
     return get_user_session(user)
 
 
-@user.put("/user/{id}", dependencies=[Depends(user_exist), Depends(user_update_validator)])
+@user.put("/user/{id}", tags=["Client"], dependencies=[Depends(user_exist), Depends(user_update_validator)])
 def update_find__user(id: str, user: updateUser, userSession=Depends(Portador())):
     return update_user(id, dict(user), userSession)
 
 # Routes for Administrators
 
 
-@user.get("/users", dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
+@user.get("/users", tags=["Admin"], dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
 def find_all_user():
     return usersEntity(db_name.Users.find())
 
 
-@user.post("/user", dependencies=[Depends(account_exist), Depends(user_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
+@user.post("/user", tags=["Admin"], dependencies=[Depends(account_exist), Depends(user_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
 def create_user_route(user: User):
     return create_user(user)
 
 
-@user.get("/users/{id}", dependencies=[Depends(user_exist), Depends(Portador()), Depends(protectedAcountAdmin)])
+@user.get("/users/{id}", tags=["Admin"], dependencies=[Depends(user_exist), Depends(Portador()), Depends(protectedAcountAdmin)])
 def find_user(id: str):
     return get_user(id)
 
 
-@user.delete("/user/{id}", dependencies=[Depends(user_exist), Depends(Portador())])
+@user.delete("/user/{id}", tags=["Admin"], dependencies=[Depends(user_exist), Depends(Portador())])
 def delete_find_user(id: str, user: loginUser = Depends(protectedAcountAdmin())):
     return delete_user(id, user)

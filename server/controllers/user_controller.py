@@ -4,7 +4,6 @@ from fastapi.responses import JSONResponse
 from passlib.hash import sha256_crypt
 from schemas.schema_user import userEntity, userEntityUpdate
 from bson import ObjectId
-from starlette.status import HTTP_204_NO_CONTENT, HTTP_201_CREATED
 from middlewares.auth_middleware import write_token
 
 

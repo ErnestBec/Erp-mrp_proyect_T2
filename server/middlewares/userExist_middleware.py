@@ -31,3 +31,13 @@ def user_exist(request: Request):
             status_code=404, detail="The user doest not exist!")
 
     return request
+
+
+def user_email(email: str):
+    user_req = db_name.Users.find_one(
+        {"email": email})
+    user_req.pop("_id")
+    user_req.pop("password")
+    user_req.pop("status")
+    user_req.pop("role")
+    return user_req

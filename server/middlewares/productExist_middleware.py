@@ -22,3 +22,14 @@ def product_exist(request: Request):
             status_code=404, detail="The product doest not exist!")
 
     return request
+
+
+def product_ref(ref: list):
+    products = []
+    for ref_product in ref:
+        product = db_name.Products.find_one({"num_pieza": ref_product})
+        product.pop("_id")
+        product.pop("min_stock")
+        product.pop("max_stock")
+        products.append(product)
+    return products

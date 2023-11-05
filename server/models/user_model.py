@@ -22,3 +22,11 @@ class updateUser(BaseModel):
 class loginUser(BaseModel):
     email: str
     password: str
+
+
+class userSession(BaseModel):
+    _id: Optional[str]
+    name: str
+    email: str
+    user: str
+    phone: int
