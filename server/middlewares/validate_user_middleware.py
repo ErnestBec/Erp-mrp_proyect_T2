@@ -24,7 +24,8 @@ async def user_validate_middleware(request: Request):
         errors.append("The phone number can only contain 10 digits")
     if user["role"] != "client":
         if user["role"] != "admin":
-            errors.append("The rol invalid")
+            if user["role"] != "proveedor":
+                errors.append("The rol invalid")
 
     if errors:
         raise HTTPException(status_code=400, detail=". ".join(errors))

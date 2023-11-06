@@ -32,6 +32,10 @@ def product_ref(ref: list):
         product.pop("_id")
         product.pop("min_stock")
         product.pop("max_stock")
+        product.pop("cantidad_prod")
+        product.pop("mp")
+        product.pop("lote_prod")
+        product.pop("lote_almacen")
         products.append(
             {ref_product["product"]: product, "quantyti": ref_product["quantity"]})
     return products

@@ -6,7 +6,6 @@ class User(BaseModel):
     _id: Optional[str]
     name: str
     email: str
-    user: str
     password: str
     phone: int
     role: str = "client"
@@ -28,5 +27,4 @@ class userSession(BaseModel):
     _id: Optional[str]
     name: str
     email: str
-    user: str
     phone: int

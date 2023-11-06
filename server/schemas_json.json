@@ -32,12 +32,18 @@
     "tiempo_estimado":60
 },
 {
-    "tabla":"Almancen",
+    "tabla":"Almancen Productos",
     "_id":"3456",
-    "tipo":"pzs_Terminadas",
     "quantity_total":1234,
     "pisos":[{"num_piso":"num","num_fila":"fila","rack":{"capacidad":123,"num_espacio":234}}],
     "products":[{"name_prod":"T3a.BasebandOro","quantity_prod":1234},{"name_prod":"T3a.BasebanPlata","quantity_prod":1234}]
+},
+{
+    "tabla":"Almancen Materia Prima",
+    "_id":"3456",
+    "quantity_total":1234,
+    "pisos":[{"num_piso":"num","num_fila":"fila","rack":{"capacidad":123,"num_espacio":234}}],
+    "raws_materials":[{"name_raw_material":"T3a.BasebandOro","quantity_raw_material":1234},{"name_raw_material":"T3a.BasebanPlata","quantity_raw_material":1234}]
 },
 {
     "tabla":"Compras_proveedor",
