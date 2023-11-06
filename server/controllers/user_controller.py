@@ -17,6 +17,7 @@ def create_user(user):
 
 def get_user(id):
     user = db_name.Users.find_one({"_id": ObjectId(id)})
+    print(user["_id"])
     return JSONResponse(content={"user": userEntity(user), "status": "Success!"}, status_code=201)
 
 

@@ -1,15 +1,15 @@
 def productEntity(item) -> dict:
     return {
         "id": str(item["_id"]),
-        "name": item["name"],
+        "name_prod": item["name_prod"],
         "Descripcion": item["Descripcion"],
         "min_stock": item["min_stock"],
         "max_stock": item["max_stock"],
         "precio_uni": item["precio_uni"],
         "num_pieza": item["num_pieza"],
         "mp": item["mp"],
-        "category": item["category"],
-        "cantidad": item["cantidad"]
+        "category_prod": item["category_prod"],
+        "cantidad_prod": item["cantidad_prod"]
     }
 
 
