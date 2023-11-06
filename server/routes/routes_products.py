@@ -16,7 +16,7 @@ product = APIRouter()
 
 @product.get("/product", tags=["Client"], dependencies=[Depends(Portador())])
 def find_all_user():
-    return productsEntity(db_name.Products.find())
+    return productsEntity(db_name.Products.find({},{Prducto._id:0,Prducto.name_prod:1,Prducto.Descripcion:1,Prducto.precio_uni:1,Prducto.cantidad_prod:1}).toArray())
 
 
 @product.get("/products/{id}", tags=["Client"], dependencies=[Depends(product_exist), Depends(Portador())])
@@ -24,6 +24,9 @@ def find_product(id: str):
     return get_prduct(id)
 
 # Endppoints User Admin
+@product.get("/product", tags=["Admin"], dependencies=[Depends(Portador()),Depends(protectedAcountAdmin())])
+def find_all_admin():
+    return productsEntity(db_name.Products.find().toArray())
 
 
 @product.post("/product", tags=["Admin"], dependencies=[Depends(product_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
