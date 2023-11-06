@@ -4,6 +4,7 @@ from components import nabvar_side, navbar_user, card_icome, card_tasks, card_pe
 
 @component
 def home_page():
+    
     bootstrap_css = html.link({
         "rel": "stylesheet",
         "href": "https://elpatronhh.github.io/portfolio/bootstrap.min.css"
@@ -41,8 +42,7 @@ def home_page():
             "href": "https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i",
             "rel": "stylesheet"
         }),
-
-    ),
+    )
     return html.div({
         "id": "page-top"
     },
