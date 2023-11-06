@@ -1,13 +1,35 @@
 from typing import Optional
 from pydantic import BaseModel
+from datetime import datetime
+
+class Lote_Prod(BaseModel):
+    fecha_prod: datetime
+    mat_prod: int
+
+class Rack(BaseModel):
+    capacidad:int
+    num_espacio:int
+
+class Piso(BaseModel):
+    num_piso:int
+    num_fila:int
+    rack:list[Rack]
 
 
+class Lote_Almacen(BaseModel):
+    tipo: str
+    quantity_products: int
+    piso:list[Piso]
+
+
+
+ 
 class MateriaPrima(BaseModel):
-    _id: Optional[str]
+    
     tipo: str
     quantity: int
-    min_stock: int
-    max_stock: int
+
+
 class Prducto(BaseModel):
     _id: Optional[str]
     name_prod: str
@@ -19,8 +41,8 @@ class Prducto(BaseModel):
     category_prod: str
     cantidad_prod: int
     mp: list[MateriaPrima]
-    lote_prod: list
-    lote_alamacen: list
+    lote_prod: list[Lote_Prod]
+    lote_alamacen: list[Lote_Almacen]
     class Config:
         orm_mode = True
 
