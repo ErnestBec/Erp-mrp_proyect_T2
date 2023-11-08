@@ -1,6 +1,7 @@
 from typing import Optional
 from pydantic import BaseModel
 from datetime import datetime
+from models.raw_materials_model import raw_materials
 
 class Lote_Prod(BaseModel):
     fecha_prod: datetime
@@ -23,13 +24,6 @@ class Lote_Almacen(BaseModel):
 
 
 
- 
-class MateriaPrima(BaseModel):
-    
-    tipo: str
-    quantity: int
-
-
 class Prducto(BaseModel):
     _id: Optional[str]
     name_prod: str
@@ -40,7 +34,7 @@ class Prducto(BaseModel):
     num_pieza: str
     category_prod: str
     cantidad_prod: int
-    mp: list[MateriaPrima]
+    mp: list[raw_materials]
     lote_prod: list[Lote_Prod]
     lote_alamacen: list[Lote_Almacen]
     class Config:
