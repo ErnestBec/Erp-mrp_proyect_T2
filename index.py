@@ -18,12 +18,8 @@ def App():
         route("/utillitiesAnimation", utilities_animation.utilities_animation()),
         route("/utilitiesColor", utilities_color.utilities_color()),
         route("/charts", charts.graficas()),
-<<<<<<< Updated upstream:index.py
-        route("*", error_page.error())
-=======
         route("/pruebastate", home_prueba.home_peueba()),
         route("*", error_page.error()),
->>>>>>> Stashed changes:public/index.py
 
     )
 
