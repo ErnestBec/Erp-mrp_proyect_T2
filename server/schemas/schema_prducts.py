@@ -9,31 +9,7 @@ def productEntity(item) -> dict:
         "num_pieza": item["num_pieza"],
         "category_prod": item["category_prod"],
         "cantidad_prod": item["catindad_prod"],
-        "mp":item[{
-            "tipo":item["tipo"],
-            "quantity":item["quantity"]
-        }
-        ],
-        "lote_prod": [{
-            "fecha":item["fecha"],
-            "mat_pro":item["mat_prod"]
-        }
-        ],
-        "lote_Almacen": [{
-            "tipo":item["tipo"],
-            "quantity":item["quantity"],
-            "piso":[{
-                "num_piso":item["num_piso"],
-                "num_fila":item["num_fila"],
-                "rack":[{
-                    "capacidad": item["capacidad"],
-                    "num_espcacio": item["num_espacio"]
-                }]
-
-            }]
-
-        }
-        ]
+        "mp":item["mp"]
 
 
     }
