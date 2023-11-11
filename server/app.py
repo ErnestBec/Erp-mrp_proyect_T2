@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from routes.routes_user import user
 from routes.routes_products import product
 from routes.routes_client_request import requests_client
+from routes.routes_cuentas_por_cobrar import cuentacobrar
 
 
 app = FastAPI()
@@ -21,6 +22,7 @@ load_dotenv()
 app.include_router(user)
 app.include_router(product)
 app.include_router(requests_client)
+app.include_router(cuentacobrar)
 
 # if __name__ == "__main__":
 #     uvicorn.run(app, host="127.0.0.1", port=8001)
