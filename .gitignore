@@ -1,6 +1,7 @@
 # Nombres de entornos virtuales
 frontend-tier-env
 venv
+t2-env
 # Carpetas de cache y vacias 
 __pycache__
 *.log
