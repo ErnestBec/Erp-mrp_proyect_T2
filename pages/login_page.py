@@ -1,136 +1,62 @@
-from reactpy import component, html
+from reactpy import component, html, hooks,use_state
 from reactpy_router import link
+import reactpy
+import json
 
+email=""
+passwd =""
+    
 
+def handle_prueba_submit(e):
+    elements = e['currentTarget']['elements']
+    for element in elements:
+        if element['tagName']!='INPUT':
+            del element
+    print("\n\n\n"+str(json.dumps(elements,indent=4))+"\n\n\n\n")
+    elements_l = elements.values()
+    print(str(elements_l))
 @component
 def login_user():
-    bootstrap_css = html.link({
-        "rel": "stylesheet",
-        "href": "https://elpatronhh.github.io/portfolio/bootstrap.min.css"
-    })
-    style_css = html.link({
-        "href": "https://elpatronhh.github.io/portfolio/sb-admin-2.min.css",
-        "rel": "stylesheet"
-    })
-    fontawesome = html.link({
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css",
-        "rel": "stylesheet",
-    })
-    head = html.div(
-        html.meta({
-            "charset": "utf-8"
-        }),
-        html.meta({
-            "http-equiv": "X-UA-Compatible",
-            "content": "IE=edge"
-        }),
-        html.meta({
-            "name": "viewport",
-            "content": "width=device-width, initial-scale=1, shrink-to-fit=no"
-        }),
-        html.meta({
-            "name": "description",
-            "content": ""
-        }),
-        html.meta({
-            "name": "author",
-            "content": ""
-        }),
-        html.title("PANEL ADMINISTRADOR"),
-        html.link({
-            "href": "https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i",
-            "rel": "stylesheet"
-        }),
-
-    ),
-
     return (
-        html.div({"class": "bg-gradient-primary", "style": {"height": "100vh"}},
-                 bootstrap_css,
-                 style_css,
-                 fontawesome,
-                 head,
-                 html.div({"class": "container"},
-                          html.div({"class": "row justify-content-center"},
-                                   html.div({"class": "col-xl-10 col-lg-12 col-md-9"},
-                                            html.div({"class": "card o-hidden border-0 shadow-lg my-5"},
-                                                     html.div({"class": "card-body p-0"},
-                                                              html.div({"class": "row"},
-                                                                       html.div(
-                                                                           {"class": "col-lg-6 d-none d-lg-block bg-login-image"},),
-                                                                       html.div({"class": "col-lg-6"},
-                                                                                html.div({"class": "p-5"},
-                                                                                         html.div({"class": "text-center"},
-                                                                                                  html.h1(
-                                                                                                      {"class": "h4 text-gray-900 mb-4"}, "Welcome Back!"),
-                                                                                                  ),
-                                                                                         html.form({"class": "user"},
-                                                                                                   html.div({"class": "form-group"},
-                                                                                                            html.input({"type": "email", "class": "form-control form-control-user", "id": "exampleInputEmail",
-                                                                                                                        "aria-describedby": "emailHelp",
-                                                                                                                        "placeholder": "Enter Email Address..."
-                                                                                                                        })
-                                                                                                            ),
-                                                                                         html.div({"class": "from-group"},
-                                                                                                  html.input({"type": "password", "class": "form-control form-control-user",
-                                                                                                              "id": "exampleInputPassword", "placeholder": "Password"
-                                                                                                              })
-                                                                                                  ),
-                                                                                         html.div({"class": "form-group"},
-                                                                                                  html.div({"class": "custom-control custom-checkbox small"},
-                                                                                                           html.input(
-                                                                                                               {"type": "checkbox", "class": "custom-control-input", "id": "customCheck"}),
-                                                                                                           html.label(
-                                                                                                               {"class": "custom-control-label", "for": "customCheck"}, "Remember Me")
-                                                                                                           ),
-                                                                                                  ),
-                                                                                         link(
-                                                                                             "Login", to="/", **{"class": "btn btn-primary btn-user btn-block"}),
-                                                                                         html.hr(),
-                                                                                         html.a({"href": "index.html", "class": "btn btn-google btn-user btn-block"},
-                                                                                                html.i(
-                                                                                             {"class": "fab fa-google fa-fw"}),
-                                                                                             "Login with Google"
+        html.div({"style":"background-color: #FAFCFD;height: 100vh;","class":"d-flex align-items-center"},
+                 html.div({"class": "container-fluid h-75"},
+                          html.div({"class":"row d-flex justify-content-center h-100"},
+                                   html.div({"style":"padding: 0px; border-radius: 24px;background-color: #FFFFFF;box-shadow: 1px 0px 12px 0px rgba(0,0,0,0.04);","class":"col-10 col-md-6 col-lg-5 col-xl-3 h-100"},
+                                            html.div({"style":"border-radius: 24px;","class":"container-fluid h-100"},
+                                                     html.div({"class":"row h-75","style":"background-color: white;border-top-right-radius: 24px;border-top-left-radius: 24px;"},
+                                                              html.div({"class":"col-12 pb-1 pt-3 pe-0 ps-0 pb-sm-2 pt-sm-4 pe-sm-2 ps-sm-2 pb-lg-3 pt-lg-5 pe-lg-4 ps-lg-4"},
+                                                                       html.div({"class": "h-100"},
+                                                                                html.div({"class":"w-100","style":"color: #47516B; font-size: 24px; font-family: Inter; font-weight: 800; line-height: 32px; word-wrap: break-word"},
+                                                                                         "Inicia sesión."
                                                                                          ),
-                                                                                         html.a({"href": "index.html", "class": "btn btn-facebook btn-user btn-block"},
-                                                                                                html.i(
-                                                                                             {"class": "fab fa-facebook-f fa-fw"}),
-                                                                                             "Login with Facebook"
-                                                                                         )
+                                                                                html.div({"class":"w-100 mb-4","style":"opacity: 0.60; color: #47516B; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word"},
+                                                                                         "Accede con tus credenciales."
                                                                                          ),
-                                                                                         html.hr(),
-                                                                                         html.div({"class": "text-center"},
-                                                                                                  html.a(
-                                                                                             {"class": "small", "href": "#"}, "Forgot Password?")
-                                                                                ),
-                                                                           html.div({"class": "text-center"},
-                                                                                    link("Create an Account!", to="/register",
-                                                                                         **{"class": "small", "href": "#"})
-                                                                                    )
+                                                                                html.form({"on_submit":handle_prueba_submit},
+                                                                                          html.div({"class":"form-group"},
+                                                                                                   html.label({"for":"exampleInputEmail1","style": "color: #556769; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16px; word-wrap: break-word"},"Correo electrónico*"),
+                                                                                                   html.input({"type":"email","class":"form-control","id":"exampleInputEmail1","aria-describedby":"emailHelp","placeholder":"correo@example.com","key":"mail1"})
+                                                                                                   ),
+                                                                                          html.div({"class":"form-group"},
+                                                                                                   html.label({"for":"exampleInputPassword1","style": "color: #556769; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16px; word-wrap: break-word"},"Contraseña"),
+                                                                                                   html.input({"type":"password","class":"form-control","id":"exampleInputPassword1","placeholder":"Ingresa contraseña"})
+                                                                                                   ),
+                                                                                          html.button({"type":"submit","class":"btn btn-dark col-12 mt-5"},"Iniciar Sesión")
+                                                                                          
+                                                                                          )
+                                                                                )
                                                                        )
+                                                              ),
+                                                     html.div({"class": "row h-25 ps-5 pe-5 pt-4 pb-4 flex-column justify-content-start align-items-start gap-2","style":"background-color: #E8E8E8;border-bottom-right-radius: 24px;border-bottom-left-radius: 24px;"},
+                                                              html.div({"style":"opacity: 0.70; color: #4D70A4; font-size: 12px; font-family: Inter; font-weight: 400; line-height: 16px; word-wrap: break-word"},
+                                                                       "©2023 ElectroniXpress. Todos los derechos reservados."
+                                                                       ),
+                                                              html.div({"style":"color: #181616; font-size: 12px; font-family: Inter; font-weight: 700; line-height: 16px; word-wrap: break-word"},
+                                                                       "Política de Privacidad.")
                                                               )
                                                      )
                                             )
                                    )
                           )
                  )
-        ),
-            html.script(
-                {"src": "https://elpatronhh.github.io/portfolio/startbootstrap-sb-admin-2-gh-pages/vendor/jquery/jquery.min.js"}),
-            html.script(
-                {"src": "https://elpatronhh.github.io/portfolio/startbootstrap-sb-admin-2-gh-pages/vendor/bootstrap/js/bootstrap.bundle.min.js"}),
-            html.script(
-                {"src": "https://elpatronhh.github.io/portfolio/startbootstrap-sb-admin-2-gh-pages/vendor/jquery-easing/jquery.easing.min.js"}),
-            html.script(
-                {"src": "https://elpatronhh.github.io/portfolio/startbootstrap-sb-admin-2-gh-pages/js/sb-admin-2.min.js"}),
-            html.script(
-                {"src": "https://elpatronhh.github.io/portfolio/startbootstrap-sb-admin-2-gh-pages/vendor/chart.js/Chart.min.js"}),
-            html.script(
-                {"src": "https://elpatronhh.github.io/portfolio/startbootstrap-sb-admin-2-gh-pages/js/demo/chart-area-demo.js"}),
-            html.script(
-                {"src": "https://elpatronhh.github.io/portfolio/startbootstrap-sb-admin-2-gh-pages/js/demo/chart-pie-demo.js"}),
-            html.script(
-                {"src": "https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.bundle.min.js"})
-
-        )
     )
