@@ -7,9 +7,11 @@ from starlette.status import HTTP_204_NO_CONTENT
 
 def create_prduct(product):
     new_product = dict(product)
+    print(new_product)
     id = db_name.Products.insert_one(new_product).inserted_id
-    user = db_name.Products.find_one({"_id": id})
-    return productEntity(user)
+    # user = db_name.Products.find_one({"_id": id})
+    # return productEntity(user)
+    return new_product
 
 
 def get_prduct(id):
