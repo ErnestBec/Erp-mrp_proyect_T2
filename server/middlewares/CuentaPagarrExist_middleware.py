@@ -13,7 +13,7 @@ def is_valid_cuentaPagart_id(id_str):
 
 def cuentas_Pagar_exist(request: Request):
     id = request.path_params.get("id")
-    if not is_valid_object_id(id):
+    if not is_valid_cuentaPagart_id(id):
         raise HTTPException(
             status_code=400, detail="The cuenta por pagar doest not exist!")
     user = db_name.CuentasPorPagar.find_one({"_id": ObjectId(id)})

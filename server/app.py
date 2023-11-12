@@ -10,6 +10,7 @@ from routes.routes_client_request import requests_client
 from routes.routes_cuentas_por_cobrar import cuentacobrar
 from routes.routes_cuentas_Pagar import cuentaPagar
 from routes.routes_recoleccion import recoleccion
+from routes.routes_OrderPrducc import OrdenProducc
 
 
 app = FastAPI()
@@ -27,6 +28,7 @@ app.include_router(requests_client)
 app.include_router(cuentacobrar)
 app.include_router(cuentaPagar)
 app.include_router(recoleccion)
+app.include_router(OrdenProducc)
 
 # if __name__ == "__main__":
 #     uvicorn.run(app, host="127.0.0.1", port=8001)
