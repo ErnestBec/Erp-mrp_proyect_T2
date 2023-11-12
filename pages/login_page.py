@@ -5,18 +5,12 @@ import json
 
 email=""
 passwd =""
-    
 
-def handle_prueba_submit(e):
-    elements = e['currentTarget']['elements']
-    for element in elements:
-        if element['tagName']!='INPUT':
-            del element
-    print("\n\n\n"+str(json.dumps(elements,indent=4))+"\n\n\n\n")
-    elements_l = elements.values()
-    print(str(elements_l))
+
 @component
 def login_user():
+    email,setEmail = reactpy.hooks.use_state("")
+    passwd,setPasswd=reactpy.hooks.use_state("")
     return (
         html.div({"style":"background-color: #FAFCFD;height: 100vh;","class":"d-flex align-items-center"},
                  html.div({"class": "container-fluid h-75"},
@@ -35,7 +29,7 @@ def login_user():
                                                                                 html.form({"on_submit":handle_prueba_submit},
                                                                                           html.div({"class":"form-group"},
                                                                                                    html.label({"for":"exampleInputEmail1","style": "color: #556769; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16px; word-wrap: break-word"},"Correo electrónico*"),
-                                                                                                   html.input({"type":"email","class":"form-control","id":"exampleInputEmail1","aria-describedby":"emailHelp","placeholder":"correo@example.com","key":"mail1"})
+                                                                                                   html.input({"type":"email","class":"form-control","id":"exampleInputEmail1","aria-describedby":"emailHelp","placeholder":"correo@example.com","key":"mail1","onChange":lambda event:print(str(event))})
                                                                                                    ),
                                                                                           html.div({"class":"form-group"},
                                                                                                    html.label({"for":"exampleInputPassword1","style": "color: #556769; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16px; word-wrap: break-word"},"Contraseña"),
