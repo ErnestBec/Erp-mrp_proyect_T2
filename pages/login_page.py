@@ -3,9 +3,8 @@ from reactpy_router import link
 import reactpy
 import json
 
-email=""
-passwd =""
-
+def btnSubmit(e,usr,pswd):
+    print("\n\n\nSubmit :D\nEmail:"+usr+"\nContraseña:"+pswd)    
 
 @component
 def login_user():
@@ -26,17 +25,16 @@ def login_user():
                                                                                 html.div({"class":"w-100 mb-4","style":"opacity: 0.60; color: #47516B; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word"},
                                                                                          "Accede con tus credenciales."
                                                                                          ),
-                                                                                html.form({"on_submit":handle_prueba_submit},
+                                                                                html.form({},
                                                                                           html.div({"class":"form-group"},
                                                                                                    html.label({"for":"exampleInputEmail1","style": "color: #556769; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16px; word-wrap: break-word"},"Correo electrónico*"),
-                                                                                                   html.input({"type":"email","class":"form-control","id":"exampleInputEmail1","aria-describedby":"emailHelp","placeholder":"correo@example.com","key":"mail1","onChange":lambda event:print(str(event))})
+                                                                                                   html.input({"type":"email","class":"form-control","id":"exampleInputEmail1","aria-describedby":"emailHelp","placeholder":"correo@example.com","key":"mail1","onChange":lambda event:setEmail(str(event['currentTarget']['value']))})
                                                                                                    ),
                                                                                           html.div({"class":"form-group"},
                                                                                                    html.label({"for":"exampleInputPassword1","style": "color: #556769; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16px; word-wrap: break-word"},"Contraseña"),
-                                                                                                   html.input({"type":"password","class":"form-control","id":"exampleInputPassword1","placeholder":"Ingresa contraseña"})
+                                                                                                   html.input({"type":"password","class":"form-control","id":"exampleInputPassword1","placeholder":"Ingresa contraseña","onChange":lambda event:setPasswd(str(event['currentTarget']['value']))})
                                                                                                    ),
-                                                                                          html.button({"type":"submit","class":"btn btn-dark col-12 mt-5"},"Iniciar Sesión")
-                                                                                          
+                                                                                          html.button({"type":"submit","class":"btn btn-dark col-12 mt-5","onClick":lambda event:btnSubmit(event,email,passwd)},"Iniciar Sesión")
                                                                                           )
                                                                                 )
                                                                        )
