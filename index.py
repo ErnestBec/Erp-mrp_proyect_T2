@@ -4,7 +4,7 @@ from reactpy.backend.fastapi import configure
 from reactpy_router import route, simple
 from pages import home_page, login_page, shopping, error_page, card_page, Tables_pages, utilities_others, charts, register, utilities_animation, utilities_color
 
-
+#
 @component
 def App():
     return simple.router(

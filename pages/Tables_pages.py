@@ -4,7 +4,7 @@ from reactpy_router import link
 from pages import home_page
 
 
-
+#
 @component
 def tablas():
         bootstrap_css = html.link({
