@@ -1,6 +1,6 @@
 from reactpy import component, html
 
-
+#
 @component
 def card_income(colo_rborder,income, cash, icon):
 
