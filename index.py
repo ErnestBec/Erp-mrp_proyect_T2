@@ -8,7 +8,7 @@ from pages import home_page, login_page, shopping, error_page, card_page, Tables
 @component
 def App():
     return simple.router(
-        route("/login", home_page.home_page()),
+        route("/dashboard", home_page.home_page()),
         route("/", login_page.login_user()),
         route("/register", register.register()),
         route("/shopping", shopping.shopping()),

@@ -11,13 +11,16 @@ def btnSubmit(e,mail,pswd):
     info = {"email": mail,"password": pswd}
     color ="#ff6161"
     result = ""
+    link = ""
     response = requests.post(url+"login",data=json.dumps(info))
     if response.status_code >=200 and response.status_code <300:
         color = "#98ff98"
-        result = response.json()['token']
+        #result = response.json()['token']
+        result = "Puede ingresar"
+        link = "/dashboard"
     else:
-        result = response
-    return html.p({"style":"color: "+color+";font-family: Inter;","class":"m-0 p-0"},str(result))
+        result = "Error"
+    return html.a({"style":"color: "+color+";font-family: Inter;","class":"m-0 p-0","href":str(link)},str(result))
     
 @component
 def login_user():
