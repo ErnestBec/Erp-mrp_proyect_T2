@@ -2,16 +2,32 @@ from reactpy import component, html, hooks,use_state
 from reactpy_router import link
 import reactpy
 import json
+import requests
 
-def btnSubmit(e,usr,pswd):
-    print("\n\n\nSubmit :D\nEmail:"+usr+"\nContraseña:"+pswd)    
+url = "http://127.0.0.1:8001/"
 
+def btnSubmit(e,mail,pswd):
+    print("\n\n\nSubmit :D\n\nEmail:"+str(mail)+"\nPasswd:"+str(pswd))
+    info = {"email": mail,"password": pswd}
+    color ="#ff6161"
+    result = ""
+    response = requests.post(url+"login",data=json.dumps(info))
+    if response.status_code >=200 and response.status_code <300:
+        color = "#98ff98"
+        result = response.json()['token']
+    else:
+        result = response
+    return html.p({"style":"color: "+color+";font-family: Inter;","class":"m-0 p-0"},str(result))
+    
 @component
 def login_user():
+    
     email,setEmail = reactpy.hooks.use_state("")
     passwd,setPasswd=reactpy.hooks.use_state("")
+    msj, setMsj = reactpy.hooks.use_state("")
     return (
         html.div({"style":"background-color: #FAFCFD;height: 100vh;","class":"d-flex align-items-center"},
+                 html.head(html.title('Login')),
                  html.div({"class": "container-fluid h-75"},
                           html.div({"class":"row d-flex justify-content-center h-100"},
                                    html.div({"style":"padding: 0px; border-radius: 24px;background-color: #FFFFFF;box-shadow: 1px 0px 12px 0px rgba(0,0,0,0.04);","class":"col-10 col-md-6 col-lg-5 col-xl-3 h-100"},
@@ -32,9 +48,10 @@ def login_user():
                                                                                                    ),
                                                                                           html.div({"class":"form-group"},
                                                                                                    html.label({"for":"exampleInputPassword1","style": "color: #556769; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16px; word-wrap: break-word"},"Contraseña"),
-                                                                                                   html.input({"type":"password","class":"form-control","id":"exampleInputPassword1","placeholder":"Ingresa contraseña","onChange":lambda event:setPasswd(str(event['currentTarget']['value']))})
+                                                                                                   html.input({"type":"password","class":"form-control mb-4","id":"exampleInputPassword1","placeholder":"Ingresa contraseña","onChange":lambda event:setPasswd(str(event['currentTarget']['value']))})
                                                                                                    ),
-                                                                                          html.button({"type":"submit","class":"btn btn-dark col-12 mt-5","onClick":lambda event:btnSubmit(event,email,passwd)},"Iniciar Sesión")
+                                                                                          msj,
+                                                                                          html.button({"type":"button","class":"btn btn-dark col-12","onClick":lambda event:setMsj(btnSubmit(event,email,passwd))},"Iniciar Sesión")
                                                                                           )
                                                                                 )
                                                                        )
