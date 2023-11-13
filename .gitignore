@@ -2,4 +2,4 @@
 frontend-tier-env/
 venv/
 __pycache__/
-
+server.log
