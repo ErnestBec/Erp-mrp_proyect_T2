@@ -4,7 +4,7 @@ import reactpy
 import json
 import requests
 
-url = "http://127.0.0.1:8001/"
+url = "tier2-pe.eastus.cloudapp.azure.com:8001/"
 
 def btnSubmit(e,mail,pswd):
     print("\n\n\nSubmit :D\n\nEmail:"+str(mail)+"\nPasswd:"+str(pswd))
