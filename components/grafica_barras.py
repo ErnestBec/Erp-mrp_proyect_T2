@@ -1,6 +1,6 @@
 from reactpy import component, html
 
-
+#
 @component
 def grafica_barras(id,width,heigth):
 

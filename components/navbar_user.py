@@ -1,7 +1,7 @@
 from reactpy import component, html
 from reactpy_router import link
 
-
+#
 @component
 def navbar_user():
     return (html.nav({"class": "navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"},
