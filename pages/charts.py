@@ -1,7 +1,7 @@
 from reactpy import html, component
 from components import nabvar_side, navbar_user, grafica_area, footer, grafica_barras, grafica_donas
 
-
+#
 @component
 def graficas():
     bootstrap_css = html.link({
