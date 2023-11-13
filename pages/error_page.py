@@ -2,7 +2,7 @@ from reactpy import component, html
 from components import nabvar_side, footer, navbar_user
 from reactpy_router import link
 from pymongo import MongoClient
-
+#
 # Provide the connection details
 hostname = 't2mdb.eastus.cloudapp.azure.com'
 port = 27017  # Default MongoDB port
