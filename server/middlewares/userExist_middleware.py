@@ -24,7 +24,7 @@ def user_exist(request: Request):
     id = request.path_params.get("id")
     if not is_valid_object_id(id):
         raise HTTPException(
-            status_code=400, detail="The user doest not exist!")
+            status_code=400, detail="The id id invalid!")
     user = db_name.Users.find_one({"_id": ObjectId(id)})
     if not user:
         raise HTTPException(

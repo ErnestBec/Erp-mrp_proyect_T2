@@ -30,12 +30,17 @@ def product_ref(ref: list):
         product = db_name.Products.find_one(
             {"num_pieza": ref_product["product"]})
         product.pop("_id")
+        product.pop("nam_prod")
+        product.pop("Descripcion")
         product.pop("min_stock")
         product.pop("max_stock")
+        product.pop("precio_uni")
+        product.pop("num_pieza")
+        product.pop("categoria_prod")
         product.pop("cantidad_prod")
         product.pop("mp")
-        product.pop("lote_prod")
-        product.pop("lote_almacen")
+    
         products.append(
             {ref_product["product"]: product, "quantyti": ref_product["quantity"]})
     return products
+

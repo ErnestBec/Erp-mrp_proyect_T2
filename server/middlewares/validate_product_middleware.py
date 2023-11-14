@@ -28,14 +28,17 @@ async def product_validate_middleware(request: Request):
         errors.append("The cantidad cannot be empty")
     elif product["cantidad_prod"] < 0:
         errors.append("Te cantidad cannto be 0")
+    if not product["mp"]:
+        errors.append("The mp cannot be empty")
     if errors:
         raise HTTPException(status_code=400, detail=". ".join(errors))
 
+ 
 
 async def product_update_validator(request: Request):
     errors = []
     product = await request.json()
-    if not product["name"]:
+    if not product["name_prod"]:
         errors.append("The name cannot be empty")
     if not product["Descripcion"]:
         errors.append("The descripcion cannot be empty")
@@ -55,9 +58,11 @@ async def product_update_validator(request: Request):
         errors.append("Te precio_uni cannto be 0")
     if not product["num_pieza"]:
         errors.append("The num_pieza cannot be empty")
-    if not product["cantidad"]:
+    if not product["cantidad_prod"]:
         errors.append("The cantidad cannot be empty")
-    elif product["cantidad"] < 0:
+    elif product["cantidad_prod"] < 0:
         errors.append("Te cantidad cannto be 0")
+    if not product["mp"]:
+        errors.append("The mp cannot be empty")
     if errors:
         raise HTTPException(status_code=400, detail=". ".join(errors))
