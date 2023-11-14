@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi import HTTPException
 from utils.appError_utils import http_error_handler, server_error_handler
 from dotenv import load_dotenv
+import uvicorn
 # Routes
 from routes.routes_user import user
 from routes.routes_products import product
@@ -23,6 +24,3 @@ app.include_router(user)
 app.include_router(product)
 app.include_router(requests_client)
 app.include_router(stocks)
-
-# if __name__ == "__main__":
-#     uvicorn.run(app, host="127.0.0.1", port=8001)

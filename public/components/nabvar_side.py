@@ -8,7 +8,7 @@ def navbar():
 
         # sidebar
         html.ul({
-            "class": "navbar-nav bg-gradient-primary sidebar sidebar-dark accordion",
+            "class": "navbar-nav  sidebar  accordion",
                      "id": "accordionSidebar"
         },
             # Sidebar - Brand
