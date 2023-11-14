@@ -28,7 +28,7 @@ def find_product(id: str):
 
 @product.get("/product", tags=["Admin"], dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
 def find_all_admin():
-    return productsEntity(db_name.Products.find().toArray())
+    return productsEntity(db_name.Products.find())
 
 
 @product.post("/product", tags=["Admin"], dependencies=[Depends(product_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])

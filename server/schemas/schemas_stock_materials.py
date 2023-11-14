@@ -12,7 +12,7 @@ def types_stocks(types_stocks):
 def stock_product(stock_product):
     return {
         "_id": str(stock_product["_id"]),
-        "type_stock": stock_product["type_stock"],
+        "id_type_stock": stock_product["id_type_stock"],
         "name_stock": stock_product["name_stock"],
         "date_update": stock_product["date_update"]
     }
@@ -30,7 +30,7 @@ def rack_stock(rack):
         "width_capacity": rack["width_capacity"],
         "high_capacity": rack["high_capacity"],
         "long_capacity": rack["long_capacity"],
-        "update_date": rack["update_date"]
+        "date_update": rack["date_update"]
     }
 
 
@@ -38,16 +38,16 @@ def racks_stock(racks):
     return [rack_stock(rack) for rack in racks]
 
 
-def floor_stock(floor):
+def floor_rack(floor):
     return {
         "_id": str(floor["_id"]),
         "id_rack": floor["id_rack"],
-        "no_rack": floor["no_rack"]
+        "no_floor": floor["no_floor"]
     }
 
 
 def floors_rack(floors):
-    return [floor_stock(floor) for floor in floors]
+    return [floor_rack(floor) for floor in floors]
 
 
 def row_rack(row):
