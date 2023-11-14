@@ -13,6 +13,7 @@ class Prducto(BaseModel):
     category_prod: str
     cantidad_prod: int
     mp: list[dict[str, int]]
+    id_space_stock: Optional[str]
 
 
 class updatePrducto(BaseModel):
@@ -25,4 +26,5 @@ class updatePrducto(BaseModel):
     num_pieza: Optional[str]
     category_prod: Optional[str]
     cantidad_prod: Optional[int]
-    mp: Optional[list]
+    mp: Optional[list[dict[str, int]]]
+    id_space_stock: Optional[str]
