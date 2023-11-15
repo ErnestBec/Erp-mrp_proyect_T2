@@ -9,16 +9,22 @@ from schemas.schema_client_request import requestClientEntity, requestsClientEnt
 from middlewares.userExist_middleware import user_email
 from middlewares.productExist_middleware import product_ref
 
+# _id: Optional[str]
+# status: Optional[str] = "pending"
+# client: dict
+# date_req: Optional[str]
+# products: List[products]
+# num_ref_solicitud: Optional[str]
+# date_approved: Optional[str]
+# date_delivery_expected: Optional[str]
+# date_delivery: Optional[str]
+
 
 def new_request(request):
     data_request = dict(request)
-    new_request = db_name.Request_Client.find_one(
-        {"num_ref_solicitud": data_request["num_ref_solicitud"]})
-    if new_request != None:
-        raise HTTPException(
-            detail=f"Ya existe una solicitud con referencia: {data_request['num_ref_solicitud']}, no puede modificar la solicitud!", status_code=400)
     date_request = datetime.now()
-    data_request["client"] = user_email(data_request["client"])
+    user_req = user_email(data_request["client"])
+    data_request["client"] = user_req
     data_request["products"] = product_ref(data_request["products"])
     date_request = date_request.strftime("%d-%m-%y")
     data_request.update({"date_req": date_request})
@@ -35,7 +41,6 @@ def verified_almacen():
 
 
 def get_request_month(month):
-
     data = db_name.Request_Client.find()
     list_request = []
     for request in list(data):

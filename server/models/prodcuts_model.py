@@ -16,7 +16,6 @@ class Prducto(BaseModel):
     max_stock: int
     precio_uni: int
     num_pieza: str
-    cantidad_prod: int
     mp: List[mp]
     time_production: str
 
@@ -29,6 +28,5 @@ class updatePrducto(BaseModel):
     max_stock: Optional[int]
     precio_uni: Optional[int]
     num_pieza: Optional[str]
-    cantidad_prod: Optional[int]
     mp: Optional[List[mp]]
     time_production: Optional[str]

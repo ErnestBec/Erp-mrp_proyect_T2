@@ -39,8 +39,7 @@ def product_ref(ref: list):
         product.pop("categoria_prod")
         product.pop("cantidad_prod")
         product.pop("mp")
-    
+
         products.append(
             {ref_product["product"]: product, "quantyti": ref_product["quantity"]})
     return products
-

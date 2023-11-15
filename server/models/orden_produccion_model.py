@@ -1,16 +1,18 @@
-from typing import Optional
+from typing import Optional, List
 from pydantic import BaseModel
 from datetime import datetime
+
+
+class product(BaseModel):
+    id_prod: str
+    quantity: int
 
 
 class Orden_Produccion(BaseModel):
     _id: Optional[str]
     fecha_alta: datetime
-    solicitud: int
-    producto: str
-    cantidad_fabri: int
-    id_pieza: int
-
+    products: List[product]
+    status: Optional[str] = "pending"
 
 
 class updateorden_Prduccion(BaseModel):
@@ -20,7 +22,3 @@ class updateorden_Prduccion(BaseModel):
     producto: Optional[str]
     cantidad_fabri: Optional[int]
     id_pieza: Optional[int]
-
-    
-
-   

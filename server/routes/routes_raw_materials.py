@@ -1,12 +1,13 @@
 from fastapi import APIRouter, Depends
-
+from controllers.row_materials_controller import create_rawMaterial
+from models.raw_materials_model import raw_materials
 
 raw_material = APIRouter()
 
 
 @raw_material.post("/rawmaterial")
-def new_raw_material_route():
-    return
+def new_raw_material_route(raw_material: raw_materials):
+    return create_rawMaterial(raw_material)
 
 
 @raw_material.get("/rawmaterials")

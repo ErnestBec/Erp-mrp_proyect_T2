@@ -1,5 +1,6 @@
 from utils.db import db_name
 from fastapi import Response, HTTPException
+from fastapi.responses import JSONResponse
 from schemas.schema_prducts import productEntity
 from bson import ObjectId
 from starlette.status import HTTP_204_NO_CONTENT
@@ -8,18 +9,21 @@ from middlewares.warehouse_middleware import is_valid_object_id
 
 def create_prduct(product):
     new_product = dict(product)
+    i = 0
     for mp in new_product["mp"]:
-        print()
         if not is_valid_object_id(mp.id_mp):
             raise HTTPException(
                 status_code=400, detail="The id of raw material is invalid!")
-        mp = db_name.RawMaterial.find_one({"_id": ObjectId(mp.id_mp)})
+        mp = db_name.RawMaterials.find_one({"_id": ObjectId(mp.id_mp)})
         if not mp:
             raise HTTPException(
                 status_code=404, detail="The raw material doest not exist!")
+
+        new_product["mp"][i] = dict(new_product["mp"][i])
+        i = +1
     id = db_name.Products.insert_one(new_product).inserted_id
     product = db_name.Products.find_one({"_id": id})
-    return productEntity(product)
+    return JSONResponse(content={"product": productEntity(product), "status": "Success!"}, status_code=201)
 
 
 def get_prduct(id):
