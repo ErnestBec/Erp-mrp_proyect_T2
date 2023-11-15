@@ -39,6 +39,6 @@ def update_find__ceuntacobrar(id: str, cuenta: updateCuenta_por_cobrar):
     return update_cuenta_por_cobrar(id, cuenta)
 
 
-@cuentacobrar.delete("/products/{id}", tags=["Admin"], dependencies=[Depends(cuentas_por_cobrar_exist), Depends(Portador()), Depends(protectedAcountAdmin())])
-def delete_find_product(id: str):
+@cuentacobrar.delete("/cuentapagr/{id}", tags=["Admin"], dependencies=[Depends(cuentas_por_cobrar_exist), Depends(Portador()), Depends(protectedAcountAdmin())])
+def delete_find_ceuntapgar(id: str):
     return delete_cuenta_por_cobrar(id)
