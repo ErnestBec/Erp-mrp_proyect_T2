@@ -8,10 +8,9 @@ def productEntity(item) -> dict:
         "precio_uni": item["precio_uni"],
         "num_pieza": item["num_pieza"],
         "category_prod": item["category_prod"],
-        "cantidad_prod": item["catindad_prod"],
-        "mp":item["mp"]
-
-
+        "cantidad_prod": item["cantidad_prod"],
+        "mp": item["mp"],
+        "id_space_stock": item["id_space_stock"]
     }
 
 

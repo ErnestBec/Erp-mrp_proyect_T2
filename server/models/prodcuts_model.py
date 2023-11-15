@@ -1,6 +1,7 @@
 from typing import Optional
 from pydantic import BaseModel
 
+
 class Prducto(BaseModel):
     _id: Optional[str]
     name_prod: str
@@ -11,7 +12,8 @@ class Prducto(BaseModel):
     num_pieza: str
     category_prod: str
     cantidad_prod: int
-    mp: str
+    mp: list[dict[str, int]]
+    id_space_stock: Optional[str]
 
 
 class updatePrducto(BaseModel):
@@ -24,8 +26,5 @@ class updatePrducto(BaseModel):
     num_pieza: Optional[str]
     category_prod: Optional[str]
     cantidad_prod: Optional[int]
-    mp: Optional[str]
- 
-    
-
-   
+    mp: Optional[list[dict[str, int]]]
+    id_space_stock: Optional[str]
