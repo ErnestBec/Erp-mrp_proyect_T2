@@ -9,3 +9,4 @@ pyjwt
 Name BD= Prueba_Tier2
 Collectiones DB
 Users
+version Paython = 3.12.0
