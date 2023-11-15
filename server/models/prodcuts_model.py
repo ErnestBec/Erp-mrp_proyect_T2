@@ -1,5 +1,11 @@
-from typing import Optional
+from typing import Optional, List
 from pydantic import BaseModel
+
+
+class mp(BaseModel):
+    id_mp: str
+    name_mp: str
+    quantyti: int
 
 
 class Prducto(BaseModel):
@@ -10,10 +16,9 @@ class Prducto(BaseModel):
     max_stock: int
     precio_uni: int
     num_pieza: str
-    category_prod: str
     cantidad_prod: int
-    mp: list[dict[str, int]]
-    id_space_stock: Optional[str]
+    mp: List[mp]
+    time_production: str
 
 
 class updatePrducto(BaseModel):
@@ -24,7 +29,6 @@ class updatePrducto(BaseModel):
     max_stock: Optional[int]
     precio_uni: Optional[int]
     num_pieza: Optional[str]
-    category_prod: Optional[str]
     cantidad_prod: Optional[int]
-    mp: Optional[list[dict[str, int]]]
-    id_space_stock: Optional[str]
+    mp: Optional[List[mp]]
+    time_production: Optional[str]
