@@ -4,7 +4,8 @@ def raw_materials(data):
         "tipo": data["tipo"],
         "quantity": data["quantity"],
         "min_stock": data["min_stock"],
-        "max_stock": data["max_stock"]
+        "max_stock": data["max_stock"],
+        "id_space_Rack": data["id_space_Rack"]
     }
 
 

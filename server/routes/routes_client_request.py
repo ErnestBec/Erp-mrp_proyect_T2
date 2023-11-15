@@ -8,6 +8,7 @@ from models.user_model import userSession
 # Middlewares
 from middlewares.auth_middleware import Portador, protectedAcountAdmin
 from middlewares.request_client_middleware import exist_request_client
+from middlewares.validate_request_client_middleware import request_client_validate_middleware
 # Controllers
 from controllers.requests_client_controller import new_request, get_request_month
 # routing requests
@@ -16,7 +17,7 @@ requests_client = APIRouter()
 
 # Ruta para insercion automatica
 
-@requests_client.post("/client/request/api", tags=["Client:API"])
+@requests_client.post("/client/request/api", tags=["Client:API"], dependencies=[Depends(request_client_validate_middleware)])
 def new_request_route(request: RequestsClient):
     return new_request(request)
 

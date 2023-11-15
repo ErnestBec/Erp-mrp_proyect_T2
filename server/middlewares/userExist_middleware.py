@@ -34,8 +34,11 @@ def user_exist(request: Request):
 
 
 def user_email(email: str):
+
     user_req = db_name.Users.find_one(
         {"email": email})
+    if not user_req:
+        return None
     user_req.pop("_id")
     user_req.pop("password")
     user_req.pop("status")
