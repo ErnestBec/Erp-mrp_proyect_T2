@@ -3,6 +3,21 @@ from fastapi import Request, HTTPException
 from bson import ObjectId
 
 
+async def create_rack_validator(request: Request):
+    errors = []
+    rack = await request.json()
+    if not rack["name_rack"]:
+        errors.append("The name rack is invalid!")
+    if not rack["width_capacity"]:
+        errors.append("The width capacity can´t be empty")
+    if not rack["high_capacity"]:
+        errors.append("The higth capacity can´t be empty")
+    if not rack["long_capacity"]:
+        errors.append("The long capacity can´t be empty")
+    if errors:
+        raise HTTPException(status_code=400, detail=". ".join(errors))
+
+
 def is_valid_object_id(id_str):
     try:
         ObjectId(id_str)

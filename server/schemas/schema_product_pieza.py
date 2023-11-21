@@ -1,6 +1,7 @@
 def product_pieza_schema(product_pieza) -> dict:
     return {
         "_id": str(product_pieza["_id"]),
+        "no_serie": product_pieza["no_serie"],
         "id_product": product_pieza["id_product"],
         "status": product_pieza["status"],
         "date": product_pieza["date"]

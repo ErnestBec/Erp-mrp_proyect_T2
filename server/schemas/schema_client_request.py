@@ -29,5 +29,3 @@ def requestClientEntityInser(data):
 
 def requestsClientEntity(request) -> list:
     return [requestClientEntity(data) for data in request]
- 
- 

@@ -5,11 +5,15 @@ from bson import ObjectId
 from starlette.status import HTTP_204_NO_CONTENT
 
 
-def create_cuenta_por_cobrar(ctp):
-    new_cuenta_pagar = dict(ctp)
-    id = db_name.CuentasPorCobrar.insert_one(new_cuenta_pagar).inserted_id
+def create_cuenta_por_cobrar(ctc):
+    new_cuenta_Cobrar = dict(ctc)
+    id = db_name.CuentasPorCobrar.insert_one(new_cuenta_Cobrar).inserted_id
     cuenta = db_name.CuentasPorCobrar.find_one({"_id": id})
-    return cuenta_por_cobrarEntity(cuenta)
+
+    if not cuenta:
+        return False
+    else:
+        return True
 
 
 def get_cuenta_por_cobrar(id):

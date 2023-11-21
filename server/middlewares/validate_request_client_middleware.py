@@ -9,7 +9,7 @@ async def request_client_validate_middleware(request: Request):
     request_client = await request.json()
     if not request_client["client"]:
         errors.append("The client cannot be empty")
-    user_req = user_email(request["client"])
+    user_req = user_email(request_client["client"])
     if user_req == None:
         errors.append("The entered user is not registred as a customer!")
     if not request_client["products"]:
