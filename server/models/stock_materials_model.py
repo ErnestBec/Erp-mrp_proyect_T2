@@ -28,17 +28,23 @@ class rackModel(BaseModel):
 class Floors(BaseModel):
     _id: Optional[str]
     id_rack: str
-    no_floor: int
 
 
 class Rows(BaseModel):
     _id: Optional[str]
     id_floor: str
-    no_row: int
 
 
 class SpaceRow(BaseModel):
     _id: str
     id_row: str
-    no_space: str
+    id_prod: str
     status: Optional[str] = "free"
+
+
+class product_pieza(BaseModel):
+    _id: Optional[str]
+    no_serie: str
+    id_product: str
+    status: str
+    date: datetime

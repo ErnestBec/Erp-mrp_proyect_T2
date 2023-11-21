@@ -2,8 +2,9 @@ from utils.db import db_name
 from bson import ObjectId
 from fastapi import HTTPException
 from fastapi.responses import JSONResponse
-from schemas.schemas_stock_materials import floor_rack, floors_rack, rack_stock, racks_stock, row_rack, rows_rack, space_row, spaces_row, stock_product, stocks_products, type_stock, types_stocks
+from schemas.schemas_stock_materials import rack_stock, stock_product, type_stock, spaces_row
 from middlewares.warehouse_middleware import is_valid_object_id
+from datetime import datetime, timedelta
 
 
 def create_warehouse_type(warehouse_type):
@@ -54,6 +55,9 @@ def create_rack(rack):
         raise HTTPException(
             status_code=404, detail="The warehouse doest not exist!")
     id = db_name.Racks.insert_one(new_rack).inserted_id
+    for i in range(0, new_rack["high_capacity"]):
+        create_floor(
+            {"id_rack": id, "long": new_rack["long_capacity"], "width_capacity": new_rack["width_capacity"]})
     new_rack = db_name.Racks.find_one({"_id": ObjectId(id)})
     new_rack["date_update"] = str(new_rack["date_update"])
     return JSONResponse(content={"warehouse_type": rack_stock(new_rack), "status": "Success!"}, status_code=201)
@@ -68,86 +72,58 @@ def delete_rack(id):
 
 def create_floor(floor):
     new_floor = dict(floor)
-    if not is_valid_object_id(new_floor["id_rack"]):
-        raise HTTPException(
-            status_code=400, detail="The id of rack invalid!")
-    rack = db_name.Racks.find_one(
-        {"_id": ObjectId(new_floor["id_rack"])})
-    if not rack:
-        raise HTTPException(
-            status_code=404, detail="The rack doest not exist!")
-    floors_used = db_name.Floors.count_documents(
-        {"id_rack": str(rack["_id"])})
-    print(floors_used)
-    if floors_used >= rack["high_capacity"]:
-        raise HTTPException(
-            detail="The selected rack does not have more floors available", status_code=404)
-    id = db_name.Floors.insert_one(new_floor).inserted_id
+    id = db_name.Floors.insert_one(
+        {"id_rack": new_floor["id_rack"]}).inserted_id
+    for i in range(0, new_floor["long"]):
+        create_row(
+            {"id_floor": id, "width_capacity": new_floor["width_capacity"]})
     new_floor = db_name.Floors.find_one({"_id": ObjectId(id)})
-    return JSONResponse(content={"warehouse_type": floor_rack(new_floor), "status": "Success!"}, status_code=201)
-
-
-def delete_floor(id):
-    db_name.Floors.delete_one({"_id": ObjectId(id)})
-    return JSONResponse(content={"status": "Delete Successfull"}, status_code=204)
-
-# Controllers Rows
 
 
 def create_row(row):
     new_row = dict(row)
-    if not is_valid_object_id(new_row["id_floor"]):
-        raise HTTPException(
-            status_code=400, detail="The id of floor invalid!")
-    floor = db_name.Floors.find_one(
-        {"_id": ObjectId(new_row["id_floor"])})
-    if not floor:
-        raise HTTPException(
-            status_code=404, detail="The floor doest not exist!")
-    rack = db_name.Racks.find_one({"_id": ObjectId(floor["id_rack"])})
-    rows_used = db_name.Rows.count_documents(
-        {"id_floor": str(floor["_id"])})
-    print(floor["_id"])
-    if rows_used >= rack["width_capacity"]:
-        raise HTTPException(
-            detail="The selected floor does not have more rows available", status_code=404)
-    id = db_name.Rows.insert_one(new_row).inserted_id
+    id = db_name.Rows.insert_one({"id_floor": new_row["id_floor"]}).inserted_id
+    for i in range(0, new_row["width_capacity"]):
+        create_space_row({"id_row": id})
     new_row = db_name.Rows.find_one({"_id": ObjectId(id)})
-    return JSONResponse(content={"warehouse_type": row_rack(new_row), "status": "Success!"}, status_code=201)
-
-
-def delete_row(id):
-    db_name.Rows.delete_one({"_id": ObjectId(id)})
-    return JSONResponse(content={"status": "Delete Successfull"}, status_code=204)
-
-# controllers space rows
 
 
 def create_space_row(space_row_req):
     new_space_row = dict(space_row_req)
-    if not is_valid_object_id(new_space_row["id_row"]):
-        raise HTTPException(
-            status_code=400, detail="The id of row invalid!")
-    row = db_name.Rows.find_one(
-        {"_id": ObjectId(new_space_row["id_row"])})
-    if not row:
-        raise HTTPException(
-            status_code=404, detail="The row doest not exist!")
-    floor = db_name.Floors.find_one({"_id": ObjectId(row["id_floor"])})
-    print(floor)
-    rack = db_name.Racks.find_one({"_id": ObjectId(floor["id_rack"])})
-    print(rack)
-    space_rows_used = db_name.SpaceRow.count_documents(
-        {"id_row": str(row["_id"])})
-    print(space_rows_used)
-    if space_rows_used >= rack["long_capacity"]:
-        raise HTTPException(
-            detail="The selected space row does not have more rows available", status_code=404)
-    id = db_name.SpaceRow.insert_one(new_space_row).inserted_id
+    id = db_name.SpaceRow.insert_one(
+        {"id_row": new_space_row["id_row"], "id_prod": "Null", "status": "free"}).inserted_id
     new_space_row = db_name.SpaceRow.find_one({"_id": ObjectId(id)})
-    return JSONResponse(content={"warehouse_type": space_row(new_space_row), "status": "Success!"}, status_code=201)
+    print(new_space_row)
 
 
-def delete_space_row(id):
-    db_name.SpaceRow.delete_one({"_id": ObjectId(id)})
-    return JSONResponse(content={"status": "Delete Successfull"}, status_code=204)
+def verified_almacen(products):
+    request_production = []
+    for product in products:
+        product = dict(product)
+        products_pzs = db_name.Product_Pza.count_documents(
+            {"$and": [{"id_product": product["id_pro"]}, {"status": "active"}]})
+        if int(product["quantity"]) > products_pzs:
+            print("No alcanta el producto:")
+            quantity_missing = product["quantity"]-products_pzs
+            request_production.append(
+                {"id_prod": product["id_pro"], "quantity_missing": quantity_missing})
+        else:
+            "Hola"
+    if len(request_production) == 0:
+        return datetime.now().strftime("%d-%m-%y")
+    else:
+        # Realizar peticion de produccion
+        fecha_actual = datetime.now()
+        nuevos_dias = 5
+        nueva_fecha = fecha_actual + timedelta(days=nuevos_dias)
+        return nueva_fecha.strftime("%d-%m-%y")
+
+
+def get_all_space_rack_status(query_status, id_prod):
+    if not is_valid_object_id(id_prod):
+        raise HTTPException(
+            status_code=400, detail="The id of tipe of rack invalid!")
+    spaces = db_name.SpaceRow.find(
+        {"$and": [{"status": query_status}, {"id_prod": id_prod}]})
+
+    return {"status": spaces_row(spaces)}

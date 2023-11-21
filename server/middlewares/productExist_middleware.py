@@ -27,19 +27,10 @@ def product_exist(request: Request):
 def product_ref(ref: list):
     products = []
     for ref_product in ref:
+        ref_product = dict(ref_product)
         product = db_name.Products.find_one(
-            {"num_pieza": ref_product["product"]})
-        product.pop("_id")
-        product.pop("nam_prod")
-        product.pop("Descripcion")
-        product.pop("min_stock")
-        product.pop("max_stock")
-        product.pop("precio_uni")
-        product.pop("num_pieza")
-        product.pop("categoria_prod")
-        product.pop("cantidad_prod")
-        product.pop("mp")
-
+            {"_id": ObjectId(ref_product["id_pro"])}, {"name_prod": 1, "_id": 1, "precio_uni": 1})
+        product["_id"] = str(product["_id"])
         products.append(
-            {ref_product["product"]: product, "quantyti": ref_product["quantity"]})
+            {"product": product, "quantyti": ref_product["quantity"]})
     return products

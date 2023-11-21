@@ -42,7 +42,6 @@ def floor_rack(floor):
     return {
         "_id": str(floor["_id"]),
         "id_rack": floor["id_rack"],
-        "no_floor": floor["no_floor"]
     }
 
 
@@ -65,8 +64,8 @@ def rows_rack(rows):
 def space_row(space):
     return {
         "_id": str(space["_id"]),
-        "id_row": space["id_row"],
-        "no_space": space["no_space"],
+        "id_row": str(space["id_row"]),
+        "id_prod": str(space["id_prod"]),
         "status": space["status"]
     }
 
