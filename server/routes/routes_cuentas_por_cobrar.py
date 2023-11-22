@@ -14,15 +14,6 @@ cuentacobrar = APIRouter()
 # Endppoints User Clients
 
 
-@cuentacobrar.get("/cuentacobrar", tags=["Client"], dependencies=[Depends(Portador())])
-def find_all_user():
-    return cuentas_por_cobrarEntity(db_name.CuentasPorCobrar.find().toArray())
-
-
-@cuentacobrar.get("/cuentacobrar/{id}", tags=["Client"], dependencies=[Depends(cuentas_por_cobrar_exist), Depends(Portador())])
-def find_product(id: str):
-    return get_cuenta_por_cobrar(id)
-
 # Endppoints User Admin
 @cuentacobrar.get("/cuentacobrar", tags=["Admin"], dependencies=[Depends(Portador()),Depends(protectedAcountAdmin())])
 def find_all_admin():

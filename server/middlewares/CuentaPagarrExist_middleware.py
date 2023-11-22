@@ -24,19 +24,3 @@ def cuentas_Pagar_exist(request: Request):
     return request
 
 
-def cuentaPagar_ref(ref: list):
-    cuentas = []
-    for ref_cuentas in ref:
-        cuenta = db_name.CuentasPorPagar.find_one(
-            {"total": ref_cuentas["cuenta"]})
-        cuenta.pop("_id")
-        cuenta.pop("proveedor")
-        cuenta.pop("solicitud")
-        cuenta.pop("importe")
-        cuenta.pop("total")
-        cuenta.pop("fecha_de_pago")
-    
-        cuentas.append(
-            {ref_cuentas["solictud"]: cuenta, "total": ref_cuentas["total"]})
-    return cuentas
-
