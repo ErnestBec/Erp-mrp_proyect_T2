@@ -46,12 +46,12 @@ def tablas():
             }),
 
         ),
-        return html.div(
+        return html.div(#Engloba toda la pagina
         bootstrap_css,
         style_css,
         fontawesome,
         head,
-        html.div({
+        html.div({#Engloba el contenido, lo que va dentro de la pagina
             "style": {
                 "display": "flex",
             },
@@ -61,12 +61,12 @@ def tablas():
             html.div({"style":{
                 "width":"100%"
             }, "id":"content-wrapper", "class" :"d-flex flex-column"},
-                html.div({"id":"content"},
+                html.div({"id":"content"},#Particiona la pagina
                     html.div(navbar_user.navbar_user()),
-                    html.div({"class":"container-fluid"},
+                    html.div({"class":"container-fluid"}, #Div de la tabla
                              #Page Heading
                              html.h1({"class":"h3 mb-2 text-gray-800"},"Tables"),
-                             html.p({"class":"mb-4"},"DataTables is a third party plugin that is used to generate the demo table below."),
+                             html.p({"class":"mb-4", },"DataTables is a third party plugin that is used to generate the demo table below."),
                              #Datables example
                              html.div({"class":"card sh adow mb-4"},
                                     html.div({"class":"card-header py-3"},

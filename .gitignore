@@ -1,5 +1,7 @@
 # Nombres de entornos virtuales
 frontend-tier-env/
-venv/
+env/
 __pycache__/
+
+
 
