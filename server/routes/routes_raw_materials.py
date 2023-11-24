@@ -15,21 +15,21 @@ def new_raw_material_route(raw_material: raw_materials):
     return create_rawMaterial(raw_material)
 
 
-@raw_material.get("/rawmaterials",tags=["Admin"], dependencies=[Depends(RowMaterial_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
+@raw_material.get("/rawmaterials",tags=["RowMaterials"], dependencies=[Depends(RowMaterial_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
 def get_all_raw_materials_route():
     return raws_materials(db_name.RawMaterials.find())
 
 
-@raw_material.get("/rawmaterial/{id}",tags=["Admin"], dependencies=[Depends(RowMaterial_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
+@raw_material.get("/rawmaterial/{id}",tags=["RowMaterials"], dependencies=[Depends(RowMaterial_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
 def get_raw_material_route(id:str):
     return get_rawMaterial(id)
 
 
-@raw_material.put("/rawmaterial/{id}",tags=["Admin"], dependencies=[Depends(RowMaterial_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
+@raw_material.put("/rawmaterial/{id}",tags=["RowMaterials"], dependencies=[Depends(RowMaterial_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
 def update_raw_material_route(id:str,raw: updateraw_materials):
     return update_rawMaterial(id,raw)
 
 
-@raw_material.delete("/rawmaterial/{id}",tags=["Admin"], dependencies=[Depends(RowMaterial_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
+@raw_material.delete("/rawmaterial/{id}",tags=["RowMaterials"], dependencies=[Depends(RowMaterial_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
 def delete_raw_material_route(id:str):
     return delete_rawMaterial(id)
