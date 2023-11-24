@@ -14,31 +14,22 @@ cuentacobrar = APIRouter()
 # Endppoints User Clients
 
 
-@cuentacobrar.get("/cuentacobrar", tags=["Client"], dependencies=[Depends(Portador())])
-def find_all_user():
-    return cuentas_por_cobrarEntity(db_name.CuentasPorCobrar.find().toArray())
-
-
-@cuentacobrar.get("/cuentacobrar/{id}", tags=["Client"], dependencies=[Depends(cuentas_por_cobrar_exist), Depends(Portador())])
-def find_product(id: str):
-    return get_cuenta_por_cobrar(id)
-
 # Endppoints User Admin
-@cuentacobrar.get("/cuentacobrar", tags=["Admin"], dependencies=[Depends(Portador()),Depends(protectedAcountAdmin())])
+@cuentacobrar.get("/cuentacobrar", tags=["Cuentas por cobrar"], dependencies=[Depends(Portador()),Depends(protectedAcountAdmin())])
 def find_all_admin():
     return cuentas_por_cobrarEntity(db_name.CuentasPorCobrar.find().toArray())
 
 
-@cuentacobrar.post("/cuentapagar", tags=["Admin"], dependencies=[Depends(ceuenta_por_cobrar_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
+@cuentacobrar.post("/cuentacobrar",  tags=["Cuentas por cobrar"], dependencies=[Depends(ceuenta_por_cobrar_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
 def create_product_route(cuenta, Cnta):
     return create_cuenta_por_cobrar(cuenta)
 
 
-@cuentacobrar.put("/cuentapagar/{id}", tags=["Admin"], dependencies=[Depends(cuentas_por_cobrar_exist), Depends(cuenta_por_cobrar_update_validator), Depends(Portador()), Depends(protectedAcountAdmin())])
+@cuentacobrar.put("/cuentacobrar/{id}",  tags=["Cuentas por cobrar"], dependencies=[Depends(cuentas_por_cobrar_exist), Depends(cuenta_por_cobrar_update_validator), Depends(Portador()), Depends(protectedAcountAdmin())])
 def update_find__ceuntacobrar(id: str, cuenta: updateCuenta_por_cobrar):
     return update_cuenta_por_cobrar(id, cuenta)
 
 
-@cuentacobrar.delete("/cuentapagr/{id}", tags=["Admin"], dependencies=[Depends(cuentas_por_cobrar_exist), Depends(Portador()), Depends(protectedAcountAdmin())])
+@cuentacobrar.delete("/cuentacobara/{id}",  tags=["Cuentas por cobrar"], dependencies=[Depends(cuentas_por_cobrar_exist), Depends(Portador()), Depends(protectedAcountAdmin())])
 def delete_find_ceuntapgar(id: str):
     return delete_cuenta_por_cobrar(id)
