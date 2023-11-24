@@ -1,7 +1,13 @@
 # Nombres de entornos virtuales
-frontend-tier-env/
-env/
-__pycache__/
-
-
-
+frontend-tier-env
+venv
+t2-env
+# Carpetas de cache y vacias 
+__pycache__
+*.log
+*.pot
+*.pyc
+env
+.env
+.pytest_cache
+>>>>>>> 6583187ecd24d42d0fdc817fba95594ae2a4d72f

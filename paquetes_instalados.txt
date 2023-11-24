@@ -1,3 +1,11 @@
 reactpy[fastapi]
 uvicorn[standard]
 reactpy_router
+python-dotenv
+pymongo
+passlib
+pyjwt
+
+Name BD= Prueba_Tier2
+Collectiones DB
+Users
