@@ -14,7 +14,7 @@ product = APIRouter()
 # Endppoints User Clients
 
 
-@product.get("/products", tags=["Client"], dependencies=[Depends(Portador())])
+@product.get("/products", tags=[""], dependencies=[Depends(Portador())])
 def find_all_user():
     return productsEntity(db_name.Products.find())
 

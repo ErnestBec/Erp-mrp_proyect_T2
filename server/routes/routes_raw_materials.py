@@ -10,7 +10,7 @@ from middlewares.auth_middleware import protectedAcountAdmin,Portador
 raw_material = APIRouter()
 
 #enpoints de Admin
-@raw_material.post("/rawmaterial", tags=["Admin"], dependencies=[Depends(RowMaterial_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
+@raw_material.post("/rawmaterial", tags=["RowMaterials"], dependencies=[Depends(RowMaterial_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
 def new_raw_material_route(raw_material: raw_materials):
     return create_rawMaterial(raw_material)
 
