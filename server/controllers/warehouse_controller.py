@@ -1,10 +1,16 @@
-from utils.db import db_name
+# Librerias
 from bson import ObjectId
 from fastapi import HTTPException
 from fastapi.responses import JSONResponse
-from schemas.schemas_stock_materials import rack_stock, stock_product, type_stock, spaces_row
-from middlewares.warehouse_middleware import is_valid_object_id
 from datetime import datetime, timedelta
+# Utils
+from utils.db import db_name
+# Schemas
+from schemas.schemas_stock_materials import rack_stock, stock_product, type_stock, spaces_row
+# Middlewares
+from middlewares.warehouse_middleware import is_valid_object_id
+# Controllers
+from controllers.cuentaPagar_controller import create_cuentaPagar
 
 
 def create_warehouse_type(warehouse_type):
@@ -103,13 +109,19 @@ def verified_almacen(products):
         products_pzs = db_name.Product_Pza.count_documents(
             {"$and": [{"id_product": product["id_pro"]}, {"status": "active"}]})
         if int(product["quantity"]) > products_pzs:
+            # Se hace el conteo de la cantidad de productos faltantes para mandar a producción
             print("No alcanta el producto:")
             quantity_missing = product["quantity"]-products_pzs
             request_production.append(
                 {"id_prod": product["id_pro"], "quantity_missing": quantity_missing})
-        else:
-            "Hola"
     if len(request_production) == 0:
+        # se ingresa a cuentas por pagar
+        # create_cuentaPagar(
+        #     {"fecha": datetime.now().strftime("%d-%m-%y"), "lugar": "Tier1", "id_cobro": 1413, "status": "pending"})
+        # Se ingresa a recolecciones solicitadas
+
+        # Se realiza la peticon a logistica para recoleccion
+
         return datetime.now().strftime("%d-%m-%y")
     else:
         # Realizar peticion de produccion
