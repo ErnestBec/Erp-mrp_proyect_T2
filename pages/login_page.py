@@ -4,11 +4,10 @@ import reactpy
 import json
 import requests
 #
-url = "tier2-pe.eastus.cloudapp.azure.com:8001/"
+url = "http://127.0.0.1:8001/"
 
 def btnSubmit(e,mail,pswd):
-    print("\n\n\nSubmit :D\n\nEmail:"+str(mail)+"\nPasswd:"+str(pswd))
-    info = {"email": mail,"password": pswd}
+    info = {"email": str(mail),"password": str(pswd)}
     color ="#ff6161"
     result = ""
     link = ""
@@ -16,6 +15,7 @@ def btnSubmit(e,mail,pswd):
     if response.status_code >=200 and response.status_code <300:
         color = "#98ff98"
         #result = response.json()['token']
+        print("token generado: "+str(response.json()['token']))
         result = "Puede ingresar"
         link = "/dashboard"
     else:
