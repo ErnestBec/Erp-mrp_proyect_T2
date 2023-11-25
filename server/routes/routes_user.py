@@ -10,6 +10,7 @@ from middlewares.userExist_middleware import account_exist, user_exist
 from middlewares.auth_middleware import Portador, protectedAcountAdmin
 # Controllers
 from controllers.user_controller import create_user, get_user, update_user, delete_user, login, get_user_session
+# nicializamos rutas
 user = APIRouter()
 
 # {
