@@ -19,7 +19,6 @@ def App():
         route("/utilitiesColor", utilities_color.utilities_color()),
         route("/charts", charts.graficas()),
         route("*", error_page.error()),
-
     )
 
 

@@ -44,6 +44,7 @@ def delete_user(id, user):
 def login(user):
     user_auth = db_name.Users.find_one(
         {"$and": [{"email": user["email"]}, {"status": "activate"}]})
+
     if not user_auth:
         raise HTTPException(status_code=400, detail="Credentials invalids!")
 

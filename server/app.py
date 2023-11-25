@@ -33,7 +33,6 @@ app.include_router(raw_material)
 app.include_router(cuentaPagar)
 app.include_router(recoleccion)
 app.include_router(OrdenProducc)
-
 app.include_router(stock_materials)
 
 
