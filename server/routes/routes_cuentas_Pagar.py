@@ -15,32 +15,23 @@ cuentaPagar = APIRouter()
 # Endppoints User Clients
 
 
-@cuentaPagar.get("/cuentapagar", tags=["Client"], dependencies=[Depends(Portador())])
-def find_all_user():
-    return cuentasPagarEntity(db_name.CuentasPorPagar.find().toArray())
-
-
-@cuentaPagar.get("/cuentapagar/{id}", tags=["Client"], dependencies=[Depends(cuentas_Pagar_exist), Depends(Portador())])
-def find_product(id: str):
-    return get_cuentaPagar(id)
-
 # Endppoints User Admin
-@cuentaPagar.get("/cuentapagar", tags=["Admin"], dependencies=[Depends(Portador()),Depends(protectedAcountAdmin())])
+@cuentaPagar.get("/cuentapagar", tags=["Cuentas Por Pagar"], dependencies=[Depends(Portador()),Depends(protectedAcountAdmin())])
 def find_all_admin():
     return cuentasPagarEntity(db_name.CuentasPorPagar.find().toArray())
 
 
-@cuentaPagar.post("/cuentapagar", tags=["Admin"], dependencies=[Depends(ceuenta_Pagar_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
+@cuentaPagar.post("/cuentapagar",  tags=["Cuentas Por Pagar"], dependencies=[Depends(ceuenta_Pagar_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
 def create_cuentaPagar(cuenta, CntaP):
     return create_cuentaPagar(cuenta)
 
 
 
-@cuentaPagar.put("/cuentapagar/{id}", tags=["Admin"], dependencies=[Depends(cuentas_Pagar_exist), Depends(cuenta_Pagar_update_validator), Depends(Portador()), Depends(protectedAcountAdmin())])
+@cuentaPagar.put("/cuentapagar/{id}", tags=["Cuentas Por Pagar"], dependencies=[Depends(cuentas_Pagar_exist), Depends(cuenta_Pagar_update_validator), Depends(Portador()), Depends(protectedAcountAdmin())])
 def update_find__cuentaPagar(id: str, cuenta: update_cuentaPagar):
     return update_cuentaPagar(id, cuenta)
 
 
-@cuentaPagar.delete("/cuentapagar/{id}", tags=["Admin"], dependencies=[Depends(cuentas_Pagar_exist), Depends(Portador()), Depends(protectedAcountAdmin())])
+@cuentaPagar.delete("/cuentapagar/{id}",  tags=["Cuentas Por Pagar"], dependencies=[Depends(cuentas_Pagar_exist), Depends(Portador()), Depends(protectedAcountAdmin())])
 def delete_find_cuentaPagar(id: str):
     return delete_cuentaPagar(id)
