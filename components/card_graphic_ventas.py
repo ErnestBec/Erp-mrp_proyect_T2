@@ -4,7 +4,7 @@ from reactpy_router import link
 
 
 @component
-def LinearChartComponent(canvaId:str,titles_x:str,title:str,charts:str):
+def linearChartComponent(canvaId:str,titles_x:str,title:str,charts:str):
     script =html.script("const ctx = document.getElementById('"+canvaId+"'); new Chart(ctx, { type: 'line', data: { labels: "+titles_x+", datasets: "+charts+"}});")
     return (
         html.div({"class": "col-xl-8 col-lg-7"},
