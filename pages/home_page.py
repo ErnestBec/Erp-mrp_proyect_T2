@@ -1,12 +1,31 @@
 from reactpy import html, component
 from components import nabvar_side, navbar_user, card_icome, card_tasks, card_pending_request, footer, card_graphic_ventas, card_graphic_round
-from components import chart
+from components import chart as classChart
+import random
 
 @component
 def home_page():
     chartTitle1 = "Some title"
     titles = ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr',  'May', 'Jun'] 
-    charts = [chart.newChart("silk",[15, 70, 55, 250, 320, 260, 250, 100, 150, 200, 300],"#F98600"),chart.newChart("cotton",[30, 250, 240, 200, 200, 430, 430, 500, 650, 390, 270, 850],"#00BA34")]
+    charts = []
+    arrayTemp =[]
+    
+    palabras_adj = ["Rojo", "Azul", "Verde", "Brillante", "Suave", "Rápido", "Silencioso", "Elegante"]
+    palabras_sust = ["León", "Montaña", "Río", "Estrella", "Cascada", "Árbol", "Globo", "Martillo"]
+    for i in range(random.randint(1, 7)):
+        adjetivo = random.choice(palabras_adj)
+        sustantivo = random.choice(palabras_sust)
+        nombre_aleatorio = f"{sustantivo} {adjetivo}"
+        r = random.randint(0, 255)
+        g = random.randint(0, 255)
+        b = random.randint(0, 255)
+        color_hex = "#{:02x}{:02x}{:02x}".format(r, g, b)
+        arrayTemp.clear()
+        for i in range(11):
+            arrayTemp.append(random.randint(1, 550))
+        charts.append(classChart.newChart(str(nombre_aleatorio),arrayTemp,str(color_hex)))
+    
+    
     strCharts = "["
     for i in charts:
         strCharts+=(i+",")
