@@ -104,8 +104,12 @@ def home_page():
 
     )
 def makeAChart(nombre_char:str):
+    lenght=random.randint(1, 30)
     chartTitle1 = "Some title"
-    titles = ['Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar', 'Apr',  'May', 'Jun'] 
+    titles = []
+    titles.clear
+    for i in range(lenght):
+        titles.append("t"+str((i+1)))
     charts = []
     arrayTemp =[]
     palabras_adj = ["Rojo", "Azul", "Verde", "Brillante", "Suave", "Rápido", "Silencioso", "Elegante"]
@@ -119,7 +123,7 @@ def makeAChart(nombre_char:str):
         b = random.randint(0, 255)
         color_hex = "#{:02x}{:02x}{:02x}".format(r, g, b)
         arrayTemp.clear()
-        for i in range(11):
+        for i in range(random.randint(1, lenght)):
             arrayTemp.append(random.randint(1, 550))
         charts.append(classChart.newChart(str(nombre_aleatorio),arrayTemp,str(color_hex)))
         strCharts = "["
