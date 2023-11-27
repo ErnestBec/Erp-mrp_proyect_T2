@@ -65,7 +65,7 @@ def space_row(space):
     return {
         "_id": str(space["_id"]),
         "id_row": str(space["id_row"]),
-        "id_prod": str(space["id_prod"]),
+        "id_prod_pz": str(space["id_prod_pz"]),
         "status": space["status"]
     }
 

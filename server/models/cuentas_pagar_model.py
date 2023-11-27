@@ -6,11 +6,9 @@ from datetime import datetime
 class Cuenta_Pagar(BaseModel):
     _id: Optional[str]
     proveedor: str
-    solicitud: int
     importe: int
-    total: int
     fecha_de_pago: datetime
-
+    status: str
 
 
 class updateCuentaPagar(BaseModel):
@@ -20,7 +18,3 @@ class updateCuentaPagar(BaseModel):
     importe: Optional[int]
     total: Optional[int]
     fecha_de_pago: Optional[datetime]
-
-    
-
-   

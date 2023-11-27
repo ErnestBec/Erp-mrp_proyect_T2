@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Depends
 from utils.db import db_name
 from bson import ObjectId
-from schemas.schemas_stock_materials import rack_stock, racks_stock, stock_product, stocks_products, type_stock, types_stocks
+from schemas.schemas_stock_materials import rack_stock, racks_stock, stock_product, stocks_products, type_stock, types_stocks, spaces_row
 from models.stock_materials_model import Floors, rackModel, Rows, SpaceRow, stock_products, typeStockModel, product_pieza
 from controllers.warehouse_controller import create_warehouse_type, delete_warehouse_type, create_warehouse, delete_warehouse, create_rack, delete_rack, get_all_space_rack_status
 from middlewares.warehouse_middleware import warehouse_exist, tpye_warehouse_exist, rack_exist, create_rack_validator
@@ -82,8 +82,16 @@ def get_all_space_rack_status_route(query_status: str = None, id_prod: str = Non
 # Prueba
 
 
-@stock_materials.post("/new_pza")
+@stock_materials.post("/new_pza", tags=["Pza_Product/Materia Prima"])
 def new_pza(pz: product_pieza):
     pieza = dict(pz)
     db_name.Product_Pza.insert_one(pieza)
     return {"status": "success!"}
+
+
+@stock_materials.get("/space_row")
+def get_all_space():
+    all_spaces = db_name.SpaceRow.find()
+    spaces = {}
+
+    return spaces_row(all_spaces)

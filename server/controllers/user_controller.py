@@ -46,13 +46,15 @@ def login(user):
         {"$and": [{"email": user["email"]}, {"status": "activate"}]})
 
     if not user_auth:
-        raise HTTPException(status_code=400, detail="Credentials invalids!")
+        return JSONResponse(status_code=400, content={
+            "status": "Credentials invalids!"})
 
     # valid Password
     password = sha256_crypt.verify(user["password"], user_auth["password"])
     user_auth["password"]
     if not password:
-        raise HTTPException(status_code=400, detail="Credentials invalids!")
+        return JSONResponse(status_code=400, content={
+            "status": "Credentials invalids!"})
 
     # Generate token
     token = write_token(user)
