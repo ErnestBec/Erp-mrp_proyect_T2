@@ -11,8 +11,10 @@ class product(BaseModel):
 class Orden_Produccion(BaseModel):
     _id: Optional[str]
     fecha_alta: datetime
+    fecha_terminate: datetime
     products: List[product]
     status: Optional[str] = "pending"
+    num_ref_solicitud: str
 
 
 class updateorden_Prduccion(BaseModel):

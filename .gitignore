@@ -8,5 +8,5 @@ __pycache__
 *.pot
 *.pyc
 env
-.env
+
 .pytest_cache

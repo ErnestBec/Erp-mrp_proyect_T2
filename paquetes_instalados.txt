@@ -5,8 +5,19 @@ python-dotenv
 pymongo
 passlib
 pyjwt
+httpx
 
 Name BD= Prueba_Tier2
 Collectiones DB
 Users
-version Paython = 3.12.0
+CuentasPorCobrar
+Floors
+Products_Pza
+Products
+Racks
+RawMaterials
+Request_Client
+Rows
+SpaceRow
+TypeWarehouse
+Warehouse

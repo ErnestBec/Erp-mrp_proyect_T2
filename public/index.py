@@ -19,8 +19,8 @@ def App():
         route("/utilitiesColor", utilities_color.utilities_color()),
         route("/charts", charts.graficas()),
         route("/orders", orders_page.order_page()),
+        route("/perfil", charts.graficas()),
         route("*", error_page.error()),
-
     )
 
 

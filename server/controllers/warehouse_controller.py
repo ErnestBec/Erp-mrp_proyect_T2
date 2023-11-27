@@ -3,6 +3,7 @@ from bson import ObjectId
 from fastapi import HTTPException
 from fastapi.responses import JSONResponse
 from datetime import datetime, timedelta
+<<<<<<< HEAD
 # Utils
 from utils.db import db_name
 # Schemas
@@ -11,6 +12,10 @@ from schemas.schemas_stock_materials import rack_stock, stock_product, type_stoc
 from middlewares.warehouse_middleware import is_valid_object_id
 # Controllers
 from controllers.cuentaPagar_controller import create_cuentaPagar
+=======
+import httpx
+import os
+>>>>>>> 19f4bda804916c736d9ecfb83a3134795bdd908b
 
 
 def create_warehouse_type(warehouse_type):
@@ -97,12 +102,12 @@ def create_row(row):
 def create_space_row(space_row_req):
     new_space_row = dict(space_row_req)
     id = db_name.SpaceRow.insert_one(
-        {"id_row": new_space_row["id_row"], "id_prod": "Null", "status": "free"}).inserted_id
+        {"id_row": new_space_row["id_row"], "id_prod_pz": "Null", "status": "free"}).inserted_id
     new_space_row = db_name.SpaceRow.find_one({"_id": ObjectId(id)})
     print(new_space_row)
 
 
-def verified_almacen(products):
+def verified_almacen(products, num_ref):
     request_production = []
     for product in products:
         product = dict(product)
@@ -114,6 +119,7 @@ def verified_almacen(products):
             quantity_missing = product["quantity"]-products_pzs
             request_production.append(
                 {"id_prod": product["id_pro"], "quantity_missing": quantity_missing})
+<<<<<<< HEAD
     if len(request_production) == 0:
         # se ingresa a cuentas por pagar
         # create_cuentaPagar(
@@ -123,12 +129,53 @@ def verified_almacen(products):
         # Se realiza la peticon a logistica para recoleccion
 
         return datetime.now().strftime("%d-%m-%y")
+=======
+
+    if len(request_production) == 0:
+        # Descontamos products de Almacen
+        discount_products(products)
+        # Hacemos peticion de entrega a logistica
+        date_delivery = request_logistics(products)
+        return date_delivery
+>>>>>>> 19f4bda804916c736d9ecfb83a3134795bdd908b
     else:
         # Realizar peticion de produccion
+        generate_Production(request_production, num_ref)
         fecha_actual = datetime.now()
         nuevos_dias = 5
         nueva_fecha = fecha_actual + timedelta(days=nuevos_dias)
         return nueva_fecha.strftime("%d-%m-%y")
+
+
+def discount_products(products):
+    for product in products:
+        product = dict(product)
+        products_pzs = db_name.Product_Pza.find(
+            {"$and": [{"id_product": product["id_pro"]}, {"status": "active"}]})
+        quantity = product["quantity"]
+        products_pzs = list(products_pzs)
+        for discount in range(quantity):
+            id_prod_pz = products_pzs[discount]
+            print(discount)
+            print(id_prod_pz["_id"])
+            db_name.Product_Pza.update_one(
+                {"_id": id_prod_pz["_id"]}, {"$set": {"status": "sold"}})
+            db_name.SpaceRow.update_one({"id_prod_pz": str(id_prod_pz["_id"])}, {
+                                        "$set": {"status": "free", "id_prod_pz": "Null"}})
+
+
+def request_logistics(products):
+
+    # Generamos los datos de la peticion que necesita logistica
+    # with httpx.Client() as client:
+    #     headers = {"Authorization": 123123}
+    #     response = client.post(os.getenv("URL_LOGISTICA"), headers=headers)
+    # Logistica me regresa costo de recoleccion, dia de entrega a tier1
+    id_pago = db_name.CuentasPagar.insert_one(
+        {"proveedor": "Logistica", "importe": 4564, "fecha_pago": datetime.now().strftime("%d-%m-%y"), "status": "pending"}).inserted_id
+    db_name.Recolections.insert_one(
+        {"fecha_recolection": datetime.now().strftime("%d-%m-%y"), "id_pago": id_pago, "status": "pending"})
+    return datetime.now().strftime("%d-%m-%y")
 
 
 def get_all_space_rack_status(query_status, id_prod):
@@ -139,3 +186,37 @@ def get_all_space_rack_status(query_status, id_prod):
         {"$and": [{"status": query_status}, {"id_prod": id_prod}]})
 
     return {"status": spaces_row(spaces)}
+
+
+def generate_Production(request_production, num_ref):
+    # Verificamos la existencia de materia Prima
+    date_alta = verified_mp(request_production)
+    # Si alcanza procedemos a Mandar a Produccion
+    # Verificamos si tenemos una solicitud Pendiente y que no sea para otra Peticion
+    # Si no lacanza Hacemos peticion a T3 para solicictar MP
+    data_production = {"fecha_alta": datetime.now().strftime(
+        "%d-%m-%y"), "products": request_production, "status": "pending"}
+    db_name.OrderProduction.insert_one(data_production)
+    return datetime.now().strftime("%d-%m-%y")
+
+
+def verified_mp(products):
+    request_mp = []
+    for product in products:
+        product_mp = db_name.Products.find_one(
+            {"_id": ObjectId(product["id_prod"])})
+        for mp in product_mp["mp"]:
+            print(mp["id_mp"])
+            wareHouse_mp = db_name.Product_Pza.count_documents(
+                {"id_product": mp["id_mp"]})
+            # print(mp["quantyti"])
+            if mp["quantyti"] > wareHouse_mp:
+                print(int(mp["quantyti"])-int(wareHouse_mp))
+
+                print(wareHouse_mp)
+                request_mp.append(mp)
+                print("No hay mp disponible")
+            else:
+                print("Si hay mp")
+            # print(request_mp)
+    return

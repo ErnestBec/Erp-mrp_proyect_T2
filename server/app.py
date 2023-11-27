@@ -4,6 +4,7 @@ from fastapi import HTTPException
 from utils.appError_utils import http_error_handler, server_error_handler
 from dotenv import load_dotenv
 import uvicorn
+from fastapi.middleware.cors import CORSMiddleware
 # Routes
 from routes.routes_user import user
 from routes.routes_products import product
@@ -25,6 +26,18 @@ app.add_exception_handler(Exception, server_error_handler)
 # load env
 load_dotenv()
 
+# Permitir las cors
+app.add_middleware(
+    CORSMiddleware,
+    # Puedes especificar los orígenes permitidos en lugar de "*"
+    allow_origins=["*"],
+    allow_credentials=True,
+    # Puedes especificar los métodos permitidos (por ejemplo, ["GET", "POST"])
+    allow_methods=["*"],
+    # Puedes especificar los encabezados permitidos (por ejemplo, ["Content-Type"])
+    allow_headers=["*"],
+)
+
 # Routes
 app.include_router(user)
 app.include_router(product)
@@ -34,7 +47,6 @@ app.include_router(raw_material)
 app.include_router(cuentaPagar)
 app.include_router(recoleccion)
 app.include_router(OrdenProducc)
-
 app.include_router(stock_materials)
 
 
