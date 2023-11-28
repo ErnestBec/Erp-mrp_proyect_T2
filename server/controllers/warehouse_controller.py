@@ -15,7 +15,6 @@ import httpx
 import os
 
 
-
 def create_warehouse_type(warehouse_type):
     new_warehouse_type = dict(warehouse_type)
     id = db_name.TypeWarehouse.insert_one(new_warehouse_type).inserted_id
@@ -197,16 +196,16 @@ def verified_mp(products):
             {"_id": ObjectId(product["id_prod"])})
         for mp in product_mp["mp"]:
             print(mp["id_mp"])
-            wareHouse_mp = db_name.Product_Pza.count_documents(
+            wareHouse_mp = db_name.Products_Pza.count_documents(
                 {"id_product": mp["id_mp"]})
             # print(mp["quantyti"])
             if mp["quantyti"] > wareHouse_mp:
                 print(int(mp["quantyti"])-int(wareHouse_mp))
-
                 print(wareHouse_mp)
                 request_mp.append(mp)
                 print("No hay mp disponible")
             else:
                 print("Si hay mp")
             # print(request_mp)
+    print(request_mp)
     return
