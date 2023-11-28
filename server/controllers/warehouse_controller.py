@@ -3,7 +3,6 @@ from bson import ObjectId
 from fastapi import HTTPException
 from fastapi.responses import JSONResponse
 from datetime import datetime, timedelta
-<<<<<<< HEAD
 # Utils
 from utils.db import db_name
 # Schemas
@@ -12,10 +11,9 @@ from schemas.schemas_stock_materials import rack_stock, stock_product, type_stoc
 from middlewares.warehouse_middleware import is_valid_object_id
 # Controllers
 from controllers.cuentaPagar_controller import create_cuentaPagar
-=======
 import httpx
 import os
->>>>>>> 19f4bda804916c736d9ecfb83a3134795bdd908b
+
 
 
 def create_warehouse_type(warehouse_type):
@@ -119,7 +117,7 @@ def verified_almacen(products, num_ref):
             quantity_missing = product["quantity"]-products_pzs
             request_production.append(
                 {"id_prod": product["id_pro"], "quantity_missing": quantity_missing})
-<<<<<<< HEAD
+
     if len(request_production) == 0:
         # se ingresa a cuentas por pagar
         # create_cuentaPagar(
@@ -129,15 +127,7 @@ def verified_almacen(products, num_ref):
         # Se realiza la peticon a logistica para recoleccion
 
         return datetime.now().strftime("%d-%m-%y")
-=======
 
-    if len(request_production) == 0:
-        # Descontamos products de Almacen
-        discount_products(products)
-        # Hacemos peticion de entrega a logistica
-        date_delivery = request_logistics(products)
-        return date_delivery
->>>>>>> 19f4bda804916c736d9ecfb83a3134795bdd908b
     else:
         # Realizar peticion de produccion
         generate_Production(request_production, num_ref)
