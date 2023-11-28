@@ -183,7 +183,6 @@ def generate_Production(request_production, num_ref):
     date_alta = verified_mp(request_production)
     # Si alcanza procedemos a Mandar a Produccion
     # Verificamos si tenemos una solicitud Pendiente y que no sea para otra Peticion
-    # Si no lacanza Hacemos peticion a T3 para solicictar MP
     data_production = {"fecha_alta": datetime.now().strftime(
         "%d-%m-%y"), "products": request_production, "status": "pending"}
     db_name.OrderProduction.insert_one(data_production)
@@ -196,17 +195,29 @@ def verified_mp(products):
         product_mp = db_name.Products.find_one(
             {"_id": ObjectId(product["id_prod"])})
         for mp in product_mp["mp"]:
-            print(mp["id_mp"])
             wareHouse_mp = db_name.Product_Pza.count_documents(
                 {"id_product": mp["id_mp"]})
             # print(mp["quantyti"])
             if mp["quantyti"] > wareHouse_mp:
                 print(int(mp["quantyti"])-int(wareHouse_mp))
-
-                print(wareHouse_mp)
                 request_mp.append(mp)
                 print("No hay mp disponible")
-            else:
-                print("Si hay mp")
-            # print(request_mp)
+    if len(request_mp)==0:
+        return datetime.now().strftime("%d-%m-%y")
+    else :
+        # Si no lacanza Hacemos peticion a T3 para solicictar MP
+        return 
     return
+
+def request_proveedor():
+    # Generamos los datos de la peticion que necesita logistica
+    # with httpx.Client() as client:
+    #     headers = {"Authorization": 123123}
+    #     response = client.post(os.getenv("URL_LOGISTICA"), headers=headers)
+    # Logistica me regresa costo de recoleccion, dia de entrega a tier1
+    id_pago = db_name.CuentasPagar.insert_one(
+        {"proveedor": "Logistica", "importe": 4564, "fecha_pago": datetime.now().strftime("%d-%m-%y"), "status": "pending"}).inserted_id
+    db_name.Recolections.insert_one(
+        {"fecha_recolection": datetime.now().strftime("%d-%m-%y"), "id_pago": id_pago, "status": "pending"})
+    date_deliverly=datetime.now().strftime("%d-%m-%y")
+    return date_deliverly
