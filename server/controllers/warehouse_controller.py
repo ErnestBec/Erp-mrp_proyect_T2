@@ -109,7 +109,7 @@ def verified_almacen(products, num_ref):
     request_production = []
     for product in products:
         product = dict(product)
-        products_pzs = db_name.Product_Pza.count_documents(
+        products_pzs = db_name.Products_Pza.count_documents(
             {"$and": [{"id_product": product["id_pro"]}, {"status": "active"}]})
         if int(product["quantity"]) > products_pzs:
             # Se hace el conteo de la cantidad de productos faltantes para mandar a producción
@@ -180,7 +180,7 @@ def get_all_space_rack_status(query_status, id_prod):
 
 def generate_Production(request_production, num_ref):
     # Verificamos la existencia de materia Prima
-    date_alta = verified_mp(request_production)
+    date_alta = verified_mp(request_production, num_ref)
     # Si alcanza procedemos a Mandar a Produccion
     # Verificamos si tenemos una solicitud Pendiente y que no sea para otra Peticion
     data_production = {"fecha_alta": datetime.now().strftime(
@@ -189,7 +189,7 @@ def generate_Production(request_production, num_ref):
     return datetime.now().strftime("%d-%m-%y")
 
 
-def verified_mp(products):
+def verified_mp(products , num_ref):
     request_mp = []
     for product in products:
         product_mp = db_name.Products.find_one(
@@ -200,24 +200,26 @@ def verified_mp(products):
             # print(mp["quantyti"])
             if mp["quantyti"] > wareHouse_mp:
                 print(int(mp["quantyti"])-int(wareHouse_mp))
-                request_mp.append(mp)
+                request_mp.append({"id_mp":mp["id_mp"], "order_quantity":int(mp["quantyti"])-int(wareHouse_mp)})
                 print("No hay mp disponible")
     if len(request_mp)==0:
+        print("Si hay mp")
         return datetime.now().strftime("%d-%m-%y")
-    else :
-        # Si no lacanza Hacemos peticion a T3 para solicictar MP
-        return 
-    return
+ 
+    # Si no lacanza Hacemos peticion a T3 para solicictar MP
+    date_deliverly = request_proveedor(request_mp, num_ref)
+    return date_deliverly
+    
 
-def request_proveedor():
+def request_proveedor(mp, num_ref):
     # Generamos los datos de la peticion que necesita logistica
     # with httpx.Client() as client:
     #     headers = {"Authorization": 123123}
     #     response = client.post(os.getenv("URL_LOGISTICA"), headers=headers)
     # Logistica me regresa costo de recoleccion, dia de entrega a tier1
     id_pago = db_name.CuentasPagar.insert_one(
-        {"proveedor": "Logistica", "importe": 4564, "fecha_pago": datetime.now().strftime("%d-%m-%y"), "status": "pending"}).inserted_id
-    db_name.Recolections.insert_one(
-        {"fecha_recolection": datetime.now().strftime("%d-%m-%y"), "id_pago": id_pago, "status": "pending"})
+        {"proveedor": "Tier3", "importe": 4564, "fecha_pago": datetime.now().strftime("%d-%m-%y"), "status": "pending"}).inserted_id
+    db_name.Request_Supplier.insert_one(
+        {"fecha_peticion": datetime.now().strftime("%d-%m-%y"), "id_pago": id_pago,"num_ref_request":num_ref, "status": "pending", "list_mp":mp})
     date_deliverly=datetime.now().strftime("%d-%m-%y")
     return date_deliverly
