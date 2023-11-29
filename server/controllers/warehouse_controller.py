@@ -106,10 +106,12 @@ def create_space_row(space_row_req):
 
 def verified_almacen(products, num_ref):
     request_production = []
+    # Validamos almacen de productos terminados
     for product in products:
         product = dict(product)
         products_pzs = db_name.Products_Pza.count_documents(
             {"$and": [{"id_product": product["id_pro"]}, {"status": "active"}]})
+        # Verificamos que el producto se encuentre en existencia y ademas alcance
         if int(product["quantity"]) > products_pzs:
             # Se hace el conteo de la cantidad de productos faltantes para mandar a producción
             print("No alcanta el producto:")
