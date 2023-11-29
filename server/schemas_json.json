@@ -35,16 +35,42 @@
     "tabla":"Almancen Productos",
     "_id":"3456",
     "quantity_total":1234,
-    "pisos":[{"num_piso":"num","num_fila":"fila","rack":{"capacidad":123,"num_espacio":234}}],
-    "products":[{"name_prod":"T3a.BasebandOro","quantity_prod":1234},{"name_prod":"T3a.BasebanPlata","quantity_prod":1234}]
+    "pisos":[
+        {"num_piso":"num",
+        "filas":[{
+            "num_fila":"num",
+            "racks":
+            [{
+                "num_rack":"num",
+                "espacios":
+                [{"num_espacio":"num","cantidad":123}]
+                }]
+                }]
+        }]
 },
 {
     "tabla":"Almancen Materia Prima",
     "_id":"3456",
     "quantity_total":1234,
-    "pisos":[{"num_piso":"num","num_fila":"fila","rack":{"capacidad":123,"num_espacio":234}}],
-    "raws_materials":[{"name_raw_material":"T3a.BasebandOro","quantity_raw_material":1234},{"name_raw_material":"T3a.BasebanPlata","quantity_raw_material":1234}]
+    "pisos":[
+        {"num_piso":"num",
+        "filas":
+            [{
+                "num_fila":"num",
+                "racks":
+                [{
+                    "num_rack":"num",
+                    "espacios":
+                    [{"num_espacio":"num","cantidad":123}],
+                    "catidad_rack":1234
+                }],
+                "cantidad_total_fila":12
+            }],
+        "cantidad_total_piso":123
+        }
+    ]
 },
+   
 {
     "tabla":"Compras_proveedor",
     "_id":12345,

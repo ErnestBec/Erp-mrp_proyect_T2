@@ -3,6 +3,7 @@ from fastapi import FastAPI
 from fastapi import HTTPException
 from utils.appError_utils import http_error_handler, server_error_handler
 from dotenv import load_dotenv
+import uvicorn
 from fastapi.middleware.cors import CORSMiddleware
 # Routes
 from routes.routes_user import user
@@ -13,6 +14,7 @@ from routes.routes_raw_materials import raw_material
 from routes.routes_cuentas_Pagar import cuentaPagar
 from routes.routes_recoleccion import recoleccion
 from routes.routes_OrderPrducc import OrdenProducc
+from routes.Business_Rules_routes import routes_business_rules
 
 from routes.routes_stock_materials import stock_materials
 
@@ -47,6 +49,7 @@ app.include_router(cuentaPagar)
 app.include_router(recoleccion)
 app.include_router(OrdenProducc)
 app.include_router(stock_materials)
+app.include_router(routes_business_rules)
 
 
 # if __name__ == "__main__":
