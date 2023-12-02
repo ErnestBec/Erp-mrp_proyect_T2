@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "65545025614fe2109b2eb5ca"
+  },
+  "tipo": "Cobre",
+  "min_stock": 11,
+  "max_stock": 100
+},
+{
+  "_id": {
+    "$oid": "6554505975595ec9eb847586"
+  },
+  "tipo": "Cobre",
+  "min_stock": 11,
+  "max_stock": 100
+}]

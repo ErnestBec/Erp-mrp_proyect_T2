@@ -1,0 +1,44 @@
+[{
+  "_id": {
+    "$oid": "65598cee03e976eb88e7cf1f"
+  },
+  "no_serie": "664646546454",
+  "id_product": "6554505975595ec9eb847586",
+  "status": "active",
+  "date": {
+    "$date": "2023-11-19T04:17:39.568Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65598d0703e976eb88e7cf20"
+  },
+  "no_serie": "664646546454dsadasd",
+  "id_product": "655455bef786b6ad709433e2",
+  "status": "sold",
+  "date": {
+    "$date": "2023-11-19T04:17:39.568Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65598d0d03e976eb88e7cf21"
+  },
+  "no_serie": "664646546454dsad",
+  "id_product": "655455bef786b6ad709433e2",
+  "status": "sold",
+  "date": {
+    "$date": "2023-11-19T04:17:39.568Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "65598d0d03e976eb88e7cf22"
+  },
+  "no_serie": "664646546454dsad",
+  "id_product": "655455bef786b6ad709433e2",
+  "status": "sold",
+  "date": {
+    "$date": "2023-11-19T04:17:39.568Z"
+  }
+}]

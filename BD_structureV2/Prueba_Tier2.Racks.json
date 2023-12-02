@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "6559622caa904f83730e5301"
+  },
+  "id_stock": "6552babbf98daaa2f954d983",
+  "name_rack": "655455bef786b6ad709433e2",
+  "width_capacity": 3,
+  "high_capacity": 4,
+  "long_capacity": 2,
+  "date_update": {
+    "$date": "2023-11-19T00:26:23.585Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6563d024d52ce62e65bc1611"
+  },
+  "id_stock": "6563cff0d52ce62e65bc1610",
+  "name_rack": "mpelectronicos",
+  "width_capacity": 15,
+  "high_capacity": 20,
+  "long_capacity": 25,
+  "date_update": {
+    "$date": "2023-11-26T23:08:53.665Z"
+  }
+}]

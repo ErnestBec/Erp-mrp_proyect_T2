@@ -1,0 +1,900 @@
+[{
+  "_id": {
+    "$oid": "6564219c0f3ee2bfa70af430"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112615",
+  "date_delivery": "01-12-23",
+  "date_approved": "26-11-23",
+  "date_req": "26-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65642226a4f085f85ecb6311"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112682",
+  "date_delivery": "01-12-23",
+  "date_approved": "26-11-23",
+  "date_req": "26-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6564227a475393994e538da3"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log202311265",
+  "date_delivery": "01-12-23",
+  "date_approved": "26-11-23",
+  "date_req": "26-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656422cfe8ff3b8fb1bd85bc"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112677",
+  "date_delivery": "01-12-23",
+  "date_approved": "26-11-23",
+  "date_req": "26-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6564240f34a868f345b3da00"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112620",
+  "date_delivery": "01-12-23",
+  "date_approved": "26-11-23",
+  "date_req": "26-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65642427a4017ef8b90e5590"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112668",
+  "date_delivery": "01-12-23",
+  "date_approved": "26-11-23",
+  "date_req": "26-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656424a8dc4be89b9164f8b5"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112648",
+  "date_delivery": "01-12-23",
+  "date_approved": "26-11-23",
+  "date_req": "26-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65642521c4237307a761c62b"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112612",
+  "date_delivery": "01-12-23",
+  "date_approved": "26-11-23",
+  "date_req": "26-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65642568c4237307a761c62e"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112685",
+  "date_delivery": "01-12-23",
+  "date_approved": "26-11-23",
+  "date_req": "26-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656426a9fead59e43559ea78"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112669",
+  "date_delivery": "01-12-23",
+  "date_approved": "26-11-23",
+  "date_req": "26-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656427163ac8f91db8d9bef1"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112656",
+  "date_delivery": "01-12-23",
+  "date_approved": "26-11-23",
+  "date_req": "26-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656435594aa63fdfaf623420"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112738",
+  "date_delivery": "02-12-23",
+  "date_approved": "27-11-23",
+  "date_req": "27-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6564389a46683db2c4b15728"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112720",
+  "date_delivery": "02-12-23",
+  "date_approved": "27-11-23",
+  "date_req": "27-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656438c4fe028b428ef352ee"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112760",
+  "date_delivery": "02-12-23",
+  "date_approved": "27-11-23",
+  "date_req": "27-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656438fd1cd8d33e80146d6e"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112748",
+  "date_delivery": "02-12-23",
+  "date_approved": "27-11-23",
+  "date_req": "27-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656439811cd8d33e80146d71"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112752",
+  "date_delivery": "02-12-23",
+  "date_approved": "27-11-23",
+  "date_req": "27-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65667a07986f95468290f66c"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112830",
+  "date_delivery": "03-12-23",
+  "date_approved": "28-11-23",
+  "date_req": "28-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65667a63ff57ee94d9a91d71"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112859",
+  "date_delivery": "03-12-23",
+  "date_approved": "28-11-23",
+  "date_req": "28-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65667d71de3973f209d29931"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112899",
+  "date_delivery": "03-12-23",
+  "date_approved": "28-11-23",
+  "date_req": "28-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65667da8de3973f209d29936"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112864",
+  "date_delivery": "03-12-23",
+  "date_approved": "28-11-23",
+  "date_req": "28-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65667e30de3973f209d2993b"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554572786a77d41c76438e1",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023112816",
+  "date_delivery": "03-12-23",
+  "date_approved": "28-11-23",
+  "date_req": "28-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656a7688dde3b32a27ce0e0f"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554567fac15dc4f954cbaa2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023120192",
+  "date_delivery": "06-12-23",
+  "date_approved": "01-12-23",
+  "date_req": "01-12-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656a7792710eb360dfcdaeb5"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554567fac15dc4f954cbaa2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023120194",
+  "date_delivery": "06-12-23",
+  "date_approved": "01-12-23",
+  "date_req": "01-12-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656a7a2f03beb0dbaf018ccc"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554567fac15dc4f954cbaa2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023120162",
+  "date_delivery": "01-12-23",
+  "date_approved": "01-12-23",
+  "date_req": "01-12-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656a7ab803beb0dbaf018ccf"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554567fac15dc4f954cbaa2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log202312014",
+  "date_delivery": "01-12-23",
+  "date_approved": "01-12-23",
+  "date_req": "01-12-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656a84537d71eef7cfbdb033"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554567fac15dc4f954cbaa2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023120122",
+  "date_delivery": "01-12-23",
+  "date_approved": "01-12-23",
+  "date_req": "01-12-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656a84a650710c3244517218"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554567fac15dc4f954cbaa2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023120111",
+  "date_delivery": "01-12-23",
+  "date_approved": "01-12-23",
+  "date_req": "01-12-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656a87466b0d0906565335dd"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554567fac15dc4f954cbaa2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023120199",
+  "date_delivery": "01-12-23",
+  "date_approved": "01-12-23",
+  "date_req": "01-12-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656a879f6b0d0906565335e2"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554567fac15dc4f954cbaa2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023120195",
+  "date_delivery": "01-12-23",
+  "date_approved": "01-12-23",
+  "date_req": "01-12-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656a87af6b0d0906565335e7"
+  },
+  "client": null,
+  "products": [
+    {
+      "product": {
+        "_id": "655455bef786b6ad709433e2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    },
+    {
+      "product": {
+        "_id": "6554567fac15dc4f954cbaa2",
+        "name_prod": "string",
+        "precio_uni": 123123
+      },
+      "quantyti": 1
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "log2023120191",
+  "date_delivery": "01-12-23",
+  "date_approved": "01-12-23",
+  "date_req": "01-12-23",
+  "status": "pending"
+}]

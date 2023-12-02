@@ -1,0 +1,1089 @@
+[{
+  "_id": {
+    "$oid": "655c16819a6e8e3eef56fb8f"
+  },
+  "id_request": {
+    "$oid": "655c16819a6e8e3eef56fb8e"
+  },
+  "importe": 69810741,
+  "date_issue": "20-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655c16b9612cfbc0db4c3dec"
+  },
+  "id_request": {
+    "$oid": "655c16b9612cfbc0db4c3deb"
+  },
+  "importe": 69810741,
+  "date_issue": "20-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655c178cb2369a838851c384"
+  },
+  "id_request": {
+    "$oid": "655c178cb2369a838851c383"
+  },
+  "importe": 69810741,
+  "date_issue": "20-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655c17bcb2369a838851c386"
+  },
+  "id_request": {
+    "$oid": "655c17bcb2369a838851c385"
+  },
+  "importe": 615615,
+  "date_issue": "20-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655ee57dc71dc51b918ed761"
+  },
+  "id_request": {
+    "$oid": "655ee57dc71dc51b918ed760"
+  },
+  "importe": 28318290,
+  "date_issue": "22-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655ee614c71dc51b918ed763"
+  },
+  "id_request": {
+    "$oid": "655ee614c71dc51b918ed762"
+  },
+  "importe": 28318290,
+  "date_issue": "22-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655ee633c71dc51b918ed765"
+  },
+  "id_request": {
+    "$oid": "655ee633c71dc51b918ed764"
+  },
+  "importe": 28318290,
+  "date_issue": "22-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655eeb72db5913e19954c9d7"
+  },
+  "id_request": {
+    "$oid": "655eeb72db5913e19954c9d6"
+  },
+  "importe": 0,
+  "date_issue": "23-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655eeb76db5913e19954c9d9"
+  },
+  "id_request": {
+    "$oid": "655eeb76db5913e19954c9d8"
+  },
+  "importe": 0,
+  "date_issue": "23-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655eeb7cdb5913e19954c9db"
+  },
+  "id_request": {
+    "$oid": "655eeb7cdb5913e19954c9da"
+  },
+  "importe": 0,
+  "date_issue": "23-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655eeb7ddb5913e19954c9dd"
+  },
+  "id_request": {
+    "$oid": "655eeb7ddb5913e19954c9dc"
+  },
+  "importe": 0,
+  "date_issue": "23-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655eeb7ddb5913e19954c9df"
+  },
+  "id_request": {
+    "$oid": "655eeb7ddb5913e19954c9de"
+  },
+  "importe": 0,
+  "date_issue": "23-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655eeb7ddb5913e19954c9e1"
+  },
+  "id_request": {
+    "$oid": "655eeb7ddb5913e19954c9e0"
+  },
+  "importe": 0,
+  "date_issue": "23-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655eeb7edb5913e19954c9e3"
+  },
+  "id_request": {
+    "$oid": "655eeb7edb5913e19954c9e2"
+  },
+  "importe": 0,
+  "date_issue": "23-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655eebf1db5913e19954c9e5"
+  },
+  "id_request": {
+    "$oid": "655eebf1db5913e19954c9e4"
+  },
+  "importe": 28318290,
+  "date_issue": "23-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655eed16db5913e19954c9e7"
+  },
+  "id_request": {
+    "$oid": "655eed16db5913e19954c9e6"
+  },
+  "importe": 28318290,
+  "date_issue": "23-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655eee9edb5913e19954c9e9"
+  },
+  "id_request": {
+    "$oid": "655eee9edb5913e19954c9e8"
+  },
+  "importe": 28318290,
+  "date_issue": "23-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "655eeeed7f47137755996f0f"
+  },
+  "id_request": {
+    "$oid": "655eeeed7f47137755996f0e"
+  },
+  "importe": 28318290,
+  "date_issue": "23-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6562886a1afaf8a067882767"
+  },
+  "id_request": {
+    "$oid": "6562886a1afaf8a067882766"
+  },
+  "importe": 12312300,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656289dc8b94a3a32f907da7"
+  },
+  "id_request": {
+    "$oid": "656289dc8b94a3a32f907da6"
+  },
+  "importe": 24624600,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65628a058b94a3a32f907da9"
+  },
+  "id_request": {
+    "$oid": "65628a058b94a3a32f907da8"
+  },
+  "importe": 492492,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65628a558b94a3a32f907dab"
+  },
+  "id_request": {
+    "$oid": "65628a558b94a3a32f907daa"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65628a608b94a3a32f907dad"
+  },
+  "id_request": {
+    "$oid": "65628a608b94a3a32f907dac"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65628a7c8b94a3a32f907daf"
+  },
+  "id_request": {
+    "$oid": "65628a7c8b94a3a32f907dae"
+  },
+  "importe": 246246,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65628a868b94a3a32f907db1"
+  },
+  "id_request": {
+    "$oid": "65628a868b94a3a32f907db0"
+  },
+  "importe": 123123,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65628ac4318a218bea6f9184"
+  },
+  "id_request": {
+    "$oid": "65628ac4318a218bea6f9183"
+  },
+  "importe": 123123,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65628d9b8c98b760cad9cc9f"
+  },
+  "id_request": {
+    "$oid": "65628d9b8c98b760cad9cc9e"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65628e3953ebd1233dd21baf"
+  },
+  "id_request": {
+    "$oid": "65628e3953ebd1233dd21bae"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65628e5a581abc6672953758"
+  },
+  "id_request": {
+    "$oid": "65628e5a581abc6672953757"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65628e89c4a522da5ba03f46"
+  },
+  "id_request": {
+    "$oid": "65628e89c4a522da5ba03f45"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65628e95d37e9dc8b79107ac"
+  },
+  "id_request": {
+    "$oid": "65628e95d37e9dc8b79107ab"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65628ef293528b78dcd188dd"
+  },
+  "id_request": {
+    "$oid": "65628ef293528b78dcd188dc"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65628f6604a028ba7c7c8d17"
+  },
+  "id_request": {
+    "$oid": "65628f6604a028ba7c7c8d16"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6562907b0aedab72488bfe16"
+  },
+  "id_request": {
+    "$oid": "6562907b0aedab72488bfe15"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656290c0abd345a5a80dc638"
+  },
+  "id_request": {
+    "$oid": "656290c0abd345a5a80dc637"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656290fb71d07c07166c4c50"
+  },
+  "id_request": {
+    "$oid": "656290fb71d07c07166c4c4f"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656291520ec48edfee591041"
+  },
+  "id_request": {
+    "$oid": "656291520ec48edfee591040"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6562919833dd676c4eca0d4c"
+  },
+  "id_request": {
+    "$oid": "6562919833dd676c4eca0d4b"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656291e2b8e5075fe83063b6"
+  },
+  "id_request": {
+    "$oid": "656291e2b8e5075fe83063b5"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6562922db8e5075fe83063b8"
+  },
+  "id_request": {
+    "$oid": "6562922db8e5075fe83063b7"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6562927fb8e5075fe83063ba"
+  },
+  "id_request": {
+    "$oid": "6562927fb8e5075fe83063b9"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65629355f8a3af9ff0fc5591"
+  },
+  "id_request": {
+    "$oid": "65629355f8a3af9ff0fc5590"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65629360f8a3af9ff0fc5593"
+  },
+  "id_request": {
+    "$oid": "65629360f8a3af9ff0fc5592"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65629365f8a3af9ff0fc5595"
+  },
+  "id_request": {
+    "$oid": "65629365f8a3af9ff0fc5594"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65629368f8a3af9ff0fc5597"
+  },
+  "id_request": {
+    "$oid": "65629368f8a3af9ff0fc5596"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65629369f8a3af9ff0fc5599"
+  },
+  "id_request": {
+    "$oid": "65629369f8a3af9ff0fc5598"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656293cdeb2761a9344eb982"
+  },
+  "id_request": {
+    "$oid": "656293cdeb2761a9344eb981"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65629a2dde37b05fed951b01"
+  },
+  "id_request": {
+    "$oid": "65629a2dde37b05fed951b00"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65629aa5a2e1c6cfd4b838dd"
+  },
+  "id_request": {
+    "$oid": "65629aa5a2e1c6cfd4b838dc"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65629b5850f0ec1a2089f9c9"
+  },
+  "id_request": {
+    "$oid": "65629b5850f0ec1a2089f9c8"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6562a37250f0ec1a2089f9cb"
+  },
+  "id_request": {
+    "$oid": "6562a37250f0ec1a2089f9ca"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6562c6ee06e06f6f777f35bb"
+  },
+  "id_request": {
+    "$oid": "6562c6ee06e06f6f777f35ba"
+  },
+  "importe": 369369,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6562c72506e06f6f777f35bf"
+  },
+  "id_request": {
+    "$oid": "6562c72506e06f6f777f35be"
+  },
+  "importe": 123123,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6562c77a06e06f6f777f35c1"
+  },
+  "id_request": {
+    "$oid": "6562c77a06e06f6f777f35c0"
+  },
+  "importe": 123123,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6562ccfae109d0f545729973"
+  },
+  "id_request": {
+    "$oid": "6562ccfae109d0f545729972"
+  },
+  "importe": 123123,
+  "date_issue": "25-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6563a48f7361efce6b5db46a"
+  },
+  "id_request": {
+    "$oid": "6563a48f7361efce6b5db469"
+  },
+  "importe": 123123,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65641cf3ba7d74a4e4d6dfc2"
+  },
+  "id_request": {
+    "$oid": "65641cf3ba7d74a4e4d6dfc1"
+  },
+  "importe": 123123,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65641e311d3e87459eb5f9bb"
+  },
+  "id_request": {
+    "$oid": "65641e311d3e87459eb5f9ba"
+  },
+  "importe": 123123,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65641e58155e9deb4d3d6abe"
+  },
+  "id_request": {
+    "$oid": "65641e58155e9deb4d3d6abd"
+  },
+  "importe": 123123,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65641e7630e5f8f3b7bc74ca"
+  },
+  "id_request": {
+    "$oid": "65641e7630e5f8f3b7bc74c9"
+  },
+  "importe": 123123,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65641e8b77fc66fcf81ebe64"
+  },
+  "id_request": {
+    "$oid": "65641e8b77fc66fcf81ebe63"
+  },
+  "importe": 123123,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65641ec81f3c3834290d6ecb"
+  },
+  "id_request": {
+    "$oid": "65641ec81f3c3834290d6eca"
+  },
+  "importe": 123123,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65641ed59ba6a95da0b6dee5"
+  },
+  "id_request": {
+    "$oid": "65641ed59ba6a95da0b6dee4"
+  },
+  "importe": 123123,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65641f18fd28e6e4b9ed25c8"
+  },
+  "id_request": {
+    "$oid": "65641f18fd28e6e4b9ed25c7"
+  },
+  "importe": 123123,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65641f42fd28e6e4b9ed25cb"
+  },
+  "id_request": {
+    "$oid": "65641f42fd28e6e4b9ed25ca"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65641f7ffd28e6e4b9ed25ce"
+  },
+  "id_request": {
+    "$oid": "65641f7ffd28e6e4b9ed25cd"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6564209216045420955f4c51"
+  },
+  "id_request": {
+    "$oid": "6564209216045420955f4c50"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656420c083b9e931dc8b4918"
+  },
+  "id_request": {
+    "$oid": "656420c083b9e931dc8b4917"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656420d94f5d517adeb396d2"
+  },
+  "id_request": {
+    "$oid": "656420d94f5d517adeb396d1"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6564219c0f3ee2bfa70af431"
+  },
+  "id_request": {
+    "$oid": "6564219c0f3ee2bfa70af430"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65642226a4f085f85ecb6312"
+  },
+  "id_request": {
+    "$oid": "65642226a4f085f85ecb6311"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6564227a475393994e538da4"
+  },
+  "id_request": {
+    "$oid": "6564227a475393994e538da3"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656422cfe8ff3b8fb1bd85bd"
+  },
+  "id_request": {
+    "$oid": "656422cfe8ff3b8fb1bd85bc"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6564240f34a868f345b3da01"
+  },
+  "id_request": {
+    "$oid": "6564240f34a868f345b3da00"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65642427a4017ef8b90e5591"
+  },
+  "id_request": {
+    "$oid": "65642427a4017ef8b90e5590"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656424a8dc4be89b9164f8b6"
+  },
+  "id_request": {
+    "$oid": "656424a8dc4be89b9164f8b5"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65642521c4237307a761c62c"
+  },
+  "id_request": {
+    "$oid": "65642521c4237307a761c62b"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65642568c4237307a761c62f"
+  },
+  "id_request": {
+    "$oid": "65642568c4237307a761c62e"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656426a9fead59e43559ea79"
+  },
+  "id_request": {
+    "$oid": "656426a9fead59e43559ea78"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656427163ac8f91db8d9bef2"
+  },
+  "id_request": {
+    "$oid": "656427163ac8f91db8d9bef1"
+  },
+  "importe": 246246,
+  "date_issue": "26-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656435594aa63fdfaf623421"
+  },
+  "id_request": {
+    "$oid": "656435594aa63fdfaf623420"
+  },
+  "importe": 246246,
+  "date_issue": "27-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "6564389a46683db2c4b15729"
+  },
+  "id_request": {
+    "$oid": "6564389a46683db2c4b15728"
+  },
+  "importe": 246246,
+  "date_issue": "27-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656438c4fe028b428ef352ef"
+  },
+  "id_request": {
+    "$oid": "656438c4fe028b428ef352ee"
+  },
+  "importe": 246246,
+  "date_issue": "27-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656438fd1cd8d33e80146d6f"
+  },
+  "id_request": {
+    "$oid": "656438fd1cd8d33e80146d6e"
+  },
+  "importe": 246246,
+  "date_issue": "27-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656439811cd8d33e80146d72"
+  },
+  "id_request": {
+    "$oid": "656439811cd8d33e80146d71"
+  },
+  "importe": 246246,
+  "date_issue": "27-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65667a07986f95468290f66d"
+  },
+  "id_request": {
+    "$oid": "65667a07986f95468290f66c"
+  },
+  "importe": 246246,
+  "date_issue": "28-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65667a63ff57ee94d9a91d72"
+  },
+  "id_request": {
+    "$oid": "65667a63ff57ee94d9a91d71"
+  },
+  "importe": 246246,
+  "date_issue": "28-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65667d71de3973f209d29932"
+  },
+  "id_request": {
+    "$oid": "65667d71de3973f209d29931"
+  },
+  "importe": 246246,
+  "date_issue": "28-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65667da8de3973f209d29937"
+  },
+  "id_request": {
+    "$oid": "65667da8de3973f209d29936"
+  },
+  "importe": 246246,
+  "date_issue": "28-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "65667e30de3973f209d2993c"
+  },
+  "id_request": {
+    "$oid": "65667e30de3973f209d2993b"
+  },
+  "importe": 246246,
+  "date_issue": "28-11-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656a7688dde3b32a27ce0e10"
+  },
+  "id_request": {
+    "$oid": "656a7688dde3b32a27ce0e0f"
+  },
+  "importe": 246246,
+  "date_issue": "01-12-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656a7792710eb360dfcdaeb6"
+  },
+  "id_request": {
+    "$oid": "656a7792710eb360dfcdaeb5"
+  },
+  "importe": 246246,
+  "date_issue": "01-12-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656a7a2f03beb0dbaf018ccd"
+  },
+  "id_request": {
+    "$oid": "656a7a2f03beb0dbaf018ccc"
+  },
+  "importe": 246246,
+  "date_issue": "01-12-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656a7ab803beb0dbaf018cd0"
+  },
+  "id_request": {
+    "$oid": "656a7ab803beb0dbaf018ccf"
+  },
+  "importe": 246246,
+  "date_issue": "01-12-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656a84537d71eef7cfbdb034"
+  },
+  "id_request": {
+    "$oid": "656a84537d71eef7cfbdb033"
+  },
+  "importe": 246246,
+  "date_issue": "01-12-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656a84a650710c3244517219"
+  },
+  "id_request": {
+    "$oid": "656a84a650710c3244517218"
+  },
+  "importe": 246246,
+  "date_issue": "01-12-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656a87466b0d0906565335de"
+  },
+  "id_request": {
+    "$oid": "656a87466b0d0906565335dd"
+  },
+  "importe": 246246,
+  "date_issue": "01-12-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656a879f6b0d0906565335e3"
+  },
+  "id_request": {
+    "$oid": "656a879f6b0d0906565335e2"
+  },
+  "importe": 246246,
+  "date_issue": "01-12-23",
+  "date_pay": null
+},
+{
+  "_id": {
+    "$oid": "656a87af6b0d0906565335e8"
+  },
+  "id_request": {
+    "$oid": "656a87af6b0d0906565335e7"
+  },
+  "importe": 246246,
+  "date_issue": "01-12-23",
+  "date_pay": null
+}]

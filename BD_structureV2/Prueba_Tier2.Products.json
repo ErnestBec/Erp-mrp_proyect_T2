@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "655455bef786b6ad709433e2"
+  },
+  "name_prod": "string",
+  "Descripcion": "string",
+  "min_stock": 11,
+  "max_stock": 99,
+  "precio_uni": 123123,
+  "num_pieza": "string",
+  "mp": [
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "name_mp": "string",
+      "quantyti": 23
+    },
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "name_mp": "string1",
+      "quantyti": 2
+    }
+  ],
+  "time_production": "string"
+},
+{
+  "_id": {
+    "$oid": "6554567fac15dc4f954cbaa2"
+  },
+  "name_prod": "string",
+  "Descripcion": "string",
+  "min_stock": 11,
+  "max_stock": 99,
+  "precio_uni": 123123,
+  "num_pieza": "string",
+  "mp": [
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "name_mp": "string",
+      "quantyti": 5
+    },
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "name_mp": "string1",
+      "quantyti": 56
+    }
+  ],
+  "time_production": "string"
+},
+{
+  "_id": {
+    "$oid": "6554572786a77d41c76438e1"
+  },
+  "name_prod": "string",
+  "Descripcion": "string",
+  "min_stock": 11,
+  "max_stock": 99,
+  "precio_uni": 123123,
+  "num_pieza": "string",
+  "mp": [
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "name_mp": "string",
+      "quantyti": 8
+    },
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "name_mp": "string1",
+      "quantyti": 2
+    }
+  ],
+  "time_production": "string"
+}]

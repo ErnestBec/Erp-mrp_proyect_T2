@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "6562c72506e06f6f777f35bd"
+  },
+  "fecha_recolection": "25-11-23",
+  "id_pago": {
+    "$oid": "6562c72506e06f6f777f35bc"
+  },
+  "status": "pending"
+}]

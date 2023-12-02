@@ -1,0 +1,109 @@
+[{
+  "_id": {
+    "$oid": "65667d71de3973f209d2992f"
+  },
+  "fecha_peticion": "28-11-23",
+  "id_pago": {
+    "$oid": "65667d71de3973f209d2992e"
+  },
+  "num_ref_request": "log2023112899",
+  "status": "pending",
+  "list_mp": [
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "order_quantity": 8
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65667da8de3973f209d29934"
+  },
+  "fecha_peticion": "28-11-23",
+  "id_pago": {
+    "$oid": "65667da8de3973f209d29933"
+  },
+  "num_ref_request": "log2023112864",
+  "status": "pending",
+  "list_mp": [
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "order_quantity": 8
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "65667e30de3973f209d29939"
+  },
+  "fecha_peticion": "28-11-23",
+  "id_pago": {
+    "$oid": "65667e30de3973f209d29938"
+  },
+  "num_ref_request": "log2023112816",
+  "status": "pending",
+  "list_mp": [
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "order_quantity": 8
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656a87906b0d0906565335e0"
+  },
+  "fecha_peticion": "01-12-23",
+  "id_pago": {
+    "$oid": "656a87906b0d0906565335df"
+  },
+  "num_ref_request": "log2023120195",
+  "status": "pending",
+  "list_mp": [
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "order_quantity": 23
+    },
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "order_quantity": 2
+    },
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "order_quantity": 5
+    },
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "order_quantity": 56
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656a87a06b0d0906565335e5"
+  },
+  "fecha_peticion": "01-12-23",
+  "id_pago": {
+    "$oid": "656a87a06b0d0906565335e4"
+  },
+  "num_ref_request": "log2023120191",
+  "status": "pending",
+  "list_mp": [
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "order_quantity": 23
+    },
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "order_quantity": 2
+    },
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "order_quantity": 5
+    },
+    {
+      "id_mp": "6554505975595ec9eb847586",
+      "order_quantity": 56
+    }
+  ]
+}]

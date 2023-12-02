@@ -1,0 +1,12 @@
+[{
+  "_id": {
+    "$oid": "65529726ed298345ac5c0575"
+  },
+  "name_type": "Productos Terminados"
+},
+{
+  "_id": {
+    "$oid": "6563cf95d52ce62e65bc160f"
+  },
+  "name_type": "Materia Prima"
+}]

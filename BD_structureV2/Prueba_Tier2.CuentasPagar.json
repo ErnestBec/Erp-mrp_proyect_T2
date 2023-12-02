@@ -1,0 +1,54 @@
+[{
+  "_id": {
+    "$oid": "6562c72506e06f6f777f35bc"
+  },
+  "proveedor": "Logistica",
+  "importe": 4564,
+  "fecha_pago": "25-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65667d71de3973f209d2992e"
+  },
+  "proveedor": "Tier3",
+  "importe": 4564,
+  "fecha_pago": "28-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65667da8de3973f209d29933"
+  },
+  "proveedor": "Tier3",
+  "importe": 4564,
+  "fecha_pago": "28-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65667e30de3973f209d29938"
+  },
+  "proveedor": "Tier3",
+  "importe": 4564,
+  "fecha_pago": "28-11-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656a87906b0d0906565335df"
+  },
+  "proveedor": "Tier3",
+  "importe": 4564,
+  "fecha_pago": "01-12-23",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656a87a06b0d0906565335e4"
+  },
+  "proveedor": "Tier3",
+  "importe": 4564,
+  "fecha_pago": "01-12-23",
+  "status": "pending"
+}]

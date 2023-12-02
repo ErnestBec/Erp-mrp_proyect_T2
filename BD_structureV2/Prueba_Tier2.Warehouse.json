@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "6552babbf98daaa2f954d983"
+  },
+  "id_type_stock": "65529726ed298345ac5c0575",
+  "name_stock": 124545,
+  "date_update": {
+    "$date": "2023-11-14T00:06:27.709Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6563cff0d52ce62e65bc1610"
+  },
+  "id_type_stock": "6563cf95d52ce62e65bc160f",
+  "name_stock": "mp123435",
+  "date_update": {
+    "$date": "2023-11-26T23:08:18.297Z"
+  }
+}]
