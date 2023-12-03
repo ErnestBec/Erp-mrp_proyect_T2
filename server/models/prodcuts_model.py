@@ -17,7 +17,7 @@ class Prducto(BaseModel):
     precio_uni: int
     num_pieza: str
     mp: List[mp]
-    time_production: str
+    time_production: float
 
 
 class updatePrducto(BaseModel):
@@ -29,4 +29,4 @@ class updatePrducto(BaseModel):
     precio_uni: Optional[int]
     num_pieza: Optional[str]
     mp: Optional[List[mp]]
-    time_production: Optional[str]
+    time_production: Optional[float]

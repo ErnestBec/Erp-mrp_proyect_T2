@@ -12,7 +12,9 @@ from controllers.orden_produccion_controller import create_orden_produccion, get
 OrdenProducc = APIRouter()
 
 # Endppoints User Admin
-@OrdenProducc.get("/ordenproduc", tags=["Orden de Produccion"], dependencies=[Depends(Portador()),Depends(protectedAcountAdmin())])
+
+
+@OrdenProducc.get("/ordenproduc", tags=["Orden de Produccion"], dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
 def find_all_admin_orders():
     return Ordenes_ProduccionEntity(db_name.OrdenesProduccion.find().toArray())
 

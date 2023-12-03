@@ -1,8 +1,8 @@
 # libreries
 from fastapi import APIRouter, Depends
 from utils.db import db_name
+from models.recoleccion_model import Recoleccion, updaterecoleccion
 from schemas.schema_recoleccion import recoleccionesEntity
-from models.recoleccion_model import Recoleccion,updaterecoleccion
 # Middlewares
 from middlewares.validate_Recoleccion_middleware import recoleccion_update_validator, recoleccion_validate_middleware
 from middlewares.recoleccionExist_middleware import recoleccion_exist
@@ -24,7 +24,9 @@ def find_product(id: str):
     return get_Recolecciom(id)
 
 # Endppoints User Admin
-@recoleccion.get("/recolecion", tags=["Recoleccion"], dependencies=[Depends(Portador()),Depends(protectedAcountAdmin())])
+
+
+@recoleccion.get("/recolecion", tags=["Recoleccion"], dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
 def find_all_admin():
     return recoleccionesEntity(db_name.Recolecciones.find().toArray())
 

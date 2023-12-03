@@ -18,36 +18,36 @@ requests_client = APIRouter()
 # Ruta para insercion automatica
 
 @requests_client.post("/client/request/api", tags=["Client:API"], dependencies=[Depends(Portador())])
-def new_request_route(request: RequestsClient):
+async def new_request_route(request: RequestsClient):
     return new_request(request)
 
 # Routes for Client
 
 
 @requests_client.post("/client/request", tags=["Client"], dependencies=[Depends(Portador()), Depends(exist_request_client)])
-def new_request_route(request: RequestsClient):
+async def new_request_route(request: RequestsClient):
     return new_request(request)
 
 # Routes generales
 
 
 @requests_client.get("/requests", tags=["Client-Admin"], dependencies=[Depends(Portador())])
-def get_all_request_route():
+async def get_all_request_route():
     return requestsClientEntity(db_name.Request_Client.find())
 
 
 @requests_client.get("/request/status/{status}", tags=["Client-Admin"], dependencies=[Depends(Portador())])
-def get_request_status_route(status: str):
+async def get_request_status_route(status: str):
     return requestsClientEntity(db_name.Request_Client.find({"status": status}))
 
 
 @requests_client.get("/request/date/{month}", tags=["Client-Admin"], description="The month must be written in English and the first letter in capital letters", dependencies=[Depends(Portador())])
-def get_request_date_route(month: str):
+async def get_request_date_route(month: str):
     return get_request_month(month)
 
 
 # Routes for Admin
 
 @requests_client.put("/admin/request/{id}", tags=["Admin"])
-def update_status_request_route():
+async def update_status_request_route():
     return

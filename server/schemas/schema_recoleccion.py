@@ -1,11 +1,12 @@
 def recoleccionEntity(item) -> dict:
     return {
         "id": str(item["_id"]),
-        "fecha": item["fecha"],
-        "lugar": item["lugar"],
-        "id_cobro": item["id_cobro"],
-        "cobro": item["cobro"],
-        "status":item["status"]
+        "fecha_recolection": item["fecha_recolection"],
+        "fecha_entrega": item["fecha_entrega"],
+        "cliente": item["cliente"],
+        "status": item["status"],
+        "num_ref_solicictud": item["num_ref_solicictud"],
+        "costo": item["costo"]
 
 
     }

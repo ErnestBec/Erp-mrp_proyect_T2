@@ -5,7 +5,7 @@ from datetime import datetime
 
 class Cuenta_Pagar(BaseModel):
     _id: Optional[str]
-    proveedor: str
+    proveedor: dict
     importe: int
     fecha_de_pago: datetime
     status: str

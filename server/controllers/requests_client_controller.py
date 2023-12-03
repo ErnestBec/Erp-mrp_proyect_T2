@@ -27,7 +27,7 @@ from controllers.cuenta_por_cobrar_controller import create_cuenta_por_cobrar
 
 def new_request(request):
     data_request = dict(request)
-    date_request = datetime.now()
+    date_request = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(data_request)
     response_client = {}
     data_request["num_ref_solicitud"] = generate_num_ref(
@@ -35,12 +35,12 @@ def new_request(request):
     # Validamos Almacen de materias terminadas
     data_request["date_delivery"] = verified_almacen(
         data_request["products"], data_request["num_ref_solicitud"])
-
+    print(type[data_request["date_delivery"]])
     user_req = user_email(data_request["client"])
     data_request["client"] = user_req
     data_request["products"] = product_ref(data_request["products"])
-    date_request = date_request.strftime("%d-%m-%y")
-    data_request["date_approved"] = datetime.now().strftime("%d-%m-%y")
+    data_request["date_approved"] = datetime.now().strftime(
+        "%Y-%m-%d %H:%M:%S")
     data_request.update({"date_req": date_request})
     data_request.update({"status": "pending"})
     id = db_name.Request_Client.insert_one(data_request).inserted_id
