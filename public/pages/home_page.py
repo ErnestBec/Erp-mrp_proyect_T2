@@ -4,9 +4,7 @@ from components import nabvar_side, navbar_user, card_icome, card_tasks, card_pe
 
 @component
 def home_page():
-    return html.div({
-        "id": "page-top"
-    },
+    return html.div({"id": "page-top"},
         html.div({"id": "wrapper"},
                  nabvar_side.navbar(),
                  html.div({"id": "content-wrapper", "class": "d-flex flex-column"},
