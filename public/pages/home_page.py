@@ -4,62 +4,10 @@ from components import nabvar_side, navbar_user, card_icome, card_tasks, card_pe
 
 @component
 def home_page():
-<<<<<<< HEAD:pages/home_page.py
-    bootstrap_css = html.link({
-        "rel": "stylesheet",
-        "href": "https://elpatronhh.github.io/portfolio/bootstrap.min.css" 
-        #Links de boostrap
-    })
-    style_css = html.link({
-        "href": "https://elpatronhh.github.io/portfolio/sb-admin-2.min.css",
-        "rel": "stylesheet"
-    })
-    fontawesome = html.link({
-        "href": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css",
-        "rel": "stylesheet",
-    })#Aqui terminan links de boots
-    head = html.div(
-        html.meta({
-            "charset": "utf-8"
-        }),
-        html.meta({
-            "http-equiv": "X-UA-Compatible",
-            "content": "IE=edge"
-        }),
-        html.meta({
-            "name": "viewport",
-            "content": "width=device-width, initial-scale=1, shrink-to-fit=no"
-        }),
-        html.meta({
-            "name": "description",
-            "content": ""
-        }),
-        html.meta({
-            "name": "author",
-            "content": ""
-        }),
-        html.title("PANEL ADMINISTRADOR"),
-        html.link({
-            "href": "https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i",
-            "rel": "stylesheet"
-        }), #Terminan 
-
-    ),
-    return html.div({
-        "id": "page-top"
-    },
-        bootstrap_css,
-        style_css,
-        fontawesome,
-        head,
-
-        html.div({"id": "wrapper"}, #Contenedor principal 
-=======
     return html.div({
         "id": "page-top"
     },
         html.div({"id": "wrapper"},
->>>>>>> 6583187ecd24d42d0fdc817fba95594ae2a4d72f:public/pages/home_page.py
                  nabvar_side.navbar(),
                  html.div({"id": "content-wrapper", "class": "d-flex flex-column"},
                           html.div({"id": "content"},
