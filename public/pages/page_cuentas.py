@@ -33,18 +33,11 @@ def Page_Cuentas():
                                 }, html.div({"class":"row"},
                                             html.div({"class":"col-auto me-auto", "style":{"color":"black"}}, 
                                                      html.h6({"class":"display-6"}, 
-                                                             html.b("Ordenes Totales")
+                                                             html.b("Cuentas")
                                                             )
                                                     )
                                         ),
-                                    html.div({"class":"row"},
-                                            html.div({"class":"col-auto me-auto", "style":{"color":"black"}}, 
-                                                     html.h6({"class":"display-8"}, 
-                                                             html.p("Estás viendo el número total de ordenes realizadas hasta el momento")
-                                                            )
-                                                    )
-
-                                    )
+                                    
                             ),html.div( {"class" :"card-body", "style" : {"margin-top":"0%"}},                                        #Contenedor para la grafica y botones
                                     html.div({"class":"container-fluid"}, #Contenedor de los botones
                                            html.div({"class":"row no-border-bottom"},
