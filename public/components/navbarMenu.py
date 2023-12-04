@@ -1,4 +1,5 @@
 from reactpy import component, html
+
 @component
 def Navbar():
     navbar_style = {

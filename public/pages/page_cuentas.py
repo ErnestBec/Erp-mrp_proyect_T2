@@ -4,7 +4,7 @@ from reactpy_router import link
 
 
 @component
-def Prueba():
+def Page_Cuentas():
     return html.div(
         {"id": "app"},
         html.div(
@@ -38,8 +38,18 @@ def Prueba():
                                     {"style": {"margin-bottom": "10%"}},
                                     "Listado de solicitudes aprobadas",
                                 ),
+                            ),
+                            html.div(
+                                {"class": "container-fluid"},
                                 html.div(
-                                    {"class": "container-fluid d-flex"},
+                                    {"class": "row no-border-bottom"},
+                                    html.div(
+                                        {"class": "col-auto"},
+                                        html.div(
+                                            {"class": "btn-group"},
+                                            
+                                        ),
+                                    ),
                                 ),
                             ),
                         ),
