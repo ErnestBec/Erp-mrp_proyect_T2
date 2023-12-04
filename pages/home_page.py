@@ -104,7 +104,8 @@ def home_page():
 
     )
 def makeAChart(nombre_char:str):
-    lenght=random.randint(1, 30)
+    ant_val=-1
+    lenght=random.randint(1, 70)
     chartTitle1 = "Some title"
     titles = []
     titles.clear
@@ -114,7 +115,7 @@ def makeAChart(nombre_char:str):
     arrayTemp =[]
     palabras_adj = ["Rojo", "Azul", "Verde", "Brillante", "Suave", "Rápido", "Silencioso", "Elegante"]
     palabras_sust = ["León", "Montaña", "Río", "Estrella", "Cascada", "Árbol", "Globo", "Martillo"]
-    for i in range(random.randint(1, 7)):
+    for i in range(random.randint(1, 17)):
         adjetivo = random.choice(palabras_adj)
         sustantivo = random.choice(palabras_sust)
         nombre_aleatorio = f"{sustantivo} {adjetivo}"
@@ -123,8 +124,18 @@ def makeAChart(nombre_char:str):
         b = random.randint(0, 255)
         color_hex = "#{:02x}{:02x}{:02x}".format(r, g, b)
         arrayTemp.clear()
+        curr_val = random.randint(1, 3500)
         for i in range(random.randint(1, lenght)):
-            arrayTemp.append(random.randint(1, 550))
+            if ant_val==-1:
+                ant_val = curr_val
+            curr_val = random.randint(int(float(ant_val)*0.8), int(float(ant_val)*1.2))
+            ant_val = curr_val
+            arrayTemp.append(curr_val)
+            if curr_val<5:
+                curr_val +=30
+                
+                
+                
         charts.append(classChart.newChart(str(nombre_aleatorio),arrayTemp,str(color_hex)))
         strCharts = "["
     for i in charts:
