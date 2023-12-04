@@ -1,6 +1,7 @@
 from utils.db import db_name
 from fastapi import Request, HTTPException
 from bson import ObjectId
+from fastapi.params import Body
 
 
 def is_valid_object_id(id_str):
@@ -24,6 +25,17 @@ def cuentas_por_cobrar_exist(request: Request):
     return request
 
 
+def valid_status(request: Request):
+    status = request.query_params.get("status")
+    print(status)
+    if status == "pending":
+        return request
+    elif status == "paid":
+        return request
+    raise HTTPException(
+        status_code=404, detail="the status invalid, pending or paid ")
+
+
 def cuentacobrar_ref(ref: list):
     cuentas = []
     for ref_cuentas in ref:
@@ -35,8 +47,7 @@ def cuentacobrar_ref(ref: list):
         cuenta.pop("fecha_emision")
         cuenta.pop("total")
         cuenta.pop("fecha_de_pago")
-    
+
         cuentas.append(
             {ref_cuentas["solictud"]: cuenta, "total": ref_cuentas["total"]})
     return cuentas
-

@@ -9,7 +9,6 @@ class products(BaseModel):
 
 class RequestsClient(BaseModel):
     _id: Optional[str]
-    client: str
     products: List[products]
     date_delivery_expected: Optional[str]
 
@@ -17,7 +16,6 @@ class RequestsClient(BaseModel):
 class requestsClienteInsert(BaseModel):
     _id: Optional[str]
     status: Optional[str] = "pending"
-    client: dict
     date_req: Optional[str]
     products: List[products]
     num_ref_solicitud: Optional[str]

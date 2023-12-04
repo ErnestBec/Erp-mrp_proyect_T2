@@ -11,6 +11,7 @@ from utils.db import db_name
 from schemas.schema_orden_produccion import orden_produccionEntity
 # Controllers
 from controllers.row_materials_controller import verified_mp
+from controllers.notificationst_controller import create_notification
 
 
 def generate_Production(request_production, num_ref, time_production):
@@ -52,6 +53,8 @@ def generate_Production(request_production, num_ref, time_production):
                        "products": request_production, "fecha_termino": fecha_sumada, "num_ref_solicitud": num_ref, "status": "pending"}
     inserted = db_name.OrderProduction.insert_one(
         data_production).inserted_id
+    create_notification(
+        f"Se genero una nueva Orden de produccion", num_ref, num_ref)
 
     return fecha_prod_entrega
 

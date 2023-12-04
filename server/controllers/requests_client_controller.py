@@ -3,7 +3,7 @@ from fastapi.responses import JSONResponse
 from fastapi import Request, HTTPException
 import calendar
 import random
-from datetime import datetime, date
+from datetime import datetime, date, timedelta
 # Schemas
 from schemas.schema_client_request import requestClientEntity, requestsClientEntity, requestClientEntityInser
 # Middleware
@@ -13,7 +13,7 @@ from bson import ObjectId
 # Controllers
 from controllers.warehouse_controller import verified_almacen
 from controllers.cuenta_por_cobrar_controller import create_cuenta_por_cobrar
-
+from controllers.notificationst_controller import create_notification
 # _id: Optional[str]
 # status: Optional[str] = "pending"
 # client: dict
@@ -25,18 +25,16 @@ from controllers.cuenta_por_cobrar_controller import create_cuenta_por_cobrar
 # date_delivery: Optional[str]
 
 
-def new_request(request):
+def new_request(request, user):
     data_request = dict(request)
     date_request = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    print(data_request)
     response_client = {}
     data_request["num_ref_solicitud"] = generate_num_ref(
-        data_request["client"])
+        user["email"])
     # Validamos Almacen de materias terminadas
     data_request["date_delivery"] = verified_almacen(
-        data_request["products"], data_request["num_ref_solicitud"])
-    print(type[data_request["date_delivery"]])
-    user_req = user_email(data_request["client"])
+        data_request["products"], data_request["num_ref_solicitud"], user)
+    user_req = user_email(user["email"])
     data_request["client"] = user_req
     data_request["products"] = product_ref(data_request["products"])
     data_request["date_approved"] = datetime.now().strftime(
@@ -44,7 +42,9 @@ def new_request(request):
     data_request.update({"date_req": date_request})
     data_request.update({"status": "pending"})
     id = db_name.Request_Client.insert_one(data_request).inserted_id
-    request_inserted = db_name.Request_Client.find_one({"_id": id})
+    db_name.Request_Client.find_one({"_id": id})
+    create_notification(
+        f"{user["email"]} genero una nueva solicitud de productos", id, user["email"])
     # Integramos la respuesta del cliente
     response_client["num_ref_solicitud"] = data_request["num_ref_solicitud"]
     importe = generate_total_cost(data_request["products"])
@@ -52,15 +52,12 @@ def new_request(request):
     response_client["date_approved"] = data_request["date_approved"]
     response_client["date_delivery"] = data_request["date_delivery"]
     # Ingresamos a cuentas por cobrar
+    date_pago = datetime.now()+timedelta(days=7)
     create_cuenta_por_cobrar(
-        {"id_request": id, "importe": importe, "date_issue": date_request, "date_pay": None})
+        {"importe": importe, "date_registration": date_request, "date_pay": date_pago.strftime("%Y-%m-%d %H:%M:%S"), "Deudor": user["email"], "num_referencia": data_request["num_ref_solicitud"], "status": "pending"})
     # Validad Capacidad de Produccion
 
     return JSONResponse(content={"request": response_client, "status": "Success!"}, status_code=201)
-
-
-def request_raw_materials():
-    return ""
 
 
 def get_request_month(month):

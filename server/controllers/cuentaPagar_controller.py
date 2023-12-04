@@ -9,7 +9,6 @@ def create_cuentaPagar(ctpa):
     new_cuenta_pagar = dict(ctpa)
     id = db_name.CuentasPorPagar.insert_one(new_cuenta_pagar).inserted_id
     cuenta = db_name.CuentasPorPagar.find_one({"_id": id})
-    return cuentaPagarEntity(cuenta)
 
 
 def get_cuentaPagar(id):
@@ -17,10 +16,12 @@ def get_cuentaPagar(id):
     return cuentaPagarEntity(cuentap)
 
 
-def update_cuentaPagar(id, cuentap):
-    db_name.CuentasPorPagar.find_one_and_update(
-        {"_id": ObjectId(id)}, {"$set": dict(cuentap)})
-    return cuentaPagarEntity(db_name.CuentasPorPagar.find_one({"_id": ObjectId(id)}))
+def update_cuentaPagar(id):
+    db_name.CuentasPagar.update_one(
+        {"_id": ObjectId(id)}, {"$set": {"status": "paid"}})
+    cuenta_update = db_name.CuentasPagar.find_one({"_id": ObjectId(id)})
+    cuenta_update = dict(cuenta_update)
+    return cuentaPagarEntity(cuenta_update)
 
 
 def delete_cuentaPagar(id):

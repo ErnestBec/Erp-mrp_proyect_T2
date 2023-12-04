@@ -17,16 +17,16 @@ requests_client = APIRouter()
 
 # Ruta para insercion automatica
 
-@requests_client.post("/client/request/api", tags=["Client:API"], dependencies=[Depends(Portador())])
-async def new_request_route(request: RequestsClient):
-    return new_request(request)
+@requests_client.post("/client/request/api", tags=["Client:API"], dependencies=[Depends(request_client_validate_middleware)])
+async def new_request_route(request: RequestsClient, user=Depends(Portador())):
+    return new_request(request, user)
 
 # Routes for Client
 
 
-@requests_client.post("/client/request", tags=["Client"], dependencies=[Depends(Portador()), Depends(exist_request_client)])
-async def new_request_route(request: RequestsClient):
-    return new_request(request)
+# @requests_client.post("/client/request", tags=["Client"], dependencies=[Depends(Portador()), Depends(exist_request_client)])
+# async def new_request_route(request: RequestsClient):
+#     return new_request(request)
 
 # Routes generales
 

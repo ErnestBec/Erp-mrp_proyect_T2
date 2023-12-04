@@ -41,6 +41,6 @@ def update_find__product(id: str, product: updatePrducto):
     return update_product(id, product)
 
 
-@product.delete("/products/{id}", tags=["Products"], dependencies=[Depends(product_exist), Depends(Portador()), Depends(protectedAcountAdmin())])
-def delete_find_product(id: str):
-    return delete_product(id)
+# @product.delete("/products/{id}", tags=["Products"], dependencies=[Depends(product_exist), Depends(Portador()), Depends(protectedAcountAdmin())])
+# def delete_find_product(id: str):
+#     return delete_product(id)

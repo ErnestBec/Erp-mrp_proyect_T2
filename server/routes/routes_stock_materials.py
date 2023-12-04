@@ -11,24 +11,24 @@ stock_materials = APIRouter()
 # Routes for type Stock
 
 
-@stock_materials.post("/type_warehouse_materials/", tags=["Type Warehouse"])
+@stock_materials.post("/type_warehouse_materials/", tags=["Warehouse"])
 def warehouse_type(warehouse_type: typeStockModel):
     return create_warehouse_type(warehouse_type)
 
 
-@stock_materials.delete("/type_warehouse_materials/{id}", tags=["Type Warehouse"], dependencies=[Depends(tpye_warehouse_exist)])
-def delete_warehouse_type_roue(id):
-    return delete_warehouse_type(id)
+# @stock_materials.delete("/type_warehouse_materials/{id}", tags=["Type Warehouse"], dependencies=[Depends(tpye_warehouse_exist)])
+# def delete_warehouse_type_roue(id):
+#     return delete_warehouse_type(id)
 
 
-@stock_materials.get("/type_warehouse_materials", tags=["Type Warehouse"])
+@stock_materials.get("/type_warehouse_materials", tags=["Warehouse"])
 def get_all_types_warehouse():
     return types_stocks(db_name.TypeWarehouse.find())
 
 
-@stock_materials.get("/type_warehouse_materials/{id}", tags=["Type Warehouse"], dependencies=[Depends(tpye_warehouse_exist)])
-def get_warehouse_type_by_id(id):
-    return type_stock(db_name.TypeWarehouse.find_one({"_id": ObjectId(id)}))
+# @stock_materials.get("/type_warehouse_materials/{id}", tags=["Type Warehouse"], dependencies=[Depends(tpye_warehouse_exist)])
+# def get_warehouse_type_by_id(id):
+#     return type_stock(db_name.TypeWarehouse.find_one({"_id": ObjectId(id)}))
 
 # Routes warehouse
 
@@ -38,9 +38,9 @@ def create_warehouse_route(warehouse: stock_products):
     return create_warehouse(warehouse)
 
 
-@stock_materials.delete("/new_warehouse/{id}", tags=["Warehouse"], dependencies=[Depends(warehouse_exist)])
-def delete_warehouse_route(id):
-    return delete_warehouse(id)
+# @stock_materials.delete("/new_warehouse/{id}", tags=["Warehouse"], dependencies=[Depends(warehouse_exist)])
+# def delete_warehouse_route(id):
+#     return delete_warehouse(id)
 
 
 @stock_materials.get("/warehouse_materials", tags=["Warehouse"])
@@ -48,48 +48,48 @@ def get_all_types_warehouse():
     return stocks_products(db_name.Warehouse.find())
 
 
-@stock_materials.get("/warehouse_materials/{id}", tags=["Warehouse"], dependencies=[Depends(warehouse_exist)])
-def get_warehouse_type_by_id(id):
-    return stock_product(db_name.Warehouse.find_one({"_id": ObjectId(id)}))
+# @stock_materials.get("/warehouse_materials/{id}", tags=["Warehouse"], dependencies=[Depends(warehouse_exist)])
+# def get_warehouse_type_by_id(id):
+#     return stock_product(db_name.Warehouse.find_one({"_id": ObjectId(id)}))
 
 # Routes Racks
 
 
-@stock_materials.post("/new_rack", tags=["Racks"], dependencies=[Depends(create_rack_validator)])
+@stock_materials.post("/new_rack", tags=["Warehouse"], dependencies=[Depends(create_rack_validator)])
 def create_rack_route(rack: rackModel):
     return create_rack(rack)
 
 
-@stock_materials.delete("/rack/{id}", tags=["Racks"], dependencies=[Depends(rack_exist)])
-def delete_rack_route(id):
-    return delete_rack(id)
+# @stock_materials.delete("/rack/{id}", tags=["Racks"], dependencies=[Depends(rack_exist)])
+# def delete_rack_route(id):
+#     return delete_rack(id)
 
 
-@stock_materials.get("/racks", tags=["Racks"])
+@stock_materials.get("/racks", tags=["Warehouse"])
 def get_all_racks():
     return racks_stock(db_name.Racks.find())
 
 
-@stock_materials.get("/rack/{id}", tags=["Racks"], dependencies=[Depends(rack_exist)])
-def get_rack_by_id(id):
-    return rack_stock(db_name.Racks.find_one({"_id": ObjectId(id)}))
+# @stock_materials.get("/rack/{id}", tags=["Racks"], dependencies=[Depends(rack_exist)])
+# def get_rack_by_id(id):
+#     return rack_stock(db_name.Racks.find_one({"_id": ObjectId(id)}))
 
 
-@stock_materials.get("/space_status", tags=["Racks"])
-def get_all_space_rack_status_route(query_status: str = None, id_prod: str = None):
-    return get_all_space_rack_status(query_status, id_prod)
+# @stock_materials.get("/space_status", tags=["Racks"])
+# def get_all_space_rack_status_route(query_status: str = None, id_prod: str = None):
+#     return get_all_space_rack_status(query_status, id_prod)
 
 # Prueba
 
 
-@stock_materials.post("/new_pza", tags=["Pza_Product/Materia Prima"])
+@stock_materials.post("/new_pza", tags=["Warehouse"])
 def new_pza(pz: product_pieza):
     pieza = dict(pz)
     db_name.Product_Pza.insert_one(pieza)
     return {"status": "success!"}
 
 
-@stock_materials.get("/space_row")
+@stock_materials.get("/space_row", tags=["Warehouse"])
 def get_all_space():
     all_spaces = db_name.SpaceRow.find()
     spaces = {}

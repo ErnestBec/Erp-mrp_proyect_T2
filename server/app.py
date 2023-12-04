@@ -15,8 +15,8 @@ from routes.routes_cuentas_Pagar import cuentaPagar
 from routes.routes_recoleccion import recoleccion
 from routes.routes_OrderPrducc import OrdenProducc
 from routes.Business_Rules_routes import routes_business_rules
-
 from routes.routes_stock_materials import stock_materials
+from routes.notifications_routes import notifications
 
 
 app = FastAPI()
@@ -50,6 +50,7 @@ app.include_router(recoleccion)
 app.include_router(OrdenProducc)
 app.include_router(stock_materials)
 app.include_router(routes_business_rules)
+app.include_router(notifications)
 
 
 # if __name__ == "__main__":

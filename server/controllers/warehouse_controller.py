@@ -12,6 +12,7 @@ from middlewares.warehouse_middleware import is_valid_object_id
 # Controllers
 from controllers.cuentaPagar_controller import create_cuentaPagar
 from controllers.orden_produccion_controller import generate_Production
+from controllers.notificationst_controller import create_notification
 import httpx
 import os
 import time
@@ -107,7 +108,7 @@ def create_space_row(space_row_req):
     print(new_space_row)
 
 
-def verified_almacen(products, num_ref):
+def verified_almacen(products, num_ref, user):
     """
         Esta funcion verifica la existencia de productos terminados en almacen:
             -si no hay producto suficiente se genera una orden de produccion
@@ -128,7 +129,7 @@ def verified_almacen(products, num_ref):
             {"_id": ObjectId(product["id_pro"])})
         list_products.append(product_time)
         time_production = time_production + \
-            int(product_time["time_production"])
+            product_time["time_production"]
         # Verificamos que el producto se encuentre en existencia y ademas alcance
         if int(product["quantity"]) > products_pzs:
             # Se hace el conteo de la cantidad de productos faltantes para mandar a producción
@@ -138,26 +139,16 @@ def verified_almacen(products, num_ref):
                 {"id_prod": product["id_pro"], "quantity_missing": quantity_missing})
 
     if len(request_production) == 0:
-        print("productos mandados a prod")
-        print(request_production)
-        # Si los productos de almacen Alcanzaron, se ingresa a cuentas por pagar
-        create_cuentaPagar(
-            {"fecha": datetime.now(), "lugar": "Tier1", "id_cobro": num_ref, "status": "pending"})
-        print("solicita recoleccion ...")
         # Se realiza la peticon a logistica para recoleccion, la fecha enviada sera la que logistica indique la entrega
         date_delivery = request_logistics(list_products, num_ref)
         # descontamos productos de Almacen
         discount_products(list_products)
         return date_delivery
-    print("productos mandados a prod")
-    print(request_production)
     # Solicitamos la produccion
-    print("solicictamos orden de prod")
     date_production = generate_Production(
         request_production, num_ref, time_production)
     # Solcictamos Recoleccion
-    date_delivery = request_logistics(list_products, num_ref)
-
+    date_delivery = request_logistics(list_products, num_ref, user)
     # Calculamos tiempo de entrega fecha de recoleccion mas tiempo de produccion
     # Convertir las cadenas a objetos datetime
     fecha_produccion = datetime.fromisoformat(
@@ -167,18 +158,19 @@ def verified_almacen(products, num_ref):
     # Sumar las fechas
     fecha_sumada = fecha_produccion + (fecha_entrega - fecha_produccion)
     fecha_sumada_str = fecha_sumada.strftime("%Y-%m-%d %H:%M:%S")
-    print(type(fecha_sumada_str))
     return fecha_sumada_str
 
 
 def discount_products(products):
+    print(products)
     for product in products:
-        product = dict(product)
+        if type(product) != dict:
+            product = dict(product)
         products_pzs = db_name.Product_Pza.find(
             {"$and": [{"id_product": product["id_pro"]}, {"status": "active"}]})
         quantity = product["quantity"]
         products_pzs = list(products_pzs)
-        for discount in range(quantity):
+        for discount in range(len(products_pzs)):
             id_prod_pz = products_pzs[discount]
             db_name.Product_Pza.update_one(
                 {"_id": id_prod_pz["_id"]}, {"$set": {"status": "sold"}})
@@ -186,18 +178,24 @@ def discount_products(products):
                                         "$set": {"status": "free", "id_prod_pz": "Null"}})
 
 
-def request_logistics(list_products, num_ref_solicitud):
+def request_logistics(list_products, num_ref_solicitud, user):
 
     # Generamos los datos de la peticion que necesita logistica
     # with httpx.Client() as client:
     #     headers = {"Authorization": 123123}
     #     response = client.post(os.getenv("URL_LOGISTICA"), headers=headers)
     # Logistica me regresa costo de recoleccion, dia de entrega a tier1, fecha de recoleccion t2
-
+    # Si los productos de almacen Alcanzaron, se ingresa a cuentas por pagar
+    print("solicita recoleccion ...")
+    date_pago = datetime.now()+timedelta(days=7)
     id_prov = db_name.Recolections.insert_one(
-        {"fecha_recolection": datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "fecha_entrega": datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "num_ref_solicictud": num_ref_solicitud, "status": "pending", "costo": "costo"}).inserted_id
-    db_name.CuentasPagar.insert_one(
-        {"proveedor": {"proveedor": "Logistica", "motivo": id_prov}, "importe": 4564, "fecha_pago": None, "status": "pending"})
+        {"fecha_recolection": datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "fecha_entrega": datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "num_ref_solicictud": num_ref_solicitud, "status": "pending", "costo": 159600}).inserted_id
+    create_cuentaPagar({"importe": 15600, "date_registration": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+                       "date_pay": date_pago.strftime("%Y-%m-%d %H:%M:%S"), "Acreedor": "Logistica", "num_referencia": id_prov, "status": "pending"})
+    create_notification(
+        f"Se genero una nueva solicitud a logistica", num_ref_solicitud, user["email"])
+    # db_name.CuentasPagar.insert_one(
+    #     {"proveedor": {"proveedor": "Logistica", "motivo": id_prov}, "importe": 4564, "fecha_pago": None, "status": "pending"})
     return datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 

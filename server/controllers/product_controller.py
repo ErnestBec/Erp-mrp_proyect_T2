@@ -10,17 +10,18 @@ from middlewares.warehouse_middleware import is_valid_object_id
 def create_prduct(product):
     new_product = dict(product)
     i = 0
+    list_mp = []
     for mp in new_product["mp"]:
         if not is_valid_object_id(mp.id_mp):
             raise HTTPException(
                 status_code=400, detail="The id of raw material is invalid!")
-        mp = db_name.RawMaterials.find_one({"_id": ObjectId(mp.id_mp)})
-        if not mp:
+        mp_bd = db_name.RawMaterials.find_one({"_id": ObjectId(mp.id_mp)})
+        if not mp_bd:
             raise HTTPException(
                 status_code=404, detail="The raw material doest not exist!")
-
-        new_product["mp"][i] = dict(new_product["mp"][i])
-        i = +1
+        list_mp.append(dict(mp))
+    print(list_mp)
+    new_product["mp"] = list_mp
     id = db_name.Products.insert_one(new_product).inserted_id
     product = db_name.Products.find_one({"_id": id})
     return JSONResponse(content={"product": productEntity(product), "status": "Success!"}, status_code=201)

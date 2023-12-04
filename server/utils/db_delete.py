@@ -1,13 +1,10 @@
-reactpy[fastapi]
-uvicorn[standard]
-reactpy_router
-python-dotenv
-pymongo
-passlib
-pyjwt
-httpx
+from pymongo import MongoClient
 
-Name BD= Prueba_Tier2
+
+# Conectar a la base de datos MongoDB
+client = MongoClient("mongodb://localhost:27017/")
+db = client["Prueba_Tier2"]
+
 # Collectiones DB
 # Users
 # coleccion = db["BusinessRuleMaxProd"]
@@ -28,3 +25,9 @@ Name BD= Prueba_Tier2
 # coleccion = db["TypeWarehouse"]
 # coleccion = db["Warehouse"]
 # coleccion = db["Notifications"]
+coleccion = db[""]
+
+# Borrar todos los documentos de la colección
+coleccion.delete_many({})
+
+print("Se han eliminado todos los documentos de la colección.")

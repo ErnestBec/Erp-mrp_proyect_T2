@@ -1,13 +1,12 @@
 def cuenta_por_cobrarEntity(item) -> dict:
     return {
-        "id": str(item["_id"]),
-        "solicitud": item["solicictud"],
+        "_id": str(item["_id"]),
         "importe": item["importe"],
-        "fecha_emision": item["fecha_emision"],
-        "total": item["total"],
-        "fecha_de_pago": item["fcha_de_pago"]
-
-
+        "date_registration": item["date_registration"],
+        "date_pay": item["date_pay"],
+        "Deudor": item["Deudor"],
+        "num_referencia": item["num_referencia"],
+        "status": item["status"]
     }
 
 

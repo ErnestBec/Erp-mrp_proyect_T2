@@ -47,7 +47,6 @@ def verified_mp(products, num_ref):
             # Listamos Mp para descontar de almacen
             discount_mp.append({"id_mp": mp["id_mp"], "order_quantity": int(
                 mp["quantyti"])})
-    print(len(request_mp))
     if len(request_mp) == 0:
         # Descontamos de Mp de Almacenes
         discount_Mp(discount_mp)
@@ -62,16 +61,11 @@ def verified_mp(products, num_ref):
 
 def discount_Mp(list_mp):
     for mp in list_mp:
-        print(mp)
         mp_pzs = db_name.Product_Pza.find(
             {"$and": [{"id_product": mp["id_mp"]}, {"status": "active"}]})
-        quantity = mp["order_quantity"]
         mp_pzs = list(mp_pzs)
-        print(len(mp_pzs))
-
         for discount in range(len(mp_pzs)):
             id_mp_pz = mp_pzs[discount]
-            print(id_mp_pz)
             db_name.Product_Pza.update_one(
                 {"_id": id_mp_pz["_id"]}, {"$set": {"status": "sold"}})
             db_name.SpaceRow.update_one({"id_prod_pz": id_mp_pz["_id"]}, {
