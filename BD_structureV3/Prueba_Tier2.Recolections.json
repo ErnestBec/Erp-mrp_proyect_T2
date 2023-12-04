@@ -1,0 +1,90 @@
+[{
+  "_id": {
+    "$oid": "656d5c271ca52e0e0836cf07"
+  },
+  "fecha_recolection": "2023-12-03 22:57:11",
+  "fecha_entrega": "2023-12-03 22:57:11",
+  "num_ref_solicictud": "tie2023120343",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d65106fbc07ac67062d91"
+  },
+  "fecha_recolection": "2023-12-03 23:35:12",
+  "fecha_entrega": "2023-12-03 23:35:12",
+  "num_ref_solicictud": "tie202312034",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d65304ffdac18e32e99e0"
+  },
+  "fecha_recolection": "2023-12-03 23:35:44",
+  "fecha_entrega": "2023-12-03 23:35:44",
+  "num_ref_solicictud": "tie2023120398",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d683fc77407edccd605a8"
+  },
+  "fecha_recolection": "2023-12-03 23:48:47",
+  "fecha_entrega": "2023-12-03 23:48:47",
+  "num_ref_solicictud": "tie2023120331",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d6fe64abc9e2ef7caaf05"
+  },
+  "fecha_recolection": "2023-12-04 00:21:26",
+  "fecha_entrega": "2023-12-04 00:21:26",
+  "num_ref_solicictud": "tie2023120497",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d7634c473fb6ac3719c03"
+  },
+  "fecha_recolection": "2023-12-04 00:48:20",
+  "fecha_entrega": "2023-12-04 00:48:20",
+  "num_ref_solicictud": "tie2023120440",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d7ef0fbccb92d78547c88"
+  },
+  "fecha_recolection": "2023-12-04 01:25:36",
+  "fecha_entrega": "2023-12-04 01:25:36",
+  "num_ref_solicictud": "tie2023120478",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d7f035ff5c3fc86f1ce27"
+  },
+  "fecha_recolection": "2023-12-04 01:25:55",
+  "fecha_entrega": "2023-12-04 01:25:55",
+  "num_ref_solicictud": "tie2023120473",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07b0"
+  },
+  "fecha_recolection": "2023-12-04 01:39:39",
+  "fecha_entrega": "2023-12-04 01:39:39",
+  "num_ref_solicictud": "tie2023120417",
+  "status": "pending",
+  "costo": 159600
+}]

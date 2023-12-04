@@ -1,0 +1,148 @@
+[{
+  "_id": {
+    "$oid": "656d65106fbc07ac67062d92"
+  },
+  "importe": 15600,
+  "date_registration": "2023-12-03 23:35:12",
+  "date_pay": "2023-12-10 23:35:12",
+  "Acreedor": "Logistica",
+  "num_referencia": {
+    "$oid": "656d65106fbc07ac67062d91"
+  },
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d65304ffdac18e32e99e1"
+  },
+  "importe": 15600,
+  "date_registration": "2023-12-03 23:35:44",
+  "date_pay": "2023-12-10 23:35:44",
+  "Acreedor": "Logistica",
+  "num_referencia": {
+    "$oid": "656d65304ffdac18e32e99e0"
+  },
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d683fc77407edccd605a9"
+  },
+  "importe": 15600,
+  "date_registration": "2023-12-03 23:48:47",
+  "date_pay": "2023-12-10 23:48:47",
+  "Acreedor": "Logistica",
+  "num_referencia": {
+    "$oid": "656d683fc77407edccd605a8"
+  },
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d6fe64abc9e2ef7caaf06"
+  },
+  "importe": 15600,
+  "date_registration": "2023-12-04 00:21:26",
+  "date_pay": "2023-12-11 00:21:26",
+  "Acreedor": "Logistica",
+  "num_referencia": {
+    "$oid": "656d6fe64abc9e2ef7caaf05"
+  },
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7634c473fb6ac3719c00"
+  },
+  "importe": 4564,
+  "date_registration": "2023-12-04 00:48:20",
+  "date_pay": "2023-12-11 00:48:20",
+  "Acreedor": "Tier3",
+  "num_referencia": "tie2023120440",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7634c473fb6ac3719c04"
+  },
+  "importe": 15600,
+  "date_registration": "2023-12-04 00:48:20",
+  "date_pay": "2023-12-11 00:48:20",
+  "Acreedor": "Logistica",
+  "num_referencia": {
+    "$oid": "656d7634c473fb6ac3719c03"
+  },
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7ef0fbccb92d78547c85"
+  },
+  "importe": 4564,
+  "date_registration": "2023-12-04 01:25:36",
+  "date_pay": "2023-12-11 01:25:36",
+  "Acreedor": "Tier3",
+  "num_referencia": "tie2023120478",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7ef0fbccb92d78547c89"
+  },
+  "importe": 15600,
+  "date_registration": "2023-12-04 01:25:36",
+  "date_pay": "2023-12-11 01:25:36",
+  "Acreedor": "Logistica",
+  "num_referencia": {
+    "$oid": "656d7ef0fbccb92d78547c88"
+  },
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7f035ff5c3fc86f1ce24"
+  },
+  "importe": 4564,
+  "date_registration": "2023-12-04 01:25:55",
+  "date_pay": "2023-12-11 01:25:55",
+  "Acreedor": "Tier3",
+  "num_referencia": "tie2023120473",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7f035ff5c3fc86f1ce28"
+  },
+  "importe": 15600,
+  "date_registration": "2023-12-04 01:25:55",
+  "date_pay": "2023-12-11 01:25:55",
+  "Acreedor": "Logistica",
+  "num_referencia": {
+    "$oid": "656d7f035ff5c3fc86f1ce27"
+  },
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07aa"
+  },
+  "importe": 4564,
+  "date_registration": "2023-12-04 01:39:39",
+  "date_pay": "2023-12-11 01:39:39",
+  "Acreedor": "Tier3",
+  "num_referencia": "tie2023120417",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07b1"
+  },
+  "importe": 15600,
+  "date_registration": "2023-12-04 01:39:39",
+  "date_pay": "2023-12-11 01:39:39",
+  "Acreedor": "Logistica",
+  "num_referencia": {
+    "$oid": "656d823b2909c677b1ae07b0"
+  },
+  "status": "pending"
+}]

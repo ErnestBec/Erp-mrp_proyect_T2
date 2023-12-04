@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07ab"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "656d823b2909c677b1ae07aa"
+  },
+  "date_created": "2023-12-04 01:39:39",
+  "date_view": null,
+  "email_user": "tie2023120417",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07ad"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120417",
+  "date_created": "2023-12-04 01:39:39",
+  "date_view": null,
+  "email_user": "tie2023120417",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07af"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120417",
+  "date_created": "2023-12-04 01:39:39",
+  "date_view": null,
+  "email_user": "tie2023120417",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07b2"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120417",
+  "date_created": "2023-12-04 01:39:39",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07b4"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "656d823b2909c677b1ae07b3"
+  },
+  "date_created": "2023-12-04 01:39:39",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d83648495cb6cab069ee3"
+  },
+  "Mesaage": "Se recibio materia prima de logisitca",
+  "id_message": {
+    "$oid": "656d83648495cb6cab069ee2"
+  },
+  "date_created": "2023-12-04 01:44:36",
+  "date_view": null,
+  "email_user": {
+    "$oid": "656d83648495cb6cab069ee2"
+  },
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d83658495cb6cab069eea"
+  },
+  "Mesaage": "Se termino la opdern de produccion tie2023120417",
+  "id_message": "tie2023120417",
+  "date_created": "2023-12-04 01:44:37",
+  "date_view": "2023-12-04 01:47:20",
+  "email_user": "tie2023120417",
+  "status": "view"
+},
+{
+  "_id": {
+    "$oid": "656d83658495cb6cab069eeb"
+  },
+  "Mesaage": "Se completo la solicitud de cliente con referencia tie2023120417",
+  "id_message": "tie2023120417",
+  "date_created": "2023-12-04 01:44:37",
+  "date_view": null,
+  "email_user": "tie2023120417",
+  "status": "pending"
+}]

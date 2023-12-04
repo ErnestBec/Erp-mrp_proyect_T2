@@ -1,0 +1,324 @@
+[{
+  "_id": {
+    "$oid": "656d5c271ca52e0e0836cf09"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120343",
+  "date_delivery": "2023-12-03 22:57:11",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-03 22:57:11",
+  "date_req": "2023-12-03 22:57:11",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "656d65106fbc07ac67062d93"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie202312034",
+  "date_delivery": "2023-12-03 23:35:12",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-03 23:35:12",
+  "date_req": "2023-12-03 23:35:12",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d65304ffdac18e32e99e2"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120398",
+  "date_delivery": "2023-12-03 23:35:44",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-03 23:35:44",
+  "date_req": "2023-12-03 23:35:44",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d683fc77407edccd605aa"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120331",
+  "date_delivery": "2023-12-03 23:48:47",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-03 23:48:47",
+  "date_req": "2023-12-03 23:48:46",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d6fe64abc9e2ef7caaf07"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120497",
+  "date_delivery": "2023-12-04 00:21:26",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-04 00:21:26",
+  "date_req": "2023-12-04 00:21:26",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7634c473fb6ac3719c05"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120440",
+  "date_delivery": "2023-12-04 00:48:20",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-04 00:48:20",
+  "date_req": "2023-12-04 00:48:20",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "656d7ef0fbccb92d78547c8a"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120478",
+  "date_delivery": "2023-12-04 01:25:36",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-04 01:25:36",
+  "date_req": "2023-12-04 01:25:36",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7f035ff5c3fc86f1ce29"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120473",
+  "date_delivery": "2023-12-04 01:25:55",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-04 01:25:55",
+  "date_req": "2023-12-04 01:25:55",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07b3"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120417",
+  "date_delivery": "2023-12-04 01:39:39",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-04 01:39:39",
+  "date_req": "2023-12-04 01:39:39",
+  "status": "complete"
+}]

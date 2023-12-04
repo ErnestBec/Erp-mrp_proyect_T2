@@ -1,0 +1,20 @@
+[{
+  "_id": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_type_stock": "656d3a2b50411fb20a144bca",
+  "name_stock": "ALmacen ITTOL",
+  "date_update": {
+    "$date": "2023-12-04T02:33:18.514Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_type_stock": "656d3a6150411fb20a144bcb",
+  "name_stock": "ALmacen ITTOL B",
+  "date_update": {
+    "$date": "2023-12-04T02:33:18.514Z"
+  }
+}]

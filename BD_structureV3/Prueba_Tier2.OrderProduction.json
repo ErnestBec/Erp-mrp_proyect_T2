@@ -1,0 +1,207 @@
+[{
+  "_id": {
+    "$oid": "656d5c271ca52e0e0836cf06"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-03T22:57:11.302Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-03T22:57:11.000Z"
+  },
+  "num_ref_solicitud": "tie2023120343",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "656d65106fbc07ac67062d90"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-03T23:35:12.077Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-03T23:35:12.000Z"
+  },
+  "num_ref_solicitud": "tie202312034",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d65304ffdac18e32e99df"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-03T23:35:44.064Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-03T23:35:44.000Z"
+  },
+  "num_ref_solicitud": "tie2023120398",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d683fc77407edccd605a7"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-03T23:48:47.004Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-03T23:48:47.000Z"
+  },
+  "num_ref_solicitud": "tie2023120331",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d6fe64abc9e2ef7caaf04"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-04T00:21:26.190Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-04T00:21:26.000Z"
+  },
+  "num_ref_solicitud": "tie2023120497",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7634c473fb6ac3719c02"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-04T00:48:20.813Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-04T00:48:20.000Z"
+  },
+  "num_ref_solicitud": "tie2023120440",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "656d7ef0fbccb92d78547c87"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-04T01:25:36.993Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-04T01:25:36.000Z"
+  },
+  "num_ref_solicitud": "tie2023120478",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7f035ff5c3fc86f1ce26"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-04T01:25:55.729Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-04T01:25:55.000Z"
+  },
+  "num_ref_solicitud": "tie2023120473",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07ae"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-04T01:39:39.066Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-04T01:39:39.000Z"
+  },
+  "num_ref_solicitud": "tie2023120417",
+  "status": "complete"
+}]

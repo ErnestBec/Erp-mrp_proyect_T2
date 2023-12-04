@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "656d3fd312e9e3a61ed89671"
+  },
+  "Name": "Cobre",
+  "min_stock": 100,
+  "max_stock": 500
+},
+{
+  "_id": {
+    "$oid": "656d3fe312e9e3a61ed89672"
+  },
+  "Name": "Aluminio",
+  "min_stock": 100,
+  "max_stock": 500
+},
+{
+  "_id": {
+    "$oid": "656d3ff212e9e3a61ed89673"
+  },
+  "Name": "Silicio",
+  "min_stock": 100,
+  "max_stock": 500
+},
+{
+  "_id": {
+    "$oid": "656d3ffd12e9e3a61ed89674"
+  },
+  "Name": "Oro",
+  "min_stock": 100,
+  "max_stock": 500
+},
+{
+  "_id": {
+    "$oid": "656d400912e9e3a61ed89675"
+  },
+  "Name": "Estaño",
+  "min_stock": 100,
+  "max_stock": 500
+},
+{
+  "_id": {
+    "$oid": "656d401112e9e3a61ed89676"
+  },
+  "Name": "Plata",
+  "min_stock": 100,
+  "max_stock": 500
+},
+{
+  "_id": {
+    "$oid": "656d401c12e9e3a61ed89677"
+  },
+  "Name": "Vidrio",
+  "min_stock": 100,
+  "max_stock": 500
+},
+{
+  "_id": {
+    "$oid": "656d402512e9e3a61ed89678"
+  },
+  "Name": "Litio",
+  "min_stock": 100,
+  "max_stock": 500
+}]

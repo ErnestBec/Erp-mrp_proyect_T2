@@ -1,0 +1,26 @@
+[{
+  "_id": {
+    "$oid": "656d3aee50411fb20a144bce"
+  },
+  "id_stock": "656d3a8c50411fb20a144bcc",
+  "name_rack": "Rack 5678",
+  "width_capacity": 20,
+  "high_capacity": 20,
+  "long_capacity": 20,
+  "date_update": {
+    "$date": "2023-12-04T02:34:37.367Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "656d3b1450411fb20a146cb3"
+  },
+  "id_stock": "656d3aa350411fb20a144bcd",
+  "name_rack": "Rack 5678",
+  "width_capacity": 20,
+  "high_capacity": 20,
+  "long_capacity": 20,
+  "date_update": {
+    "$date": "2023-12-04T02:34:37.367Z"
+  }
+}]

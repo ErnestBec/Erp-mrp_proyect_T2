@@ -1,0 +1,344 @@
+[{
+  "_id": {
+    "$oid": "656d5c271ca52e0e0836cf05"
+  },
+  "fecha_peticion": {
+    "$date": "2023-12-03T22:57:11.302Z"
+  },
+  "fecha_entrega": "2023-12-03 22:57:11",
+  "id_pago": {
+    "$oid": "656d5c271ca52e0e0836cf04"
+  },
+  "num_ref_request": "tie2023120343",
+  "status": "complete",
+  "list_mp": [
+    {
+      "id_mp": "656d3ff212e9e3a61ed89673",
+      "order_quantity": 1
+    },
+    {
+      "id_mp": "656d401112e9e3a61ed89676",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d401c12e9e3a61ed89677",
+      "order_quantity": 5
+    },
+    {
+      "id_mp": "656d3fd312e9e3a61ed89671",
+      "order_quantity": 2
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656d65106fbc07ac67062d8f"
+  },
+  "fecha_peticion": "2023-12-03 23:35:12",
+  "fecha_entrega": "2023-12-03 23:35:12",
+  "id_pago": {
+    "$oid": "656d65106fbc07ac67062d8e"
+  },
+  "num_ref_request": "tie202312034",
+  "status": "pending",
+  "list_mp": [
+    {
+      "id_mp": "656d3ff212e9e3a61ed89673",
+      "order_quantity": 1
+    },
+    {
+      "id_mp": "656d401112e9e3a61ed89676",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d401c12e9e3a61ed89677",
+      "order_quantity": 5
+    },
+    {
+      "id_mp": "656d3fd312e9e3a61ed89671",
+      "order_quantity": 2
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656d65304ffdac18e32e99de"
+  },
+  "fecha_peticion": "2023-12-03 23:35:44",
+  "fecha_entrega": "2023-12-03 23:35:44",
+  "id_pago": {
+    "$oid": "656d65304ffdac18e32e99dd"
+  },
+  "num_ref_request": "tie2023120398",
+  "status": "pending",
+  "list_mp": [
+    {
+      "id_mp": "656d3ff212e9e3a61ed89673",
+      "order_quantity": 1
+    },
+    {
+      "id_mp": "656d401112e9e3a61ed89676",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d401c12e9e3a61ed89677",
+      "order_quantity": 5
+    },
+    {
+      "id_mp": "656d3fd312e9e3a61ed89671",
+      "order_quantity": 2
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656d683fc77407edccd605a6"
+  },
+  "fecha_peticion": "2023-12-03 23:48:47",
+  "fecha_entrega": "2023-12-03 23:48:47",
+  "id_pago": {
+    "$oid": "656d683fc77407edccd605a5"
+  },
+  "num_ref_request": "tie2023120331",
+  "status": "pending",
+  "list_mp": [
+    {
+      "id_mp": "656d3ff212e9e3a61ed89673",
+      "order_quantity": 1
+    },
+    {
+      "id_mp": "656d401112e9e3a61ed89676",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d401c12e9e3a61ed89677",
+      "order_quantity": 5
+    },
+    {
+      "id_mp": "656d3fd312e9e3a61ed89671",
+      "order_quantity": 2
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656d6fe64abc9e2ef7caaf03"
+  },
+  "fecha_peticion": "2023-12-04 00:21:26",
+  "fecha_entrega": "2023-12-04 00:21:26",
+  "id_pago": {
+    "$oid": "656d6fe64abc9e2ef7caaf02"
+  },
+  "num_ref_request": "tie2023120497",
+  "status": "pending",
+  "list_mp": [
+    {
+      "id_mp": "656d3ff212e9e3a61ed89673",
+      "order_quantity": 1
+    },
+    {
+      "id_mp": "656d401112e9e3a61ed89676",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d401c12e9e3a61ed89677",
+      "order_quantity": 5
+    },
+    {
+      "id_mp": "656d3fd312e9e3a61ed89671",
+      "order_quantity": 2
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656d7634c473fb6ac3719c01"
+  },
+  "fecha_peticion": "2023-12-04 00:48:20",
+  "fecha_entrega": "2023-12-04 00:48:20",
+  "id_pago": {
+    "$oid": "656d7634c473fb6ac3719c00"
+  },
+  "num_ref_request": "tie2023120440",
+  "status": "complete",
+  "list_mp": [
+    {
+      "id_mp": "656d3ff212e9e3a61ed89673",
+      "order_quantity": 1
+    },
+    {
+      "id_mp": "656d401112e9e3a61ed89676",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d401c12e9e3a61ed89677",
+      "order_quantity": 5
+    },
+    {
+      "id_mp": "656d3fd312e9e3a61ed89671",
+      "order_quantity": 2
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656d7ef0fbccb92d78547c86"
+  },
+  "fecha_peticion": "2023-12-04 01:25:36",
+  "fecha_entrega": "2023-12-04 01:25:36",
+  "id_pago": {
+    "$oid": "656d7ef0fbccb92d78547c85"
+  },
+  "num_ref_request": "tie2023120478",
+  "status": "pending",
+  "list_mp": [
+    {
+      "id_mp": "656d3ff212e9e3a61ed89673",
+      "order_quantity": 1
+    },
+    {
+      "id_mp": "656d401112e9e3a61ed89676",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d401c12e9e3a61ed89677",
+      "order_quantity": 5
+    },
+    {
+      "id_mp": "656d3fd312e9e3a61ed89671",
+      "order_quantity": 2
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656d7f035ff5c3fc86f1ce25"
+  },
+  "fecha_peticion": "2023-12-04 01:25:55",
+  "fecha_entrega": "2023-12-04 01:25:55",
+  "id_pago": {
+    "$oid": "656d7f035ff5c3fc86f1ce24"
+  },
+  "num_ref_request": "tie2023120473",
+  "status": "pending",
+  "list_mp": [
+    {
+      "id_mp": "656d3ff212e9e3a61ed89673",
+      "order_quantity": 1
+    },
+    {
+      "id_mp": "656d401112e9e3a61ed89676",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d401c12e9e3a61ed89677",
+      "order_quantity": 5
+    },
+    {
+      "id_mp": "656d3fd312e9e3a61ed89671",
+      "order_quantity": 2
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 1
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07ac"
+  },
+  "fecha_peticion": "2023-12-04 01:39:39",
+  "fecha_entrega": "2023-12-04 01:39:39",
+  "id_pago": {
+    "$oid": "656d823b2909c677b1ae07aa"
+  },
+  "num_ref_request": "tie2023120417",
+  "status": "complete",
+  "list_mp": [
+    {
+      "id_mp": "656d3ff212e9e3a61ed89673",
+      "order_quantity": 1
+    },
+    {
+      "id_mp": "656d401112e9e3a61ed89676",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 0
+    },
+    {
+      "id_mp": "656d401c12e9e3a61ed89677",
+      "order_quantity": 5
+    },
+    {
+      "id_mp": "656d3fd312e9e3a61ed89671",
+      "order_quantity": 2
+    },
+    {
+      "id_mp": "656d3ffd12e9e3a61ed89674",
+      "order_quantity": 1
+    }
+  ]
+}]
