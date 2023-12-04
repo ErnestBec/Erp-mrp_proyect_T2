@@ -50,8 +50,8 @@ def Page_Cuentas():
                                            html.div({"class":"row no-border-bottom"},
                                                     html.div({"class":"col-auto"}, 
                                                              html.div({"class":"btn-group"},
-                                                                    
-                                                                    
+                                                                    btnFilterDay.btnFilterDay(),
+                                                                    btnFilter.btnFilter()
                                                                     )
                                                             )
                                                 )  
