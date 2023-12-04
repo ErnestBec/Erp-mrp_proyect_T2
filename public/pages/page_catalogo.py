@@ -2,35 +2,8 @@ from reactpy import component, html
 from components import navbar_top, Card, navbarMenu, tabla, btnFilter, btnFilterDay
 from reactpy_router import link
 
-def Estado(edo):
-    if edo == "Aprobada":
-        return html.button(
-            {
-                "type": "button",
-                "class": "btn",
-                "style": {
-                    "color": "#000000",
-                    "background-color": "#AFF2FF",
-                     "font-size": "14px"
-                },
-            },
-             html.b(f"{edo}"),
-        )
-    if edo == "Pendiente":
-        return html.button(
-            {
-                "type": "button",
-                "class": "btn",
-                "style": {
-                    "color": "#000000",
-                    "background-color": "#F0FE88",
-                     "font-size": "14px"
-                },
-            },
-             html.b(f"{edo}"),
-        )
-    
-def Ver():
+def Boom():
+
      return html.button(
             {
                 "type": "button",
@@ -40,50 +13,63 @@ def Ver():
                     "background-color": "#D2DDE7",
                 },
             },
-             html.b(html.a({"href": "#", "style": {"color": "black", "font-size": "14px"}}, "Ver"))
+             html.b(html.a({"href": "#", "style": {"color": "black", "font-size": "14px"}}, "Ver BOOM"))
 
         ) 
 
+def Estado(edo):
+    if edo == "Disponible":
+        return html.button(
+            {
+                "type": "button",
+                "class": "btn",
+                "style": {
+                    "color": "#000000",
+                    "background-color": "#DFFFEE",
+                     "font-size": "14px"
+                },
+            },
+             html.b(f"{edo}"),
+        )
+    if edo == "No Disponible":
+        return html.button(
+            {
+                "type": "button",
+                "class": "btn",
+                "style": {
+                    "color": "#000000",
+                    "background-color": "#FFDFDF",
+                     "font-size": "14px"
+                },
+            },
+             html.b(f"{edo}"),
+        )
+    
+
 @component
-def Page_Solicitudes():
+def Page_Catalogo():
 
-    titulo = "Solicitudes"
+    titulo = "Catálogo"
 
-    icono = 'bi bi-card-list'
+    icono = 'bi bi-bag'
 
     opciones = [
-        "Solicitudes Aprobadas",
-        "Solicitudes Pendientes",
+        "Disponible",
+        "No Disponible",
     ]
 
-   
+    datos = [["65545", "Pantallas", Estado("Disponible"), "11", "99", "$123", Boom()],
+             ["65545", "Pantallas", Estado("No Disponible"), "11", "99", "$123", Boom()],]
 
-    datos = [
-    [
-        "Aieto Energies",
-        "0957746KJLY",
-        Ver(),  
-        Estado("Aprobada"),
-        "01/12/2020",
-        "24/12/2020",
-    ],
-    [
-        "Aieto Energies",
-        "0957746KJLY",
-        Ver(),  
-        Estado("Pendiente"),
-        "01/12/2020",
-        "24/12/2020",
-    ],
-    ]
     columnas = [
         "",
-        "Nombre del Cliente",
-        "Num. referencia",
-        "Descripción",
+        "ID",
+        "Nombre del Producto",
         "Estado",
-        "Fecha de emisión",
-        "Fecha de entrega",
+        "Stock Mínimo",
+        "Stock Máximo",
+        "Precio",
+        "",
     ]
 
     return html.div(
@@ -117,7 +103,7 @@ def Page_Solicitudes():
                                                 "class": "display-6",
                                                 "style": "color: black;",
                                             },
-                                            html.b("Inventario de Solicitudes"),
+                                            html.b("Catálogo"),
                                         ),
                                     ),
                                 ),
@@ -130,7 +116,7 @@ def Page_Solicitudes():
                                                 "class": "display-8",
                                                 "style": "color: black;",
                                             },
-                                            "Listado de todas las solicitudes esperando aprobación",
+                                            "Disponibilidad",
                                         ),
                                     ),
                                 ),
@@ -152,7 +138,6 @@ def Page_Solicitudes():
                                             {"class": "col-auto"},
                                             html.div(
                                                 {"class": "btn-group"},
-                                                btnFilterDay.btnFilterDay(),
                                                 btnFilter.btnFilter(opciones),
                                             ),
                                         ),

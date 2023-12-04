@@ -2,25 +2,104 @@ from reactpy import component, html
 from components import navbar_top, Card, navbarMenu, tabla, btnFilter, btnFilterDay
 from reactpy_router import link
 
+def Estado(edo):
+    if edo == "Aprobada":
+        return html.button(
+            {
+                "type": "button",
+                "class": "btn",
+                "style": {
+                    "color": "#000000",
+                    "background-color": "#AFF2FF",
+                     "font-size": "14px"
+                },
+            },
+             html.b(f"{edo}"),
+        )
+    if edo == "Pendiente":
+        return html.button(
+            {
+                "type": "button",
+                "class": "btn",
+                "style": {
+                    "color": "#000000",
+                    "background-color": "#F0FE88",
+                     "font-size": "14px"
+                },
+            },
+             html.b(f"{edo}"),
+        )
+    
+    if edo == "Completada":
+        return html.button(
+            {
+                "type": "button",
+                "class": "btn",
+                "style": {
+                    "color": "#000000",
+                    "background-color": "#5BDD4B",
+                     "font-size": "14px"
+                },
+            },
+             html.b(f"{edo}"),
+        )
+    
+    if edo == "No Empezada":
+        return html.button(
+            {
+                "type": "button",
+                "class": "btn",
+                "style": {
+                    "color": "#000000",
+                    "background-color": "#FF6060",
+                     "font-size": "14px"
+                },
+            },
+             html.b(f"{edo}"),
+        )
+
 
 @component
 def Page_Ordenes():
+
+    
 
     titulo = "Ordenes"
 
     icono = 'bi bi-cart3'
 
     opciones = [
-        "Ordenes Totales",
-        "Ordenes Pendientes",
-        "Ordenes Aprobadas",
-        "Ordenes Completadas",
+        "Total",
+        "Pendiente",
+        "Aprobada",
+        "Completada",
     ]
-
+    
     datos = [
         [
             "Aieto Energies",
-            "Aprobado",
+            "Aprobada",
+            "0957746KJLY",
+            "BOM-Rizz-0523-001",
+            "24/12/2020",
+        ],
+        [
+            "Aieto Energies",
+            "Pendiente",
+            "0957746KJLY",
+            "BOM-Rizz-0523-001",
+            "24/12/2020",
+        ],
+        [
+            "Aieto Energies",
+            "Completada",
+            "0957746KJLY",
+            "BOM-Rizz-0523-001",
+            "24/12/2020",
+        ],
+        [
+            "Aieto Energies",
+            "No Empezada",
             "0957746KJLY",
             "BOM-Rizz-0523-001",
             "24/12/2020",

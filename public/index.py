@@ -2,7 +2,7 @@ from reactpy import component
 from fastapi import FastAPI
 from reactpy.backend.fastapi import configure
 from reactpy_router import route, simple
-from pages import EJEMPLOAPI, page_forcast, page_requests, page_orders, home_page, login_page, shopping, error_page, card_page, Tables_pages, utilities_others, charts, register, page_cuentas ,utilities_animation, utilities_color
+from pages import EJEMPLOAPI, page_catalogo, page_store, page_forcast, page_racks, page_requests, page_orders, home_page, login_page, shopping, error_page, card_page, Tables_pages, utilities_others, charts, register, page_cuentas ,utilities_animation, utilities_color
 
 
 @component
@@ -23,6 +23,9 @@ def App():
         route("/Ordenes", page_orders.Page_Ordenes()),
         route("/Pronostico", page_forcast.Page_Forcast()),
         route("/Solicitudes", page_requests.Page_Solicitudes()),
+        route("/Almacenes", page_store.Page_Almacenes()),
+        route("/Racks", page_racks.Page_Racks()),
+        route("/Catalogo", page_catalogo.Page_Catalogo()),
         route("*", error_page.error()),
     )
 
