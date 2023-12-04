@@ -1,5 +1,5 @@
 from reactpy import component, html
-from components import  navbar2,nabvar_side, footer, navbar_user, card_icome, card_tasks, card_pending_request
+from components import  nabvar_side, footer, navbar_user, card_icome, card_tasks, card_pending_request
 from reactpy_router import link
 from pages import home_page
 
@@ -14,7 +14,7 @@ def utlities_oters():
             },
             "id": "page-top"
         },
-            navbar2.NavbarTop(),
+          navbar_user.navbar_user(),
             html.div({"style": {
                 "width": "100%"
             }, "id": "content-wrapper", "class": "d-flex flex-column"},
