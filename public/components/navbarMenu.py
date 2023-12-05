@@ -25,7 +25,7 @@ def Navbar():
         html.li(
             {"class": "nav-item active", "style": {"marginLeft": "10%", "marginTop": "8%", "color": "#000000", "textAlign": "left"}},
             html.i({"class": "bi bi-clipboard-data", "style": {"fontSize": "20px", "marginRight": "8px"}}),
-            html.b(html.a({"href": "#", "style": {"color": "black"}}, "Dashboard")),
+            html.b(html.a({"href": "/page_dashboard", "style": {"color": "black"}}, "Dashboard")),
         ),
         html.li(
             {"className": "nav-item active", "style": {"marginLeft": "10%", "marginTop": "8%", "color": "#000000", "textAlign": "left"}},

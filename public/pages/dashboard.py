@@ -58,7 +58,7 @@ def Dashboard():
                 {"id": "content-wrapper", "class_name": "d-flex flex-column"},
                 html.div(
                     {"id": "content"},
-                    navbar_top.NavbarBusqueda(titulo),
+                    navbar_top.NavbarBusqueda(titulo, icono),
                     html.div(
                         {"class_name": "container-fluid"},
                         html.div(
