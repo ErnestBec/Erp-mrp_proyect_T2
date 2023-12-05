@@ -1,5 +1,5 @@
 from reactpy import component, html
-from components import navbar_top, navbarMenu, btnFilter, btnFilterDay, table
+from components import navbar_top, navbarMenu, btnFilter, btnFilterDay, table, chart, card_graphic_ventas
 from reactpy_router import link
 
 @component
@@ -125,7 +125,11 @@ def Dashboard():
                                                              html.b("Graficas")
                                                             )
                                                     )
-                                        )                                   
+                                        ),
+                                        html.div({"class":"container-fluid"},
+                                                 definirGrafica("Grafica de Pantallas")
+                                                 )
+                                                                       
                                     ),
                         ),
                     ),
@@ -181,3 +185,27 @@ def Dashboard():
             ),
         ),
     )
+
+    
+def definirGrafica(dash):
+    longitudx = ["1", "2", "3", "4","5"]
+    titulo = "Venta de piezas"
+    color= "#00BA34"
+    datos = [54152645,51254559,5645512,564865,8456156,984561]
+    nombre = "Pantalla"
+    graficas = []
+    graficas.append(chart.newChart(nombre, datos, color))
+    
+    strCharts = "["
+    for i in graficas:
+        strCharts+=(i+",")
+    strCharts+="]"
+
+    return card_graphic_ventas.linearChartComponent(str(dash), (str(longitudx)), titulo, strCharts)
+
+
+
+
+
+    
+
