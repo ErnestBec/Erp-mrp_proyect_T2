@@ -1,4 +1,3 @@
-
 from reactpy import component, html
 
 @component
@@ -30,4 +29,13 @@ def Tabla(columnas, datos):
         table
     )
     return table_container
+
+
+
+
+
+
+
+
+
 

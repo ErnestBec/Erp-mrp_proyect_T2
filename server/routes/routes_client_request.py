@@ -17,7 +17,7 @@ requests_client = APIRouter()
 
 # Ruta para insercion automatica
 
-@requests_client.post("/client/request/api", tags=["Client:API"], dependencies=[Depends(request_client_validate_middleware)])
+@requests_client.post("/client/request/api", tags=["Client:API"], dependencies=[Depends(Portador())])
 def new_request_route(request: RequestsClient):
     return new_request(request)
 

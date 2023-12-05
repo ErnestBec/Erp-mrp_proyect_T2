@@ -3,7 +3,8 @@ from reactpy_router import link
 
 
 @component
-def NavbarBusqueda(titulo):
+def NavbarBusqueda(titulo, icono):
+
     return html.div(
         html.nav(
             {
@@ -18,7 +19,11 @@ def NavbarBusqueda(titulo):
                     "data-bs-toggle": "button",
                     "style": {"color": "black", "marginRight": "50%"},
                 },
+
                 #html.i({"className": "bi bi-cash d-flex", "style": {"fontSize": "20px"}}),
+
+                html.i({"className": icono, "style": {"fontSize": "20px"}}),
+
                 html.b(titulo),
             ),
             html.input(
@@ -57,5 +62,7 @@ def NavbarBusqueda(titulo):
     )
 
 
-# Exportar el componente
-# exported_component = NavbarBusqueda
+
+
+
+

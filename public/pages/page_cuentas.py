@@ -1,34 +1,10 @@
 from reactpy import component, html
-from components import navbar_top, navbarMenu, btnFilter, btnFilterDay, table
+from components import navbar_top, Card, navbarMenu
 from reactpy_router import link
 
 
 @component
-
 def Page_Cuentas():
-
-    
-    opciones = [
-        "Cuentas por cobrar",
-        "Cuentas por pagar",
-
-    ]
-
-    columnas = [
-        "",
-        "No",
-        "Num. Referencia*",
-        "Importe",
-        "Estatus",
-        "Fecha de emision",
-        "Fecha de pago"
-    ]
-
-    datos = [
-
-
-    ]
-
     return html.div(
         {"id": "app"},
         html.div(
@@ -38,7 +14,7 @@ def Page_Cuentas():
                 {"id": "content-wrapper", "class_name": "d-flex flex-column"},
                 html.div(
                     {"id": "content"},
-                    navbar_top.NavbarBusqueda("Cuentas"),
+                    navbar_top.NavbarBusqueda(),
                     html.div(
                         {"class_name": "container-fluid"},
                         html.div(
@@ -47,37 +23,34 @@ def Page_Cuentas():
                                 "style": {
                                     "background-color": "white",
                                     "border-radius": "10px",
-                                }
+                                },
                             },
                             html.div(
                                 {
                                     "class": "container-fluid",
-                                    "style": {"margin-top": "5%", "margin-bottom": "5%"},
-                                }, html.div({"class":"row"},
-                                            html.div({"class":"col-auto me-auto", "style":{"color":"black"}}, 
-                                                     html.h6({"class":"display-6"}, 
-                                                             html.b("Cuentas")
-                                                            )
-                                                    )
+                                    "style": {"margin-top": "5%"},
+                                },
+                                html.h5(
+                                    {"class": "display-6", "style": {"color": "black"}},
+                                    "Cuentas",
+                                ),
+                                html.h6(
+                                    {"style": {"margin-bottom": "10%"}},
+                                    "Listado de solicitudes aprobadas",
+                                ),
+                            ),
+                            html.div(
+                                {"class": "container-fluid"},
+                                html.div(
+                                    {"class": "row no-border-bottom"},
+                                    html.div(
+                                        {"class": "col-auto"},
+                                        html.div(
+                                            {"class": "btn-group"},
+                                            
                                         ),
-                                    
-                            ),html.div( {"class" :"card-body", "style" : {"margin-top":"0%"}},                                        #Contenedor para la grafica y botones
-                                    html.div({"class":"container-fluid"}, #Contenedor de los botones
-                                           html.div({"class":"row no-border-bottom"},
-                                                    html.div({"class":"col-auto"}, 
-                                                             html.div({"class":"btn-group"},
-                                                                    btnFilterDay.btnFilterDay(),
-                                                                    btnFilter.btnFilter(opciones)
-                                                                    )
-                                                            )
-                                                )  
-                                           
-                                           ),
-                                           html.div({"class":"table-responsive", "style" :{"margin-top" :"2%"}},
-                                                    table.Tabla(columnas,datos)
-
-                                                    )
-
+                                    ),
+                                ),
                             ),
                         ),
                     ),
