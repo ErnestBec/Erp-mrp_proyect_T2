@@ -21,15 +21,6 @@ def NavbarBusqueda(titulo, icono):
                 html.i({"className": icono, "style": {"fontSize": "20px"}}),
                 html.b(titulo),
             ),
-            html.input(
-                {
-                    "type": "email",
-                    "class": "form-control navbar-nav ml-auto",
-                    "id": "floatingInput",
-                    "placeholder": "Buscar ...",
-                    "aria-label": "Search",
-                }
-            ),
             html.a(
                 {
                     "class": "nav-link dropdown-toggle",

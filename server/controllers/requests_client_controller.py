@@ -44,7 +44,7 @@ def new_request(request, user):
     id = db_name.Request_Client.insert_one(data_request).inserted_id
     db_name.Request_Client.find_one({"_id": id})
     create_notification(
-        f"{user["email"]} genero una nueva solicitud de productos", id, user["email"])
+        f'{user["email"]} genero una nueva solicitud de productos', id, user["email"])
     # Integramos la respuesta del cliente
     response_client["num_ref_solicitud"] = data_request["num_ref_solicitud"]
     importe = generate_total_cost(data_request["products"])

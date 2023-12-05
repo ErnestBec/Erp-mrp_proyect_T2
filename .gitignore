@@ -2,6 +2,7 @@
 frontend-tier-env
 venv
 t2-env
+T2-env
 # Carpetas de cache y vacias 
 __pycache__
 *.log
