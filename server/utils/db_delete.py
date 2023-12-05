@@ -6,9 +6,12 @@ client = MongoClient("mongodb://localhost:27017/")
 db = client["Prueba_Tier2"]
 
 # Collectiones DB
+# #coleccion = db["RcepiptOfRequestSupplier"]
+# coleccion = db["Notifications"]
 # Users
 # coleccion = db["BusinessRuleMaxProd"]
 # coleccion = db["CuentasPagar"]
+collections = ["CuentasPorCobrar","Floors","OrderProduction","Product_Pza","Products","Racks",]
 # coleccion = db["CuentasPorCobrar"]
 # coleccion = db["Floors"]
 # coleccion = db["OrderProduction"]
@@ -16,7 +19,6 @@ db = client["Prueba_Tier2"]
 # coleccion = db["Products"]
 # coleccion = db["Racks"]
 # coleccion = db["RawMaterials"]
-# coleccion = db["RcepiptOfRequestSupplier"]
 # coleccion = db["Recolections"]
 # coleccion = db["Request_Client"]
 # coleccion = db["Request_Supplier"]
@@ -24,8 +26,7 @@ db = client["Prueba_Tier2"]
 # coleccion = db["SpaceRow"]
 # coleccion = db["TypeWarehouse"]
 # coleccion = db["Warehouse"]
-# coleccion = db["Notifications"]
-coleccion = db[""]
+# coleccion = db[""]
 
 # Borrar todos los documentos de la colección
 coleccion.delete_many({})
