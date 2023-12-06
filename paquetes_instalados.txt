@@ -8,7 +8,7 @@ pyjwt
 httpx
 bson
 
-Name BD= Prueba_Tier2
+#Name BD= Prueba_Tier2
 # Collectiones DB
 # Users
 # coleccion = db["BusinessRuleMaxProd"]
