@@ -1,6 +1,52 @@
-from reactpy import component, html
+from reactpy import component, html, hooks
 from components import navbar_top, Card, navbarMenu, tabla, btnFilter, btnFilterDay
 from reactpy_router import link
+import json
+import requests
+import json
+
+def obtener_datos_api():
+    url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
+    mail = "tier2@gmail.com"
+    pswd = "pzs12345"
+    info = {"email": str(mail), "password": str(pswd)}
+
+    response = requests.post(
+        url + "login",
+        data=json.dumps(info),
+        headers={"Content-Type": "application/json"},
+    )
+
+    if response.status_code >= 200 and response.status_code < 300:
+        token = str(response.json()["token"])
+        print(token)
+
+        headers = {'Authorization': f'Bearer {token}'}
+
+        try:
+            response = requests.get(url + "requests", headers=headers)
+            response.raise_for_status()
+            datos = response.json()
+            return datos
+        except requests.exceptions.HTTPError as errh:
+            print("HTTP Error:", errh)
+        except requests.exceptions.ConnectionError as errc:
+            print("Error de conexión:", errc)
+        except requests.exceptions.Timeout as errt:
+            print("Tiempo de espera agotado:", errt)
+        except requests.exceptions.RequestException as err:
+            print("Error desconocido:", err)
+    else:
+        print(f"Error en la solicitud POST. Código de estado: {response.status_code}")
+
+    return []  
+
+
+
+
+
+datos_api = obtener_datos_api()
+
 
 def Estado(edo):
     if edo == "Aprobada":
@@ -11,10 +57,10 @@ def Estado(edo):
                 "style": {
                     "color": "#000000",
                     "background-color": "#AFF2FF",
-                     "font-size": "14px"
+                    "font-size": "14px",
                 },
             },
-             html.b(f"{edo}"),
+            html.b(f"{edo}"),
         )
     if edo == "Pendiente":
         return html.button(
@@ -24,12 +70,12 @@ def Estado(edo):
                 "style": {
                     "color": "#000000",
                     "background-color": "#F0FE88",
-                     "font-size": "14px"
+                    "font-size": "14px",
                 },
             },
-             html.b(f"{edo}"),
+            html.b(f"{edo}"),
         )
-    
+
     if edo == "Completada":
         return html.button(
             {
@@ -38,12 +84,12 @@ def Estado(edo):
                 "style": {
                     "color": "#000000",
                     "background-color": "#5BDD4B",
-                     "font-size": "14px"
+                    "font-size": "14px",
                 },
             },
-             html.b(f"{edo}"),
+            html.b(f"{edo}"),
         )
-    
+
     if edo == "No Empezada":
         return html.button(
             {
@@ -52,21 +98,18 @@ def Estado(edo):
                 "style": {
                     "color": "#000000",
                     "background-color": "#FF6060",
-                     "font-size": "14px"
+                    "font-size": "14px",
                 },
             },
-             html.b(f"{edo}"),
+            html.b(f"{edo}"),
         )
 
 
 @component
 def Page_Ordenes():
-
-    
-
     titulo = "Ordenes"
 
-    icono = 'bi bi-cart3'
+    icono = "bi bi-cart3"
 
     opciones = [
         "Total",
@@ -74,46 +117,31 @@ def Page_Ordenes():
         "Aprobada",
         "Completada",
     ]
+
     
-    datos = [
-        [
-            "Aieto Energies",
-            "Aprobada",
-            "0957746KJLY",
-            "BOM-Rizz-0523-001",
-            "24/12/2020",
-        ],
-        [
-            "Aieto Energies",
-            "Pendiente",
-            "0957746KJLY",
-            "BOM-Rizz-0523-001",
-            "24/12/2020",
-        ],
-        [
-            "Aieto Energies",
-            "Completada",
-            "0957746KJLY",
-            "BOM-Rizz-0523-001",
-            "24/12/2020",
-        ],
-        [
-            "Aieto Energies",
-            "No Empezada",
-            "0957746KJLY",
-            "BOM-Rizz-0523-001",
-            "24/12/2020",
-        ],
-    ]
 
     columnas = [
-        "",
-        "Nombre del Cliente",
-        "Estado",
-        "ID de la Orden",
-        "Lista de Materiales",
-        "Fecha de Vencimiento",
-    ]
+    "",
+    "id",
+    "status",
+    "date_req",
+    "products.0.product._id",
+    "products.0.product.name_prod",
+    "products.0.product.precio_uni",
+    "products.0.quantyti",
+    "products.1.product._id",
+    "products.1.product.name_prod",
+    "products.1.product.precio_uni",
+    "products.1.quantyti",
+    "num_ref_solicitud",
+    "date_approved",
+    "date_delivery_expected",
+    "date_delivery",
+    "client.name",
+    "client.email",
+    "client.phone"
+]
+
 
     return html.div(
         {"id": "app"},
@@ -187,7 +215,13 @@ def Page_Ordenes():
                                         ),
                                     ),
                                 ),
-                                tabla.Tabla(columnas, datos),
+                                
+                                #tabla.Tabla(columnas, datos_api)
+                                #print(datos_api),
+
+                                tabla.mostrar_tabla_de_documentos(columnas, datos_api)
+                               
+                                
                             ),
                         ),
                     ),

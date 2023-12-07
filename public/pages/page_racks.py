@@ -181,7 +181,7 @@ def Page_Racks():
                             html.div(
                                 {"class": "card-body", "style": "margin-top: 0%;"},
                                 html.hr({"class": "sidebar-divider my-0"}),
-                                tabla.Tabla(columnas, datos),
+                                tabla.Tabla(datos),
                             ),
                         ),
                     ),
