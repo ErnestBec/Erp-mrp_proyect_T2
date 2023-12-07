@@ -16,7 +16,7 @@ OrdenProducc = APIRouter()
 
 @OrdenProducc.get("/ordenproduc", tags=["Orden de Produccion"], dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
 def find_all_admin_orders():
-    return Ordenes_ProduccionEntity(db_name.OrdenesProduccion.find().toArray())
+    return Ordenes_ProduccionEntity(db_name.OrdenesProduccion.find())
 
 
 @OrdenProducc.post("/orderp", tags=["Orden de Produccion"], dependencies=[Depends(OrdenProd_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])

@@ -1,8 +1,11 @@
-from reactpy import component, html
+from reactpy import component, html, use_effect, use_state
 from components import navbar_top, Card, navbarMenu, tabla, btnFilter, btnFilterDay
 from reactpy_router import link
+import requests
+import json
 
 def Estado(edo):
+   
     if edo == "Aprobada":
         return html.button(
             {
@@ -61,8 +64,14 @@ def Estado(edo):
 
 @component
 def Page_Ordenes():
+    orders, set_orders = use_state([])
+    def getOrders():
+            url ="http://127.0.0.1:8001/products"
+            headers = {'Authorization':'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpZXIyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoicHpzMTIzNDUiLCJleHAiOjE3MDIwNTMyNTZ9.B_Sx1RUI76Pn74oSUsDxYxBxUXsNpiLnOxLxdn-_K5I' }
+            orders_api = requests.get(url,headers=headers)
+            set_orders(orders_api)
 
-    
+    use_effect(getOrders, dependencies=[])
 
     titulo = "Ordenes"
 
@@ -146,7 +155,8 @@ def Page_Ordenes():
                                                 "class": "display-6",
                                                 "style": "color: black;",
                                             },
-                                            html.b("Ordenes Totales"),
+                                    
+                                            html.b(orders),
                                         ),
                                     ),
                                 ),
