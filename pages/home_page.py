@@ -1,10 +1,25 @@
-from reactpy import html, component
+from reactpy import html, component,hooks,use_state
 from components import nabvar_side, navbar_user, card_icome, card_tasks, card_pending_request, footer, card_graphic_ventas, card_graphic_round
 from components import chart as classChart
+from localStoragePy import localStoragePy
+import reactpy
 import random
+localStorage = localStoragePy('tier2', 't2-storage')
+token = None
 
 @component
 def home_page():
+    token,setToken = reactpy.hooks.use_state("")
+    def getToken():
+        getTkn = str(localStorage.getItem("token"))
+        if getTkn == "None":
+            return html.script("window.location.href = \"/\";")
+        else:
+            setToken(getTkn)
+            return html.script("")
+        
+        
+        
     bootstrap_css = html.link({
         "rel": "stylesheet",
         "href": "https://elpatronhh.github.io/portfolio/bootstrap.min.css"
@@ -50,16 +65,16 @@ def home_page():
         style_css,
         fontawesome,
         head,
-
         html.div({"id": "wrapper"},
                  nabvar_side.navbar(),
+                 getToken(),
                  html.div({"id": "content-wrapper", "class": "d-flex flex-column"},
                           html.div({"id": "content"},
                                    html.div(navbar_user.navbar_user()),
                                    html.div({"class": "container-fluid"},
                                             html.div({"class": "d-sm-flex align-items-center justify-content-between mb-4"},
                                                      html.h1(
-                                                {"class": "h3 mb-0 text-gray-800"}, "Dashboard"),
+                                                {"class": "h3 mb-0 text-gray-800"}, token),
                                        html.a({"class": "d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"},
                                               html.i(
                                            {"class": "fas fa-download fa-sm text-white-50 me-2"}),

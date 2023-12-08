@@ -1,11 +1,15 @@
 from reactpy import component, html, hooks,use_state
 from reactpy_router import link
+from localStoragePy import localStoragePy
 import reactpy
 import json
 import requests
 #
-url = "http://127.0.0.1:8001/"
 
+localStorage = localStoragePy('tier2', 't2-storage')
+
+
+url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
 def btnSubmit(e,mail,pswd):
     info = {"email": str(mail),"password": str(pswd)}
     color ="#ff6161"
@@ -16,11 +20,14 @@ def btnSubmit(e,mail,pswd):
         color = "#98ff98"
         #result = response.json()['token']
         print("token generado: "+str(response.json()['token']))
-        result = "Puede ingresar"
-        link = "/dashboard"
+        result = str(response.json()['token'])
+        localStorage.setItem('token', result )
+        return html.script("window.location.href = \"/dashboard\";")
     else:
-        result = "Error"
-    return html.a({"style":"color: "+color+";font-family: Inter;","class":"m-0 p-0","href":str(link)},str(result))
+        print("No hay token")
+        localStorage.clear()
+        return html.script("")
+    
     
 @component
 def login_user():
@@ -44,7 +51,7 @@ def login_user():
                                                                                 html.div({"class":"w-100 mb-4","style":"opacity: 0.60; color: #47516B; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word"},
                                                                                          "Accede con tus credenciales."
                                                                                          ),
-                                                                                html.form({},
+                                                                                html.form({}, 
                                                                                           html.div({"class":"form-group"},
                                                                                                    html.label({"for":"exampleInputEmail1","style": "color: #556769; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16px; word-wrap: break-word"},"Correo electrónico*"),
                                                                                                    html.input({"type":"email","class":"form-control","id":"exampleInputEmail1","aria-describedby":"emailHelp","placeholder":"correo@example.com","key":"mail1","onChange":lambda event:setEmail(str(event['currentTarget']['value']))})
