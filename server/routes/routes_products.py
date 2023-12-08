@@ -26,17 +26,17 @@ def find_product(id: str):
 # Endppoints User Admin
 
 
-@product.get("/products", tags=["Products"], dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
+@product.get("/admin/products", tags=["Products"], dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
 def find_all_admin():
     return productsEntity(db_name.Products.find())
 
 
-@product.post("/product", tags=["Products"], dependencies=[Depends(product_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
+@product.post("/admin/product", tags=["Products"], dependencies=[Depends(product_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
 def create_product_route(producto: Prducto):
     return create_prduct(producto)
 
 
-@product.put("/products/{id}", tags=["Products"], dependencies=[Depends(product_exist), Depends(product_update_validator), Depends(Portador()), Depends(protectedAcountAdmin())])
+@product.put("/admin/products/{id}", tags=["Products"], dependencies=[Depends(product_exist), Depends(product_update_validator), Depends(Portador()), Depends(protectedAcountAdmin())])
 def update_find__product(id: str, product: updatePrducto):
     return update_product(id, product)
 

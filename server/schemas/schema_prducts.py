@@ -19,6 +19,7 @@ def productUserEntity(item)->dict:
         "id": str(item["_id"]),
         "name_prod": item["name_prod"],
         "Descripcion": item["Descripcion"],
+        "precio_uni": item["precio_uni"],
     }
 def productsUserEntity(entity) -> list:
     return [productUserEntity(item) for item in entity]

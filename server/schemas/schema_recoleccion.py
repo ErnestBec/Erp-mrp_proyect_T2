@@ -6,8 +6,6 @@ def recoleccionEntity(item) -> dict:
         "status": item["status"],
         "num_ref_solicictud": item["num_ref_solicictud"],
         "costo": item["costo"]
-
-
     }
 
 

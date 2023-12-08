@@ -31,7 +31,7 @@ def get_user_session_route(user: loginUser = Depends(Portador())):
     return get_user_session(user)
 
 
-@user.put("/user/{id}", tags=["Users"], dependencies=[Depends(user_exist), Depends(user_update_validator)])
+@user.put("/admin/user/{id}", tags=["Users"], dependencies=[Depends(user_exist), Depends(user_update_validator), Depends(protectedAcountAdmin())])
 def update_find__user(id: str, user: updateUser, userSession=Depends(Portador())):
     return update_user(id, dict(user), userSession)
 
@@ -43,16 +43,16 @@ def find_all_user():
     return usersEntity(db_name.Users.find())
 
 
-@user.post("/user", tags=["Users"], dependencies=[Depends(account_exist), Depends(user_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
+@user.post("/admin/user", tags=["Users"], dependencies=[Depends(account_exist), Depends(user_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
 def create_user_route(user: User):
     return create_user(user)
 
 
-@user.get("/user/{id}", tags=["Users"], dependencies=[Depends(user_exist), Depends(Portador()), Depends(protectedAcountAdmin)])
+@user.get("/admin/user/{id}", tags=["Users"], dependencies=[Depends(user_exist), Depends(Portador()), Depends(protectedAcountAdmin)])
 def find_user(id: str):
     return get_user(id)
 
 
-@user.delete("/user/{id}", tags=["Users"], dependencies=[Depends(user_exist), Depends(Portador())])
+@user.delete("/admin/user/{id}", tags=["Users"], dependencies=[Depends(user_exist), Depends(Portador())])
 def delete_find_user(id: str, user: loginUser = Depends(protectedAcountAdmin())):
     return delete_user(id, user)

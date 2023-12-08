@@ -105,10 +105,10 @@ def get_Recolecciom(id):
     return recoleccionEntity(product)
 
 
-def update_recoleccion(id, recoleccion):
-    db_name.Recolections.find_one_and_update(
-        {"_id": ObjectId(id)}, {"$set": dict(recoleccion)})
-    return recoleccionEntity(db_name.Recolections.find_one({"_id": ObjectId(id)}))
+def update_recoleccion(id):
+    db_name.Recolections.update_one(
+       {"_id": ObjectId(id)}, {"$set": {"status": "sendit"}})
+    return JSONResponse(content={"update":recoleccionEntity(db_name.Recolections.find_one({"_id": ObjectId(id)}))})
 
 
 def delete_recoleccion(id):

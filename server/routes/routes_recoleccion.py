@@ -11,17 +11,26 @@ from middlewares.auth_middleware import protectedAcountAdmin, Portador
 from controllers.recoleccion_controller import create_Recoleccion, get_Recolecciom, update_recoleccion, delete_recoleccion, receive_request_Logistics
 recoleccion = APIRouter()
 
-# Endppoints User Clients
 
 
-@recoleccion.get("/recoleccion", tags=["Recoleccion"], dependencies=[Depends(Portador())])
-def find_all_user():
+
+# Endppoints User Admin
+@recoleccion.get("/admin/recoleccion", tags=["Recoleccion"], dependencies=[Depends(protectedAcountAdmin())])
+async def find_all_user():
     return recoleccionesEntity(db_name.Recolections.find())
 
 
-@recoleccion.get("/recolecciones/{id}", tags=["Recoleccion"], dependencies=[Depends(recoleccion_exist), Depends(Portador())])
-def find_product(id: str):
+@recoleccion.get("/admin/recolecciones/{id}", tags=["Recoleccion"], dependencies=[Depends(recoleccion_exist), Depends(protectedAcountAdmin())])
+async def find_product(id: str):
     return get_Recolecciom(id)
+
+
+
+@recoleccion.put("/admin/admin/recoleccion/{id}", tags=["Recoleccion"], dependencies=[Depends(recoleccion_exist), Depends(protectedAcountAdmin())])
+async def update_find__recoleccion(id: str):
+    return update_recoleccion(id)
+
+
 # Endpoint para recibir embarque enviado por proveedor
 
 
@@ -33,22 +42,3 @@ async def receive_embark_route(embark: ReceivedEmbark):
         "num_ref_solicitud": embark.num_ref_solicitud, "list_Mp": list_mp_as_dict}
 
     return receive_request_Logistics(data_to_insert)
-
-# Endppoints User Admin
-
-
-@recoleccion.get("/recolecion", tags=["Recoleccion"], dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
-def find_all_admin():
-    return recoleccionesEntity(db_name.Recolections.find())
-
-
-
-
-@recoleccion.put("/recoleccion/{id}", tags=["Recoleccion"], dependencies=[Depends(recoleccion_exist), Depends(recoleccion_update_validator), Depends(Portador()), Depends(protectedAcountAdmin())])
-def update_find__recoleccion(id: str, reco: updaterecoleccion):
-    return update_recoleccion(id, reco)
-
-
-@recoleccion.delete("/recoleccion/{id}", tags=["Recoleccion"], dependencies=[Depends(recoleccion_exist), Depends(Portador()), Depends(protectedAcountAdmin())])
-def delete_find_recoleccion(id: str):
-    return delete_recoleccion(id)
