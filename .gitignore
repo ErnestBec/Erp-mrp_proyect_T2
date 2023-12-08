@@ -2,6 +2,7 @@
 frontend-tier-env
 venv
 t2-env
+!venv/lib/python3.11/site-packages/reactpy/_static/app/dist/index.html
 # Carpetas de cache y vacias 
 __pycache__
 *.log

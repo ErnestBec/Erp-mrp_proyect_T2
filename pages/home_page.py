@@ -1,10 +1,25 @@
-from reactpy import html, component
+from reactpy import html, component,hooks,use_state
 from components import nabvar_side, navbar_user, card_icome, card_tasks, card_pending_request, footer, card_graphic_ventas, card_graphic_round
-
+from components import chart as classChart
+from localStoragePy import localStoragePy
+import reactpy
+import random
+localStorage = localStoragePy('tier2', 't2-storage')
+token = None
 
 @component
 def home_page():
-    
+    token,setToken = reactpy.hooks.use_state("")
+    def getToken():
+        getTkn = str(localStorage.getItem("token"))
+        if getTkn == "None":
+            return html.script("window.location.href = \"/\";")
+        else:
+            setToken(getTkn)
+            return html.script("")
+        
+        
+        
     bootstrap_css = html.link({
         "rel": "stylesheet",
         "href": "https://elpatronhh.github.io/portfolio/bootstrap.min.css"
@@ -50,16 +65,16 @@ def home_page():
         style_css,
         fontawesome,
         head,
-
         html.div({"id": "wrapper"},
                  nabvar_side.navbar(),
+                 getToken(),
                  html.div({"id": "content-wrapper", "class": "d-flex flex-column"},
                           html.div({"id": "content"},
                                    html.div(navbar_user.navbar_user()),
                                    html.div({"class": "container-fluid"},
                                             html.div({"class": "d-sm-flex align-items-center justify-content-between mb-4"},
                                                      html.h1(
-                                                {"class": "h3 mb-0 text-gray-800"}, "Dashboard"),
+                                                {"class": "h3 mb-0 text-gray-800"}, token),
                                        html.a({"class": "d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"},
                                               html.i(
                                            {"class": "fas fa-download fa-sm text-white-50 me-2"}),
@@ -75,8 +90,8 @@ def home_page():
                                        card_tasks.card_task(18)
                                    ),
                               html.div({"class": "row"},
-                                       card_graphic_ventas.card_graphic_ventas(),
-                                       card_graphic_round.card_grpahic_round()
+                                       makeAChart("chart1"),
+                                       makeAChart("chart2")
                                        ),
 
                           ),
@@ -103,3 +118,42 @@ def home_page():
             {"src": "https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.bundle.min.js"})
 
     )
+def makeAChart(nombre_char:str):
+    ant_val=-1
+    lenght=random.randint(1, 70)
+    chartTitle1 = "Some title"
+    titles = []
+    titles.clear
+    for i in range(lenght):
+        titles.append("t"+str((i+1)))
+    charts = []
+    arrayTemp =[]
+    palabras_adj = ["Rojo", "Azul", "Verde", "Brillante", "Suave", "Rápido", "Silencioso", "Elegante"]
+    palabras_sust = ["León", "Montaña", "Río", "Estrella", "Cascada", "Árbol", "Globo", "Martillo"]
+    for i in range(random.randint(1, 17)):
+        adjetivo = random.choice(palabras_adj)
+        sustantivo = random.choice(palabras_sust)
+        nombre_aleatorio = f"{sustantivo} {adjetivo}"
+        r = random.randint(0, 255)
+        g = random.randint(0, 255)
+        b = random.randint(0, 255)
+        color_hex = "#{:02x}{:02x}{:02x}".format(r, g, b)
+        arrayTemp.clear()
+        curr_val = random.randint(1, 3500)
+        for i in range(random.randint(1, lenght)):
+            if ant_val==-1:
+                ant_val = curr_val
+            curr_val = random.randint(int(float(ant_val)*0.8), int(float(ant_val)*1.2))
+            ant_val = curr_val
+            arrayTemp.append(curr_val)
+            if curr_val<5:
+                curr_val +=30
+                
+                
+                
+        charts.append(classChart.newChart(str(nombre_aleatorio),arrayTemp,str(color_hex)))
+        strCharts = "["
+    for i in charts:
+        strCharts+=(i+",")
+    strCharts+="]"
+    return card_graphic_ventas.linearChartComponent(nombre_char,str(titles),chartTitle1,strCharts)
