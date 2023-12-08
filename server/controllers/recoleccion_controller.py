@@ -29,6 +29,7 @@ def receive_request_Logistics(request_supplier):
     id = db_name.RcepiptOfRequestSupplier.insert_one(
         new_request_supplier).inserted_id
     req_insert = db_name.RcepiptOfRequestSupplier.find_one({"_id": id})
+    db_name.Recolections.update_one({"num_ref_solicictud":request_supplier["num_ref_solicitud"]},{"$set":{"status":"sendit"}})
     create_notification(
         f"Se recibio materia prima de logisitca", id, id)
     if not req_insert:

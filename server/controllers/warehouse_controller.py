@@ -217,7 +217,22 @@ def get_all_space_rack_status(query_status, id_prod):
 
     return {"status": spaces_row(spaces)}
 
-
+def get_capacity_all_warehouse():
+    warehouses = db_name.Warehouse.find()
+    capacity_warehouse=[]
+    warehouses = list(warehouses)
+    for warehouse in warehouses:
+        list_total_space = db_name.SpaceRow.count_documents({"id_stock":warehouse["_id"]})
+        lis_space_row_ocuped = db_name.SpaceRow.count_documents({"$and":[{"id_stock":warehouse["_id"]},{"status":"ocuped"}]})
+        lis_space_row_free = db_name.SpaceRow.count_documents({"$and":[{"id_stock":warehouse["_id"]},{"status":"free"}]})
+        if list_total_space !=0:
+            warehouse_used= (int(lis_space_row_ocuped)*100)/int(list_total_space)
+       
+            capacity_warehouse.append({"id_warehouse":str(warehouse["_id"]),"name_stock":warehouse["name_stock"],"capacity":warehouse_used,"date_update":warehouse["date_update"]})
+        else:
+            capacity_warehouse.append({"id_warehouse":str(warehouse["_id"]),"name_stock":warehouse["name_stock"],"capacity":"El Almacen no cuenta con racks","date_update":warehouse["date_update"]})
+          
+    return JSONResponse(content={"warehouses":list(capacity_warehouse)})
 # Se revisa si la orden de Materia prima recibida por logistica pertenece a una orden de produccion pendiente
 
 

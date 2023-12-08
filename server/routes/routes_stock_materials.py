@@ -7,7 +7,7 @@ from schemas.schemas_stock_materials import rack_stock, racks_stock, stock_produ
 # Models
 from models.stock_materials_model import Floors, rackModel, Rows, SpaceRow, stock_products, typeStockModel, product_pieza
 # Controllers
-from controllers.warehouse_controller import create_warehouse_type,get_warehouse_capacity, create_warehouse, delete_warehouse, create_rack, delete_rack, get_all_space_rack_status
+from controllers.warehouse_controller import create_warehouse_type,get_warehouse_capacity, create_warehouse, delete_warehouse, create_rack, delete_rack, get_all_space_rack_status,get_capacity_all_warehouse
 # Middlewares
 from middlewares.warehouse_middleware import warehouse_exist, tpye_warehouse_exist, rack_exist, create_rack_validator
 from middlewares.auth_middleware import protectedAcountAdmin
@@ -51,6 +51,9 @@ async def create_rack_route(rack: rackModel):
 async def get_all_racks():
     return racks_stock(db_name.Racks.find())
 
+@stock_materials.get("/admin/warehouse/capacity", tags=["Warehouse"], dependencies=[Depends(protectedAcountAdmin())], description="Devuelve la capacidad en porcentage de todos los almacenes")
+async def get_all_capacity_warehouse():
+    return get_capacity_all_warehouse()
 
 # @stock_materials.get("/rack/{id}", tags=["Racks"], dependencies=[Depends(rack_exist)])
 # def get_rack_by_id(id):
@@ -62,16 +65,17 @@ async def get_all_racks():
 #     return get_all_space_rack_status(query_status, id_prod)
 
 
-@stock_materials.post("/new_pza", tags=["Warehouse"])
-async def new_pza(pz: product_pieza):
-    pieza = dict(pz)
-    db_name.Product_Pza.insert_one(pieza)
-    return {"status": "success!"}
+
+# @stock_materials.post("/new_pza", tags=["Warehouse"])
+# async def new_pza(pz: product_pieza):
+#     pieza = dict(pz)
+#     db_name.Product_Pza.insert_one(pieza)
+#     return {"status": "success!"}
 
 
-@stock_materials.get("/space_row", tags=["Warehouse"])
-async def get_all_space():
-    all_spaces = db_name.SpaceRow.find()
-    spaces = {}
+# @stock_materials.get("/space_row", tags=["Warehouse"])
+# async def get_all_space():
+#     all_spaces = db_name.SpaceRow.find()
+#     spaces = {}
 
-    return spaces_row(all_spaces)
+#     return spaces_row(all_spaces)

@@ -16,7 +16,7 @@ def recoleccionesEntity(entity) -> list:
 def receivedEmbarkSchema(item) -> dict:
     return {
         "id": str(item["_id"]),
-        "num_ref_solicictud": item["num_ref_solicictud"],
+        "num_ref_solicitud": item["num_ref_solicitud"],
         "list_Mp": item["list_Mp"],
         "date_delivery": item["date_delivery"]
     }

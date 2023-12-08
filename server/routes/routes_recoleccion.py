@@ -25,12 +25,6 @@ async def find_product(id: str):
     return get_Recolecciom(id)
 
 
-
-@recoleccion.put("/admin/admin/recoleccion/{id}", tags=["Recoleccion"], dependencies=[Depends(recoleccion_exist), Depends(protectedAcountAdmin())])
-async def update_find__recoleccion(id: str):
-    return update_recoleccion(id)
-
-
 # Endpoint para recibir embarque enviado por proveedor
 
 
