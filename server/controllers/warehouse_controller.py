@@ -43,15 +43,22 @@ def create_warehouse(warehouse):
     if not type_warehouse:
         raise HTTPException(
             status_code=404, detail="The type warehouse doest not exist!")
+    new_warehouse["date_update"] =  datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    new_warehouse["id_type_stock"] = ObjectId(new_warehouse["id_type_stock"])
     id = db_name.Warehouse.insert_one(new_warehouse).inserted_id
     new_warehouse = db_name.Warehouse.find_one({"_id": ObjectId(id)})
-    new_warehouse["date_update"] = str(new_warehouse["date_update"])
     return JSONResponse(content={"warehouse_type": stock_product(new_warehouse), "status": "Success!"}, status_code=201)
 
 
 def delete_warehouse(id):
     db_name.Warehouse.delete_one({"_id": ObjectId(id)})
     return JSONResponse(content={"status": "Delete Successfull"}, status_code=204)
+
+def  get_warehouse_capacity(id):
+    warehouse = db_name.TypeWarehouse.count({""})
+    print(list(warehouse))
+    return list(warehouse)
+
 
 # Controllers Racks
 
@@ -66,10 +73,12 @@ def create_rack(rack):
     if not warehouse:
         raise HTTPException(
             status_code=404, detail="The warehouse doest not exist!")
+    new_rack["id_stock"] = ObjectId(new_rack["id_stock"])
+    new_rack["date_update"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     id = db_name.Racks.insert_one(new_rack).inserted_id
     for i in range(0, new_rack["high_capacity"]):
         create_floor(
-            {"id_rack": id, "long": new_rack["long_capacity"], "width_capacity": new_rack["width_capacity"]})
+            {"id_rack": ObjectId(id), "long": new_rack["long_capacity"], "width_capacity": new_rack["width_capacity"]},new_rack["id_stock"],id)
     new_rack = db_name.Racks.find_one({"_id": ObjectId(id)})
     new_rack["date_update"] = str(new_rack["date_update"])
     return JSONResponse(content={"warehouse_type": rack_stock(new_rack), "status": "Success!"}, status_code=201)
@@ -82,28 +91,28 @@ def delete_rack(id):
 # Controllers Floors
 
 
-def create_floor(floor):
+def create_floor(floor, id_stock,id_rack):
     new_floor = dict(floor)
     id = db_name.Floors.insert_one(
         {"id_rack": new_floor["id_rack"]}).inserted_id
     for i in range(0, new_floor["long"]):
         create_row(
-            {"id_floor": id, "width_capacity": new_floor["width_capacity"]})
+            {"id_floor": id, "width_capacity": new_floor["width_capacity"]},id_stock,id_rack)
     new_floor = db_name.Floors.find_one({"_id": ObjectId(id)})
 
 
-def create_row(row):
+def create_row(row,id_stock,id_rack):
     new_row = dict(row)
     id = db_name.Rows.insert_one({"id_floor": new_row["id_floor"]}).inserted_id
     for i in range(0, new_row["width_capacity"]):
-        create_space_row({"id_row": id})
+        create_space_row({"id_row": id,"id_stock":id_stock,"id_rack":id_rack})
     new_row = db_name.Rows.find_one({"_id": ObjectId(id)})
 
 
-def create_space_row(space_row_req):
+async def create_space_row(space_row_req):
     new_space_row = dict(space_row_req)
     id = db_name.SpaceRow.insert_one(
-        {"id_row": new_space_row["id_row"], "id_prod_pz": "Null", "status": "free"}).inserted_id
+        {"id_row": new_space_row["id_row"],"id_stock":new_space_row["id_stock"],"id_rack":new_space_row["id_rack"], "id_prod_pz": "Null", "status": "free"}).inserted_id
     new_space_row = db_name.SpaceRow.find_one({"_id": ObjectId(id)})
     print(new_space_row)
 

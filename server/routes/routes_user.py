@@ -48,7 +48,7 @@ def create_user_route(user: User):
     return create_user(user)
 
 
-@user.get("/users/{id}", tags=["Users"], dependencies=[Depends(user_exist), Depends(Portador()), Depends(protectedAcountAdmin)])
+@user.get("/user/{id}", tags=["Users"], dependencies=[Depends(user_exist), Depends(Portador()), Depends(protectedAcountAdmin)])
 def find_user(id: str):
     return get_user(id)
 

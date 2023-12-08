@@ -1,3 +1,4 @@
+# Libreries
 from utils.db import db_name
 from fastapi.responses import JSONResponse
 from fastapi import Request, HTTPException
@@ -9,7 +10,7 @@ from schemas.schema_client_request import requestClientEntity, requestsClientEnt
 # Middleware
 from middlewares.userExist_middleware import user_email
 from middlewares.productExist_middleware import product_ref
-from bson import ObjectId
+
 # Controllers
 from controllers.warehouse_controller import verified_almacen
 from controllers.cuenta_por_cobrar_controller import create_cuenta_por_cobrar
@@ -60,13 +61,16 @@ def new_request(request, user):
     return JSONResponse(content={"request": response_client, "status": "Success!"}, status_code=201)
 
 
-def get_request_month(month):
-    data = db_name.Request_Client.find()
+def get_request_month(month,email):
+    if email == None :
+        data = db_name.Request_Client.find()
+    else:
+        data = db_name.Request_Client.find({"client.email":email})
     list_request = []
     for request in list(data):
-        dia, mes, año = map(int, request["date_req"].split("-"))
-        nombre_mes = calendar.month_name[mes]
-        if month == nombre_mes:
+        fecha = datetime.strptime(request["date_req"], "%Y-%m-%d %H:%M:%S")
+        mes = fecha.month
+        if int(month) == int(mes):
             list_request.append(request)
 
     return JSONResponse(content={"requests": requestsClientEntity(list_request), "status": "Succes!"}, status_code=201)

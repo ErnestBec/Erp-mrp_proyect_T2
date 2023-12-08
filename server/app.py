@@ -44,14 +44,14 @@ app.include_router(user)
 app.include_router(product)
 app.include_router(requests_client)
 app.include_router(cuentacobrar)
-app.include_router(raw_material)
 app.include_router(cuentaPagar)
+app.include_router(stock_materials)
+app.include_router(raw_material)
 app.include_router(recoleccion)
 app.include_router(OrdenProducc)
-app.include_router(stock_materials)
 app.include_router(routes_business_rules)
 app.include_router(notifications)
 
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="127.0.0.1", port=8001)
+# eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpZXIyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoicHpzMTIzNDUiLCJleHAiOjE3MDIxMjU1NTh9.zW4JbVwrPleTeeSLNZLmVwjaclBfsDOebDsJ97P66tw
+# if __name__ == "__main__":
+#     uvicorn.run(app, host="127.0.0.1", port=8001)

@@ -13,3 +13,12 @@ def productEntity(item) -> dict:
 
 def productsEntity(entity) -> list:
     return [productEntity(item) for item in entity]
+
+def productUserEntity(item)->dict:
+    return{
+        "id": str(item["_id"]),
+        "name_prod": item["name_prod"],
+        "Descripcion": item["Descripcion"],
+    }
+def productsUserEntity(entity) -> list:
+    return [productUserEntity(item) for item in entity]

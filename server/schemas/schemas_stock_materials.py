@@ -12,7 +12,7 @@ def types_stocks(types_stocks):
 def stock_product(stock_product):
     return {
         "_id": str(stock_product["_id"]),
-        "id_type_stock": stock_product["id_type_stock"],
+        "id_type_stock": str(stock_product["id_type_stock"]),
         "name_stock": stock_product["name_stock"],
         "date_update": stock_product["date_update"]
     }
@@ -25,7 +25,7 @@ def stocks_products(stock_products):
 def rack_stock(rack):
     return {
         "_id": str(rack["_id"]),
-        "id_stock": rack["id_stock"],
+        "id_stock": str(rack["id_stock"]),
         "name_rack": rack["name_rack"],
         "width_capacity": rack["width_capacity"],
         "high_capacity": rack["high_capacity"],
@@ -66,6 +66,8 @@ def space_row(space):
         "_id": str(space["_id"]),
         "id_row": str(space["id_row"]),
         "id_prod_pz": str(space["id_prod_pz"]),
+        "id_stock":str(space["id_stock"]),
+        "id_rack":str(space["id_rack"]),
         "status": space["status"]
     }
 

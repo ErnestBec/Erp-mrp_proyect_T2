@@ -17,7 +17,7 @@ def recoleccion_exist(request: Request):
     if not is_valid_object_id(id):
         raise HTTPException(
             status_code=400, detail="The recollecion doest not exist!")
-    user = db_name.Recolecciones.find_one({"_id": ObjectId(id)})
+    user = db_name.Recolections.find_one({"_id": ObjectId(id)})
     if not user:
         raise HTTPException(
             status_code=404, detail="The cuenta por pagar doest not exist!")

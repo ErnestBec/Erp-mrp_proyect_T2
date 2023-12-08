@@ -1,7 +1,7 @@
 # libreries
 from fastapi import APIRouter, Depends
 from utils.db import db_name
-from schemas.schema_prducts import productsEntity
+from schemas.schema_prducts import productsEntity,productsUserEntity
 from models.prodcuts_model import Prducto, updatePrducto
 # Middlewares
 from middlewares.validate_product_middleware import product_update_validator, product_validate_middleware
@@ -11,12 +11,12 @@ from middlewares.auth_middleware import protectedAcountAdmin, Portador
 from controllers.product_controller import create_prduct, get_prduct, update_product, delete_product
 product = APIRouter()
 
+
 # Endppoints User Clients
 
-
-@product.get("/products", tags=["Products"], dependencies=[Depends(Portador())])
+@product.get("/products-user", tags=["Products"], dependencies=[Depends(Portador())])
 def find_all_user():
-    return productsEntity(db_name.Products.find())
+    return productsUserEntity(db_name.Products.find())
 
 
 @product.get("/products/{id}", tags=["Products"], dependencies=[Depends(product_exist), Depends(Portador())])
@@ -26,7 +26,7 @@ def find_product(id: str):
 # Endppoints User Admin
 
 
-@product.get("/product", tags=["Products"], dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
+@product.get("/products", tags=["Products"], dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
 def find_all_admin():
     return productsEntity(db_name.Products.find())
 
@@ -41,6 +41,3 @@ def update_find__product(id: str, product: updatePrducto):
     return update_product(id, product)
 
 
-# @product.delete("/products/{id}", tags=["Products"], dependencies=[Depends(product_exist), Depends(Portador()), Depends(protectedAcountAdmin())])
-# def delete_find_product(id: str):
-#     return delete_product(id)

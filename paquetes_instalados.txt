@@ -13,11 +13,11 @@ response
 # Collectiones DB
 # Users
 # coleccion = db["BusinessRuleMaxProd"]
-# coleccion = db["CuentasPagar"]
+# coleccion = db["CuentasPorPagar"]
 # coleccion = db["CuentasPorCobrar"]
 # coleccion = db["Floors"]
 # coleccion = db["OrderProduction"]
-# coleccion = db["Product_Pza"]
+# coleccion = db["Products_Pza"]
 # coleccion = db["Products"]
 # coleccion = db["Racks"]
 # coleccion = db["RawMaterials"]

@@ -37,11 +37,12 @@ async def tpye_warehouse_exist(req: Request):
             status_code=404, detail="The type warehouse materials doest not exist!")
 
 
-async def warehouse_exist(req: Request):
+def warehouse_exist(req: Request):
     id = req.path_params.get("id")
+    print(id)
     if not is_valid_object_id(id):
         raise HTTPException(
-            status_code=400, detail="")
+            status_code=400, detail="The id of warehouse invalid!")
     user = db_name.Warehouse.find_one({"_id": ObjectId(id)})
     if not user:
         raise HTTPException(

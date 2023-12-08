@@ -12,7 +12,7 @@ class stock_products(BaseModel):
     _id: Optional[str]
     id_type_stock: str
     name_stock: str
-    date_update: datetime
+   
 
 
 class rackModel(BaseModel):

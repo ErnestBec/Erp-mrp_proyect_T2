@@ -16,11 +16,11 @@ def cuentas_por_cobrar_exist(request: Request):
     id = request.path_params.get("id")
     if not is_valid_object_id(id):
         raise HTTPException(
-            status_code=400, detail="The cuenta por pagar doest not exist!")
+            status_code=400, detail="The account payable doest not exist!")
     user = db_name.CuentasPorCobrar.find_one({"_id": ObjectId(id)})
     if not user:
         raise HTTPException(
-            status_code=404, detail="The cuenta por pagar doest not exist!")
+            status_code=404, detail="The account payable doest not exist!")
 
     return request
 

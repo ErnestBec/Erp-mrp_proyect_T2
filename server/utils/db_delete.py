@@ -11,7 +11,7 @@ db = client["Prueba_Tier2"]
 # Users
 # coleccion = db["BusinessRuleMaxProd"]
 # coleccion = db["CuentasPagar"]
-collections = ["CuentasPorCobrar","Floors","OrderProduction","Product_Pza","Products","Racks",]
+# collections = ["CuentasPorCobrar","Floors","OrderProduction","Product_Pza","Products","Racks",]
 # coleccion = db["CuentasPorCobrar"]
 # coleccion = db["Floors"]
 # coleccion = db["OrderProduction"]

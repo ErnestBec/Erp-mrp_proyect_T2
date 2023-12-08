@@ -52,14 +52,14 @@ def login(user):
 
     # valid Password
     password = sha256_crypt.verify(user["password"], user_auth["password"])
-    user_auth["password"]
+    
     if not password:
         return JSONResponse(status_code=400, content={
             "status": "Credentials invalids!"})
 
     # Generate token
     token = write_token(user)
-    return JSONResponse(content={"token": token, "status": "Succes Session!"}, status_code=201)
+    return JSONResponse(content={"token": token,"role":user_auth["role"], "status": "Succes Session!"}, status_code=201)
 
 
 def get_user_session(user):

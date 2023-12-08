@@ -16,7 +16,7 @@ recoleccion = APIRouter()
 
 @recoleccion.get("/recoleccion", tags=["Recoleccion"], dependencies=[Depends(Portador())])
 def find_all_user():
-    return recoleccionesEntity(db_name.Recolecciones.find().toArray())
+    return recoleccionesEntity(db_name.Recolections.find())
 
 
 @recoleccion.get("/recolecciones/{id}", tags=["Recoleccion"], dependencies=[Depends(recoleccion_exist), Depends(Portador())])
@@ -39,12 +39,9 @@ async def receive_embark_route(embark: ReceivedEmbark):
 
 @recoleccion.get("/recolecion", tags=["Recoleccion"], dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
 def find_all_admin():
-    return recoleccionesEntity(db_name.Recolecciones.find().toArray())
+    return recoleccionesEntity(db_name.Recolections.find())
 
 
-@recoleccion.post("/recolecciones", tags=["Recoleccion"], dependencies=[Depends(recoleccion_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
-def create_recoleccion_route(recoleccio: Recoleccion):
-    return create_Recoleccion(recoleccio)
 
 
 @recoleccion.put("/recoleccion/{id}", tags=["Recoleccion"], dependencies=[Depends(recoleccion_exist), Depends(recoleccion_update_validator), Depends(Portador()), Depends(protectedAcountAdmin())])
