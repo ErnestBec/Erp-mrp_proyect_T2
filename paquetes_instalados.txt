@@ -1,12 +1,12 @@
-reactpy[fastapi]
-uvicorn[standard]
-reactpy_router
-python-dotenv
-pymongo
-passlib
-pyjwt
-httpx
-bson
+pip install reactpy[fastapi]
+pip install uvicorn[standard]
+pip install reactpy_router
+pip install python-dotenv
+pip install pymongo
+pip install passlib
+pip install pyjwt
+pip install httpx
+pip install bson
 
 Name BD= Prueba_Tier2
 # Collectiones DB

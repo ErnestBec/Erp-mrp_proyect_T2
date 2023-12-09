@@ -18,17 +18,8 @@ def NavbarBusqueda(titulo, icono):
                     "data-bs-toggle": "button",
                     "style": {"color": "black", "marginRight": "50%"},
                 },
-                html.i({"className": icono, "style": {"fontSize": "20px"}}),
+                html.i({"className": icono, "style": {"fontSize": "20px", "marginRight": "8px"}}),
                 html.b(titulo),
-            ),
-            html.input(
-                {
-                    "type": "email",
-                    "class": "form-control navbar-nav ml-auto",
-                    "id": "floatingInput",
-                    "placeholder": "Buscar ...",
-                    "aria-label": "Search",
-                }
             ),
             html.a(
                 {

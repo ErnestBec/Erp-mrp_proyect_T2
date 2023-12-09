@@ -35,7 +35,7 @@ def num_ref_solicitud_exist(embark=Body(...)):
             status_code=404, detail="The number reference request doest not exist or is it already completed!")
     if len(embark["list_Mp"]) != len(reques_exist["list_mp"]):
         raise HTTPException(
-            status_code=404, detail=f"The number of pieces does not correspond to what was requested, They left {len(embark["list_Mp"])} pieces and we requested {len(reques_exist["list_mp"])}")
+            status_code=404, detail=f'The number of pieces does not correspond to what was requested, They left {len(embark["list_Mp"])} pieces and we requested {len(reques_exist["list_mp"])}')
     list_mp_embar = list(embark["list_Mp"])
     list_mp_request = reques_exist["list_mp"]
     for mp_emnark in embark["list_Mp"]:
