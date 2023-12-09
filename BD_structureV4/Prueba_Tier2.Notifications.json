@@ -1,0 +1,1896 @@
+[{
+  "_id": {
+    "$oid": "657217ec13a950df60d33d00"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "657217ec13a950df60d33cff"
+  },
+  "date_created": "2023-12-07 13:07:24",
+  "date_view": null,
+  "email_user": "tie2023120781",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657217ec13a950df60d33d02"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120781",
+  "date_created": "2023-12-07 13:07:24",
+  "date_view": null,
+  "email_user": "tie2023120781",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657217ec13a950df60d33d04"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120781",
+  "date_created": "2023-12-07 13:07:24",
+  "date_view": null,
+  "email_user": "tie2023120781",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657217ec13a950df60d33d07"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120781",
+  "date_created": "2023-12-07 13:07:24",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657217ec13a950df60d33d09"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "657217ec13a950df60d33d08"
+  },
+  "date_created": "2023-12-07 13:07:24",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65722b325e98ffe816df576e"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "65722b325e98ffe816df576d"
+  },
+  "date_created": "2023-12-07 14:29:38",
+  "date_view": null,
+  "email_user": "tie2023120773",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65722b325e98ffe816df5770"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120773",
+  "date_created": "2023-12-07 14:29:38",
+  "date_view": null,
+  "email_user": "tie2023120773",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65722b325e98ffe816df5772"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120773",
+  "date_created": "2023-12-07 14:29:38",
+  "date_view": null,
+  "email_user": "tie2023120773",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65722b325e98ffe816df5775"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120773",
+  "date_created": "2023-12-07 14:29:38",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65722b325e98ffe816df5777"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "65722b325e98ffe816df5776"
+  },
+  "date_created": "2023-12-07 14:29:38",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65727837267542baa77e2280"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "65727837267542baa77e227f"
+  },
+  "date_created": "2023-12-07 19:58:15",
+  "date_view": null,
+  "email_user": "t1A2023120723",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65727837267542baa77e2282"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "t1A2023120723",
+  "date_created": "2023-12-07 19:58:15",
+  "date_view": null,
+  "email_user": "t1A2023120723",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65727837267542baa77e2284"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "t1A2023120723",
+  "date_created": "2023-12-07 19:58:15",
+  "date_view": null,
+  "email_user": "t1A2023120723",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65727837267542baa77e2287"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "t1A2023120723",
+  "date_created": "2023-12-07 19:58:15",
+  "date_view": null,
+  "email_user": "t1Acc@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65727837267542baa77e2289"
+  },
+  "Mesaage": "t1Acc@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "65727837267542baa77e2288"
+  },
+  "date_created": "2023-12-07 19:58:15",
+  "date_view": null,
+  "email_user": "t1Acc@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657388b52a58a71add54f680"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "657388b52a58a71add54f67f"
+  },
+  "date_created": "2023-12-08 15:20:53",
+  "date_view": null,
+  "email_user": "t1A2023120814",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657388b52a58a71add54f682"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "t1A2023120814",
+  "date_created": "2023-12-08 15:20:53",
+  "date_view": null,
+  "email_user": "t1A2023120814",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657388b52a58a71add54f684"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "t1A2023120814",
+  "date_created": "2023-12-08 15:20:53",
+  "date_view": null,
+  "email_user": "t1A2023120814",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657388b52a58a71add54f687"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "t1A2023120814",
+  "date_created": "2023-12-08 15:20:53",
+  "date_view": null,
+  "email_user": "t1Acc@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657388b52a58a71add54f689"
+  },
+  "Mesaage": "t1Acc@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "657388b52a58a71add54f688"
+  },
+  "date_created": "2023-12-08 15:20:53",
+  "date_view": null,
+  "email_user": "t1Acc@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65738a412a58a71add54f68c"
+  },
+  "Mesaage": "Se recibio materia prima de logisitca",
+  "id_message": {
+    "$oid": "65738a412a58a71add54f68b"
+  },
+  "date_created": "2023-12-08 15:27:29",
+  "date_view": null,
+  "email_user": {
+    "$oid": "65738a412a58a71add54f68b"
+  },
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65738a422a58a71add54f690"
+  },
+  "Mesaage": "Se termino la opdern de produccion t1A2023120814",
+  "id_message": "t1A2023120814",
+  "date_created": "2023-12-08 15:27:30",
+  "date_view": null,
+  "email_user": "t1A2023120814",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65738a422a58a71add54f691"
+  },
+  "Mesaage": "Se completo la solicitud de cliente con referencia t1A2023120814",
+  "id_message": "t1A2023120814",
+  "date_created": "2023-12-08 15:27:30",
+  "date_view": null,
+  "email_user": "t1A2023120814",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65738daac44551ec1dc00b10"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "65738daac44551ec1dc00b0f"
+  },
+  "date_created": "2023-12-08 15:42:02",
+  "date_view": null,
+  "email_user": "tie2023120830",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65738daac44551ec1dc00b12"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120830",
+  "date_created": "2023-12-08 15:42:02",
+  "date_view": null,
+  "email_user": "tie2023120830",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65738daac44551ec1dc00b14"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120830",
+  "date_created": "2023-12-08 15:42:02",
+  "date_view": null,
+  "email_user": "tie2023120830",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65738daac44551ec1dc00b17"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120830",
+  "date_created": "2023-12-08 15:42:02",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65738daac44551ec1dc00b19"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "65738daac44551ec1dc00b18"
+  },
+  "date_created": "2023-12-08 15:42:02",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65738e3cc44551ec1dc00b1c"
+  },
+  "Mesaage": "Se recibio materia prima de logisitca",
+  "id_message": {
+    "$oid": "65738e3cc44551ec1dc00b1b"
+  },
+  "date_created": "2023-12-08 15:44:28",
+  "date_view": null,
+  "email_user": {
+    "$oid": "65738e3cc44551ec1dc00b1b"
+  },
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65738e3cc44551ec1dc00b20"
+  },
+  "Mesaage": "Se termino la opdern de produccion tie2023120830",
+  "id_message": "tie2023120830",
+  "date_created": "2023-12-08 15:44:28",
+  "date_view": null,
+  "email_user": "tie2023120830",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65738e3cc44551ec1dc00b21"
+  },
+  "Mesaage": "Se completo la solicitud de cliente con referencia tie2023120830",
+  "id_message": "tie2023120830",
+  "date_created": "2023-12-08 15:44:28",
+  "date_view": null,
+  "email_user": "tie2023120830",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657395d2dc16cda8c1942a63"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "657395d2dc16cda8c1942a62"
+  },
+  "date_created": "2023-12-08 16:16:50",
+  "date_view": null,
+  "email_user": "tie2023120853",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657395d2dc16cda8c1942a65"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120853",
+  "date_created": "2023-12-08 16:16:50",
+  "date_view": null,
+  "email_user": "tie2023120853",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657395d2dc16cda8c1942a67"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120853",
+  "date_created": "2023-12-08 16:16:50",
+  "date_view": null,
+  "email_user": "tie2023120853",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657395d2dc16cda8c1942a6a"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120853",
+  "date_created": "2023-12-08 16:16:50",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657395d2dc16cda8c1942a6c"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "657395d2dc16cda8c1942a6b"
+  },
+  "date_created": "2023-12-08 16:16:50",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573961ddc16cda8c1942a6f"
+  },
+  "Mesaage": "Se recibio materia prima de logisitca",
+  "id_message": {
+    "$oid": "6573961ddc16cda8c1942a6e"
+  },
+  "date_created": "2023-12-08 16:18:05",
+  "date_view": null,
+  "email_user": {
+    "$oid": "6573961ddc16cda8c1942a6e"
+  },
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573961ddc16cda8c1942a73"
+  },
+  "Mesaage": "Se termino la opdern de produccion tie2023120853",
+  "id_message": "tie2023120853",
+  "date_created": "2023-12-08 16:18:05",
+  "date_view": null,
+  "email_user": "tie2023120853",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573961ddc16cda8c1942a74"
+  },
+  "Mesaage": "Se completo la solicitud de cliente con referencia tie2023120853",
+  "id_message": "tie2023120853",
+  "date_created": "2023-12-08 16:18:05",
+  "date_view": null,
+  "email_user": "tie2023120853",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657396771f68384c1fd17e8b"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "657396761f68384c1fd17e8a"
+  },
+  "date_created": "2023-12-08 16:19:35",
+  "date_view": null,
+  "email_user": "tie2023120872",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657396771f68384c1fd17e8d"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120872",
+  "date_created": "2023-12-08 16:19:35",
+  "date_view": null,
+  "email_user": "tie2023120872",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657396771f68384c1fd17e8f"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120872",
+  "date_created": "2023-12-08 16:19:35",
+  "date_view": null,
+  "email_user": "tie2023120872",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657396771f68384c1fd17e92"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120872",
+  "date_created": "2023-12-08 16:19:35",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657396771f68384c1fd17e94"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "657396771f68384c1fd17e93"
+  },
+  "date_created": "2023-12-08 16:19:35",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657396ba1f68384c1fd17e97"
+  },
+  "Mesaage": "Se recibio materia prima de logisitca",
+  "id_message": {
+    "$oid": "657396ba1f68384c1fd17e96"
+  },
+  "date_created": "2023-12-08 16:20:42",
+  "date_view": null,
+  "email_user": {
+    "$oid": "657396ba1f68384c1fd17e96"
+  },
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657396ba1f68384c1fd17e9b"
+  },
+  "Mesaage": "Se termino la opdern de produccion tie2023120872",
+  "id_message": "tie2023120872",
+  "date_created": "2023-12-08 16:20:42",
+  "date_view": null,
+  "email_user": "tie2023120872",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657396ba1f68384c1fd17e9c"
+  },
+  "Mesaage": "Se completo la solicitud de cliente con referencia tie2023120872",
+  "id_message": "tie2023120872",
+  "date_created": "2023-12-08 16:20:42",
+  "date_view": null,
+  "email_user": "tie2023120872",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573971a1a3da417c392b0e5"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6573971a1a3da417c392b0e4"
+  },
+  "date_created": "2023-12-08 16:22:18",
+  "date_view": null,
+  "email_user": "tie2023120868",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573971a1a3da417c392b0e7"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120868",
+  "date_created": "2023-12-08 16:22:18",
+  "date_view": null,
+  "email_user": "tie2023120868",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573971a1a3da417c392b0e9"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120868",
+  "date_created": "2023-12-08 16:22:18",
+  "date_view": null,
+  "email_user": "tie2023120868",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573971a1a3da417c392b0ec"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120868",
+  "date_created": "2023-12-08 16:22:18",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573971a1a3da417c392b0ee"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6573971a1a3da417c392b0ed"
+  },
+  "date_created": "2023-12-08 16:22:18",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657397ba9a5af108db79c2f8"
+  },
+  "Mesaage": "Se recibio materia prima de logisitca",
+  "id_message": {
+    "$oid": "657397ba9a5af108db79c2f7"
+  },
+  "date_created": "2023-12-08 16:24:58",
+  "date_view": null,
+  "email_user": {
+    "$oid": "657397ba9a5af108db79c2f7"
+  },
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657397ba9a5af108db79c2fc"
+  },
+  "Mesaage": "Se termino la opdern de produccion tie2023120868",
+  "id_message": "tie2023120868",
+  "date_created": "2023-12-08 16:24:58",
+  "date_view": null,
+  "email_user": "tie2023120868",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657397ba9a5af108db79c2fd"
+  },
+  "Mesaage": "Se completo la solicitud de cliente con referencia tie2023120868",
+  "id_message": "tie2023120868",
+  "date_created": "2023-12-08 16:24:58",
+  "date_view": null,
+  "email_user": "tie2023120868",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573f87027be4bbd45ea8eaf"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6573f87027be4bbd45ea8eae"
+  },
+  "date_created": "2023-12-08 23:17:36",
+  "date_view": null,
+  "email_user": "t1A2023120897",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573f87027be4bbd45ea8eb1"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "t1A2023120897",
+  "date_created": "2023-12-08 23:17:36",
+  "date_view": null,
+  "email_user": "t1A2023120897",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573f87027be4bbd45ea8eb3"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "t1A2023120897",
+  "date_created": "2023-12-08 23:17:36",
+  "date_view": null,
+  "email_user": "t1A2023120897",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573f87027be4bbd45ea8eb6"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "t1A2023120897",
+  "date_created": "2023-12-08 23:17:36",
+  "date_view": null,
+  "email_user": "t1Acc@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573f87027be4bbd45ea8eb8"
+  },
+  "Mesaage": "t1Acc@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6573f87027be4bbd45ea8eb7"
+  },
+  "date_created": "2023-12-08 23:17:36",
+  "date_view": null,
+  "email_user": "t1Acc@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fb8bf0a3e45bcd168abc"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6573fb8bf0a3e45bcd168abb"
+  },
+  "date_created": "2023-12-08 23:30:51",
+  "date_view": null,
+  "email_user": "tie202312087",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fb8bf0a3e45bcd168abe"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie202312087",
+  "date_created": "2023-12-08 23:30:51",
+  "date_view": null,
+  "email_user": "tie202312087",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fb8bf0a3e45bcd168ac0"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie202312087",
+  "date_created": "2023-12-08 23:30:51",
+  "date_view": null,
+  "email_user": "tie202312087",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fb8bf0a3e45bcd168ac3"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie202312087",
+  "date_created": "2023-12-08 23:30:51",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fb8bf0a3e45bcd168ac5"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6573fb8bf0a3e45bcd168ac4"
+  },
+  "date_created": "2023-12-08 23:30:51",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fbe037d4388c86801663"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6573fbe037d4388c86801662"
+  },
+  "date_created": "2023-12-08 23:32:16",
+  "date_view": null,
+  "email_user": "tie2023120898",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fbe037d4388c86801665"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120898",
+  "date_created": "2023-12-08 23:32:16",
+  "date_view": null,
+  "email_user": "tie2023120898",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fbe037d4388c86801667"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120898",
+  "date_created": "2023-12-08 23:32:16",
+  "date_view": null,
+  "email_user": "tie2023120898",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fbe037d4388c8680166a"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120898",
+  "date_created": "2023-12-08 23:32:16",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fbe137d4388c8680166c"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6573fbe137d4388c8680166b"
+  },
+  "date_created": "2023-12-08 23:32:17",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fca3c229d11c135571aa"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6573fca3c229d11c135571a9"
+  },
+  "date_created": "2023-12-08 23:35:31",
+  "date_view": null,
+  "email_user": "tie2023120880",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fca3c229d11c135571ac"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120880",
+  "date_created": "2023-12-08 23:35:31",
+  "date_view": null,
+  "email_user": "tie2023120880",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fca3c229d11c135571ae"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120880",
+  "date_created": "2023-12-08 23:35:31",
+  "date_view": null,
+  "email_user": "tie2023120880",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fca3c229d11c135571b1"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120880",
+  "date_created": "2023-12-08 23:35:31",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fca3c229d11c135571b3"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6573fca3c229d11c135571b2"
+  },
+  "date_created": "2023-12-08 23:35:31",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd1989e1db343f3c1a2a"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6573fd1989e1db343f3c1a29"
+  },
+  "date_created": "2023-12-08 23:37:29",
+  "date_view": null,
+  "email_user": "tie2023120847",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd1989e1db343f3c1a2c"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120847",
+  "date_created": "2023-12-08 23:37:29",
+  "date_view": null,
+  "email_user": "tie2023120847",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd1989e1db343f3c1a2e"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120847",
+  "date_created": "2023-12-08 23:37:29",
+  "date_view": null,
+  "email_user": "tie2023120847",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd1989e1db343f3c1a31"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120847",
+  "date_created": "2023-12-08 23:37:29",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd1989e1db343f3c1a33"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6573fd1989e1db343f3c1a32"
+  },
+  "date_created": "2023-12-08 23:37:29",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd7d89e1db343f3c1a36"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6573fd7d89e1db343f3c1a35"
+  },
+  "date_created": "2023-12-08 23:39:09",
+  "date_view": null,
+  "email_user": "tie2023120826",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd7d89e1db343f3c1a38"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120826",
+  "date_created": "2023-12-08 23:39:09",
+  "date_view": null,
+  "email_user": "tie2023120826",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd7d89e1db343f3c1a3a"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120826",
+  "date_created": "2023-12-08 23:39:09",
+  "date_view": null,
+  "email_user": "tie2023120826",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd7d89e1db343f3c1a3d"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120826",
+  "date_created": "2023-12-08 23:39:09",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd7d89e1db343f3c1a3f"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6573fd7d89e1db343f3c1a3e"
+  },
+  "date_created": "2023-12-08 23:39:09",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd86cc602fc9920ea3fc"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6573fd86cc602fc9920ea3fb"
+  },
+  "date_created": "2023-12-08 23:39:18",
+  "date_view": null,
+  "email_user": "tie2023120881",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd86cc602fc9920ea3fe"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120881",
+  "date_created": "2023-12-08 23:39:18",
+  "date_view": null,
+  "email_user": "tie2023120881",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd86cc602fc9920ea400"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120881",
+  "date_created": "2023-12-08 23:39:18",
+  "date_view": null,
+  "email_user": "tie2023120881",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd86cc602fc9920ea403"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120881",
+  "date_created": "2023-12-08 23:39:18",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd86cc602fc9920ea405"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6573fd86cc602fc9920ea404"
+  },
+  "date_created": "2023-12-08 23:39:18",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fdf89478207d7c9e2551"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6573fdf89478207d7c9e2550"
+  },
+  "date_created": "2023-12-08 23:41:12",
+  "date_view": null,
+  "email_user": "tie2023120815",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fdf89478207d7c9e2553"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120815",
+  "date_created": "2023-12-08 23:41:12",
+  "date_view": null,
+  "email_user": "tie2023120815",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fdf89478207d7c9e2555"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120815",
+  "date_created": "2023-12-08 23:41:12",
+  "date_view": null,
+  "email_user": "tie2023120815",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fdf89478207d7c9e2558"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120815",
+  "date_created": "2023-12-08 23:41:12",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fdf89478207d7c9e255a"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6573fdf89478207d7c9e2559"
+  },
+  "date_created": "2023-12-08 23:41:12",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fe869478207d7c9e255d"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6573fe869478207d7c9e255c"
+  },
+  "date_created": "2023-12-08 23:43:34",
+  "date_view": null,
+  "email_user": "tie2023120875",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fe869478207d7c9e255f"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120875",
+  "date_created": "2023-12-08 23:43:34",
+  "date_view": null,
+  "email_user": "tie2023120875",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fe869478207d7c9e2561"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120875",
+  "date_created": "2023-12-08 23:43:34",
+  "date_view": null,
+  "email_user": "tie2023120875",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fe869478207d7c9e2564"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120875",
+  "date_created": "2023-12-08 23:43:34",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fe879478207d7c9e2566"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6573fe879478207d7c9e2565"
+  },
+  "date_created": "2023-12-08 23:43:35",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fed9f2e353d4dd12cbf2"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6573fed9f2e353d4dd12cbf1"
+  },
+  "date_created": "2023-12-08 23:44:57",
+  "date_view": null,
+  "email_user": "tie2023120827",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fed9f2e353d4dd12cbf4"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120827",
+  "date_created": "2023-12-08 23:44:57",
+  "date_view": null,
+  "email_user": "tie2023120827",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fed9f2e353d4dd12cbf6"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120827",
+  "date_created": "2023-12-08 23:44:57",
+  "date_view": null,
+  "email_user": "tie2023120827",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fed9f2e353d4dd12cbf9"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120827",
+  "date_created": "2023-12-08 23:44:57",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fed9f2e353d4dd12cbfb"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6573fed9f2e353d4dd12cbfa"
+  },
+  "date_created": "2023-12-08 23:44:57",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff10f2e353d4dd12cbfe"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6573ff10f2e353d4dd12cbfd"
+  },
+  "date_created": "2023-12-08 23:45:52",
+  "date_view": null,
+  "email_user": "tie202312082",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff10f2e353d4dd12cc00"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie202312082",
+  "date_created": "2023-12-08 23:45:52",
+  "date_view": null,
+  "email_user": "tie202312082",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff10f2e353d4dd12cc02"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie202312082",
+  "date_created": "2023-12-08 23:45:52",
+  "date_view": null,
+  "email_user": "tie202312082",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff10f2e353d4dd12cc05"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie202312082",
+  "date_created": "2023-12-08 23:45:52",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff10f2e353d4dd12cc07"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6573ff10f2e353d4dd12cc06"
+  },
+  "date_created": "2023-12-08 23:45:52",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff13f2e353d4dd12cc0a"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6573ff13f2e353d4dd12cc09"
+  },
+  "date_created": "2023-12-08 23:45:55",
+  "date_view": null,
+  "email_user": "tie202312081",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff13f2e353d4dd12cc0c"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie202312081",
+  "date_created": "2023-12-08 23:45:55",
+  "date_view": null,
+  "email_user": "tie202312081",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff13f2e353d4dd12cc0e"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie202312081",
+  "date_created": "2023-12-08 23:45:55",
+  "date_view": null,
+  "email_user": "tie202312081",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff13f2e353d4dd12cc11"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie202312081",
+  "date_created": "2023-12-08 23:45:55",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff13f2e353d4dd12cc13"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6573ff13f2e353d4dd12cc12"
+  },
+  "date_created": "2023-12-08 23:45:55",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400b61e2a1cd7fed65e99"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "657400b61e2a1cd7fed65e98"
+  },
+  "date_created": "2023-12-08 23:52:54",
+  "date_view": null,
+  "email_user": "tie2023120876",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400b61e2a1cd7fed65e9b"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120876",
+  "date_created": "2023-12-08 23:52:54",
+  "date_view": null,
+  "email_user": "tie2023120876",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400b61e2a1cd7fed65e9d"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120876",
+  "date_created": "2023-12-08 23:52:54",
+  "date_view": null,
+  "email_user": "tie2023120876",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400b61e2a1cd7fed65ea0"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120876",
+  "date_created": "2023-12-08 23:52:54",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400b61e2a1cd7fed65ea2"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "657400b61e2a1cd7fed65ea1"
+  },
+  "date_created": "2023-12-08 23:52:54",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400e91e2a1cd7fed65ea5"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "657400e91e2a1cd7fed65ea4"
+  },
+  "date_created": "2023-12-08 23:53:45",
+  "date_view": null,
+  "email_user": "tie2023120894",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400e91e2a1cd7fed65ea7"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120894",
+  "date_created": "2023-12-08 23:53:45",
+  "date_view": null,
+  "email_user": "tie2023120894",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400e91e2a1cd7fed65ea9"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120894",
+  "date_created": "2023-12-08 23:53:45",
+  "date_view": null,
+  "email_user": "tie2023120894",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400e91e2a1cd7fed65eac"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120894",
+  "date_created": "2023-12-08 23:53:45",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400e91e2a1cd7fed65eae"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "657400e91e2a1cd7fed65ead"
+  },
+  "date_created": "2023-12-08 23:53:45",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657401321390450839e805b9"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "657401321390450839e805b8"
+  },
+  "date_created": "2023-12-08 23:54:58",
+  "date_view": null,
+  "email_user": "tie2023120869",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657401321390450839e805bb"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120869",
+  "date_created": "2023-12-08 23:54:58",
+  "date_view": null,
+  "email_user": "tie2023120869",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657401321390450839e805bd"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120869",
+  "date_created": "2023-12-08 23:54:58",
+  "date_view": null,
+  "email_user": "tie2023120869",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657401321390450839e805c0"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120869",
+  "date_created": "2023-12-08 23:54:58",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657401321390450839e805c2"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "657401321390450839e805c1"
+  },
+  "date_created": "2023-12-08 23:54:58",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6574025f51b1b1307952a553"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "6574025f51b1b1307952a552"
+  },
+  "date_created": "2023-12-08 23:59:59",
+  "date_view": null,
+  "email_user": "tie2023120858",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6574025f51b1b1307952a555"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120858",
+  "date_created": "2023-12-08 23:59:59",
+  "date_view": null,
+  "email_user": "tie2023120858",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6574025f51b1b1307952a557"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120858",
+  "date_created": "2023-12-08 23:59:59",
+  "date_view": null,
+  "email_user": "tie2023120858",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6574025f51b1b1307952a55a"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120858",
+  "date_created": "2023-12-08 23:59:59",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6574025f51b1b1307952a55c"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6574025f51b1b1307952a55b"
+  },
+  "date_created": "2023-12-08 23:59:59",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657402896128dfec5df1e27a"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "657402896128dfec5df1e279"
+  },
+  "date_created": "2023-12-09 00:00:41",
+  "date_view": null,
+  "email_user": "tie2023120973",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657402896128dfec5df1e27c"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120973",
+  "date_created": "2023-12-09 00:00:41",
+  "date_view": null,
+  "email_user": "tie2023120973",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657402896128dfec5df1e27e"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120973",
+  "date_created": "2023-12-09 00:00:41",
+  "date_view": null,
+  "email_user": "tie2023120973",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657402896128dfec5df1e281"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120973",
+  "date_created": "2023-12-09 00:00:41",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657402896128dfec5df1e283"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "657402896128dfec5df1e282"
+  },
+  "date_created": "2023-12-09 00:00:41",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657403b87db321f29a7263a5"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "657403b87db321f29a7263a4"
+  },
+  "date_created": "2023-12-09 00:05:44",
+  "date_view": null,
+  "email_user": "tie2023120975",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657403b87db321f29a7263a7"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120975",
+  "date_created": "2023-12-09 00:05:44",
+  "date_view": null,
+  "email_user": "tie2023120975",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657403b87db321f29a7263a9"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120975",
+  "date_created": "2023-12-09 00:05:44",
+  "date_view": null,
+  "email_user": "tie2023120975",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657403b97db321f29a7263ac"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120975",
+  "date_created": "2023-12-09 00:05:45",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657403b97db321f29a7263ae"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "657403b97db321f29a7263ad"
+  },
+  "date_created": "2023-12-09 00:05:45",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65740479a46befd1fec9a126"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "65740479a46befd1fec9a125"
+  },
+  "date_created": "2023-12-09 00:08:57",
+  "date_view": null,
+  "email_user": "tie2023120912",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6574047aa46befd1fec9a128"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120912",
+  "date_created": "2023-12-09 00:08:58",
+  "date_view": null,
+  "email_user": "tie2023120912",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6574047aa46befd1fec9a12a"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120912",
+  "date_created": "2023-12-09 00:08:58",
+  "date_view": null,
+  "email_user": "tie2023120912",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6574047ba46befd1fec9a12d"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120912",
+  "date_created": "2023-12-09 00:08:59",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6574047ba46befd1fec9a12f"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "6574047ba46befd1fec9a12e"
+  },
+  "date_created": "2023-12-09 00:08:59",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404aaf5978baa32ea7731"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "657404aaf5978baa32ea7730"
+  },
+  "date_created": "2023-12-09 00:09:46",
+  "date_view": null,
+  "email_user": "tie2023120980",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404aaf5978baa32ea7733"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120980",
+  "date_created": "2023-12-09 00:09:46",
+  "date_view": null,
+  "email_user": "tie2023120980",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404aaf5978baa32ea7735"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120980",
+  "date_created": "2023-12-09 00:09:46",
+  "date_view": null,
+  "email_user": "tie2023120980",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404aaf5978baa32ea7738"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120980",
+  "date_created": "2023-12-09 00:09:46",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404aaf5978baa32ea773a"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "657404aaf5978baa32ea7739"
+  },
+  "date_created": "2023-12-09 00:09:46",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404d505f174a1c189d297"
+  },
+  "Mesaage": "Se genero un nueva deuda",
+  "id_message": {
+    "$oid": "657404d505f174a1c189d296"
+  },
+  "date_created": "2023-12-09 00:10:29",
+  "date_view": null,
+  "email_user": "tie2023120934",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404d505f174a1c189d299"
+  },
+  "Mesaage": "Se genero una nueva solicitud a proveedor",
+  "id_message": "tie2023120934",
+  "date_created": "2023-12-09 00:10:29",
+  "date_view": null,
+  "email_user": "tie2023120934",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404d505f174a1c189d29b"
+  },
+  "Mesaage": "Se genero una nueva Orden de produccion",
+  "id_message": "tie2023120934",
+  "date_created": "2023-12-09 00:10:29",
+  "date_view": null,
+  "email_user": "tie2023120934",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404d505f174a1c189d29e"
+  },
+  "Mesaage": "Se genero una nueva solicitud a logistica",
+  "id_message": "tie2023120934",
+  "date_created": "2023-12-09 00:10:29",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404d505f174a1c189d2a0"
+  },
+  "Mesaage": "tier2@gmail.com genero una nueva solicitud de productos",
+  "id_message": {
+    "$oid": "657404d505f174a1c189d29f"
+  },
+  "date_created": "2023-12-09 00:10:29",
+  "date_view": null,
+  "email_user": "tier2@gmail.com",
+  "status": "pending"
+}]

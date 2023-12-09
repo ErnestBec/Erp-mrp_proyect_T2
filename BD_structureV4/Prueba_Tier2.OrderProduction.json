@@ -1,0 +1,758 @@
+[{
+  "_id": {
+    "$oid": "656d5c271ca52e0e0836cf06"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-03T22:57:11.302Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-03T22:57:11.000Z"
+  },
+  "num_ref_solicitud": "tie2023120343",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "656d65106fbc07ac67062d90"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-03T23:35:12.077Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-03T23:35:12.000Z"
+  },
+  "num_ref_solicitud": "tie202312034",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d65304ffdac18e32e99df"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-03T23:35:44.064Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-03T23:35:44.000Z"
+  },
+  "num_ref_solicitud": "tie2023120398",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d683fc77407edccd605a7"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-03T23:48:47.004Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-03T23:48:47.000Z"
+  },
+  "num_ref_solicitud": "tie2023120331",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d6fe64abc9e2ef7caaf04"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-04T00:21:26.190Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-04T00:21:26.000Z"
+  },
+  "num_ref_solicitud": "tie2023120497",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7634c473fb6ac3719c02"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-04T00:48:20.813Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-04T00:48:20.000Z"
+  },
+  "num_ref_solicitud": "tie2023120440",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "656d7ef0fbccb92d78547c87"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-04T01:25:36.993Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-04T01:25:36.000Z"
+  },
+  "num_ref_solicitud": "tie2023120478",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7f035ff5c3fc86f1ce26"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-04T01:25:55.729Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-04T01:25:55.000Z"
+  },
+  "num_ref_solicitud": "tie2023120473",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07ae"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-04T01:39:39.066Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5
+    },
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 5
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-04T01:39:39.000Z"
+  },
+  "num_ref_solicitud": "tie2023120417",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "657217ec13a950df60d33d03"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-07T13:07:24.689Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 25
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-07T13:07:24.000Z"
+  },
+  "num_ref_solicitud": "tie2023120781",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65722b325e98ffe816df5771"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-07T14:29:38.321Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 78
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-07T14:29:38.000Z"
+  },
+  "num_ref_solicitud": "tie2023120773",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65727837267542baa77e2283"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-07T19:58:15.086Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4b4cd04356fd1e4fecec",
+      "quantity_missing": 5000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-07T19:58:15.000Z"
+  },
+  "num_ref_solicitud": "t1A2023120723",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657388b52a58a71add54f683"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T15:20:53.245Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 10000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-08T15:20:53.000Z"
+  },
+  "num_ref_solicitud": "t1A2023120814",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "65738daac44551ec1dc00b13"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T15:42:02.174Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 500
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-08T15:42:02.000Z"
+  },
+  "num_ref_solicitud": "tie2023120830",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "657395d2dc16cda8c1942a66"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T16:16:50.294Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 500
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-08T16:16:50.000Z"
+  },
+  "num_ref_solicitud": "tie2023120853",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "657396771f68384c1fd17e8e"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T16:19:35.037Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 500
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-08T16:19:35.000Z"
+  },
+  "num_ref_solicitud": "tie2023120872",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "6573971a1a3da417c392b0e8"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T16:22:18.527Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 500
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-08T16:22:18.000Z"
+  },
+  "num_ref_solicitud": "tie2023120868",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "6573f87027be4bbd45ea8eb2"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:17:36.574Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 1000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-08T23:17:36.000Z"
+  },
+  "num_ref_solicitud": "t1A2023120897",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fb8bf0a3e45bcd168abf"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:30:51.844Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 1000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:30:51.000Z"
+  },
+  "num_ref_solicitud": "tie202312087",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fbe037d4388c86801666"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:32:16.977Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 1000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:32:16.000Z"
+  },
+  "num_ref_solicitud": "tie2023120898",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fca3c229d11c135571ad"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:35:31.338Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 1000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:35:31.000Z"
+  },
+  "num_ref_solicitud": "tie2023120880",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd1989e1db343f3c1a2d"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:37:29.594Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 1000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:37:29.000Z"
+  },
+  "num_ref_solicitud": "tie2023120847",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd7d89e1db343f3c1a39"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:39:09.265Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 1000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:39:08.000Z"
+  },
+  "num_ref_solicitud": "tie2023120826",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd86cc602fc9920ea3ff"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:39:18.411Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 1000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:39:18.000Z"
+  },
+  "num_ref_solicitud": "tie2023120881",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fdf89478207d7c9e2554"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:41:12.091Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 1000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:41:11.000Z"
+  },
+  "num_ref_solicitud": "tie2023120815",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fe869478207d7c9e2560"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:43:34.977Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 1000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:43:34.000Z"
+  },
+  "num_ref_solicitud": "tie2023120875",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fed9f2e353d4dd12cbf5"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:44:57.908Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 1000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:44:57.000Z"
+  },
+  "num_ref_solicitud": "tie2023120827",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff10f2e353d4dd12cc01"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:45:52.869Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 1000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:45:52.000Z"
+  },
+  "num_ref_solicitud": "tie202312082",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff13f2e353d4dd12cc0d"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:45:55.857Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 1000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:45:55.000Z"
+  },
+  "num_ref_solicitud": "tie202312081",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400b61e2a1cd7fed65e9c"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:52:54.165Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 1000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:52:53.000Z"
+  },
+  "num_ref_solicitud": "tie2023120876",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400e91e2a1cd7fed65ea8"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:53:45.256Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 8000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:53:44.000Z"
+  },
+  "num_ref_solicitud": "tie2023120894",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657401321390450839e805bc"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:54:58.949Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 8000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:54:56.000Z"
+  },
+  "num_ref_solicitud": "tie2023120869",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6574025f51b1b1307952a556"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-08T23:59:59.682Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 8000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-15T23:59:59.000Z"
+  },
+  "num_ref_solicitud": "tie2023120858",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657402896128dfec5df1e27d"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-09T00:00:41.607Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 8000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-16T00:00:35.000Z"
+  },
+  "num_ref_solicitud": "tie2023120973",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657403b87db321f29a7263a8"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-09T00:05:44.965Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 8000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-16T00:05:44.000Z"
+  },
+  "num_ref_solicitud": "tie2023120975",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6574047aa46befd1fec9a129"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-09T00:08:58.423Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 8000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-16T00:08:47.000Z"
+  },
+  "num_ref_solicitud": "tie2023120912",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404aaf5978baa32ea7734"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-09T00:09:46.441Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 8000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-16T00:09:46.000Z"
+  },
+  "num_ref_solicitud": "tie2023120980",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404d505f174a1c189d29a"
+  },
+  "fecha_alta": {
+    "$date": "2023-12-09T00:10:29.458Z"
+  },
+  "products": [
+    {
+      "id_prod": "656d4a43c3fea6ba02fc229f",
+      "quantity_missing": 8000
+    }
+  ],
+  "fecha_termino": {
+    "$date": "2023-12-16T00:10:29.000Z"
+  },
+  "num_ref_solicitud": "tie2023120934",
+  "status": "pending"
+}]

@@ -1,0 +1,380 @@
+[{
+  "_id": {
+    "$oid": "656d5c271ca52e0e0836cf07"
+  },
+  "fecha_recolection": "2023-12-03 22:57:11",
+  "fecha_entrega": "2023-12-03 22:57:11",
+  "num_ref_solicictud": "tie2023120343",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d65106fbc07ac67062d91"
+  },
+  "fecha_recolection": "2023-12-03 23:35:12",
+  "fecha_entrega": "2023-12-03 23:35:12",
+  "num_ref_solicictud": "tie202312034",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d65304ffdac18e32e99e0"
+  },
+  "fecha_recolection": "2023-12-03 23:35:44",
+  "fecha_entrega": "2023-12-03 23:35:44",
+  "num_ref_solicictud": "tie2023120398",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d683fc77407edccd605a8"
+  },
+  "fecha_recolection": "2023-12-03 23:48:47",
+  "fecha_entrega": "2023-12-03 23:48:47",
+  "num_ref_solicictud": "tie2023120331",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d6fe64abc9e2ef7caaf05"
+  },
+  "fecha_recolection": "2023-12-04 00:21:26",
+  "fecha_entrega": "2023-12-04 00:21:26",
+  "num_ref_solicictud": "tie2023120497",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d7634c473fb6ac3719c03"
+  },
+  "fecha_recolection": "2023-12-04 00:48:20",
+  "fecha_entrega": "2023-12-04 00:48:20",
+  "num_ref_solicictud": "tie2023120440",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d7ef0fbccb92d78547c88"
+  },
+  "fecha_recolection": "2023-12-04 01:25:36",
+  "fecha_entrega": "2023-12-04 01:25:36",
+  "num_ref_solicictud": "tie2023120478",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d7f035ff5c3fc86f1ce27"
+  },
+  "fecha_recolection": "2023-12-04 01:25:55",
+  "fecha_entrega": "2023-12-04 01:25:55",
+  "num_ref_solicictud": "tie2023120473",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07b0"
+  },
+  "fecha_recolection": "2023-12-04 01:39:39",
+  "fecha_entrega": "2023-12-04 01:39:39",
+  "num_ref_solicictud": "tie2023120417",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "657217ec13a950df60d33d05"
+  },
+  "fecha_recolection": "2023-12-07 13:07:24",
+  "fecha_entrega": "2023-12-07 13:07:24",
+  "num_ref_solicictud": "tie2023120781",
+  "status": "sendit",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "65722b325e98ffe816df5773"
+  },
+  "fecha_recolection": "2023-12-07 14:29:38",
+  "fecha_entrega": "2023-12-07 14:29:38",
+  "num_ref_solicictud": "tie2023120773",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "65727837267542baa77e2285"
+  },
+  "fecha_recolection": "2023-12-07 19:58:15",
+  "fecha_entrega": "2023-12-07 19:58:15",
+  "num_ref_solicictud": "t1A2023120723",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "657388b52a58a71add54f685"
+  },
+  "fecha_recolection": "2023-12-08 15:20:53",
+  "fecha_entrega": "2023-12-08 15:20:53",
+  "num_ref_solicictud": "t1A2023120814",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "65738daac44551ec1dc00b15"
+  },
+  "fecha_recolection": "2023-12-08 15:42:02",
+  "fecha_entrega": "2023-12-08 15:42:02",
+  "num_ref_solicictud": "tie2023120830",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "657395d2dc16cda8c1942a68"
+  },
+  "fecha_recolection": "2023-12-08 16:16:50",
+  "fecha_entrega": "2023-12-08 16:16:50",
+  "num_ref_solicictud": "tie2023120853",
+  "status": "sendit",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "657396771f68384c1fd17e90"
+  },
+  "fecha_recolection": "2023-12-08 16:19:35",
+  "fecha_entrega": "2023-12-08 16:19:35",
+  "num_ref_solicictud": "tie2023120872",
+  "status": "sendit",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6573971a1a3da417c392b0ea"
+  },
+  "fecha_recolection": "2023-12-08 16:22:18",
+  "fecha_entrega": "2023-12-08 16:22:18",
+  "num_ref_solicictud": "tie2023120868",
+  "status": "sendit",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6573f87027be4bbd45ea8eb4"
+  },
+  "fecha_recolection": "2023-12-08 23:17:36",
+  "fecha_entrega": "2023-12-08 23:17:36",
+  "num_ref_solicictud": "t1A2023120897",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6573fb8bf0a3e45bcd168ac1"
+  },
+  "fecha_recolection": "2023-12-08 23:30:51",
+  "fecha_entrega": "2023-12-08 23:30:51",
+  "num_ref_solicictud": "tie202312087",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6573fbe037d4388c86801668"
+  },
+  "fecha_recolection": "2023-12-08 23:32:16",
+  "fecha_entrega": "2023-12-08 23:32:16",
+  "num_ref_solicictud": "tie2023120898",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6573fca3c229d11c135571af"
+  },
+  "fecha_recolection": "2023-12-08 23:35:31",
+  "fecha_entrega": "2023-12-08 23:35:31",
+  "num_ref_solicictud": "tie2023120880",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6573fd1989e1db343f3c1a2f"
+  },
+  "fecha_recolection": "2023-12-08 23:37:29",
+  "fecha_entrega": "2023-12-08 23:37:29",
+  "num_ref_solicictud": "tie2023120847",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6573fd7d89e1db343f3c1a3b"
+  },
+  "fecha_recolection": "2023-12-08 23:39:09",
+  "fecha_entrega": "2023-12-08 23:39:09",
+  "num_ref_solicictud": "tie2023120826",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6573fd86cc602fc9920ea401"
+  },
+  "fecha_recolection": "2023-12-08 23:39:18",
+  "fecha_entrega": "2023-12-08 23:39:18",
+  "num_ref_solicictud": "tie2023120881",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6573fdf89478207d7c9e2556"
+  },
+  "fecha_recolection": "2023-12-08 23:41:12",
+  "fecha_entrega": "2023-12-08 23:41:12",
+  "num_ref_solicictud": "tie2023120815",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6573fe869478207d7c9e2562"
+  },
+  "fecha_recolection": "2023-12-08 23:43:34",
+  "fecha_entrega": "2023-12-08 23:43:34",
+  "num_ref_solicictud": "tie2023120875",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6573fed9f2e353d4dd12cbf7"
+  },
+  "fecha_recolection": "2023-12-08 23:44:57",
+  "fecha_entrega": "2023-12-08 23:44:57",
+  "num_ref_solicictud": "tie2023120827",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6573ff10f2e353d4dd12cc03"
+  },
+  "fecha_recolection": "2023-12-08 23:45:52",
+  "fecha_entrega": "2023-12-08 23:45:52",
+  "num_ref_solicictud": "tie202312082",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6573ff13f2e353d4dd12cc0f"
+  },
+  "fecha_recolection": "2023-12-08 23:45:55",
+  "fecha_entrega": "2023-12-08 23:45:55",
+  "num_ref_solicictud": "tie202312081",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "657400b61e2a1cd7fed65e9e"
+  },
+  "fecha_recolection": "2023-12-08 23:52:54",
+  "fecha_entrega": "2023-12-08 23:52:54",
+  "num_ref_solicictud": "tie2023120876",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "657400e91e2a1cd7fed65eaa"
+  },
+  "fecha_recolection": "2023-12-08 23:53:45",
+  "fecha_entrega": "2023-12-08 23:53:45",
+  "num_ref_solicictud": "tie2023120894",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "657401321390450839e805be"
+  },
+  "fecha_recolection": "2023-12-08 23:54:58",
+  "fecha_entrega": "2023-12-08 23:54:58",
+  "num_ref_solicictud": "tie2023120869",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6574025f51b1b1307952a558"
+  },
+  "fecha_recolection": "2023-12-08 23:59:59",
+  "fecha_entrega": "2023-12-08 23:59:59",
+  "num_ref_solicictud": "tie2023120858",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "657402896128dfec5df1e27f"
+  },
+  "fecha_recolection": "2023-12-09 00:00:41",
+  "fecha_entrega": "2023-12-09 00:00:41",
+  "num_ref_solicictud": "tie2023120973",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "657403b87db321f29a7263aa"
+  },
+  "fecha_recolection": "2023-12-09 00:05:44",
+  "fecha_entrega": "2023-12-09 00:05:44",
+  "num_ref_solicictud": "tie2023120975",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "6574047aa46befd1fec9a12b"
+  },
+  "fecha_recolection": "2023-12-09 00:08:58",
+  "fecha_entrega": "2023-12-09 00:08:58",
+  "num_ref_solicictud": "tie2023120912",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "657404aaf5978baa32ea7736"
+  },
+  "fecha_recolection": "2023-12-09 00:09:46",
+  "fecha_entrega": "2023-12-09 00:09:46",
+  "num_ref_solicictud": "tie2023120980",
+  "status": "pending",
+  "costo": 159600
+},
+{
+  "_id": {
+    "$oid": "657404d505f174a1c189d29c"
+  },
+  "fecha_recolection": "2023-12-09 00:10:29",
+  "fecha_entrega": "2023-12-09 00:10:29",
+  "num_ref_solicictud": "tie2023120934",
+  "status": "pending",
+  "costo": 159600
+}]

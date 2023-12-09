@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "name_rack": "Rack Bocinas",
+  "width_capacity": 3,
+  "high_capacity": 3,
+  "long_capacity": 3,
+  "date_update": "2023-12-08 01:46:08"
+},
+{
+  "_id": {
+    "$oid": "65740a6c3a62aae23918a8c6"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "name_rack": "Bocinas 3456",
+  "width_capacity": 2,
+  "high_capacity": 2,
+  "long_capacity": 2,
+  "date_update": "2023-12-09 00:34:20"
+},
+{
+  "_id": {
+    "$oid": "65740a7e3a62aae23918a8d5"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "name_rack": "Bocinas 3456",
+  "width_capacity": 2,
+  "high_capacity": 2,
+  "long_capacity": 2,
+  "date_update": "2023-12-09 00:34:38"
+}]

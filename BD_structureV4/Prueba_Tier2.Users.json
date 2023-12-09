@@ -1,0 +1,50 @@
+[{
+  "_id": {
+    "$oid": "6551400103316126af5544ff"
+  },
+  "name": "Piezas Electronicas T3a",
+  "email": "piezaselectronicast3a@gmail.com",
+  "password": "$5$rounds=535000$IfaKh1biPHTOkqyd$GhPl/WNA5ae34LI.RXc2eVZWvJa4KQER2eDYCFZWx/0",
+  "phone": 1234567890,
+  "role": "proveedor",
+  "status": "activate"
+},
+{
+  "_id": {
+    "$oid": "6551400d03316126af554500"
+  },
+  "name": "Piezas Electronicas",
+  "email": "pzs@gmail.com",
+  "password": "$5$rounds=535000$NvdqflTTXN2NyNH3$.s/6NQDK/rJiLpxRYg7hFLABCTeRDJwKCiH7i0StW64",
+  "phone": {
+    "$numberLong": "7292284031"
+  },
+  "role": "client",
+  "status": "activate"
+},
+{
+  "_id": {
+    "$oid": "6551403103316126af554501"
+  },
+  "name": "Distribuidor de Electornicos t2",
+  "email": "tier2@gmail.com",
+  "password": "$5$rounds=535000$RnCyxSiLgYZjY6mN$iO3XCQXUZl5piPphbaPi7lrmirZ.CQP3/81yBKNKkt5",
+  "phone": {
+    "$numberLong": "7292284031"
+  },
+  "role": "admin",
+  "status": "activate"
+},
+{
+  "_id": {
+    "$oid": "657270f3dc47c65a4053cc15"
+  },
+  "name": "Accesorios",
+  "email": "t1Acc@gmail.com",
+  "password": "$5$rounds=535000$lw2nZ7KSGTnxGgCe$yS23s.nXossKhAHK6T2xh4pJwIvyUy7WfC7V4UD3KoB",
+  "phone": {
+    "$numberLong": "5578963214"
+  },
+  "role": "client",
+  "status": "activate"
+}]

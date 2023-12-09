@@ -1,0 +1,165 @@
+[{
+  "_id": {
+    "$oid": "65738a412a58a71add54f68d"
+  },
+  "no_serie": "7380068652",
+  "id_product": "656d401c12e9e3a61ed89677",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 15:27:29"
+  }
+},
+{
+  "_id": {
+    "$oid": "65738a412a58a71add54f68e"
+  },
+  "no_serie": "6816815640",
+  "id_product": "656d3fd312e9e3a61ed89671",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 15:27:29"
+  }
+},
+{
+  "_id": {
+    "$oid": "65738a412a58a71add54f68f"
+  },
+  "no_serie": "8276909496",
+  "id_product": "656d3ffd12e9e3a61ed89674",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 15:27:29"
+  }
+},
+{
+  "_id": {
+    "$oid": "65738e3cc44551ec1dc00b1d"
+  },
+  "no_serie": "4443201781",
+  "id_product": "656d401c12e9e3a61ed89677",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 15:44:28"
+  }
+},
+{
+  "_id": {
+    "$oid": "65738e3cc44551ec1dc00b1e"
+  },
+  "no_serie": "1243193844",
+  "id_product": "656d3fd312e9e3a61ed89671",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 15:44:28"
+  }
+},
+{
+  "_id": {
+    "$oid": "65738e3cc44551ec1dc00b1f"
+  },
+  "no_serie": "1620648980",
+  "id_product": "656d3ffd12e9e3a61ed89674",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 15:44:28"
+  }
+},
+{
+  "_id": {
+    "$oid": "6573961ddc16cda8c1942a70"
+  },
+  "no_serie": "5815634748",
+  "id_product": "656d401c12e9e3a61ed89677",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 16:18:05"
+  }
+},
+{
+  "_id": {
+    "$oid": "6573961ddc16cda8c1942a71"
+  },
+  "no_serie": "5568115870",
+  "id_product": "656d3fd312e9e3a61ed89671",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 16:18:05"
+  }
+},
+{
+  "_id": {
+    "$oid": "6573961ddc16cda8c1942a72"
+  },
+  "no_serie": "7929188415",
+  "id_product": "656d3ffd12e9e3a61ed89674",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 16:18:05"
+  }
+},
+{
+  "_id": {
+    "$oid": "657396ba1f68384c1fd17e98"
+  },
+  "no_serie": "2702868624",
+  "id_product": "656d401c12e9e3a61ed89677",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 16:20:42"
+  }
+},
+{
+  "_id": {
+    "$oid": "657396ba1f68384c1fd17e99"
+  },
+  "no_serie": "8204599958",
+  "id_product": "656d3fd312e9e3a61ed89671",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 16:20:42"
+  }
+},
+{
+  "_id": {
+    "$oid": "657396ba1f68384c1fd17e9a"
+  },
+  "no_serie": "1701523398",
+  "id_product": "656d3ffd12e9e3a61ed89674",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 16:20:42"
+  }
+},
+{
+  "_id": {
+    "$oid": "657397ba9a5af108db79c2f9"
+  },
+  "no_serie": "8280393295",
+  "id_product": "656d401c12e9e3a61ed89677",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 16:24:58"
+  }
+},
+{
+  "_id": {
+    "$oid": "657397ba9a5af108db79c2fa"
+  },
+  "no_serie": "5816537462",
+  "id_product": "656d3fd312e9e3a61ed89671",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 16:24:58"
+  }
+},
+{
+  "_id": {
+    "$oid": "657397ba9a5af108db79c2fb"
+  },
+  "no_serie": "5944895625",
+  "id_product": "656d3ffd12e9e3a61ed89674",
+  "status": "sold",
+  "date": {
+    "$date": "2023-12-08 16:24:58"
+  }
+}]

@@ -1,0 +1,1108 @@
+[{
+  "_id": {
+    "$oid": "656d5c271ca52e0e0836cf09"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120343",
+  "date_delivery": "2023-12-03 22:57:11",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-03 22:57:11",
+  "date_req": "2023-12-03 22:57:11",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "656d65106fbc07ac67062d93"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie202312034",
+  "date_delivery": "2023-12-03 23:35:12",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-03 23:35:12",
+  "date_req": "2023-12-03 23:35:12",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d65304ffdac18e32e99e2"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120398",
+  "date_delivery": "2023-12-03 23:35:44",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-03 23:35:44",
+  "date_req": "2023-12-03 23:35:44",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d683fc77407edccd605aa"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120331",
+  "date_delivery": "2023-12-03 23:48:47",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-03 23:48:47",
+  "date_req": "2023-12-03 23:48:46",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d6fe64abc9e2ef7caaf07"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120497",
+  "date_delivery": "2023-12-04 00:21:26",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-04 00:21:26",
+  "date_req": "2023-12-04 00:21:26",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7634c473fb6ac3719c05"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120440",
+  "date_delivery": "2023-12-04 00:48:20",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-04 00:48:20",
+  "date_req": "2023-12-04 00:48:20",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "656d7ef0fbccb92d78547c8a"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120478",
+  "date_delivery": "2023-12-04 01:25:36",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-04 01:25:36",
+  "date_req": "2023-12-04 01:25:36",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d7f035ff5c3fc86f1ce29"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120473",
+  "date_delivery": "2023-12-04 01:25:55",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-04 01:25:55",
+  "date_req": "2023-12-04 01:25:55",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "656d823b2909c677b1ae07b3"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5
+    },
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 5
+    }
+  ],
+  "date_delivery_expected": "30-11-2023",
+  "num_ref_solicitud": "tie2023120417",
+  "date_delivery": "2023-12-04 01:39:39",
+  "client": {
+    "name": "Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-04 01:39:39",
+  "date_req": "2023-12-04 01:39:39",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "657217ec13a950df60d33d08"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 25
+    }
+  ],
+  "date_delivery_expected": "28-12-23",
+  "num_ref_solicitud": "tie2023120781",
+  "date_delivery": "2023-12-07 13:07:24",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-07 13:07:24",
+  "date_req": "2023-12-07 13:07:24",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "65727837267542baa77e2288"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4b4cd04356fd1e4fecec",
+        "name_prod": "Biometric Sensor",
+        "precio_uni": 130
+      },
+      "quantyti": 5000
+    }
+  ],
+  "date_delivery_expected": "12-12-23",
+  "num_ref_solicitud": "t1A2023120723",
+  "date_delivery": "2023-12-07 19:58:15",
+  "client": {
+    "name": "Accesorios",
+    "email": "t1Acc@gmail.com",
+    "phone": {
+      "$numberLong": "5578963214"
+    }
+  },
+  "date_approved": "2023-12-07 19:58:15",
+  "date_req": "2023-12-07 19:58:14",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657388b52a58a71add54f688"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 10000
+    }
+  ],
+  "date_delivery_expected": "11-12-2023",
+  "num_ref_solicitud": "t1A2023120814",
+  "date_delivery": "2023-12-08 15:20:53",
+  "client": {
+    "name": "Accesorios",
+    "email": "t1Acc@gmail.com",
+    "phone": {
+      "$numberLong": "5578963214"
+    }
+  },
+  "date_approved": "2023-12-08 15:20:53",
+  "date_req": "2023-12-08 15:20:52",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "65738daac44551ec1dc00b18"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 500
+    }
+  ],
+  "date_delivery_expected": "11-12-2023",
+  "num_ref_solicitud": "tie2023120830",
+  "date_delivery": "2023-12-08 15:42:02",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 15:42:02",
+  "date_req": "2023-12-08 15:42:01",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "657395d2dc16cda8c1942a6b"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 500
+    }
+  ],
+  "date_delivery_expected": "11-12-2023",
+  "num_ref_solicitud": "tie2023120853",
+  "date_delivery": "2023-12-08 16:16:50",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 16:16:50",
+  "date_req": "2023-12-08 16:16:50",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "657396771f68384c1fd17e93"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 500
+    }
+  ],
+  "date_delivery_expected": "11-12-2023",
+  "num_ref_solicitud": "tie2023120872",
+  "date_delivery": "2023-12-08 16:19:35",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 16:19:35",
+  "date_req": "2023-12-08 16:19:34",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "6573971a1a3da417c392b0ed"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 500
+    }
+  ],
+  "date_delivery_expected": "11-12-2023",
+  "num_ref_solicitud": "tie2023120868",
+  "date_delivery": "2023-12-08 16:22:18",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 16:22:18",
+  "date_req": "2023-12-08 16:22:18",
+  "status": "complete"
+},
+{
+  "_id": {
+    "$oid": "6573f87027be4bbd45ea8eb7"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 1000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "t1A2023120897",
+  "date_delivery": "2023-12-08 23:17:36",
+  "client": {
+    "name": "Accesorios",
+    "email": "t1Acc@gmail.com",
+    "phone": {
+      "$numberLong": "5578963214"
+    }
+  },
+  "date_approved": "2023-12-08 23:17:36",
+  "date_req": "2023-12-08 23:17:36",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fb8bf0a3e45bcd168ac4"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 1000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie202312087",
+  "date_delivery": "2023-12-08 23:30:51",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:30:51",
+  "date_req": "2023-12-08 23:30:51",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fbe137d4388c8680166b"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 1000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120898",
+  "date_delivery": "2023-12-08 23:32:16",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:32:17",
+  "date_req": "2023-12-08 23:32:16",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fca3c229d11c135571b2"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 1000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120880",
+  "date_delivery": "2023-12-08 23:35:31",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:35:31",
+  "date_req": "2023-12-08 23:35:30",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd1989e1db343f3c1a32"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 1000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120847",
+  "date_delivery": "2023-12-08 23:37:29",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:37:29",
+  "date_req": "2023-12-08 23:37:28",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd7d89e1db343f3c1a3e"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 1000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120826",
+  "date_delivery": "2023-12-08 23:39:09",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:39:09",
+  "date_req": "2023-12-08 23:39:08",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fd86cc602fc9920ea404"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 1000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120881",
+  "date_delivery": "2023-12-08 23:39:18",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:39:18",
+  "date_req": "2023-12-08 23:39:17",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fdf89478207d7c9e2559"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 1000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120815",
+  "date_delivery": "2023-12-08 23:41:12",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:41:12",
+  "date_req": "2023-12-08 23:41:11",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fe879478207d7c9e2565"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 1000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120875",
+  "date_delivery": "2023-12-08 23:43:34",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:43:35",
+  "date_req": "2023-12-08 23:43:34",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573fed9f2e353d4dd12cbfa"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 1000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120827",
+  "date_delivery": "2023-12-08 23:44:57",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:44:57",
+  "date_req": "2023-12-08 23:44:57",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff10f2e353d4dd12cc06"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 1000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie202312082",
+  "date_delivery": "2023-12-08 23:45:52",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:45:52",
+  "date_req": "2023-12-08 23:45:52",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6573ff13f2e353d4dd12cc12"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 1000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie202312081",
+  "date_delivery": "2023-12-08 23:45:55",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:45:55",
+  "date_req": "2023-12-08 23:45:55",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400b61e2a1cd7fed65ea1"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 1000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120876",
+  "date_delivery": "2023-12-08 23:52:54",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:52:54",
+  "date_req": "2023-12-08 23:52:53",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657400e91e2a1cd7fed65ead"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 8000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120894",
+  "date_delivery": "2023-12-08 23:53:45",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:53:45",
+  "date_req": "2023-12-08 23:53:44",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657401321390450839e805c1"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 8000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120869",
+  "date_delivery": "2023-12-08 23:54:58",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:54:58",
+  "date_req": "2023-12-08 23:54:56",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6574025f51b1b1307952a55b"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 8000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120858",
+  "date_delivery": "2023-12-08 23:59:59",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-08 23:59:59",
+  "date_req": "2023-12-08 23:59:59",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657402896128dfec5df1e282"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 8000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120973",
+  "date_delivery": "2023-12-09 00:00:41",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-09 00:00:41",
+  "date_req": "2023-12-09 00:00:35",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657403b97db321f29a7263ad"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 8000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120975",
+  "date_delivery": "2023-12-09 00:05:45",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-09 00:05:45",
+  "date_req": "2023-12-09 00:05:44",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "6574047ba46befd1fec9a12e"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 8000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120912",
+  "date_delivery": "2023-12-09 00:08:59",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-09 00:08:59",
+  "date_req": "2023-12-09 00:08:47",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404aaf5978baa32ea7739"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 8000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120980",
+  "date_delivery": "2023-12-09 00:09:46",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-09 00:09:46",
+  "date_req": "2023-12-09 00:09:45",
+  "status": "pending"
+},
+{
+  "_id": {
+    "$oid": "657404d505f174a1c189d29f"
+  },
+  "products": [
+    {
+      "product": {
+        "_id": "656d4a43c3fea6ba02fc229f",
+        "name_prod": "Camera",
+        "precio_uni": 120
+      },
+      "quantyti": 8000
+    }
+  ],
+  "date_delivery_expected": "12-12-2023",
+  "num_ref_solicitud": "tie2023120934",
+  "date_delivery": "2023-12-09 00:10:29",
+  "client": {
+    "name": "Distribuidor de Electornicos t2",
+    "email": "tier2@gmail.com",
+    "phone": {
+      "$numberLong": "7292284031"
+    }
+  },
+  "date_approved": "2023-12-09 00:10:29",
+  "date_req": "2023-12-09 00:10:28",
+  "status": "pending"
+}]
