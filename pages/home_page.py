@@ -1,25 +1,17 @@
-from reactpy import html, component,hooks,use_state
+from reactpy import html, component,hooks,use_state,use_effect,use_ref
 from components import nabvar_side, navbar_user, card_icome, card_tasks, card_pending_request, footer, card_graphic_ventas, card_graphic_round
 from components import chart as classChart
-from localStoragePy import localStoragePy
 import reactpy
 import random
-localStorage = localStoragePy('tier2', 't2-storage')
-token = None
+import requests
+
+url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
 
 @component
 def home_page():
-    token,setToken = reactpy.hooks.use_state("")
-    def getToken():
-        getTkn = str(localStorage.getItem("token"))
-        if getTkn == "None":
-            return html.script("window.location.href = \"/\";")
-        else:
-            setToken(getTkn)
-            return html.script("")
-        
-        
-        
+    mi_ref = html.input({"style":"display:none","id": "divToken","onkeypress":lambda event:setToken(str(event['currentTarget']['value']))})
+    token,setToken = reactpy.hooks.use_state("Ignore")
+    
     bootstrap_css = html.link({
         "rel": "stylesheet",
         "href": "https://elpatronhh.github.io/portfolio/bootstrap.min.css"
@@ -58,6 +50,18 @@ def home_page():
             "rel": "stylesheet"
         }),
     )
+    def getToken():
+        #return html.script("var elemento = document.getElementById('divToken');elemento.value = 'asdasdasd';console.log('token recibido en home:    '+localStorage.getItem('token'));")
+        return html.script("var elemento = document.getElementById('divToken'); var item = localStorage.getItem('token'); if (item == null) { item = \"None\"; } elemento.value = item; elemento.dispatchEvent(new Event('keypress'));")
+    def validarSesion(tkn):
+        script = ""
+        if tkn != "Ignore":
+            if tkn == "None":
+                script = "localStorage.clear();window.location.href = \"/\";"
+            else:
+                script = "localStorage.clear();localStorage.setItem(\"token\", \""+tkn+"\");"
+                
+        return html.script(script)
     return html.div({
         "id": "page-top"
     },
@@ -67,14 +71,16 @@ def home_page():
         head,
         html.div({"id": "wrapper"},
                  nabvar_side.navbar(),
+                 mi_ref,
                  getToken(),
+                 validarSesion(token),
                  html.div({"id": "content-wrapper", "class": "d-flex flex-column"},
                           html.div({"id": "content"},
                                    html.div(navbar_user.navbar_user()),
                                    html.div({"class": "container-fluid"},
                                             html.div({"class": "d-sm-flex align-items-center justify-content-between mb-4"},
                                                      html.h1(
-                                                {"class": "h3 mb-0 text-gray-800"}, token),
+                                                    {"class": "h3 mb-0 text-gray-800"}, "Dashboard"),
                                        html.a({"class": "d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"},
                                               html.i(
                                            {"class": "fas fa-download fa-sm text-white-50 me-2"}),
