@@ -33,12 +33,10 @@ def get_prduct(id):
 
 
 def update_product(id, product):
-
     product =dict(product)
     list_mp = []
     for mp in product["mp"]:
         mp = dict(mp)
-        print(mp)
         list_mp.append(mp)
     product["mp"]= list_mp
     db_name.Products.find_one_and_update(
