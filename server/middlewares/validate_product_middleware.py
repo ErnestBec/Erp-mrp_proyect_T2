@@ -46,15 +46,11 @@ async def product_update_validator(request: Request):
     if not product["precio_uni"]:
         errors.append("The precio_uni cannot be empty")
     elif product["precio_uni"] < 0:
-        errors.append("Te precio_uni cannto be 0")
-    if not product["num_pieza"]:
-        errors.append("The num_pieza cannot be empty")
-    if not product["cantidad_prod"]:
-        errors.append("The cantidad cannot be empty")
-    elif product["cantidad_prod"] < 0:
         errors.append("Te cantidad cannto be 0")
     if not product["mp"]:
         errors.append("The mp cannot be empty")
+    if not product["time_production"]:
+        errors.append("The time production cannot be empty")
     if errors:
         raise HTTPException(status_code=400, detail=". ".join(errors))
 

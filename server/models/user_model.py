@@ -14,7 +14,6 @@ class User(BaseModel):
 
 class updateUser(BaseModel):
     name: Optional[str]
-    email: Optional[str]
     phone: Optional[int]
 
 
