@@ -26,5 +26,5 @@ class updatePrducto(BaseModel):
     min_stock: Optional[int]
     max_stock: Optional[int]
     precio_uni: Optional[int]
-    mp: Optional[List[mp]]
+    mp: List[mp]
     time_production: Optional[float]
