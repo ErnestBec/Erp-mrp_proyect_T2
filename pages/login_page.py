@@ -11,15 +11,12 @@ def btnSubmit(e,mail,pswd):
     result = ""
     link = ""
     response = requests.post(url+"login",data=json.dumps(info))
-    print(str(response.status_code))
     if response.status_code >=200 and response.status_code <300:
         color = "#98ff98"
         result = str(response.json()['token'])
         res = "localStorage.clear();localStorage.setItem(\"token\", \""+result+"\");window.location.href = \"/dashboard\";"
-        print(res)
         return html.script(res)
     else:
-        print("No hay token")
         return html.script("localStorage.clear();")
     
     
@@ -32,7 +29,6 @@ def login_user():
     return (
         html.div({"style":"background-color: #FAFCFD;height: 100vh;","class":"d-flex align-items-center"},
                  html.head(html.title('Login')),
-                 
                  html.div({"class": "container-fluid h-75"},
                           html.div({"class":"row d-flex justify-content-center h-100"},
                                    html.div({"style":"padding: 0px; border-radius: 24px;background-color: #FFFFFF;box-shadow: 1px 0px 12px 0px rgba(0,0,0,0.04);","class":"col-10 col-md-6 col-lg-5 col-xl-3 h-100"},
