@@ -4,7 +4,7 @@ from fastapi import Request, HTTPException
 async def product_validate_middleware(request: Request):
     errors = []
     product = await request.json()
-    if not product["name_prod"]:
+    if not product["name"]:
         errors.append("The name cannot be empty")
     if not product["Descripcion"]:
         errors.append("The descripcion cannot be empty")
