@@ -1,0 +1,688 @@
+[{
+  "_id": {
+    "$oid": "6572c9c0c2f5edca9a27c79f"
+  },
+  "id_row": {
+    "$oid": "6572c9c0c2f5edca9a27c79e"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d401c12e9e3a61ed89677",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c0c2f5edca9a27c7a0"
+  },
+  "id_row": {
+    "$oid": "6572c9c0c2f5edca9a27c79e"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d3fd312e9e3a61ed89671",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c0c2f5edca9a27c7a1"
+  },
+  "id_row": {
+    "$oid": "6572c9c0c2f5edca9a27c79e"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d3ffd12e9e3a61ed89674",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c0c2f5edca9a27c7a3"
+  },
+  "id_row": {
+    "$oid": "6572c9c0c2f5edca9a27c7a2"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d401c12e9e3a61ed89677",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c0c2f5edca9a27c7a4"
+  },
+  "id_row": {
+    "$oid": "6572c9c0c2f5edca9a27c7a2"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d3fd312e9e3a61ed89671",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c0c2f5edca9a27c7a5"
+  },
+  "id_row": {
+    "$oid": "6572c9c0c2f5edca9a27c7a2"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d3ffd12e9e3a61ed89674",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c0c2f5edca9a27c7a7"
+  },
+  "id_row": {
+    "$oid": "6572c9c0c2f5edca9a27c7a6"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d401c12e9e3a61ed89677",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7a8"
+  },
+  "id_row": {
+    "$oid": "6572c9c0c2f5edca9a27c7a6"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d3fd312e9e3a61ed89671",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7a9"
+  },
+  "id_row": {
+    "$oid": "6572c9c0c2f5edca9a27c7a6"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d3ffd12e9e3a61ed89674",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7ac"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7ab"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d401c12e9e3a61ed89677",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7ad"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7ab"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d3fd312e9e3a61ed89671",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7ae"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7ab"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d3ffd12e9e3a61ed89674",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7b0"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7af"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d401c12e9e3a61ed89677",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7b1"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7af"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d3fd312e9e3a61ed89671",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7b2"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7af"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "656d3ffd12e9e3a61ed89674",
+  "status": "ocuped"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7b4"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7b3"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7b5"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7b3"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7b6"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7b3"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7b9"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7b8"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7ba"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7b8"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7bb"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7b8"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7bd"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7bc"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7be"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7bc"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7bf"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7bc"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7c1"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7c0"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7c2"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7c0"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "6572c9c1c2f5edca9a27c7c3"
+  },
+  "id_row": {
+    "$oid": "6572c9c1c2f5edca9a27c7c0"
+  },
+  "id_stock": {
+    "$oid": "656d3a8c50411fb20a144bcc"
+  },
+  "id_rack": {
+    "$oid": "6572c9c0c2f5edca9a27c79c"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a6d3a62aae23918a8c9"
+  },
+  "id_row": {
+    "$oid": "65740a6d3a62aae23918a8c8"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a6c3a62aae23918a8c6"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a6d3a62aae23918a8ca"
+  },
+  "id_row": {
+    "$oid": "65740a6d3a62aae23918a8c8"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a6c3a62aae23918a8c6"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a6d3a62aae23918a8cc"
+  },
+  "id_row": {
+    "$oid": "65740a6d3a62aae23918a8cb"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a6c3a62aae23918a8c6"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a6d3a62aae23918a8cd"
+  },
+  "id_row": {
+    "$oid": "65740a6d3a62aae23918a8cb"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a6c3a62aae23918a8c6"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a6d3a62aae23918a8d0"
+  },
+  "id_row": {
+    "$oid": "65740a6d3a62aae23918a8cf"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a6c3a62aae23918a8c6"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a6d3a62aae23918a8d1"
+  },
+  "id_row": {
+    "$oid": "65740a6d3a62aae23918a8cf"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a6c3a62aae23918a8c6"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a6d3a62aae23918a8d3"
+  },
+  "id_row": {
+    "$oid": "65740a6d3a62aae23918a8d2"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a6c3a62aae23918a8c6"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a6d3a62aae23918a8d4"
+  },
+  "id_row": {
+    "$oid": "65740a6d3a62aae23918a8d2"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a6c3a62aae23918a8c6"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a7e3a62aae23918a8d8"
+  },
+  "id_row": {
+    "$oid": "65740a7e3a62aae23918a8d7"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a7e3a62aae23918a8d5"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a7e3a62aae23918a8d9"
+  },
+  "id_row": {
+    "$oid": "65740a7e3a62aae23918a8d7"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a7e3a62aae23918a8d5"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a7e3a62aae23918a8db"
+  },
+  "id_row": {
+    "$oid": "65740a7e3a62aae23918a8da"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a7e3a62aae23918a8d5"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a7e3a62aae23918a8dc"
+  },
+  "id_row": {
+    "$oid": "65740a7e3a62aae23918a8da"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a7e3a62aae23918a8d5"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a7e3a62aae23918a8df"
+  },
+  "id_row": {
+    "$oid": "65740a7e3a62aae23918a8de"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a7e3a62aae23918a8d5"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a7e3a62aae23918a8e0"
+  },
+  "id_row": {
+    "$oid": "65740a7e3a62aae23918a8de"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a7e3a62aae23918a8d5"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a7e3a62aae23918a8e2"
+  },
+  "id_row": {
+    "$oid": "65740a7e3a62aae23918a8e1"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a7e3a62aae23918a8d5"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+},
+{
+  "_id": {
+    "$oid": "65740a7e3a62aae23918a8e3"
+  },
+  "id_row": {
+    "$oid": "65740a7e3a62aae23918a8e1"
+  },
+  "id_stock": {
+    "$oid": "656d3aa350411fb20a144bcd"
+  },
+  "id_rack": {
+    "$oid": "65740a7e3a62aae23918a8d5"
+  },
+  "id_prod_pz": "Null",
+  "status": "free"
+}]
