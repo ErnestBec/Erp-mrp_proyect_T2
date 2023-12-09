@@ -1,5 +1,5 @@
 from reactpy import component, html
-from components import navbar_top, navbarMenu, tabla
+from components.components_admin import navbar_top, navbarMenu, tabla
 from reactpy_router import link
 
 
@@ -181,7 +181,7 @@ def Page_Racks():
                             html.div(
                                 {"class": "card-body", "style": "margin-top: 0%;"},
                                 html.hr({"class": "sidebar-divider my-0"}),
-                                tabla.Tabla(datos),
+                                #tabla.Tabla(columnas, datos),
                             ),
                         ),
                     ),

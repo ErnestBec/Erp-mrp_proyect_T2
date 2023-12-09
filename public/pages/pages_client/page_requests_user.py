@@ -1,9 +1,9 @@
-from reactpy import component, html, hooks
-from components import navbar_top, Card, navbarMenu, tabla, btnFilter, btnFilterDay
+from reactpy import component, html
+from components.components_client import navbar_top, navbarMenu, btnFilter, btnFilterDay
 from reactpy_router import link
 import json
 import requests
-import json
+
 
 def obtener_datos_api():
     url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
@@ -19,9 +19,9 @@ def obtener_datos_api():
 
     if response.status_code >= 200 and response.status_code < 300:
         token = str(response.json()["token"])
-        print(token)
+        
 
-        headers = {'Authorization': f'Bearer {token}'}
+        headers = {"Authorization": f"Bearer {token}"}
 
         try:
             response = requests.get(url + "requests", headers=headers)
@@ -39,10 +39,7 @@ def obtener_datos_api():
     else:
         print(f"Error en la solicitud POST. Código de estado: {response.status_code}")
 
-    return []  
-
-
-
+    return []
 
 
 datos_api = obtener_datos_api()
@@ -76,71 +73,94 @@ def Estado(edo):
             html.b(f"{edo}"),
         )
 
-    if edo == "Completada":
-        return html.button(
-            {
-                "type": "button",
-                "class": "btn",
-                "style": {
-                    "color": "#000000",
-                    "background-color": "#5BDD4B",
-                    "font-size": "14px",
-                },
-            },
-            html.b(f"{edo}"),
-        )
 
-    if edo == "No Empezada":
-        return html.button(
-            {
-                "type": "button",
-                "class": "btn",
-                "style": {
-                    "color": "#000000",
-                    "background-color": "#FF6060",
-                    "font-size": "14px",
-                },
-            },
-            html.b(f"{edo}"),
-        )
+def Tabla(columnas, documentos):
+    
+    def generar_filas_tabla(documentos):
+        filas_tabla = []
+        for i, doc in enumerate(documentos):
+            fila = [
+                html.th({"scope": "row"}, str(i + 1)),
+                *[generar_celda(doc, columna) for columna in columnas[1:]],
+            ]
+            filas_tabla.append(html.tr(*fila))
+        return filas_tabla
+
+    def generar_celda(doc, columna):
+        if columna == "products":
+            return html.td(generar_dropdown(doc.get(columna, [])))
+        else:
+            return html.td(obtener_valor(doc, columna))
+
+    def generar_dropdown(products):
+        options = [
+            html.option(
+                {"value": f"{prod['product']['name_prod']}, {prod['quantyti']}"},
+                f"{prod['product']['name_prod']}, {prod['quantyti']}",
+            )
+            for prod in products
+        ]
+        return html.select(options)
+
+    def obtener_valor(doc, columna):
+        if "." in columna:
+            atributos = columna.split(".")
+            valor = doc
+            for atributo in atributos:
+                if isinstance(valor, dict) and atributo in valor:
+                    valor = valor[atributo]
+                elif isinstance(valor, list) and atributo.isdigit():
+                    indice = int(atributo)
+                    if indice < len(valor):
+                        valor = obtener_valor(valor[indice], ".".join(atributos[2:]))
+                    else:
+                        valor = ""
+                    break
+                else:
+                    valor = ""
+                    break
+        else:
+            valor = doc.get(columna, "")
+        return valor
+
+    filas_tabla = generar_filas_tabla(documentos)
+
+    tabla = html.table(
+        {"class": "table", "id": "dataTable"},
+        html.thead(
+            {"style": "text-align: center;"},
+            html.tr(*[html.th({"scope": ""}, encabezado) for encabezado in columnas]),
+        ),
+        html.tbody({"style": "text-align: center;"}, *filas_tabla),
+    )
+
+    contenedor_tabla = html.div(
+        {"class": "table-responsive", "style": "margin-top: 2%;"}, tabla
+    )
+    return contenedor_tabla
 
 
 @component
-def Page_Ordenes():
-    titulo = "Ordenes"
+def Page_Solicitudes():
+    titulo = "Solicitudes"
 
-    icono = "bi bi-cart3"
+    icono = "bi bi-card-list"
 
     opciones = [
         "Total",
         "Pendiente",
-        "Aprobada",
         "Completada",
     ]
 
-    
-
-    columnas = [
-    "",
-    "id",
-    "status",
-    "date_req",
-    "products.0.product._id",
-    "products.0.product.name_prod",
-    "products.0.product.precio_uni",
-    "products.0.quantyti",
-    "products.1.product._id",
-    "products.1.product.name_prod",
-    "products.1.product.precio_uni",
-    "products.1.quantyti",
-    "num_ref_solicitud",
-    "date_approved",
-    "date_delivery_expected",
-    "date_delivery",
-    "client.name",
-    "client.email",
-    "client.phone"
-]
+    columnas_cli = [
+        "",
+        "num_ref_solicitud",
+        "status",
+        "date_req",
+        "products",
+        "date_delivery_expected",
+        "date_delivery",
+    ]
 
 
     return html.div(
@@ -174,7 +194,7 @@ def Page_Ordenes():
                                                 "class": "display-6",
                                                 "style": "color: black;",
                                             },
-                                            html.b("Ordenes Totales"),
+                                            html.b("Inventario de Solicitudes"),
                                         ),
                                     ),
                                 ),
@@ -187,7 +207,7 @@ def Page_Ordenes():
                                                 "class": "display-8",
                                                 "style": "color: black;",
                                             },
-                                            "Estás viendo el número total de ordenes realizadas hasta el momento",
+                                            "Listado de todas las solicitudes",
                                         ),
                                     ),
                                 ),
@@ -215,13 +235,7 @@ def Page_Ordenes():
                                         ),
                                     ),
                                 ),
-                                
-                                #tabla.Tabla(columnas, datos_api)
-                                #print(datos_api),
-
-                                tabla.mostrar_tabla_de_documentos(columnas, datos_api)
-                               
-                                
+                                Tabla(columnas_cli, datos_api),
                             ),
                         ),
                     ),

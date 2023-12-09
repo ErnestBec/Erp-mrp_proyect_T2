@@ -1,160 +1,131 @@
-from reactpy import component, html
-from components import navbar_top, Card, navbarMenu, tabla
+from reactpy import component, html, hooks
+from components.components_admin import navbar_top, navbarMenu, tabla, btnFilter, btnFilterDay
 from reactpy_router import link
+import json
+import requests
 
 
-def Capacidad(cap):
-    if 0 < cap <= 9:
+def obtener_datos_api():
+    url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
+    mail = "tier2@gmail.com"
+    pswd = "pzs12345"
+    info = {"email": str(mail), "password": str(pswd)}
+
+    response = requests.post(
+        url + "login",
+        data=json.dumps(info),
+        headers={"Content-Type": "application/json"},
+    )
+
+    if response.status_code >= 200 and response.status_code < 300:
+        token = str(response.json()["token"])
+
+        headers = {"Authorization": f"Bearer {token}"}
+
+        try:
+            response = requests.get(url + "requests", headers=headers)
+            response.raise_for_status()
+            datos = response.json()
+            return datos
+        except requests.exceptions.HTTPError as errh:
+            print("HTTP Error:", errh)
+        except requests.exceptions.ConnectionError as errc:
+            print("Error de conexión:", errc)
+        except requests.exceptions.Timeout as errt:
+            print("Tiempo de espera agotado:", errt)
+        except requests.exceptions.RequestException as err:
+            print("Error desconocido:", err)
+    else:
+        print(f"Error en la solicitud POST. Código de estado: {response.status_code}")
+
+    return []
+
+
+datos_api = obtener_datos_api()
+
+
+def Estado(edo):
+    if edo == "Aprobada":
         return html.button(
             {
                 "type": "button",
                 "class": "btn",
                 "style": {
                     "color": "#000000",
-                    "background-color": "#F0FFA5",
-                     "font-size": "14px"
+                    "background-color": "#AFF2FF",
+                    "font-size": "14px",
                 },
             },
-             html.b(f"{cap}%"),
+            html.b(f"{edo}"),
         )
-    if 10 <= cap <= 29:
+    if edo == "Pendiente":
         return html.button(
             {
                 "type": "button",
                 "class": "btn",
                 "style": {
                     "color": "#000000",
-                    "background-color": "#FFD6A5",
-                     "font-size": "14px"
+                    "background-color": "#F0FE88",
+                    "font-size": "14px",
                 },
             },
-             html.b(f"{cap}%"),
-        )
-    if 30 <= cap <= 49:
-        return html.button(
-            {
-                "type": "button",
-                "class": "btn",
-                "style": {
-                    "color": "#000000",
-                    "background-color": "#FFBA67",
-                     "font-size": "14px"
-                },
-            },
-             html.b(f"{cap}%"),
-        )
-    if 50 <= cap <= 69:
-        return html.button(
-            {
-                "type": "button",
-                "class": "btn",
-                "style": {
-                    "color": "#000000",
-                    "background-color": "#FFEA67",
-                     "font-size": "14px"
-                },
-            },
-             html.b(f"{cap}%"),
-        )
-    if 70 <= cap <= 89:
-        return html.button(
-            {
-                "type": "button",
-                "class": "btn",
-                "style": {
-                    "color": "#000000",
-                    "background-color": "#CAF365",
-                     "font-size": "14px"
-                },
-            },
-             html.b(f"{cap}%"),
-        )
-    if 90 <= cap <= 100:
-        return html.button(
-            {
-                "type": "button",
-                "class": "btn",
-                "style": {
-                    "color": "#000000",
-                    "background-color": "#50C242",
-                     "font-size": "14px"
-                },
-            },
-             html.b(f"{cap}%"),
+            html.b(f"{edo}"),
         )
 
-    if cap > 100:
+    if edo == "Completada":
         return html.button(
             {
                 "type": "button",
                 "class": "btn",
                 "style": {
                     "color": "#000000",
-                    "background-color": "#FF0000",
-                     "font-size": "14px"
+                    "background-color": "#5BDD4B",
+                    "font-size": "14px",
                 },
             },
-             html.b(f"{cap}%"),
+            html.b(f"{edo}"),
+        )
+
+    if edo == "No Empezada":
+        return html.button(
+            {
+                "type": "button",
+                "class": "btn",
+                "style": {
+                    "color": "#000000",
+                    "background-color": "#FF6060",
+                    "font-size": "14px",
+                },
+            },
+            html.b(f"{edo}"),
         )
 
 
 @component
-def Page_Almacenes():
-    titulo = "Almacenes"
+def Page_Ordenes():
+    titulo = "Ordenes"
 
-    icono = "bi bi-database"
+    icono = "bi bi-cart3"
 
-    datos = [
-        [
-            "1",
-            "mp123435",
-            Capacidad(8),
-            "24/12/2020",
-        ],
-        [
-            "2",
-            "mp123435",
-            Capacidad(15),
-            "24/12/2020",
-        ],
-        [
-            "3",
-            "mp123435",
-            Capacidad(40),
-            "24/12/2020",
-        ],
-        [
-            "4",
-            "mp123435",
-            Capacidad(58),
-            "24/12/2020",
-        ],
-        [
-            "5",
-            "mp123435",
-            Capacidad(79),
-            "24/12/2020",
-        ],
-        [
-            "6",
-            "mp123435",
-            Capacidad(92),
-            "24/12/2020",
-        ],
-        [
-            "7",
-            "mp123435",
-            Capacidad(101),
-            "24/12/2020",
-        ],
+    opciones = [
+        "Total",
+        "Pendiente",
+        "Aprobada",
+        "Completada",
     ]
 
     columnas = [
         "",
-        "No.",
-        "Nombre Almacén",
-        "Capacidad %",
-        "Fecha de Actualización",
+        "id",
+        "status",
+        "date_req",
+        "num_ref_solicitud",
+        "date_approved",
+        "date_delivery_expected",
+        "date_delivery",
+        "client.name",
+        "client.email",
+        "client.phone",
     ]
 
     return html.div(
@@ -188,7 +159,7 @@ def Page_Almacenes():
                                                 "class": "display-6",
                                                 "style": "color: black;",
                                             },
-                                            html.b("Almacenes"),
+                                            html.b("Ordenes Totales"),
                                         ),
                                     ),
                                 ),
@@ -201,7 +172,7 @@ def Page_Almacenes():
                                                 "class": "display-8",
                                                 "style": "color: black;",
                                             },
-                                            "Monitoreo de capacidad",
+                                            "Estás viendo el número total de ordenes realizadas hasta el momento",
                                         ),
                                     ),
                                 ),
@@ -215,7 +186,23 @@ def Page_Almacenes():
                             html.div(
                                 {"class": "card-body", "style": "margin-top: 0%;"},
                                 html.hr({"class": "sidebar-divider my-0"}),
-                                tabla.Tabla(columnas, datos),
+                                html.div(
+                                    {"class": "container-fluid"},
+                                    html.div(
+                                        {"class": "row no-border-bottom"},
+                                        html.div(
+                                            {"class": "col-auto"},
+                                            html.div(
+                                                {"class": "btn-group"},
+                                                btnFilterDay.btnFilterDay(),
+                                                btnFilter.btnFilter(opciones),
+                                            ),
+                                        ),
+                                    ),
+                                ),
+                                # tabla.Tabla(columnas, datos_api)
+                                # print(datos_api),
+                                #tabla.Tabla(columnas, datos_api),
                             ),
                         ),
                     ),

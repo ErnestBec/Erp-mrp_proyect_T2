@@ -1,5 +1,5 @@
 from reactpy import component, html
-from components import navbar_top, Card, navbarMenu, tabla, btnFilter, btnFilterDay
+from components.components_admin import navbar_top, navbarMenu, tabla, btnFilter, btnFilterDay
 from reactpy_router import link
 
 
