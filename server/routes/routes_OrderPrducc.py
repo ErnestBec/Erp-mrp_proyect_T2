@@ -23,6 +23,10 @@ async def find_pendindg_admin_orders():
 async def find_complete_admin_orders():
     return Ordenes_ProduccionEntity(db_name.OrderProduction.find({"status":"complete"}))
 
+@OrdenProducc.get("/admin/order-production/num-ref/{num_ref}", tags=["Orden de Produccion"], dependencies=[Depends(Portador()),Depends(protectedAcountAdmin())], description="Devuelve todas las ordenes de produccion por numero de referencia, solo acceso admin")
+async def find_num_ref_admin_orders(num_ref):
+    return Ordenes_ProduccionEntity(db_name.OrderProduction.find({"num_ref_solicitud":num_ref}))
+
 @OrdenProducc.get("/admin/order-production/date-mounth/{month}", tags=["Orden de Produccion"], dependencies=[Depends(Portador()),Depends(protectedAcountAdmin())], description="Devuelve todas las ordenes de produccion por mes indicado en numero es decir Enero = 01, solo acceso admin")
 async def find_month_admin_orders(month:int):
     return get_order_production_month(month)

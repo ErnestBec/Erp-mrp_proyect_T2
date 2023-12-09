@@ -52,6 +52,9 @@ async def get_all_pending_request_status_route_client(user = Depends(Portador())
 async def get_all_complete_request_status_route_client(user = Depends(Portador())):
     return requestsClientEntity(db_name.Request_Client.find({"status": "complete","client.email":user["email"]}))
 
+@requests_client.get("/request/num-ref/{num_ref}", tags=["Requests"], description="Devuelve todas las solicitudes por numero de referencia del ususario logeado")
+async def get_all_month_request_date_route_client(num_ref:str,user = Depends(Portador()) ):
+    return requestsClientEntity(db_name.Request_Client.find({"num_ref_solicitud": num_ref,"client.email":user["email"]}))
 
 @requests_client.get("/request/date-mont/{month}", tags=["Requests"], description="Devuelve todas las solicitudes por mes del ususario logeado")
 async def get_all_month_request_date_route_client(month:int,user = Depends(Portador()) ):
@@ -62,5 +65,6 @@ async def get_all_month_request_date_route_client(month:int,user = Depends(Porta
 @requests_client.post("/client/request/api", tags=["Requests"], dependencies=[Depends(request_client_validate_middleware)],description="Endpoint con el que se generarran las peticiones de clientes")
 async def new_request_route_client(request: RequestsClient, user=Depends(Portador())):
     return new_request(request, user)
+
 
 

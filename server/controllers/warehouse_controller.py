@@ -58,8 +58,6 @@ def  get_warehouse_capacity(id):
     warehouse = db_name.TypeWarehouse.count({""})
     print(list(warehouse))
     return list(warehouse)
-
-
 # Controllers Racks
 
 
@@ -185,6 +183,7 @@ def discount_products(products):
                 {"_id": id_prod_pz["_id"]}, {"$set": {"status": "sold"}})
             db_name.SpaceRow.update_one({"id_prod_pz": str(id_prod_pz["_id"])}, {
                                         "$set": {"status": "free", "id_prod_pz": "Null"}})
+     
 
 
 def request_logistics(list_products, num_ref_solicitud, user):

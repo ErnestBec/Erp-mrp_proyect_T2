@@ -30,3 +30,8 @@ def get_all_request_supply_complete():
 @request_Supply.get("/admin/request-supplier/date-month/{month}",  tags=["Request Supplier"],dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())], description="Devuelve las peticiones al proveedor en estado completado, acceso solo admin")
 async def get_request_supplier_month_route(month:int):
     return get_request_supplier_month(month)
+
+@request_Supply.get("/admin/request-supplier/num-ref-sol/{num_ref}",  tags=["Request Supplier"],dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())], description="Devuelve las peticiones al proveedor en estado completado, acceso solo admin")
+async def get_request_supplier_month_route(num_ref:str):
+    list_request_supplier = db_name.Request_Supplier.find({"num_ref_request":num_ref})
+    return requests_supply_schema(list_request_supplier)

@@ -22,6 +22,9 @@ async def find_all_user():
 @recoleccion.get("/admin/recolecciones/{id}", tags=["Recoleccion"], dependencies=[Depends(recoleccion_exist),Depends(Portador()), Depends(protectedAcountAdmin())])
 async def find_product(id: str):
     return get_Recolecciom(id)
+@recoleccion.get("/admin/recoleccion/num--ref-sol{num_ref}", tags=["Recoleccion"], dependencies=[Depends(Portador()),Depends(protectedAcountAdmin())])
+async def find_all_user(num_ref):
+    return recoleccionesEntity(db_name.Recolections.find({"num_ref_solicictud":num_ref}))
 
 
 # Endpoint para recibir embarque enviado por proveedor

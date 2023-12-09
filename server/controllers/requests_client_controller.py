@@ -30,6 +30,8 @@ def new_request(request, user):
     response_client = {}
     data_request["num_ref_solicitud"] = generate_num_ref(
         user["email"])
+    # validamos que se cumpla el minimo de envio
+    data_request["products"] = validate_businness_rules(data_request["products"])
     # Validamos Almacen de materias terminadas
     data_request["date_delivery"] = verified_almacen(
         data_request["products"], data_request["num_ref_solicitud"], user)
@@ -58,6 +60,17 @@ def new_request(request, user):
 
     return JSONResponse(content={"request": response_client, "status": "Success!"}, status_code=201)
 
+def validate_businness_rules(request_products):
+    # obtenemos reglas de negocio para envio
+    min_envio = db_name.BusinessRuleMaxProd.find()
+    min_envio = list(min_envio)
+    list_products = []
+    for product in request_products:
+        product = dict(product)
+        if int(product["quantity"]) < int(min_envio[0]["min_prod"]):
+            list_products.append({"id_pro": product["id_pro"], "quantity": min_envio[0]["min_prod"]})
+        else : list_products.append({"id_pro": product["id_pro"], "quantity": product["quantity"]}) 
+    return list_products
 
 def get_request_month(month,email):
     if email == None :

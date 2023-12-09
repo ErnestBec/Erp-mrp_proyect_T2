@@ -47,11 +47,7 @@ def num_ref_solicitud_exist(embark=Body(...)):
         if (mp_request is None):
             raise HTTPException(
                 detail="La mp no corresponde a la solicictada", status_code=404)
-        print(mp_emnark["quantity"])
-        print(mp_request["order_quantity"])
-        if mp_emnark["quantity"] != mp_request["order_quantity"]:
-            raise HTTPException(
-                detail="La cantidad no corresponde a la solicictada", status_code=404)
+
     return embark
 
 
