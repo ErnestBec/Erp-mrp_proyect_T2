@@ -109,7 +109,7 @@ def create_row(row,id_stock,id_rack):
     new_row = db_name.Rows.find_one({"_id": ObjectId(id)})
 
 
-async def create_space_row(space_row_req):
+def create_space_row(space_row_req):
     new_space_row = dict(space_row_req)
     id = db_name.SpaceRow.insert_one(
         {"id_row": new_space_row["id_row"],"id_stock":new_space_row["id_stock"],"id_rack":new_space_row["id_rack"], "id_prod_pz": "Null", "status": "free"}).inserted_id
@@ -224,7 +224,6 @@ def get_capacity_all_warehouse():
     for warehouse in warehouses:
         list_total_space = db_name.SpaceRow.count_documents({"id_stock":warehouse["_id"]})
         lis_space_row_ocuped = db_name.SpaceRow.count_documents({"$and":[{"id_stock":warehouse["_id"]},{"status":"ocuped"}]})
-        lis_space_row_free = db_name.SpaceRow.count_documents({"$and":[{"id_stock":warehouse["_id"]},{"status":"free"}]})
         if list_total_space !=0:
             warehouse_used= (int(lis_space_row_ocuped)*100)/int(list_total_space)
        
@@ -234,7 +233,23 @@ def get_capacity_all_warehouse():
           
     return JSONResponse(content={"warehouses":list(capacity_warehouse)})
 # Se revisa si la orden de Materia prima recibida por logistica pertenece a una orden de produccion pendiente
+def get_all_capacity_racks (id_warehouse):
+    if id_warehouse ==None:
+        list_racks= db_name.Racks.find()
+    else:
+        list_racks= db_name.Racks.find({"id_stock":ObjectId(id_warehouse)})
+    capacity_racks = []
+    for rack in list_racks:
+        list_total_space = db_name.SpaceRow.count_documents({"id_rack":rack["_id"]})
+        lis_space_row_ocuped = db_name.SpaceRow.count_documents({"$and":[{"id_rack":rack["_id"]},{"status":"ocuped"}]})
+        if list_total_space !=0:
+            rack_used= (int(lis_space_row_ocuped)*100)/int(list_total_space)
+       
+            capacity_racks.append({"id_rack":str(rack["_id"]),"name_rack":rack["name_rack"],"capacity":rack_used,"date_update":rack["date_update"]})
+        else:
+            capacity_racks.append({"id_rack":str(rack["_id"]),"name_rack":rack["name_rack"],"capacity":"El Rack no cuenta con espacios","date_update":rack["date_update"]})
 
+    return JSONResponse(content={"warehouses":list(capacity_racks)})
 
 def verify_request():
     return " "

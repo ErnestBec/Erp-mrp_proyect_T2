@@ -38,7 +38,7 @@ async def tpye_warehouse_exist(req: Request):
 
 
 def warehouse_exist(req: Request):
-    id = req.path_params.get("id")
+    id = req.path_params.get("id_warehouse")
     print(id)
     if not is_valid_object_id(id):
         raise HTTPException(

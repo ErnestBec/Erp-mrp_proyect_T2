@@ -1,12 +1,10 @@
 # Libreries
 from utils.db import db_name
 from fastapi.responses import JSONResponse
-from fastapi import Request, HTTPException
-import calendar
 import random
 from datetime import datetime, date, timedelta
 # Schemas
-from schemas.schema_client_request import requestClientEntity, requestsClientEntity, requestClientEntityInser
+from schemas.schema_client_request import  requestsClientEntity
 # Middleware
 from middlewares.userExist_middleware import user_email
 from middlewares.productExist_middleware import product_ref

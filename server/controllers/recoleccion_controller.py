@@ -54,8 +54,7 @@ def verifed_production_shipment(num_ref_request, list_mp):
         list_spaces = db_name.SpaceRow.find({"status": "free"})
         list_spaces = list(list_spaces)
         if len(list_spaces) < 10:
-            raise HTTPException(
-                detail="Ya no hay espacio en almacen", status_code=404)
+                create_notification(f"Ya no hay espacio disponible en almacen de mp", "admin", num_ref_request)
         space_insert = list_spaces[0]
         db_name.SpaceRow.update_one({"_id": space_insert["_id"]}, {
                                     "$set": {"id_prod_pz": mp["id_mp"], "status": "ocuped"}})

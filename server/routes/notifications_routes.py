@@ -29,7 +29,7 @@ def get_notifications_user(email):
     return JSONResponse(content={"notifications": notifications_schema(notifications_list)}, status_code=200)
 
 
-@notifications.get("/all-notifications")
+@notifications.get("/all-notifications", tags=["Notifications"])
 def get_all_notifications():
     notifications_list = db_name.Notifications.find()
     notifications_list = list(notifications_list)

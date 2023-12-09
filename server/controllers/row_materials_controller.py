@@ -42,7 +42,8 @@ def verified_mp(products, num_ref):
                 {"$and": [{"id_product": mp["id_mp"]}, {"status": "active"}]})
             if mp["quantyti"] > wareHouse_mp:
                 print("añadiendo mp a pedir")
-                request_mp.append({"id_mp": mp["id_mp"], "order_quantity": int(
+                id_mp_t3 = db_name.RawMaterials.find_one({"_id":ObjectId(mp["id_mp"])})
+                request_mp.append({"id_mp": mp["id_mp"],"id_mp_prov":id_mp_t3["id_mp"], "order_quantity": int(
                     mp["quantyti"])-int(wareHouse_mp)})
             # Listamos Mp para descontar de almacen
             discount_mp.append({"id_mp": mp["id_mp"], "order_quantity": int(

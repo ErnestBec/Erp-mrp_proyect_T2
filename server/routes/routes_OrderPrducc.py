@@ -2,33 +2,28 @@
 from fastapi import APIRouter, Depends
 from utils.db import db_name
 from schemas.schema_orden_produccion import Ordenes_ProduccionEntity
-from models.orden_produccion_model import Orden_Produccion, updateorden_Prduccion
 # Middlewares
-from middlewares.validate_OrderProd_middleware import OrdenProducc_update_validator, OrdenProd_validate_middleware
-from middlewares.OrdenProducExist_middleware import orden_exist
 from middlewares.auth_middleware import protectedAcountAdmin, Portador
 # Controllers
-from controllers.orden_produccion_controller import create_orden_produccion, get_Orden_produccion, update_Orden_prooduccion, delete_Orden_Produccion
+from controllers.orden_produccion_controller import get_order_production_month
 OrdenProducc = APIRouter()
 
 # Endppoints User Admin
 
 
-@OrdenProducc.get("/ordenproduc", tags=["Orden de Produccion"], dependencies=[Depends(Portador()), Depends(protectedAcountAdmin())])
-def find_all_admin_orders():
+@OrdenProducc.get("/admin/order-production", tags=["Orden de Produccion"], dependencies=[Depends(protectedAcountAdmin())], description="Devuelve todas las ordenes de produccion echas, acceso solo admin")
+async def find_all_admin_orders():
     return Ordenes_ProduccionEntity(db_name.OrderProduction.find())
 
+@OrdenProducc.get("/admin/order-production/status/pending", tags=["Orden de Produccion"], dependencies=[Depends(protectedAcountAdmin())], description="Devuelve todas las ordenes de produccion en estado pendiente, acceso solo admin")
+async def find_pendindg_admin_orders():
+    return Ordenes_ProduccionEntity(db_name.OrderProduction.find({"status":"pending"}))
 
-@OrdenProducc.post("/orderp", tags=["Orden de Produccion"], dependencies=[Depends(OrdenProd_validate_middleware), Depends(Portador()), Depends(protectedAcountAdmin())])
-def create_product_route(order: Orden_Produccion):
-    return create_orden_produccion(order)
+@OrdenProducc.get("/admin/order-production/status/complete", tags=["Orden de Produccion"], dependencies=[Depends(protectedAcountAdmin())], description="Devuelve todas las ordenes de produccion en estado completado, solo acceso admin")
+async def find_complete_admin_orders():
+    return Ordenes_ProduccionEntity(db_name.OrderProduction.find({"status":"complete"}))
 
+@OrdenProducc.get("/admin/order-production/date-mounth/{month}", tags=["Orden de Produccion"], dependencies=[Depends(protectedAcountAdmin())], description="Devuelve todas las ordenes de produccion por mes indicado en numero es decir Enero = 01, solo acceso admin")
+async def find_month_admin_orders(month:int):
+    return get_order_production_month(month)
 
-@OrdenProducc.put("/orderpro/{id}", tags=["Orden de Produccion"], dependencies=[Depends(orden_exist), Depends(OrdenProducc_update_validator), Depends(Portador()), Depends(protectedAcountAdmin())])
-def update_find__Orders(id: str, order: updateorden_Prduccion):
-    return update_Orden_prooduccion(id, order)
-
-
-@OrdenProducc.delete("/orderdel/{id}", tags=["Orden de Produccion"], dependencies=[Depends(orden_exist), Depends(Portador()), Depends(protectedAcountAdmin())])
-def delete_find_orders(id: str):
-    return delete_Orden_Produccion(id)

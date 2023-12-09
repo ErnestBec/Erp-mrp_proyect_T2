@@ -7,7 +7,7 @@ from schemas.schemas_stock_materials import rack_stock, racks_stock, stock_produ
 # Models
 from models.stock_materials_model import Floors, rackModel, Rows, SpaceRow, stock_products, typeStockModel, product_pieza
 # Controllers
-from controllers.warehouse_controller import create_warehouse_type,get_warehouse_capacity, create_warehouse, delete_warehouse, create_rack, delete_rack, get_all_space_rack_status,get_capacity_all_warehouse
+from controllers.warehouse_controller import create_warehouse_type,get_warehouse_capacity, create_warehouse, delete_warehouse, create_rack, delete_rack, get_all_space_rack_status,get_capacity_all_warehouse,get_all_capacity_racks
 # Middlewares
 from middlewares.warehouse_middleware import warehouse_exist, tpye_warehouse_exist, rack_exist, create_rack_validator
 from middlewares.auth_middleware import protectedAcountAdmin
@@ -47,13 +47,18 @@ async def create_rack_route(rack: rackModel):
     return create_rack(rack)
 
 
-@stock_materials.get("/admin/racks", tags=["Warehouse"], dependencies=[Depends(protectedAcountAdmin())], description="Muestra todos los racks por almacen, solo acceso Admin")
+@stock_materials.get("/admin/racks/capacity", tags=["Warehouse"], dependencies=[Depends(protectedAcountAdmin())], description="Muestra todos los racks por almacen, solo acceso Admin")
 async def get_all_racks():
-    return racks_stock(db_name.Racks.find())
+    return get_all_capacity_racks(id_warehouse = None)
+
+@stock_materials.get("/admin/by-warehouse/racks/capacity/{id_warehouse}", tags=["Warehouse"], dependencies=[Depends(protectedAcountAdmin()),Depends(warehouse_exist)], description="Muestra todos los racks por almacen, solo acceso Admin")
+async def get_all_bywarehouse_racks(id_warehouse):
+    return get_all_capacity_racks(id_warehouse )
 
 @stock_materials.get("/admin/warehouse/capacity", tags=["Warehouse"], dependencies=[Depends(protectedAcountAdmin())], description="Devuelve la capacidad en porcentage de todos los almacenes")
 async def get_all_capacity_warehouse():
     return get_capacity_all_warehouse()
+
 
 # @stock_materials.get("/rack/{id}", tags=["Racks"], dependencies=[Depends(rack_exist)])
 # def get_rack_by_id(id):

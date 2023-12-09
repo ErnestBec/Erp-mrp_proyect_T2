@@ -1,14 +1,14 @@
 # Libreries
-from fastapi import Response
-from bson import ObjectId
 from starlette.status import HTTP_204_NO_CONTENT
 from fastapi import HTTPException
-import time
 from datetime import datetime, timedelta
+from fastapi.responses import JSONResponse
+
 # utils
 from utils.db import db_name
 # Schemas
-from schemas.schema_orden_produccion import orden_produccionEntity
+from schemas.schema_orden_produccion import Ordenes_ProduccionEntity_month
+
 # Controllers
 from controllers.row_materials_controller import verified_mp
 from controllers.notificationst_controller import create_notification
@@ -58,26 +58,16 @@ def generate_Production(request_production, num_ref, time_production):
 
     return fecha_prod_entrega
 
+def get_order_production_month(month):
 
-def create_orden_produccion(orden):
-    new_orden = dict(orden)
-    id = db_name.OrdenesProduccion.insert_one(new_orden).inserted_id
-    ord = db_name.OrdenesProduccion.find_one({"_id": id})
-    return orden_produccionEntity(ord)
+    data = db_name.OrderProduction.find()
 
+    list_acount = []
+    for request in list(data):
+        fecha = request["fecha_alta"]
+        mes = fecha.month
+        if int(month) == int(mes):
+            list_acount.append(request)
 
-def get_Orden_produccion(id):
-    orden = db_name.OrdenesProduccion.find_one({"_id": ObjectId(id)})
-    return orden_produccionEntity(orden)
+    return JSONResponse(content={"requests": Ordenes_ProduccionEntity_month(list_acount), "status": "Succes!"}, status_code=201)
 
-
-def update_Orden_prooduccion(id, orden):
-    db_name.OrdenesProduccion.find_one_and_update(
-        {"_id": ObjectId(id)}, {"$set": dict(orden)})
-    return orden_produccionEntity(db_name.OrdenesProduccion.find_one({"_id": ObjectId(id)}))
-
-
-def delete_Orden_Produccion(id):
-    db_name.OrdenesProduccion.find_one_and_delete(
-        {"_id": ObjectId(id)})
-    return Response(status_code=HTTP_204_NO_CONTENT)
