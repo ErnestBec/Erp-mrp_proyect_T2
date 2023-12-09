@@ -1,9 +1,10 @@
 def request_supply_schema(request_supply) -> dict:
     return {
         "_id": str(request_supply["_id"]),
-        "list_pzs": request_supply["list_pzs"],
+        "list_mp": request_supply["list_mp"],
         "num_ref_request": request_supply["num_ref_request"],
-        "date_delivery": request_supply["date_request_delivery"]
+        "fecha_peticion": request_supply["fecha_peticion"],
+        "status":request_supply["status"]
     }
 
 

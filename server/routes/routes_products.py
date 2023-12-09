@@ -8,7 +8,7 @@ from middlewares.validate_product_middleware import product_update_validator, pr
 from middlewares.productExist_middleware import product_exist
 from middlewares.auth_middleware import protectedAcountAdmin, Portador
 # Controllers
-from controllers.product_controller import create_prduct, get_prduct, update_product, delete_product
+from controllers.product_controller import create_prduct, get_prduct, update_product
 product = APIRouter()
 
 

@@ -17,6 +17,7 @@ from routes.routes_OrderPrducc import OrdenProducc
 from routes.Business_Rules_routes import routes_business_rules
 from routes.routes_stock_materials import stock_materials
 from routes.notifications_routes import notifications
+from routes.routes_request_Supply import request_Supply
 
 
 app = FastAPI()
@@ -43,6 +44,7 @@ app.add_middleware(
 app.include_router(user)
 app.include_router(product)
 app.include_router(requests_client)
+app.include_router(request_Supply)
 app.include_router(cuentacobrar)
 app.include_router(cuentaPagar)
 app.include_router(stock_materials)

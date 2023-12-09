@@ -1,10 +1,12 @@
 # libreries
 import requests
 import json
+from fastapi.responses import JSONResponse
+from datetime import datetime, timedelta
 # utils
 from utils.db import db_name
 # Schemas
-from datetime import datetime, timedelta
+from schemas.request_suppply_schema import requests_supply_schema
 # utils
 from utils.db import db_name
 from controllers.notificationst_controller import create_notification
@@ -43,3 +45,15 @@ def request_proveedor(mp, num_ref):
     create_notification(
         f"Se genero una nueva solicitud a proveedor", num_ref, num_ref)
     return date_deliverly
+
+def get_request_supplier_month(month):
+
+    data = db_name.Request_Supplier.find()
+    list_acount = []
+    for request in list(data):
+        fecha = datetime.strptime(request["fecha_peticion"], "%Y-%m-%d %H:%M:%S")
+        mes = fecha.month
+        if int(month) == int(mes):
+            list_acount.append(request)
+
+    return JSONResponse(content={"requests": requests_supply_schema(list_acount), "status": "Succes!"}, status_code=201)
