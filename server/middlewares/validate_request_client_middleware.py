@@ -31,12 +31,6 @@ def validate_products(products: list):
     for ref_product in products:
         if not is_valid_object_id(ref_product["id_pro"]):
             return f'The product with id: {ref_product["id_pro"]} doest not exist!'
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> PedroA
         product = db_name.Products.find_one(
             {"_id": ObjectId(ref_product["id_pro"])})
         if not product:
