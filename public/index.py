@@ -2,29 +2,29 @@ from reactpy import component, use_reducer
 from fastapi import FastAPI
 from reactpy.backend.fastapi import configure
 from reactpy_router import route, simple
-from pages import EJEMPLOAPI, page_catalogo, page_store, page_forcast, page_racks, page_requests, page_orders, page_cuentas,page_login
-# from reducers.reducer_login import session_reducer
-# from reducers.store import SessionProvider
-# from components import ProtectedRouter
-# 
-# 
+from pages.pages_admin import page_catalogo_admin, page_store_admin, page_forcast_admin, page_racks_admin, page_requests_admin, page_orders_admin, page_cuentas_admin
+from pages.pages_client import page_catalogo_user, page_requests_user, page_cuentas_user
+from pages import page_login
+
 
 @component
 def App():
     # is_logged_in = use_selector(lambda state: state['is_logged_in'])
 
     return simple.router(
-        # route("/", page_login.login_user()),
-        route("/API", EJEMPLOAPI.App()),
-        route("/Ordenes", page_orders.Page_Ordenes()),
-        route("/Pronostico", page_forcast.Page_Forcast()),
-        route("/Solicitudes", page_requests.Page_Solicitudes()),
-        route("/Almacenes", page_store.Page_Almacenes()),
-        route("/Racks", page_racks.Page_Racks()),
-        route("/Catalogo", page_catalogo.Page_Catalogo()),
-        route("/login", page_login.login_user()),
-        # route("/dashboard", ProtectedRouter.ProtectedRouter()),
+        #route("/API", EJEMPLOAPI.App()),
+        route("/", page_login.login_user()),
+        route("/Admin_Ordenes", page_orders_admin.Page_Ordenes()),
+        route("/Admin_Cuentas", page_cuentas_admin.Page_Cuentas()),
+        route("/Admin_Pronostico", page_forcast_admin.Page_Forcast()),
+        route("/Admin_Solicitudes", page_requests_admin.Page_Solicitudes()),
+        route("/Admin_Almacenes", page_store_admin.Page_Almacenes()),
+        route("/Admin_Racks", page_racks_admin.Page_Racks()),
+        route("/Admin_Catalogo", page_catalogo_admin.Page_Catalogo()),
 
+        route("/User_Solicitudes", page_requests_user.Page_Solicitudes()),
+        route("/User_Cuentas", page_cuentas_user.Page_Cuentas()),
+        route("/User_Catalogo", page_catalogo_user.Page_Catalogo()),   
     )
 
 app = FastAPI()

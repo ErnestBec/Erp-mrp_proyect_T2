@@ -30,42 +30,20 @@ def Navbar():
         ),
         html.li(
             {"className": "nav-item active", "style": {"marginLeft": "10%", "marginTop": "8%", "color": "#000000", "textAlign": "left"}},
-            html.i({"className": "bi bi-cart3", "style": {"fontSize": "20px", "marginRight": "8px"}}),
-            html.b(html.a({"href": "/Ordenes", "style": {"color": "black"}}, "Ordenes")),
-        ),
-        html.li(
-            {"className": "nav-item active", "style": {"marginLeft": "10%", "marginTop": "8%", "color": "#000000", "textAlign": "left"}},
             html.i({"className": "bi bi-card-list", "style": {"fontSize": "20px", "marginRight": "8px"}}),
-            html.b(html.a({"href": "/Solicitudes", "style": {"color": "black"}}, "Solicitudes")),
+            html.b(html.a({"href": "/User_Solicitudes", "style": {"color": "black"}}, "Solicitudes")),
         ),
         html.li(
             {"className": "nav-item active", "style": {"marginLeft": "10%", "marginTop": "8%", "color": "#000000", "textAlign": "left"}},
             html.i({"className": "bi bi-bag", "style": {"fontSize": "20px", "marginRight": "8px"}}),
-            html.b(html.a({"href": "/Catalogo", "style": {"color": "black"}}, "Catálogo")),
-        ),
-        html.li(
-            {"className": "nav-item active", "style": {"marginLeft": "10%", "marginTop": "8%", "color": "#000000", "textAlign": "left"}},
-            html.i({"className": "bi bi-graph-up", "style": {"fontSize": "20px", "marginRight": "8px"}}),
-            html.b(html.a({"href": "/Pronostico", "style": {"color": "black"}}, "Pronóstico")),
+            html.b(html.a({"href": "/User_Catalogo", "style": {"color": "black"}}, "Catálogo")),
         ),
         html.li(
             {"className": "nav-item active", "style": {"marginLeft": "10%", "marginTop": "8%", "color": "#000000", "textAlign": "left"}},
             html.i({"className": "bi bi-cash", "style": {"fontSize": "20px", "marginRight": "8px"}}),
-            html.b(html.a({"href": "#", "style": {"color": "black"}}, "Cuentas")),
+            html.b(html.a({"href": "/User_Cuentas", "style": {"color": "black"}}, "Cuentas")),
         ),
-        html.li(
-            {"className": "nav-item active", "style": {"marginLeft": "10%", "marginTop": "8%", "color": "#000000", "textAlign": "left"}},
-            html.i({"className": "bi bi-database", "style": {"fontSize": "20px", "marginRight": "8px"}}),
-            html.b(html.a({"href": "/Almacenes", "style": {"color": "black"}}, "Almacenes")),
-        ),
-        html.li(
-            {"className": "nav-item active", "style": {"marginLeft": "10%", "marginTop": "8%", "color": "#000000", "textAlign": "left"}},
-            html.i({"className": "bi bi-inboxes", "style": {"fontSize": "20px", "marginRight": "8px"}}),
-            html.b(html.a({"href": "/Racks", "style": {"color": "black"}}, "Racks")),
-        ),
-
-
-
+ 
         html.br(), html.br(), html.br(), html.br(), html.br(),
 
         html.hr({"className": "sidebar-divider my-0", "style": {"backgroundColor": "black", "marginTop": "11%"}}),
