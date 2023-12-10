@@ -15,7 +15,7 @@ def error():
                                                      html.div({ "class":"error mx-auto", "data-text":"404"},"404"),
                                                      html.p({"class":"lead text-gray-800 mb-5"},"Page Not Found"),
                                                      html.p({"class":"text-gray-500 mb-0"},"It looks like you found a glitch in the matrix.."),
-                                                     html.a(link("Regresar al inicio",to="/",**{"class":"text-gray-500 mb-0"}))
+                                                     html.a(link("Regresar al inicio",to="/User_Dashboard",**{"class":"text-gray-500 mb-0"}))
                                                      )),
                     )
 
