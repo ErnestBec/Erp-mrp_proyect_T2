@@ -45,34 +45,6 @@ def obtener_datos_api():
 datos_api = obtener_datos_api()
 
 
-def Estado(edo):
-    if edo == "Aprobada":
-        return html.button(
-            {
-                "type": "button",
-                "class": "btn",
-                "style": {
-                    "color": "#000000",
-                    "background-color": "#AFF2FF",
-                    "font-size": "14px",
-                },
-            },
-            html.b(f"{edo}"),
-        )
-    if edo == "Pendiente":
-        return html.button(
-            {
-                "type": "button",
-                "class": "btn",
-                "style": {
-                    "color": "#000000",
-                    "background-color": "#F0FE88",
-                    "font-size": "14px",
-                },
-            },
-            html.b(f"{edo}"),
-        )
-
 
 def Tabla(columnas, documentos):
     
@@ -229,8 +201,8 @@ def Page_Solicitudes():
                                             {"class": "col-auto"},
                                             html.div(
                                                 {"class": "btn-group"},
-                                                btnFilterDay.btnFilterDay(),
-                                                btnFilter.btnFilter(opciones),
+                                                # btnFilterDay.btnFilterDay(),
+                                                # btnFilter.btnFilter(opciones),
                                             ),
                                         ),
                                     ),

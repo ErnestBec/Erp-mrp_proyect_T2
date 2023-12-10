@@ -54,7 +54,7 @@ async def find_complete_client(user = Depends(Portador())):
     return JSONResponse(content={"all_acounts": cuentas_por_cobrarEntity(list_cuentas)}, status_code=200)
 
 @cuentacobrar.get("/cuentacobrar/date-month/{month}", tags=["Accounts Receivable"],  description="devuelve  las cuentas por pagar por mes del cliente logeado")
-async def find_month_client(month, user =Depends(Portador())):
+async def find_month_client(month:int, user =Depends(Portador())):
     return get_cuentas_por_cobrar_month(month, user["email"])
 
 

@@ -1,24 +1,14 @@
 from reactpy import component, html
 
 @component
-def btnFilter(opciones):
-    dropdown_options = [
-        html.li(html.a({"class": "dropdown-item", "href": "#"}, option)) for option in opciones
-    ]
-
-    return html.div(
-        {"class": "dropdown ms-2"},
-        html.button(
-            {
-                "class": "btn btn-light dropdown-toggle",
-                "type": "button",
-                "style": "color: #000000;",
-                "data-bs-toggle": "dropdown",
-                "aria-expanded": "false",
-            },
-            html.b("Filtrar por"),
-        ),
-        html.ul({"class": "dropdown-menu"}, *dropdown_options),
+def btnFilter(opciones,request_data_status):
+    select_options = []
+    for option in opciones:
+        select_options.append(html.option({"value":option},option))
+    def handle_change(event):
+       request_data_status(event["target"]["value"])
+    return html.select({"class_name":"form-select ms-2", "aria-label":"Default select example","onChange":handle_change},                  
+                       *select_options,
     )
 
 

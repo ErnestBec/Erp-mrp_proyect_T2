@@ -1,43 +1,24 @@
 from reactpy import component, html
 
 
+from reactpy import hooks
 @component
-def btnFilterDay():
-    return html.div(
-        {"class": "dropdown ms-2"},
-        html.button(
-            {
-                "class": "btn btn-light dropdown-toggle",
-                "type": "button",
-                "style": "color: #000000;",
-                "data-bs-toggle": "dropdown",
-                "aria-expanded": "false",
-            },
-            html.i(
-                {
-                    "class": "bi bi-calendar",
-                    "style": {
-                        "fontSize": "16px",
-                        "marginRight": "8px",
-                        "fill": "currentColor",
-                    },
-                }
-            ),
-            html.b("Mostrar"),
-        ),
-        html.ul(
-            {"class": "dropdown-menu"},
-            html.li(html.a({"class": "dropdown-item", "href": "#"}, "Enero")),
-            html.li(html.a({"class": "dropdown-item", "href": "#"}, "Febrero")),
-            html.li(html.a({"class": "dropdown-item", "href": "#"}, "Marzo")),
-            html.li(html.a({"class": "dropdown-item", "href": "#"}, "Abril")),
-            html.li(html.a({"class": "dropdown-item", "href": "#"}, "Mayo")),
-            html.li(html.a({"class": "dropdown-item", "href": "#"}, "Junio")),
-            html.li(html.a({"class": "dropdown-item", "href": "#"}, "Julio")),
-            html.li(html.a({"class": "dropdown-item", "href": "#"}, "Agosto")),
-            html.li(html.a({"class": "dropdown-item", "href": "#"}, "Septiembre")),
-            html.li(html.a({"class": "dropdown-item", "href": "#"}, "Octubre")),
-            html.li(html.a({"class": "dropdown-item", "href": "#"}, "Noviembre")),
-            html.li(html.a({"class": "dropdown-item", "href": "#"}, "Diciembre")),
-        ),
-    )
+def btnFilterDay(request_data_month):
+    def handle_change(event):
+       request_data_month(event["target"]["value"])
+    return html.select({"class_name":"form-select", "aria-label":"Default select example","onChange": handle_change},
+                       html.option({"value":"13"},"Ver todas"),
+                       html.option({"value":"01"},"Enero"),
+                       html.option({"value":"02"},"Febrero"),
+                       html.option({"value":"03"},"Marzo"),
+                       html.option({"value":"04"},"Abril"),
+                       html.option({"value":"05"},"Mayo"),
+                       html.option({"value":"06"},"Junio"),
+                       html.option({"value":"07"},"Julio"),
+                       html.option({"value":"08"},"Agosto"),
+                       html.option({"value":"09"},"Septiembre"),
+                       html.option({"value":"10"},"Octubre"),
+                       html.option({"value":"11"},"Noviembre"),
+                       html.option({"value":"12"},"Diciembre"),
+              
+                       )

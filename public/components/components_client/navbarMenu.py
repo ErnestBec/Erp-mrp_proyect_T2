@@ -5,7 +5,6 @@ def Navbar():
     navbar_style = {
         "backgroundColor": "white",
     }
-
     return html.ul(
         {"className": "navbar-nav sidebar sidebar-dark accordion", "id": "accordionSidebar", "style": navbar_style},
         html.a(
