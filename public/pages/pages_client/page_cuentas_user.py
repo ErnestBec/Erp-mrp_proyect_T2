@@ -18,7 +18,7 @@ def generate_arr_data(data):
 @component
 def Page_Cuentas():
     url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
-    token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InQxZXF1aXBvc0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InQxZXF1aXBvczEyMzQ1IiwiZXhwIjoxNzAyMzQ0MzY1fQ.RFAYukZH0P0m7V0X-gYRPKrN6r-B8jnP3TiHfRYDgoU"
+    # token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InQxZXF1aXBvc0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InQxZXF1aXBvczEyMzQ1IiwiZXhwIjoxNzAyMzQ0MzY1fQ.RFAYukZH0P0m7V0X-gYRPKrN6r-B8jnP3TiHfRYDgoU"
     dataTable, set_dataTable = hooks.use_state({})
     dataTableMonth, set_dataTableMonth = hooks.use_state({})
     dataTableStatus , set_dataTableStatus=hooks.use_state([])
@@ -29,6 +29,14 @@ def Page_Cuentas():
     filterStatus, setFilterStatus= hooks.use_state(False)
     totalAccounts, setTotalAccounts= hooks.use_state(True)
 
+    def getToken():
+        return html.script("var elemento = document.getElementById('token'); var item = localStorage.getItem('token'); if (item == null) { item = \"None\"; } elemento.value = item; elemento.dispatchEvent(new Event('keypress'));")
+    
+    def validarSesion(tkn):
+        script = ""
+        if tkn != "Ignore":
+            script = ("localStorage.clear();window.location.href = \"/\";" if (tkn == "None") else "localStorage.clear();localStorage.setItem(\"token\", \""+tkn+"\");")   
+        return html.script(script)
     def request_data():
         headers = {"Authorization": f"Bearer {token}"}
         response =  requests.get(url + "cuentacobrar", headers=headers)
@@ -85,14 +93,7 @@ def Page_Cuentas():
         elif totalAccounts:
             return table_client.TableClient(headers, arr_products)
                         
-    def getToken():
-        return html.script("var elemento = document.getElementById('token'); var item = localStorage.getItem('token'); if (item == null) { item = \"None\"; } elemento.value = item; elemento.dispatchEvent(new Event('keypress'));")
-    
-    def validarSesion(tkn):
-        script = ""
-        if tkn != "Ignore":
-            script = ("localStorage.clear();window.location.href = \"/\";" if (tkn == "None") else "localStorage.clear();localStorage.setItem(\"token\", \""+tkn+"\");")   
-        return html.script(script)                    
+                     
     return html.div(
         {"id": "app"},
         html.div(
