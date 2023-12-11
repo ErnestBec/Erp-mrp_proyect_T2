@@ -1,116 +1,136 @@
-from reactpy import component, html
+from reactpy import component, html, hooks
 from components.components_admin import navbar_top, navbarMenu
 from reactpy_router import link
 import json
 import requests
 
 
-def obtener_datos_api():
-    url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
-    mail = "tier2@gmail.com"
-    pswd = "pzs12345"
-    info = {"email": str(mail), "password": str(pswd)}
+# def obtener_datos_api():
+#     url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
+#     mail = "tier2@gmail.com"
+#     pswd = "pzs12345"
+#     info = {"email": str(mail), "password": str(pswd)}
 
-    response = requests.post(
-        url + "login",
-        data=json.dumps(info),
-        headers={"Content-Type": "application/json"},
-    )
+#     response = requests.post(
+#         url + "login",
+#         data=json.dumps(info),
+#         headers={"Content-Type": "application/json"},
+#     )
 
-    if response.status_code >= 200 and response.status_code < 300:
-        token = str(response.json()["token"])
+#     if response.status_code >= 200 and response.status_code < 300:
+#         token = str(response.json()["token"])
 
-        headers = {"Authorization": f"Bearer {token}"}
+#         headers = {"Authorization": f"Bearer {token}"}
 
-        try:
-            response = requests.get(url + "products", headers=headers)
-            response.raise_for_status()
-            datos = response.json()
-            return datos
-        except requests.exceptions.HTTPError as errh:
-            print("HTTP Error:", errh)
-        except requests.exceptions.ConnectionError as errc:
-            print("Error de conexión:", errc)
-        except requests.exceptions.Timeout as errt:
-            print("Tiempo de espera agotado:", errt)
-        except requests.exceptions.RequestException as err:
-            print("Error desconocido:", err)
-    else:
-        print(f"Error en la solicitud POST. Código de estado: {response.status_code}")
+#         try:
+#             response = requests.get(url + "products", headers=headers)
+#             response.raise_for_status()
+#             datos = response.json()
+#             return datos
+#         except requests.exceptions.HTTPError as errh:
+#             print("HTTP Error:", errh)
+#         except requests.exceptions.ConnectionError as errc:
+#             print("Error de conexión:", errc)
+#         except requests.exceptions.Timeout as errt:
+#             print("Tiempo de espera agotado:", errt)
+#         except requests.exceptions.RequestException as err:
+#             print("Error desconocido:", err)
+#     else:
+#         print(f"Error en la solicitud POST. Código de estado: {response.status_code}")
 
-    return []
-
-
-datos_api = obtener_datos_api()
+#     return []
 
 
-def Tabla(columnas, documentos):
-    def generar_filas_tabla(documentos):
-        filas_tabla = []
-        for i, doc in enumerate(documentos):
-            fila = [
-                html.th({"scope": "row"}, str(i + 1)),
-                *[generar_celda(doc, columna) for columna in columnas[1:]],
-            ]
-            filas_tabla.append(html.tr(*fila))
-        return filas_tabla
+# datos_api = obtener_datos_api()
 
-    def generar_celda(doc, columna):
-        if columna == "mp":
-            return html.td(generar_dropdown(doc.get(columna, [])))
-        else:
-            return html.td(obtener_valor(doc, columna))
 
-    def generar_dropdown(products):
-        options = [
-            html.option(
-                {"value": f"{prod['name_mp']}, {prod['quantyti']}"},
-                f"{prod['name_mp']}, {prod['quantyti']}",
-            )
-            for prod in products
-        ]
-        return html.select(options)
+# def Tabla(columnas, documentos):
+#     def generar_filas_tabla(documentos):
+#         filas_tabla = []
+#         for i, doc in enumerate(documentos):
+#             fila = [
+#                 html.th({"scope": "row"}, str(i + 1)),
+#                 *[generar_celda(doc, columna) for columna in columnas[1:]],
+#             ]
+#             filas_tabla.append(html.tr(*fila))
+#         return filas_tabla
 
-    def obtener_valor(doc, columna):
-        if "." in columna:
-            atributos = columna.split(".")
-            valor = doc
-            for atributo in atributos:
-                if isinstance(valor, dict) and atributo in valor:
-                    valor = valor[atributo]
-                elif isinstance(valor, list) and atributo.isdigit():
-                    indice = int(atributo)
-                    if indice < len(valor):
-                        valor = obtener_valor(valor[indice], ".".join(atributos[2:]))
-                    else:
-                        valor = ""
-                    break
-                else:
-                    valor = ""
-                    break
-        else:
-            valor = doc.get(columna, "")
-        return valor
+#     def generar_celda(doc, columna):
+#         if columna == "mp":
+#             return html.td(generar_dropdown(doc.get(columna, [])))
+#         else:
+#             return html.td(obtener_valor(doc, columna))
 
-    filas_tabla = generar_filas_tabla(documentos)
+#     def generar_dropdown(products):
+#         options = [
+#             html.option(
+#                 {"value": f"{prod['name_mp']}, {prod['quantyti']}"},
+#                 f"{prod['name_mp']}, {prod['quantyti']}",
+#             )
+#             for prod in products
+#         ]
+#         return html.select(options)
 
-    tabla = html.table(
-        {"class": "table", "id": "dataTable"},
-        html.thead(
-            {"style": "text-align: center;"},
-            html.tr(*[html.th({"scope": ""}, encabezado) for encabezado in columnas]),
-        ),
-        html.tbody({"style": "text-align: center;"}, *filas_tabla),
-    )
+#     def obtener_valor(doc, columna):
+#         if "." in columna:
+#             atributos = columna.split(".")
+#             valor = doc
+#             for atributo in atributos:
+#                 if isinstance(valor, dict) and atributo in valor:
+#                     valor = valor[atributo]
+#                 elif isinstance(valor, list) and atributo.isdigit():
+#                     indice = int(atributo)
+#                     if indice < len(valor):
+#                         valor = obtener_valor(valor[indice], ".".join(atributos[2:]))
+#                     else:
+#                         valor = ""
+#                     break
+#                 else:
+#                     valor = ""
+#                     break
+#         else:
+#             valor = doc.get(columna, "")
+#         return valor
 
-    contenedor_tabla = html.div(
-        {"class": "table-responsive", "style": "margin-top: 2%;"}, tabla
-    )
-    return contenedor_tabla
+#     filas_tabla = generar_filas_tabla(documentos)
+
+#     tabla = html.table(
+#         {"class": "table", "id": "dataTable"},
+#         html.thead(
+#             {"style": "text-align: center;"},
+#             html.tr(*[html.th({"scope": ""}, encabezado) for encabezado in columnas]),
+#         ),
+#         html.tbody({"style": "text-align: center;"}, *filas_tabla),
+#     )
+
+#     contenedor_tabla = html.div(
+#         {"class": "table-responsive", "style": "margin-top: 2%;"}, tabla
+#     )
+#     return contenedor_tabla
 
 
 @component
 def Page_Catalogo():
+    url = "http://10.228.1.158:8001/"
+    headers = {"Authorization": f"Bearer {token}"}
+
+    def obtener_datos():
+        response = requests.get(url + "admin/products", headers=headers)
+        response.raise_for_status()
+        datos = response.json()
+        return datos
+    # Ise state de tokens
+    token, setToken = hooks.use_state("Ignore")
+    hooks.use_effect(obtener_datos, [])
+    # def getToken():
+    #     return html.script("var elemento = document.getElementById('token'); var item = localStorage.getItem('token'); if (item == null) { item = \"None\"; } elemento.value = item; elemento.dispatchEvent(new Event('keypress'));")
+    
+    # def validarSesion(tkn):
+    #     script = ""
+    #     if tkn != "Ignore":
+    #         script = ("localStorage.clear();window.location.href = \"/\";" if (tkn == "None") else "localStorage.clear();localStorage.setItem(\"token\", \""+tkn+"\");")   
+    #     return html.script(script)
+    
     titulo = "Catálogo"
 
     icono = "bi bi-bag"
@@ -190,7 +210,7 @@ def Page_Catalogo():
                                         ),
                                     ),
                                 ),
-                                Tabla(columnas_ad, datos_api),
+                                # Tabla(columnas_ad, datos_api),
                             ),
                         ),
                     ),

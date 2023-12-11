@@ -16,8 +16,8 @@ def generate_arr_data(data):
 
 @component
 def Page_Catalogo():
-    url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
-    # token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InQxZXF1aXBvc0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InQxZXF1aXBvczEyMzQ1IiwiZXhwIjoxNzAyMzQ0MzY1fQ.RFAYukZH0P0m7V0X-gYRPKrN6r-B8jnP3TiHfRYDgoU"
+    url = "http://10.228.1.158:8001/"
+    tokenClient="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpZXIyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoicHpzMTIzNDUiLCJleHAiOjE3MDI0NzMzOTB9.1i15KprqJjfQfgU2oN1AoTzfB-KBqjNOw7H4qalwGCM"
     dataTable, set_dataTable = hooks.use_state([])
     # Ise state de tokens
     token, setToken = hooks.use_state("Ignore")
@@ -32,7 +32,8 @@ def Page_Catalogo():
         return html.script(script)
     
     def request_data():
-        headers = {"Authorization": f"Bearer {token}"}
+        print(token)
+        headers = {"Authorization": f"Bearer {tokenClient}"}
         response = requests.get(url + "products-user", headers=headers)
         response.raise_for_status()
         datos = response.json()

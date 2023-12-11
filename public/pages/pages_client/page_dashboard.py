@@ -17,8 +17,10 @@ def generate_arr_data(data):
 @component
 def page_user_Dashboard():
 
-    url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
+    url = "http://10.228.1.158:8001/"
     # token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InQxZXF1aXBvc0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InQxZXF1aXBvczEyMzQ1IiwiZXhwIjoxNzAyMzQ0MzY1fQ.RFAYukZH0P0m7V0X-gYRPKrN6r-B8jnP3TiHfRYDgoU"
+    
+    tokenClient="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpZXIyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoicHpzMTIzNDUiLCJleHAiOjE3MDI0NzMzOTB9.1i15KprqJjfQfgU2oN1AoTzfB-KBqjNOw7H4qalwGCM"
     # tablas de Resumen de solicitudes
     dataTable, set_dataTable = hooks.use_state({})
     dataTableMonth, set_dataTableMonth = hooks.use_state({})
@@ -44,7 +46,7 @@ def page_user_Dashboard():
         return html.script(script)
     
     def request_data():
-        headers = {"Authorization": f"Bearer {token}"}
+        headers = {"Authorization": f"Bearer {tokenClient}"}
         response =  requests.get(url + "requests", headers=headers)
         response.raise_for_status()
         datos = response.json()
@@ -53,7 +55,7 @@ def page_user_Dashboard():
     hooks.use_effect(request_data,[])
 
     def request_data_month(month):
-        headers = {"Authorization": f"Bearer {token}"}
+        headers = {"Authorization": f"Bearer {tokenClient}"}
         if month == "13":
             response =  requests.get(url + "requests", headers=headers)
             setFilterMonth(False)
@@ -69,7 +71,7 @@ def page_user_Dashboard():
         set_dataTableMonth(datos)
 
     def request_data_status(status):
-        headers = {"Authorization": f"Bearer {token}"}
+        headers = {"Authorization": f"Bearer {tokenClient}"}
         if status == "Pendiente":
             response =   requests.get(url + f"requests/status/pending", headers=headers)
         elif status == "Completado":

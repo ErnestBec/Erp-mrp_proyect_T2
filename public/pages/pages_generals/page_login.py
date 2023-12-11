@@ -3,13 +3,15 @@ from reactpy_router import link
 import reactpy
 import json
 import requests
+import os
 #
 
 #localStorage = localStoragePy('tier2', 't2-storage')
 
 
-url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
+url = "http://10.228.1.158:8001/"
 def btnSubmit(e,mail,pswd):
+    print(url)
     info = {"email": str(mail),"password": str(pswd)}
     color ="#ff6161"
     result = ""

@@ -6,7 +6,7 @@ import requests
 
 
 def obtener_datos_api():
-    url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
+    url = "http://10.228.1.158:8001/"
     mail = "t1equipos@gmail.com"
     pswd = "t1equipos12345"
     info = {"email": str(mail), "password": str(pswd)}
