@@ -22,6 +22,8 @@ def Page_Cuentas():
     dataTable, set_dataTable = hooks.use_state({})
     dataTableMonth, set_dataTableMonth = hooks.use_state({})
     dataTableStatus , set_dataTableStatus=hooks.use_state([])
+    # Ise state de tokens
+    token, setToken = hooks.use_state("Ignore")
 
     filterMonth, setFilterMonth = hooks.use_state(False)
     filterStatus, setFilterStatus= hooks.use_state(False)
@@ -83,12 +85,22 @@ def Page_Cuentas():
         elif totalAccounts:
             return table_client.TableClient(headers, arr_products)
                         
-                        
+    def getToken():
+        return html.script("var elemento = document.getElementById('token'); var item = localStorage.getItem('token'); if (item == null) { item = \"None\"; } elemento.value = item; elemento.dispatchEvent(new Event('keypress'));")
+    
+    def validarSesion(tkn):
+        script = ""
+        if tkn != "Ignore":
+            script = ("localStorage.clear();window.location.href = \"/\";" if (tkn == "None") else "localStorage.clear();localStorage.setItem(\"token\", \""+tkn+"\");")   
+        return html.script(script)                    
     return html.div(
         {"id": "app"},
         html.div(
             {"id": "wrapper"},
             navbarMenu.Navbar(),
+            html.input({"style":"display : none", "id":"token", "onkeypress":lambda event: setToken(str(event['currentTarget']['value'] ))}),
+            getToken(),
+            validarSesion(token),
             html.div(
                 {"id": "content-wrapper", "class_name": "d-flex flex-column"},
                 html.div(
@@ -125,7 +137,7 @@ def Page_Cuentas():
                                         {"class": "col-auto"},
                                         html.div(
                                             {"class": "btn-group mt-4 mb-4"},
-                                            btnFilterDay.btnFilterDay( request_data_month),
+                                            btnFilterDay.btnFilterDay(request_data_month),
                                             btnFilter.btnFilter(options_dropdown, request_data_status),
                                             
                                         ),

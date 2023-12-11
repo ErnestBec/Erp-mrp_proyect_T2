@@ -1,4 +1,4 @@
-from reactpy import component, html
+from reactpy import component, html, hooks
 from components.components_client import navbar_top, navbarMenu, btnFilter, btnFilterDay
 from reactpy_router import link
 import json
@@ -114,6 +114,8 @@ def Tabla(columnas, documentos):
 
 @component
 def Page_Solicitudes():
+    # Ise state de tokens
+    token, setToken = hooks.use_state("Ignore")
     titulo = "Solicitudes"
 
     icono = "bi bi-card-list"
@@ -133,13 +135,24 @@ def Page_Solicitudes():
         "date_delivery_expected",
         "date_delivery",
     ]
-
+    def getToken():
+        return html.script("var elemento = document.getElementById('token'); var item = localStorage.getItem('token'); if (item == null) { item = \"None\"; } elemento.value = item; elemento.dispatchEvent(new Event('keypress'));")
+    
+    def validarSesion(tkn):
+        script = ""
+        if tkn != "Ignore":
+            script = ("localStorage.clear();window.location.href = \"/\";" if (tkn == "None") else "localStorage.clear();localStorage.setItem(\"token\", \""+tkn+"\");")   
+        return html.script(script)
+    
 
     return html.div(
         {"id": "app"},
         html.div(
             {"id": "wrapper"},
             navbarMenu.Navbar(),
+            html.input({"style":"display : none", "id":"token", "onkeypress":lambda event: setToken(str(event['currentTarget']['value'] ))}),
+            getToken(),
+            validarSesion(token),
             html.div(
                 {"id": "content-wrapper", "class": "d-flex flex-column"},
                 html.div(

@@ -19,6 +19,8 @@ def Page_Catalogo():
     url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
     token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InQxZXF1aXBvc0BnbWFpbC5jb20iLCJwYXNzd29yZCI6InQxZXF1aXBvczEyMzQ1IiwiZXhwIjoxNzAyMzQ0MzY1fQ.RFAYukZH0P0m7V0X-gYRPKrN6r-B8jnP3TiHfRYDgoU"
     dataTable, set_dataTable = hooks.use_state([])
+    # Ise state de tokens
+    token, setToken = hooks.use_state("Ignore")
     def request_data():
         headers = {"Authorization": f"Bearer {token}"}
         response = requests.get(url + "products-user", headers=headers)
@@ -28,12 +30,24 @@ def Page_Catalogo():
     hooks.use_effect(request_data,[])
     headers =["Id Producto","Nombre del Producto","Descripcion","Precio Unitario"]
     arr_products = generate_arr_data(dataTable)
-
+    def getToken():
+        return html.script("var elemento = document.getElementById('token'); var item = localStorage.getItem('token'); if (item == null) { item = \"None\"; } elemento.value = item; elemento.dispatchEvent(new Event('keypress'));")
+    
+    def validarSesion(tkn):
+        script = ""
+        if tkn != "Ignore":
+            script = ("localStorage.clear();window.location.href = \"/\";" if (tkn == "None") else "localStorage.clear();localStorage.setItem(\"token\", \""+tkn+"\");")   
+        return html.script(script)
+    
     return html.div(
         {"id": "app"},
+         
         html.div(
             {"id": "wrapper"},
             navbarMenu.Navbar(),
+            html.input({"style":"display : none", "id":"token", "onkeypress":lambda event: setToken(str(event['currentTarget']['value'] ))}),
+            getToken(),
+            validarSesion(token),
             html.div(
                 {"id": "content-wrapper", "class": "d-flex flex-column"},
                 html.div(

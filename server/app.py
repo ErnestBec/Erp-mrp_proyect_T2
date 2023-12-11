@@ -55,5 +55,5 @@ app.include_router(routes_business_rules)
 app.include_router(notifications)
 
 # eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpZXIyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoicHpzMTIzNDUiLCJleHAiOjE3MDIxMjU1NTh9.zW4JbVwrPleTeeSLNZLmVwjaclBfsDOebDsJ97P66tw
-# if __name__ == "__main__":
-#     uvicorn.run(app, host="127.0.0.1", port=8001)
+if __name__ == "__main__":
+    uvicorn.run(app, host="127.0.0.1", port=8001)

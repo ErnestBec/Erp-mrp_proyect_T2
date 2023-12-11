@@ -10,9 +10,9 @@ from schemas.notifications_schema import notifications_schema, notification_sche
 notifications = APIRouter()
 
 
-@notifications.get("/notifications-pending", tags=["Notifications"], dependencies=[Depends(Portador())])
-def get_notifications_pending():
-    notifications_list = db_name.Notifications.find({"status": "pending"})
+@notifications.get("/notifications-pending", tags=["Notifications"])
+def get_notifications_pending(user = Depends(Portador())):
+    notifications_list = db_name.Notifications.find({"status": "pending","email_user": user["email"]})
     notifications_list = list(notifications_list)
     return JSONResponse(content={"notifications": notifications_schema(notifications_list)}, status_code=200)
 
