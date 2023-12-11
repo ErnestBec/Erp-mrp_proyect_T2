@@ -16,12 +16,13 @@ def obtener_datos_api():
         data=json.dumps(info),
         headers={"Content-Type": "application/json"},
     )
-
+    response.status_code = 200
     if response.status_code >= 200 and response.status_code < 300:
-        token = str(response.json()["token"])
+        # token = str(response.json()["token"])
+        tokenClient="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRpZXIyQGdtYWlsLmNvbSIsInBhc3N3b3JkIjoicHpzMTIzNDUiLCJleHAiOjE3MDI0NzMzOTB9.1i15KprqJjfQfgU2oN1AoTzfB-KBqjNOw7H4qalwGCM"
         
 
-        headers = {"Authorization": f"Bearer {token}"}
+        headers = {"Authorization": f"Bearer {tokenClient}"}
 
         try:
             response = requests.get(url + "requests", headers=headers)

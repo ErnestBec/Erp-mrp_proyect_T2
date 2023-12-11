@@ -28,7 +28,7 @@ def request_proveedor(mp, num_ref):
     "metodo_pago":"Tarjeta"
     }]
     try:
-        requests.post("http://iproconnectmaterials.eastus.cloudapp.azure.com:8000/backend/postPedidoEntrante",data=json.dumps(data_request))
+        requests.post("http://192.168.208.23:8000/backend/postPedidoEntrante",data=json.dumps(data_request))
     except requests.exceptions.RequestException as e:
         print("Se creo notificacion de error")
         create_notification(
