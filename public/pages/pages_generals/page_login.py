@@ -1,40 +1,47 @@
-from reactpy import component, html, hooks,use_state
+from reactpy import component, html, hooks,use_state,create_context
 from reactpy_router import link
 import reactpy
 import json
 import requests
-# from reducers.actions import log_in
+#
 
+#localStorage = localStoragePy('tier2', 't2-storage')
+
+
+url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
+def btnSubmit(e,mail,pswd):
+    info = {"email": str(mail),"password": str(pswd)}
+    color ="#ff6161"
+    result = ""
+    link = ""
+    response = requests.post(url+"login",data=json.dumps(info))
+    print(str(response.status_code))
+    if response.status_code >=200 and response.status_code <300:
+        color = "#98ff98"
+        result = str(response.json()['token'])
+        roleUser =str(response.json()['role']) 
+        if roleUser == "admin":
+            res = "localStorage.clear();localStorage.setItem(\"token\", \""+result+"\");window.location.href = \"/Admin_Solicitudes\";"
+        elif roleUser == "client":
+            res = "localStorage.clear();localStorage.setItem(\"token\", \""+result+"\");window.location.href = \"/User_Dashboard\";"
+        
+        print(res)
+        return html.script(res)
+    else:
+        print("No hay token")
+        return html.script("localStorage.clear();")
+    
+    
 @component
 def login_user():
+    
     email,setEmail = reactpy.hooks.use_state("")
     passwd,setPasswd=reactpy.hooks.use_state("")
-    msj, set_Msj = reactpy.hooks.use_state("")
-
-    url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
-
-    def btnSubmit():
-        print("\n\n\nSubmit :D\n\nEmail:"+str(email)+"\nPasswd:"+str(passwd))
-        info = {"email": email,"password": passwd}
-        color ="#ff6161"
-        result = ""
-        link = ""
-        response = requests.post(url+"login",data=json.dumps(info))
-        if response.status_code >=200 and response.status_code <300:
-            color = "#98ff98"
-            #result = response.json()['token']
-            result = "Puede ingresar"
-            # log_in
-
-        else:
-            result = "Error"
-
-            return result
-        
-    
+    msj, setMsj = reactpy.hooks.use_state("")
     return (
         html.div({"style":"background-color: #FAFCFD;height: 100vh;","class":"d-flex align-items-center"},
                  html.head(html.title('Login')),
+                 
                  html.div({"class": "container-fluid h-75"},
                           html.div({"class":"row d-flex justify-content-center h-100"},
                                    html.div({"style":"padding: 0px; border-radius: 24px;background-color: #FFFFFF;box-shadow: 1px 0px 12px 0px rgba(0,0,0,0.04);","class":"col-10 col-md-6 col-lg-5 col-xl-3 h-100"},
@@ -48,7 +55,7 @@ def login_user():
                                                                                 html.div({"class":"w-100 mb-4","style":"opacity: 0.60; color: #47516B; font-size: 20px; font-family: Inter; font-weight: 400; line-height: 28px; word-wrap: break-word"},
                                                                                          "Accede con tus credenciales."
                                                                                          ),
-                                                                                html.form({},
+                                                                                html.form({}, 
                                                                                           html.div({"class":"form-group"},
                                                                                                    html.label({"for":"exampleInputEmail1","style": "color: #556769; font-size: 12px; font-family: Inter; font-weight: 500; line-height: 16px; word-wrap: break-word"},"Correo electrónico*"),
                                                                                                    html.input({"type":"email","class":"form-control","id":"exampleInputEmail1","aria-describedby":"emailHelp","placeholder":"correo@example.com","key":"mail1","onChange":lambda event:setEmail(str(event['currentTarget']['value']))})
@@ -58,7 +65,7 @@ def login_user():
                                                                                                    html.input({"type":"password","class":"form-control mb-4","id":"exampleInputPassword1","placeholder":"Ingresa contraseña","onChange":lambda event:setPasswd(str(event['currentTarget']['value']))})
                                                                                                    ),
                                                                                           msj,
-                                                                                          html.button({"type":"button","class":"btn btn-dark col-12","onClick": lambda event: set_Msj(btnSubmit())},"Iniciar Sesión")
+                                                                                          html.button({"type":"button","class":"btn btn-dark col-12","onClick":lambda event:setMsj(btnSubmit(event,email,passwd))},"Iniciar Sesión")
                                                                                           )
                                                                                 )
                                                                        )
