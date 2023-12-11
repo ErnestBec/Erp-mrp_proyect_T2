@@ -23,7 +23,7 @@ def obtener_datos_api():
         headers = {"Authorization": f"Bearer {token}"}
 
         try:
-            response = requests.get(url + "products", headers=headers)
+            response = requests.get(url + "admin/products", headers=headers)
             response.raise_for_status()
             datos = response.json()
             return datos

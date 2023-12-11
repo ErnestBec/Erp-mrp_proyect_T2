@@ -1,13 +1,12 @@
 from reactpy import component, html
 from reactpy_router import link
 
-
 @component
 def NavbarBusqueda(titulo, icono):
     return html.div(
         html.nav(
             {
-                "class": "navbar navbar-expand navbar-light bg-white topbar d-flex mb-3 static-top shadow"
+                "class": "navbar navbar-expand navbar-light bg-white topbar d-flex mb-3 static-top shadow container-fluid"
             },
             html.a(
                 {
@@ -21,27 +20,40 @@ def NavbarBusqueda(titulo, icono):
                 html.i({"className": icono, "style": {"fontSize": "20px", "marginRight": "8px"}}),
                 html.b(titulo),
             ),
-            html.a(
+            html.div(
                 {
-                    "class": "nav-link dropdown-toggle",
-                    "href": "#",
-                    "id": "userDropdown",
-                    "role": "button",
-                    "data-toggle": "dropdown",
-                    "aria-haspopup": "true",
-                    "aria-expanded": "false",
+                    "class": "collapse navbar-collapse",
+                    "id": "navbarSupportedContent",
                 },
-                html.i(
-                    {
-                        "className": "bi bi-bell-fill",
-                        "style": {"fontSize": "22px", "color": "black", "margin-right":"10px"},
-                    }
-                ),
-                html.i(
-                    {
-                        "className": "bi bi-person-circle",
-                        "style": {"fontSize": "22px", "color": "black"},
-                    }
+                html.ul(
+                    {"class": "navbar-nav ml-auto"},
+                    html.li(
+                        {"class": "nav-item dropdown no-arrow"},
+                        html.a(
+                            {
+                                "class": "nav-link dropdown-toggle",
+                                "href": "#",
+                                "id": "userDropdown",
+                                "role": "button",
+                                "data-toggle": "dropdown",
+                                "aria-haspopup": "true",
+                                "aria-expanded": "false",
+                                "style": {"margin-left": "auto"},
+                            },
+                            html.i(
+                                {
+                                    "className": "bi bi-bell-fill",
+                                    "style": {"fontSize": "22px", "color": "black", "margin-right": "0px"},
+                                }
+                            ),
+                            html.i(
+                                {
+                                    "className": "bi bi-person-circle",
+                                    "style": {"fontSize": "22px", "color": "black"},
+                                }
+                            ),
+                        ),
+                    ),
                 ),
             ),
         )

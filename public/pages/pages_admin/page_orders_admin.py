@@ -4,6 +4,72 @@ from reactpy_router import link
 import json
 import requests
 
+def Tabla(columnas, documentos):
+    
+    def generar_filas_tabla(documentos):
+        filas_tabla = []
+        for i, doc in enumerate(documentos):
+            fila = [
+                html.th({"scope": "row"}, str(i + 1)),
+                *[generar_celda(doc, columna) for columna in columnas[1:]],
+            ]
+            filas_tabla.append(html.tr(*fila))
+        return filas_tabla
+
+    def generar_celda(doc, columna):
+        if columna == "products":
+            return html.td(generar_dropdown(doc.get(columna, [])))
+        elif columna == "status":
+            return html.td(Estado(doc.get(columna, "")))
+        else:
+            return html.td(obtener_valor(doc, columna))
+
+    def generar_dropdown(products):
+        options = [
+            html.option(
+                {"value": f"{prod['id_prod']}, {prod['quantity_missing']}"},
+                f"{prod['id_prod']}, {prod['quantity_missing']}",
+            )
+            for prod in products
+        ]
+        return html.select(options)
+
+    def obtener_valor(doc, columna):
+        if "." in columna:
+            atributos = columna.split(".")
+            valor = doc
+            for atributo in atributos:
+                if isinstance(valor, dict) and atributo in valor:
+                    valor = valor[atributo]
+                elif isinstance(valor, list) and atributo.isdigit():
+                    indice = int(atributo)
+                    if indice < len(valor):
+                        valor = obtener_valor(valor[indice], ".".join(atributos[2:]))
+                    else:
+                        valor = ""
+                    break
+                else:
+                    valor = ""
+                    break
+        else:
+            valor = doc.get(columna, "")
+        return valor
+
+    filas_tabla = generar_filas_tabla(documentos)
+
+    tabla = html.table(
+        {"class": "table", "id": "dataTable"},
+        html.thead(
+            {"style": "text-align: center;"},
+            html.tr(*[html.th({"scope": ""}, encabezado) for encabezado in columnas]),
+        ),
+        html.tbody({"style": "text-align: center;"}, *filas_tabla),
+    )
+
+    contenedor_tabla = html.div(
+        {"class": "table-responsive", "style": "margin-top: 2%;"}, tabla
+    )
+    return contenedor_tabla
 
 def obtener_datos_api():
     url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
@@ -23,7 +89,7 @@ def obtener_datos_api():
         headers = {"Authorization": f"Bearer {token}"}
 
         try:
-            response = requests.get(url + "requests", headers=headers)
+            response = requests.get(url + "admin/order-production", headers=headers)
             response.raise_for_status()
             datos = response.json()
             return datos
@@ -40,12 +106,10 @@ def obtener_datos_api():
 
     return []
 
-
 datos_api = obtener_datos_api()
 
-
 def Estado(edo):
-    if edo == "Aprobada":
+    if edo == "complete":
         return html.button(
             {
                 "type": "button",
@@ -58,7 +122,7 @@ def Estado(edo):
             },
             html.b(f"{edo}"),
         )
-    if edo == "Pendiente":
+    if edo == "pending":
         return html.button(
             {
                 "type": "button",
@@ -107,25 +171,14 @@ def Page_Ordenes():
 
     icono = "bi bi-cart3"
 
-    opciones = [
-        "Total",
-        "Pendiente",
-        "Aprobada",
-        "Completada",
-    ]
-
-    columnas = [
+    columnas_ad = [
         "",
-        "id",
-        "status",
-        "date_req",
+        "_id",
+        "fecha_alta",
+        "products",
+        "fecha_termino",
         "num_ref_solicitud",
-        "date_approved",
-        "date_delivery_expected",
-        "date_delivery",
-        "client.name",
-        "client.email",
-        "client.phone",
+        "status",
     ]
 
     return html.div(
@@ -190,17 +243,9 @@ def Page_Ordenes():
                                     {"class": "container-fluid"},
                                     html.div(
                                         {"class": "row no-border-bottom"},
-                                        html.div(
-                                            {"class": "col-auto"},
-                                            html.div(
-                                                {"class": "btn-group"},
-                                                btnFilterDay.btnFilterDay(),
-                                                btnFilter.btnFilter(opciones),
-                                            ),
-                                        ),
                                     ),
                                 ),
-                                # tabla.Tabla(columnas, datos_api)
+                                Tabla(columnas_ad, datos_api)
                                 # print(datos_api),
                                 #tabla.Tabla(columnas, datos_api),
                             ),

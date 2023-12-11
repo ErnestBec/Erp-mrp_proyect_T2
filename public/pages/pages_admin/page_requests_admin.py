@@ -1,52 +1,51 @@
-from reactpy import component, html
+from reactpy import component, html, hooks
 from components.components_admin import navbar_top, navbarMenu, tabla, btnFilter, btnFilterDay
 from reactpy_router import link
+from components.components_client import btnFilterDay
 import json
 import requests
 
-
 def obtener_datos_api():
-    url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
-    mail = "tier2@gmail.com"
-    pswd = "pzs12345"
-    info = {"email": str(mail), "password": str(pswd)}
+        url = "http://tier2-pe.eastus.cloudapp.azure.com:8001/"
+        mail = "tier2@gmail.com"
+        pswd = "pzs12345"
+        info = {"email": str(mail), "password": str(pswd)}
 
-    response = requests.post(
-        url + "login",
-        data=json.dumps(info),
-        headers={"Content-Type": "application/json"},
-    )
+        response = requests.post(
+            url + "login",
+            data=json.dumps(info),
+            headers={"Content-Type": "application/json"},
+        )
 
-    if response.status_code >= 200 and response.status_code < 300:
-        token = str(response.json()["token"])
-        
+        if response.status_code >= 200 and response.status_code < 300:
+            token = str(response.json()["token"])
+            
 
-        headers = {"Authorization": f"Bearer {token}"}
+            headers = {"Authorization": f"Bearer {token}"}
 
-        try:
-            response = requests.get(url + "requests", headers=headers)
-            response.raise_for_status()
-            datos = response.json()
-            return datos
-        except requests.exceptions.HTTPError as errh:
-            print("HTTP Error:", errh)
-        except requests.exceptions.ConnectionError as errc:
-            print("Error de conexión:", errc)
-        except requests.exceptions.Timeout as errt:
-            print("Tiempo de espera agotado:", errt)
-        except requests.exceptions.RequestException as err:
-            print("Error desconocido:", err)
-    else:
-        print(f"Error en la solicitud POST. Código de estado: {response.status_code}")
+            try:
+                response = requests.get(url + "admin/request-supplier", headers=headers)
+                response.raise_for_status()
+                datos = response.json()
+                return datos
+            except requests.exceptions.HTTPError as errh:
+                print("HTTP Error:", errh)
+            except requests.exceptions.ConnectionError as errc:
+                print("Error de conexión:", errc)
+            except requests.exceptions.Timeout as errt:
+                print("Tiempo de espera agotado:", errt)
+            except requests.exceptions.RequestException as err:
+                print("Error desconocido:", err)
+        else:
+            print(f"Error en la solicitud POST. Código de estado: {response.status_code}")
 
-    return []
-
-
+        return []
+    
 datos_api = obtener_datos_api()
 
 
 def Estado(edo):
-    if edo == "Aprobada":
+    if edo == "complete":
         return html.button(
             {
                 "type": "button",
@@ -59,7 +58,7 @@ def Estado(edo):
             },
             html.b(f"{edo}"),
         )
-    if edo == "Pendiente":
+    if edo == "pending":
         return html.button(
             {
                 "type": "button",
@@ -87,16 +86,18 @@ def Tabla(columnas, documentos):
         return filas_tabla
 
     def generar_celda(doc, columna):
-        if columna == "products":
+        if columna == "list_mp":
             return html.td(generar_dropdown(doc.get(columna, [])))
+        elif columna == "status":
+            return html.td(Estado(doc.get(columna, "")))
         else:
             return html.td(obtener_valor(doc, columna))
 
     def generar_dropdown(products):
         options = [
             html.option(
-                {"value": f"{prod['product']['name_prod']}, {prod['quantyti']}"},
-                f"{prod['product']['name_prod']}, {prod['quantyti']}",
+                {"value": f"{prod['id_mp']}, {prod['order_quantity']}"},
+                f"{prod['id_mp']}, {prod['order_quantity']}",
             )
             for prod in products
         ]
@@ -142,26 +143,19 @@ def Tabla(columnas, documentos):
 
 @component
 def Page_Solicitudes():
+
+
     titulo = "Solicitudes"
 
     icono = "bi bi-card-list"
 
-    opciones = [
-        "Total",
-        "Pendiente",
-        "Completada",
-    ]
-
     columnas_ad = [
         "",
-        "num_ref_solicitud",
+        "_id",
+        "list_mp",
+        "num_ref_request",
+        "fecha_peticion",
         "status",
-        "date_req",
-        "products",
-        "date_delivery_expected",
-        "date_delivery",
-        "client.name",
-        "client.phone"
     ]
 
 
@@ -227,14 +221,6 @@ def Page_Solicitudes():
                                     {"class": "container-fluid"},
                                     html.div(
                                         {"class": "row no-border-bottom"},
-                                        html.div(
-                                            {"class": "col-auto"},
-                                            html.div(
-                                                {"class": "btn-group"},
-                                                btnFilterDay.btnFilterDay(),
-                                                btnFilter.btnFilter(opciones),
-                                            ),
-                                        ),
                                     ),
                                 ),
                                 Tabla(columnas_ad, datos_api),
