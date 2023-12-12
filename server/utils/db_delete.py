@@ -1,6 +1,6 @@
 from pymongo import MongoClient
 
-
+# Esta solo es para borrar el contenido de las colecciones, no influye en la API jajajaaj xd
 # Conectar a la base de datos MongoDB
 client = MongoClient("mongodb://localhost:27017/")
 db = client["Prueba_Tier2"]

@@ -11,6 +11,7 @@ notifications = APIRouter()
 
 
 @notifications.get("/notifications-pending", tags=["Notifications"])
+# En este caso en particular el middleware retoirna el valos del usuario logeado y estos datos se le envian al controlador como parametro 
 def get_notifications_pending(user = Depends(Portador())):
     notifications_list = db_name.Notifications.find({"status": "pending","email_user": user["email"]})
     notifications_list = list(notifications_list)

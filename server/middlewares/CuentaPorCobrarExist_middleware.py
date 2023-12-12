@@ -2,8 +2,9 @@ from utils.db import db_name
 from fastapi import Request, HTTPException
 from bson import ObjectId
 from fastapi.params import Body
+# valida que los datos que ingresa elusuario sean correctos o que esten dentro de la base de dato para hacer las acciones necesarias en el controlador
 
-
+# Valida que el id sea de tipo que recibe mongo db
 def is_valid_object_id(id_str):
     try:
         ObjectId(id_str)
@@ -11,7 +12,7 @@ def is_valid_object_id(id_str):
     except Exception:
         return False
 
-
+# valida que la el dato ingresado por el usuario exista en la bd
 def cuentas_por_cobrar_exist(request: Request):
     id = request.path_params.get("id")
     if not is_valid_object_id(id):

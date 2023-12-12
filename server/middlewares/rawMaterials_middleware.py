@@ -2,6 +2,7 @@ from utils.db import db_name
 from fastapi import Request, HTTPException
 from bson import ObjectId
 
+# valida que los datos que ingresa elusuario sean correctos o que esten dentro de la base de dato para hacer las acciones necesarias en el controlador
 
 def is_valid_object_id(id_str):
     try:
